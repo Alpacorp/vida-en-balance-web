@@ -3,6 +3,9 @@ export default {
   content: ["./index.html", "./src/**/*.{js,ts,jsx,tsx}"],
   theme: {
     extend: {
+      colors: {
+        violet: "#4C50A2",
+      },
       fontFamily: {
         "montserrat-black": ["Montserrat Black", "sans-serif"],
         "montserrat-black-italic": ["Montserrat BlackItalic", "sans-serif"],
