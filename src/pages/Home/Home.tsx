@@ -1,6 +1,7 @@
 import { Headings } from "@components/Headings/Headings";
-import { Header } from "../../components/Header/Header";
+import { Header } from "@components/Header/Header.tsx";
 import { Tabs } from "@components/Tabs/Tabs";
+import { Content } from "@components/Content/Content.tsx";
 
 import "./styles.css";
 
@@ -10,6 +11,7 @@ export const Home = () => {
       <Header />
       <Headings text="Productos San Rafael Balance" />
       <Tabs />
+      <Content />
     </main>
   );
 };
