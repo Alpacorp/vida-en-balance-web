@@ -3,11 +3,12 @@ import { useState } from "react";
 import { ChevronDownIcon } from "@heroicons/react/16/solid";
 
 import tabs from "./data.json";
+import { Content } from "@components/Content/Content.tsx";
 
 export const Tabs = () => {
   const [value, setValue] = useState(0);
 
-  const { id, name, images } = tabs[value];
+  const { id, name, description, image, types } = tabs[value];
 
   const handleSelectChange = (event: React.ChangeEvent<HTMLSelectElement>) => {
     const selectedTabName = event.target.value;
@@ -18,7 +19,7 @@ export const Tabs = () => {
   };
 
   return (
-    <div>
+    <>
       <div className="grid grid-cols-1 sm:hidden">
         <select
           defaultValue={tabs[value]?.name}
@@ -69,18 +70,7 @@ export const Tabs = () => {
           ))}
         </nav>
       </div>
-      <div className="py-4">
-        <div key={name} className="flex">
-          {images.map((image) => (
-            <img
-              key={image.id}
-              src={image.url}
-              alt={image.alt}
-              className="w-full h-10 object-contain"
-            />
-          ))}
-        </div>
-      </div>
-    </div>
+      <Content title={name} description={description} types={types} image={image} />
+    </>
   );
 };
