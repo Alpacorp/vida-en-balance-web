@@ -1,12 +1,11 @@
 import { useState } from "react";
-
 import { ChevronDownIcon } from "@heroicons/react/16/solid";
-
 import tabs from "./data.json";
 import { Content } from "@components/Content/Content.tsx";
 
 export const Tabs = () => {
   const [value, setValue] = useState(0);
+  const [animationKey, setAnimationKey] = useState(0);
 
   const { id, name, description, image, types } = tabs[value];
 
@@ -16,10 +15,11 @@ export const Tabs = () => {
       (tab) => tab.name === selectedTabName
     );
     setValue(selectedTabIndex);
+    setAnimationKey(prev => prev + 1);
   };
 
   return (
-    <>
+    <section className="bg-gray-50">
       <div className="grid grid-cols-1 sm:hidden">
         <select
           defaultValue={tabs[value]?.name}
@@ -50,27 +50,29 @@ export const Tabs = () => {
               key={tab.id}
               onClick={() => {
                 setValue(tabIdx);
+                setAnimationKey(prev => prev + 1);
               }}
               aria-current={tab.id === id ? "page" : undefined}
               className={`${
                 tab.id === id
-                  ? "text-indigo-600"
+                  ? "text-indigo-600 bg-gray-300 hover:bg-gray-300"
                   : "text-gray-500 hover:text-gray-700"
               } ${tabIdx === 0 ? "rounded-l-lg" : ""} ${
                 tabIdx === tabs.length - 1 ? "rounded-r-lg" : ""
               } group relative min-w-0 flex-1 overflow-hidden bg-white px-4 py-4 text-center text-sm font-medium hover:bg-gray-50 focus:z-10`}
             >
-              <img
-                src="https://tailwindui.com/plus/img/logos/mark.svg?color=indigo&shade=600"
-                alt=""
-                className="h-8 w-auto"
-              />
               <span>{tab.name}</span>
             </button>
           ))}
         </nav>
       </div>
-      <Content title={name} description={description} types={types} image={image} />
-    </>
+      <Content
+        key={animationKey}
+        title={name}
+        description={description}
+        types={types}
+        image={image}
+      />
+    </section>
   );
 };
