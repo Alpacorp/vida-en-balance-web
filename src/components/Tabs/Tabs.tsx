@@ -19,13 +19,13 @@ export const Tabs = () => {
   };
 
   return (
-    <section className="bg-gray-50">
+    <section className="bg-gray-100">
       <div className="grid grid-cols-1 sm:hidden">
         <select
           defaultValue={tabs[value]?.name}
           aria-label="Select a tab"
           className={`col-start-1 row-start-1 w-full appearance-none rounded-md bg-white py-2 pr-8 pl-3 text-base text-gray-900 outline-1 -outline-offset-1 outline-gray-300 focus:outline-2 focus:-outline-offset-2 ${
-            tabs.find((tab) => tab.id)?.id && "focus:outline-indigo-600"
+            tabs.find((tab) => tab.id)?.id && "focus:outline-[#4C50A2]"
           }`}
           onChange={handleSelectChange}
         >
@@ -55,13 +55,13 @@ export const Tabs = () => {
               aria-current={tab.id === id ? "page" : undefined}
               className={`${
                 tab.id === id
-                  ? "text-indigo-600 bg-gray-300 hover:bg-gray-300"
-                  : "text-gray-500 hover:text-gray-700"
+                  ? "text-[#4C50A2] bg-gray-100"
+                  : "text-gray-500 bg-gray-50 hover:text-gray-700"
               } ${tabIdx === 0 ? "rounded-l-lg" : ""} ${
                 tabIdx === tabs.length - 1 ? "rounded-r-lg" : ""
-              } group relative min-w-0 flex-1 overflow-hidden bg-white px-4 py-4 text-center text-sm font-medium hover:bg-gray-50 focus:z-10`}
+              } group relative min-w-0 flex-1 overflow-hidden px-4 py-4 text-center text-sm font-medium focus:z-10`}
             >
-              <span>{tab.name}</span>
+              <span className="text-lg font-montserrat-medium">{tab.name}</span>
             </button>
           ))}
         </nav>
