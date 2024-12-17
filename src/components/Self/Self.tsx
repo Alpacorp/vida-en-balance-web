@@ -46,7 +46,7 @@ export const Self = () => {
               <div className="absolute inset-0 -z-10 bg-gradient-to-t from-gray-900 via-gray-900/40" />
               <div className="absolute inset-0 -z-10 rounded-2xl ring-1 ring-inset ring-gray-900/10" />
               <div>
-                <h3 className="mt-3 text-lg/6 font-semibold text-white">
+                <h3 className="mt-3 text-3xl font-semibold text-white">
                   <a href={post.href}>
                     <span className="absolute inset-0" />
                     {post.title}

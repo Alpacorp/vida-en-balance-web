@@ -1,6 +1,10 @@
+import { useState } from "react";
+
 import { Dialog, DialogPanel } from "@headlessui/react";
 import { Bars3Icon, XMarkIcon } from "@heroicons/react/24/outline";
-import { useState } from "react";
+
+import mainLogo from "@public/assets/images/components/header/san-rafael-balance-logo.webp"
+import imgBanner from "@public/assets/images/components/header/disfruta-cuidandote.webp"
 
 const navigation = [
   { name: "Nuestros Productos", href: "#" },
@@ -17,17 +21,18 @@ export const Header = () => {
         <header className="relative bg-white inset-x-0 top-0 z-50">
           <div className="absolute flex lg:flex-1 mt-6">
             <a href="#" className="-m-1.5 p-1.5">
-              <span className="sr-only">Your Company</span>
+              <span className="sr-only">San Rafael Balance</span>
               <img
-                  alt=""
-                  src="https://www.vidaenbalance.com/wp-content/uploads/2023/03/Group-32.png"
+                  alt="San Rafael Balance Logo"
+                  title="San Rafael Balance"
+                  src={mainLogo}
                   className="h-24 w-auto"
               />
             </a>
           </div>
           <nav
               aria-label="Global"
-              className="flex items-center justify-center p-6 lg:px-8"
+              className="flex items-end justify-end p-6 lg:px-8 md:items-center md:justify-center"
           >
             <div className="flex lg:hidden">
               <button
@@ -44,7 +49,7 @@ export const Header = () => {
                   <a
                       key={item.name}
                       href={item.href}
-                      className="text-sm/6 font-semibold text-gray-900"
+                      className="text-sm tracking-wide px-3 mx-3 font-montserrat-bold text-[#4C50A2] uppercase hover:underline hover:underline-offset-4 transition-transform duration-100"
                   >
                     {item.name}
                   </a>
@@ -61,7 +66,7 @@ export const Header = () => {
                 className="fixed inset-y-0 right-0 z-50 w-full overflow-y-auto bg-white px-6 py-6 sm:max-w-sm sm:ring-1 sm:ring-gray-900/10">
               <div className="flex items-center justify-between">
                 <a href="#" className="-m-1.5 p-1.5">
-                  <span className="sr-only">Your Company</span>
+                  <span className="sr-only">San Rafael Balance</span>
                   <img
                       alt=""
                       src="https://tailwindui.com/plus/img/logos/mark.svg?color=indigo&shade=600"
@@ -104,43 +109,32 @@ export const Header = () => {
           </Dialog>
         </header>
 
-        <div className="relative isolate overflow-hidden pt-14">
+        <div className="relative isolate overflow-hidden pt-24">
           <img
-              alt=""
-              src="https://images.unsplash.com/photo-1521737604893-d14cc237f11d?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2830&q=80&blend=111827&sat=-100&exp=15&blend-mode=multiply"
+              alt="Disfruta cuidándote"
+              title="Disfruta cuidándote"
+              src={imgBanner}
               className="absolute inset-0 -z-10 size-full object-cover"
           />
-          <div
-              aria-hidden="true"
-              className="absolute inset-x-0 -top-40 -z-10 transform-gpu overflow-hidden blur-3xl sm:-top-80"
-          >
-            <div
-                style={{
-                  clipPath:
-                      'polygon(74.1% 44.1%, 100% 61.6%, 97.5% 26.9%, 85.5% 0.1%, 80.7% 2%, 72.5% 32.5%, 60.2% 62.4%, 52.4% 68.1%, 47.5% 58.3%, 45.2% 34.5%, 27.5% 76.7%, 0.1% 64.9%, 17.9% 100%, 27.6% 76.8%, 76.1% 97.7%, 74.1% 44.1%)',
-                }}
-                className="relative left-[calc(50%-11rem)] aspect-[1155/678] w-[36.125rem] -translate-x-1/2 rotate-[30deg] bg-gradient-to-tr from-[#ff80b5] to-[#9089fc] opacity-20 sm:left-[calc(50%-30rem)] sm:w-[72.1875rem]"
-            />
-          </div>
           <div className="mx-auto max-w-7xl px-6 lg:px-8">
             <div className="mx-auto max-w-2xl py-32 sm:py-48 lg:py-56">
-              <div className="hidden sm:mb-8 sm:flex sm:justify-center">
-                <div
-                    className="relative rounded-full px-3 py-1 text-sm/6 text-gray-400 ring-1 ring-white/10 hover:ring-white/20">
-                  Announcing our next round of funding.{' '}
-                  <a href="#" className="font-semibold text-white">
-                    <span aria-hidden="true" className="absolute inset-0"/>
-                    Read more <span aria-hidden="true">&rarr;</span>
-                  </a>
-                </div>
-              </div>
+              <div className="absolute inset-0 -z-10 bg-gradient-to-t from-gray-950 via-gray-900/40"/>
+              {/*<div className="hidden sm:mb-8 sm:flex sm:justify-center">*/}
+              {/*  <div*/}
+              {/*      className="relative rounded-full px-3 py-1 text-sm/6 text-gray-400 ring-1 ring-white/10 hover:ring-white/20">*/}
+              {/*    Announcing our next round of funding.{' '}*/}
+              {/*    <a href="#" className="font-semibold text-white">*/}
+              {/*      <span aria-hidden="true" className="absolute inset-0"/>*/}
+              {/*      Read more <span aria-hidden="true">&rarr;</span>*/}
+              {/*    </a>*/}
+              {/*  </div>*/}
+              {/*</div>*/}
               <div className="text-center">
                 <h1 className="text-balance text-5xl font-semibold tracking-tight text-white sm:text-7xl">
-                  Data to enrich your online business
+                 Disfruta cuiándote
                 </h1>
-                <p className="mt-8 text-pretty text-lg font-medium text-gray-400 sm:text-xl/8">
-                  Anim aute id magna aliqua ad ad non deserunt sunt. Qui irure qui lorem cupidatat commodo. Elit sunt amet
-                  fugiat veniam occaecat.
+                <p className="mt-8 text-pretty text-lg font-medium text-gray-300 sm:text-xl/8">
+                  Conoce nuestros productos y tips para llevar una vida saludable.
                 </p>
                 <div className="mt-10 flex items-center justify-center gap-x-6">
                   <a
@@ -157,8 +151,8 @@ export const Header = () => {
             </div>
           </div>
           <div
-              aria-hidden="true"
-              className="absolute inset-x-0 top-[calc(100%-13rem)] -z-10 transform-gpu overflow-hidden blur-3xl sm:top-[calc(100%-30rem)]"
+            aria-hidden="true"
+            className="absolute inset-x-0 top-[calc(100%-13rem)] -z-10 transform-gpu overflow-hidden blur-3xl sm:top-[calc(100%-30rem)]"
           >
             <div
                 style={{
