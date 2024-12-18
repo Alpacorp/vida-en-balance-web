@@ -9,6 +9,7 @@ const navigation = [
   { name: "Nuestros Productos", href: "#" },
   { name: "Tips Balance", href: "#" },
   { name: "Mente en Balance", href: "#" },
+  { name: "Cuerpo en Balance", href: "/cuerpo-balance" },
   { name: "Recetas", href: "#" },
 ];
 
@@ -19,7 +20,7 @@ export const Header = () => {
       <div className="bg-white">
         <header className="relative bg-white inset-x-0 top-0 z-50">
           <div className="absolute flex lg:flex-1 mt-6">
-            <a href="#" className="-m-1.5 p-1.5">
+            <a href="/" className="-m-1.5 p-1.5">
               <span className="sr-only">San Rafael Balance</span>
               <img
                   alt="San Rafael Balance Logo"
