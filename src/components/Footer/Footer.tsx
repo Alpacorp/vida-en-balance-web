@@ -1,7 +1,7 @@
 import { SVGProps } from "react"
 import { JSX } from "react/jsx-runtime"
 
-import mainLogo from "@public/assets/images/components/header/san-rafael-balance-logo.webp"
+import mainLogo from "@assets/images/components/footer/san-rafael-balance-logo.webp"
 
 const navigation = {
   main: [
