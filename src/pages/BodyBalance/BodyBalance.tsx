@@ -1,10 +1,6 @@
 import { HeartIcon, ScaleIcon, ChatBubbleLeftIcon } from '@heroicons/react/20/solid'
 
-import imageBanner from '@assets/images/components/banners/bodyBalance/cuerpo-en-balance-banner.webp'
-import weightLoss from '@assets/images/components/news/tu-peso-ideal.webp'
-import proteins from '@assets/images/components/news/portaciona-de-las-proteinas.webp'
-import eat from '@assets/images/components/news/comer-segun-tu-actvidad-fisica.webp'
-import nutrition from '@assets/images/components/news/nutricion-alcalina.webp'
+import { idealWeight, proteins, eatPhisical, alcalineDiet, bodyBalance } from "@assets/images/components"
 
 const cards = [
   {
@@ -32,7 +28,7 @@ const posts = [
     id: 1,
     title: 'Tu peso ideal',
     href: '#',
-    imageUrl: weightLoss,
+    imageUrl: idealWeight,
   },
   {
     id: 2,
@@ -44,13 +40,13 @@ const posts = [
     id: 3,
     title: 'Qué comer según tu nivel de actividad física',
     href: '#',
-    imageUrl: eat,
+    imageUrl: eatPhisical,
   },
   {
     id: 4,
     title: 'Nutrición alcalina ¿Sabes lo que es?',
     href: '#',
-    imageUrl: nutrition,
+    imageUrl: alcalineDiet,
   },
 ]
 
@@ -60,7 +56,7 @@ export const BodyBalance = () => {
       <section className="relative isolate overflow-hidden bg-gray-900 py-24 sm:py-32">
         <img
           alt=""
-          src={imageBanner}
+          src={bodyBalance}
           className="absolute inset-0 -z-10 size-full object-cover object-right md:object-center"
         />
         <div className="absolute inset-0 -z-10 bg-gradient-to-t from-gray-950 via-gray-900/70"/>

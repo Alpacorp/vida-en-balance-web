@@ -1,7 +1,7 @@
 import { SVGProps } from "react"
 import { JSX } from "react/jsx-runtime"
+import { footerLogo } from "@assets/images/components";
 
-import mainLogo from "@assets/images/components/footer/san-rafael-balance-logo.webp"
 
 const navigation = {
   main: [
@@ -71,7 +71,7 @@ export const Footer = () => {
   return (
     <footer className="bg-gradient-to-b from-[#293078] to-[#494986] font-montserrat-regular">
       <div className="mx-auto max-w-7xl overflow-hidden px-6 py-3 sm:py-24 lg:px-8">
-        <img src={mainLogo} alt="San Rafael Balance" title="San Rafael Balance" className="w-40 text-center mx-auto my-5" />
+        <img src={footerLogo} alt="San Rafael Balance" title="San Rafael Balance" className="w-40 text-center mx-auto my-5" />
         <nav aria-label="Footer" className="-mb-6 flex flex-wrap justify-center gap-x-12 gap-y-3 text-sm/6">
           {navigation.main.map((item) => (
             <a key={item.name} href={item.href} className="text-gray-200 hover:text-white">

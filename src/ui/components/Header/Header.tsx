@@ -2,8 +2,8 @@ import { useState } from "react";
 
 import { Dialog, DialogPanel } from "@headlessui/react";
 import { Bars3Icon, XMarkIcon } from "@heroicons/react/24/outline";
+import {headerLogo} from "@assets/images/components";
 
-import mainLogo from "@assets/images/components/header/san-rafael-balance-logo.webp"
 
 const navigation = [
   { name: "Nuestros Productos", href: "#" },
@@ -25,7 +25,7 @@ export const Header = () => {
               <img
                   alt="San Rafael Balance Logo"
                   title="San Rafael Balance"
-                  src={mainLogo}
+                  src={headerLogo}
                   className="h-24 w-auto"
               />
             </a>

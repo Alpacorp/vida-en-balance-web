@@ -1,9 +1,5 @@
-import { Heading } from "@components/Heading/Heading.tsx";
-import { Tabs } from "@components/Tabs/Tabs";
-import { Self } from "@components/Self/Self.tsx";
-import {Hero} from "@components/Hero/Hero.tsx";
+import {Heading, Hero, Self, Tabs} from "@ui/components";
 
-import "./styles.css";
 
 export const Home = () => {
   return (
