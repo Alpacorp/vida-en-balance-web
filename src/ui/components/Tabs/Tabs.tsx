@@ -1,7 +1,7 @@
 import { useState } from "react";
 import { ChevronDownIcon } from "@heroicons/react/16/solid";
 import tabs from "./data.json";
-import { Content } from "@components/Content/Content.tsx";
+import { Content } from "../Content/Content.tsx";
 
 export const Tabs = () => {
   const [value, setValue] = useState(0);

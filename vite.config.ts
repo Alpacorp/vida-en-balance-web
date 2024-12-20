@@ -6,14 +6,13 @@ export default defineConfig({
   base: '/',
   resolve: {
     alias: {
-      "@": "/src",
-      "@pages": "/src/pages",
-      "@containers": "/src/containers",
-      "@components": "/src/components",
       "@assets": "/src/assets",
-      "@public": "/public",
-      "@utils": "/src/utils",
       "@hooks": "/src/hooks",
+      "@pages": "/src/pages",
+      "@public": "/public",
+      "@routes": "/src/routes",
+      "@ui": "/src/ui",
+      "@utils": "/src/utils",
     },
   },
 });

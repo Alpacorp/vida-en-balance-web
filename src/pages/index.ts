@@ -1,2 +1,2 @@
 export * from "./Home/Home";
-export * from "@pages/BodyBalance/BodyBalance.tsx";
+export * from "./BodyBalance/BodyBalance.tsx";

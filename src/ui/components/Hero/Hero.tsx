@@ -1,4 +1,4 @@
-import imgBanner from "@assets/images/components/hero/disfruta-cuidandote.webp";
+import { heroMainImage } from "@assets/images/components";
 
 export const Hero = () => {
   return (
@@ -6,7 +6,7 @@ export const Hero = () => {
       <img
         alt="Disfruta cuidándote"
         title="Disfruta cuidándote"
-        src={imgBanner}
+        src={heroMainImage}
         className="absolute inset-0 -z-10 size-full object-cover"
       />
       <div className="mx-auto max-w-7xl px-6 lg:px-8">
