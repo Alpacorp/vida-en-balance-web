@@ -1,4 +1,4 @@
-import {Heading, Hero, Self, Tabs} from "@ui/components";
+import { Heading, Hero, Self, Tabs } from "@ui/components";
 
 
 export const Home = () => {

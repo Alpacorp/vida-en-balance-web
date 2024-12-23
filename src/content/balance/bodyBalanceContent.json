@@ -1,0 +1,58 @@
+{
+  "hero": {
+    "description": "Pensamos en rutinas que puedes hacer mientras estás en cualquier lugar y que te ayudarán a mantenerte en movimiento.",
+    "title": "Cuerpo en Balance",
+    "image": {
+      "src": "https://images.unsplash.com/photo-1517836357463-d25dfeac3438?auto=format&fit=crop&w=1200&h=600",
+      "alt": "Persona ejercitándose"
+    },
+    "buttons": [
+      {
+        "text": "Cuerpo en balance",
+        "to": "/cuerpo-balance"
+      },
+      {
+        "text": "Tips balance",
+        "to": "/tips-balance"
+      },
+      {
+        "text": "Mente en balance",
+        "to": "/mente-balance"
+      }
+    ]
+  },
+  "articles": [
+    {
+      "title": "Tu peso ideal",
+      "description": "Descubre cómo alcanzar y mantener tu peso ideal de manera saludable y sostenible.",
+      "imageUrl": "https://images.unsplash.com/photo-1571019613454-1cb2f99b2d8b?auto=format&fit=crop&w=300&h=200",
+      "imageAlt": "Báscula de peso",
+      "ctaText": "Calcular mi peso ideal",
+      "to": "/peso-ideal"
+    },
+    {
+      "title": "La importancia de las proteínas",
+      "description": "Aprende sobre el papel crucial de las proteínas en tu dieta diaria.",
+      "imageUrl": "https://images.unsplash.com/photo-1532550907401-a500c9a57435?auto=format&fit=crop&w=300&h=200",
+      "imageAlt": "Variedad de proteínas saludables",
+      "ctaText": "Guía de proteínas",
+      "to": "/guia-proteinas"
+    },
+    {
+      "title": "Nutrición y actividad física",
+      "description": "Planes nutricionales adaptados a tu nivel de actividad física.",
+      "imageUrl": "https://images.unsplash.com/photo-1517836357463-d25dfeac3438?auto=format&fit=crop&w=300&h=200",
+      "imageAlt": "Persona ejercitándose",
+      "ctaText": "Ver planes",
+      "to": "/planes-nutricionales"
+    },
+    {
+      "title": "Nutrición alcalina",
+      "description": "Explora los beneficios de una dieta alcalina balanceada.",
+      "imageUrl": "https://images.unsplash.com/photo-1540420773420-3366772f4999?auto=format&fit=crop&w=300&h=200",
+      "imageAlt": "Plato de comida alcalina",
+      "ctaText": "Aprender más",
+      "to": "/nutricion-alcalina"
+    }
+  ]
+}
