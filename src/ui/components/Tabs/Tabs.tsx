@@ -19,7 +19,7 @@ export const Tabs = () => {
   };
 
   return (
-    <section className="bg-gray-100">
+    <section className="bg-gray-100" id="productos">
       <div className="grid grid-cols-1 sm:hidden">
         <select
           defaultValue={tabs[value]?.name}
