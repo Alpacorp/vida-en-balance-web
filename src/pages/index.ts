@@ -1,7 +1,6 @@
-import { BodyBalanceTest } from "@pages/BodyBalanceTest/BodyBalanceTest.tsx";
 import { Home } from "@pages/Home/Home.tsx";
-import { BodyBalance } from "@pages/BodyBalance/BodyBalance.tsx";
-import { MindBalance } from "@pages/MindBalance/MindBalance.tsx";
-import { TipsBalance } from "@pages/TipsBalance/TipsBalance.tsx";
+import { Body } from "@pages/Balance/Body/Body.tsx";
+import { Mind } from "@pages/Balance/Mind/Mind.tsx";
+import { Tips } from "@pages/Balance/Tips/Tips.tsx";
 
-export { BodyBalanceTest, Home, BodyBalance, TipsBalance, MindBalance };
+export { Home, Body, Tips, Mind };

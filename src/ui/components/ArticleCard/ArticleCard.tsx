@@ -10,7 +10,7 @@ interface NutritionCardProps {
   to: string;
 }
 
-export const NutritionCard: React.FC<NutritionCardProps> = ({title, description, imageUrl, imageAlt, ctaText, to}) => {
+export const ArticleCard: React.FC<NutritionCardProps> = ({title, description, imageUrl, imageAlt, ctaText, to}) => {
   return (
     <article className="bg-white rounded-lg overflow-hidden shadow-md hover:shadow-xl transition-shadow duration-300 ease-in-out flex flex-col">
       <div className="relative h-48 overflow-hidden">

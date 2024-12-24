@@ -1,0 +1,33 @@
+{
+  "main": [
+    { "name": "Nuestros Productos", "path": "/" },
+    { "name": "Cuerpo Balance", "path": "/cuerpo-balance" },
+    { "name": "Tips Balance", "path": "/tips-balance" },
+    { "name": "Mente en Balance", "path": "/mente-en-balance" }
+  ],
+  "footer": [
+    { "name": "Aviso de privacidad", "path": "#" }
+  ],
+  "social": [
+    {
+      "name": "Facebook",
+      "path": "https://www.facebook.com/SanRafaelBalanceMX",
+      "icon": "facebook"
+    },
+    {
+      "name": "Instagram",
+      "path": "https://www.instagram.com/sanrafaelbalance",
+      "icon": "instagram"
+    },
+    {
+      "name": "YouTube",
+      "path": "https://www.youtube.com/@VidaEnBalanceMX",
+      "icon": "youtube"
+    },
+    {
+      "name": "TikTok",
+      "path": "https://www.tiktok.com/@vidaenbalancemx",
+      "icon": "tiktok"
+    }
+  ]
+}

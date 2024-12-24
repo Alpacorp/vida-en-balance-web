@@ -1,7 +1,7 @@
 import { FC } from 'react';
 import { Link, useLocation } from 'react-router-dom';
 
-import buttons from "../../../../../content/balance/buttonsBalanceContent.json"
+import buttons from "@content/balance/buttonsBalanceContent.json"
 
 interface ButtonProps {
   text: string;

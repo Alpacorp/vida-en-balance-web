@@ -1,7 +1,7 @@
 import { FC } from "react";
 import { Link } from "react-router-dom";
 
-import { main, social } from "@content/footer/navigation.json";
+import { main, footer, social } from "@content/navigation/navigation.json";
 
 import { footerLogo } from "@assets/images/components";
 
@@ -14,6 +14,8 @@ const iconComponents = {
   tiktok: TikTokIcon,
 }
 
+const footerMenu = main.concat(footer);
+
 export const Footer: FC = () => {
   return (
     <footer className="bg-gradient-to-b from-[#293078] to-[#494986] font-montserrat-regular">
@@ -21,8 +23,8 @@ export const Footer: FC = () => {
         <img src={footerLogo} alt="San Rafael Balance" title="San Rafael Balance"
              className="w-40 text-center mx-auto my-5"/>
         <nav aria-label="Footer" className="-mb-6 flex flex-wrap justify-center gap-x-12 gap-y-3 text-sm/6">
-          {main.map((item) => (
-            <Link key={item.name} to={item.href} className="text-gray-200 hover:text-white hover:underline hover:underline-offset-4 transition-transform duration-100">
+          {footerMenu.map((item) => (
+            <Link key={item.name} to={item.path} className="text-gray-200 hover:text-white hover:underline hover:underline-offset-4 transition-transform duration-100">
               {item.name}
             </Link>
           ))}
@@ -31,7 +33,7 @@ export const Footer: FC = () => {
           {social.map((item) => {
             const IconComponent = iconComponents[item.icon as keyof typeof iconComponents];
             return (
-              <Link key={item.name} to={item.href} target="_blank" className="text-gray-200 hover:text-white hover:transform hover:scale-110 transition-transform duration-200">
+              <Link key={item.name} to={item.path} target="_blank" className="text-gray-200 hover:text-white hover:transform hover:scale-110 transition-transform duration-200">
                 <span className="sr-only">{item.name}</span>
                 <img src={IconComponent} alt={item.name} title={item.name} className="w-6 h-6"/>
               </Link>
