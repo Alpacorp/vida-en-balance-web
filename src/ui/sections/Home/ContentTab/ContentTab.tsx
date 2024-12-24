@@ -24,8 +24,8 @@ export const ContentTab: FC<ContentProps> = ({ title, description, image, types,
     }
 
     return () => {
-      if (divRef.current) {
-        divRef.current.classList.remove('animate-slide-in-bottom');
+      if (divRef["current"]) {
+        divRef["current"].classList.remove('animate-slide-in-bottom');
       }
     };
   }, []);
