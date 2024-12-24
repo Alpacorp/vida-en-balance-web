@@ -28,7 +28,7 @@ const posts = [
   },
 ];
 
-export const Self = () => {
+export const Health = () => {
   return (
     <div className="bg-white py-10 sm:py-10">
       <div className="px-6 lg:px-8">

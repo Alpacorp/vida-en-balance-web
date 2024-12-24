@@ -1,4 +1,4 @@
-import { HeroSection } from './Balance/components/HeroSection/HeroSection'
-import { CardSection } from './Balance/components/CardSection/CardSection'
+import { HeroSection } from '@ui/sections/Balance/HeroSection/HeroSection'
+import { CardSection } from '@ui/sections/Balance/CardSection/CardSection'
 
 export { HeroSection, CardSection }

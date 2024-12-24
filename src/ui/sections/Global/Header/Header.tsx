@@ -3,6 +3,8 @@ import { Link, useLocation } from 'react-router-dom';
 
 import { headerLogo } from "@assets/images/components";
 
+import { main } from '@content/navigation/navigation.json';
+
 export const Header: FC = () => {
   const [isScrolled, setIsScrolled] = useState(false);
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
@@ -22,13 +24,6 @@ export const Header: FC = () => {
   }, [location]);
 
   const isActive = (path: string) => location.pathname === path;
-
-  const navItems = [
-    { name: 'NUESTROS PRODUCTOS', path: '/' },
-    { name: 'CUERPO BALANCE', path: '/cuerpo-balance' },
-    { name: 'TIPS BALANCE', path: '/tips-balance' },
-    { name: 'MENTE EN BALANCE', path: '/mente-en-balance' },
-  ];
 
   const toggleMobileMenu = () => {
     setIsMobileMenuOpen(!isMobileMenuOpen);
@@ -51,7 +46,7 @@ export const Header: FC = () => {
             />
           </Link>
           <nav className="hidden md:flex space-x-8">
-            {navItems.map((item) => (
+            {main.map((item) => (
               <Link
                 key={item.path}
                 to={item.path}
@@ -121,7 +116,7 @@ export const Header: FC = () => {
         }`}
       >
         <nav className="pt-2 pb-3 space-y-1">
-          {navItems.map((item) => (
+          {main.map((item) => (
             <Link
               key={item.path}
               to={item.path}

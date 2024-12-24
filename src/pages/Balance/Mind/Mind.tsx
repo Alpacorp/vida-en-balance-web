@@ -4,7 +4,7 @@ import { CardSection, HeroSection } from '@ui/sections';
 
 import mindBalanceContent from "@content/balance/mindBalanceContent.json";
 
-export const MindBalance: FC = () => {
+export const Mind: FC = () => {
   return (
     <div className="font-sans">
       <HeroSection { ...mindBalanceContent.hero } />
