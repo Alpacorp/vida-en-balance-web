@@ -8,11 +8,26 @@ interface Product {
   ingredients: string;
 }
 
-interface ProductDetailsProps {
-  product: Product;
+interface Stamp {
+  label: string;
+  image: string;
+  alt: string;
 }
 
-export const NutritionalDetails: React.FC<ProductDetailsProps> = ({ product }) => {
+interface Presentation {
+  id: number;
+  label: string;
+  image: string;
+  stamps: Stamp[];
+}
+
+interface ProductDetailsProps {
+  product: Product;
+  presentations: Presentation[];
+}
+
+export const NutritionalDetails: React.FC<ProductDetailsProps> = ({ product, presentations }) => {
+
   return (
     <div>
       <h2 className="text-[#2A2A72] text-2xl font-bold mb-4">
@@ -28,19 +43,17 @@ export const NutritionalDetails: React.FC<ProductDetailsProps> = ({ product }) =
       </div>
 
       <div className="grid grid-cols-3 gap-6">
-        {[1, 2, 3].map((i) => (
-          <div key={i} className="flex flex-col items-center">
+        {presentations.map((presentation, index) => (
+          <div key={presentation.id} className="flex flex-col items-center">
             <img
-              src={product.image}
-              alt={`Presentación ${i}`}
+              src={presentation.image}
+              alt={`Presentación ${index}`}
+              title={`Presentación ${index}`}
               className="w-32 h-32 object-contain mb-4"
             />
             <div className="grid grid-cols-2 gap-2">
-              {[1, 2].map((icon) => (
-                <div
-                  key={icon}
-                  className="w-8 h-8 bg-[#2A2A72] rounded-full"
-                />
+              {presentation.stamps.map((icon) => (
+                <img src={icon.image} alt={icon.alt} title={icon.label} key={icon.label} />
               ))}
             </div>
           </div>

@@ -45,16 +45,16 @@ export const NutritionalHeader: FC<ProductHeaderProps> = ({ products, onProductC
         <div className="flex flex-col md:flex-row items-center justify-between gap-8">
           {/* Active Product */}
           <div className="flex flex-col md:flex-row items-center gap-6">
-            <div className="w-48 md:w-64 transition-transform duration-300 hover:scale-105">
+            <div className="transition-transform duration-300 hover:scale-105">
               <img
                 src={activeProduct.image}
                 alt={activeProduct.name}
-                className="w-full h-auto"
+                className="w-full h-80 max-w-44 object-contain rounded-lg"
               />
             </div>
             <div className="text-white text-center md:text-left">
-              <h1 className="text-2xl md:text-3xl font-bold">{activeProduct.name}</h1>
-              <p className="text-xl">{activeProduct.weight}</p>
+              <h1 className="text-2xl font-montserrat-bold w-full max-w-60">{activeProduct.name}</h1>
+              <p className="text-xl font-montserrat-regular">{activeProduct.weight}</p>
             </div>
           </div>
 
@@ -65,11 +65,12 @@ export const NutritionalHeader: FC<ProductHeaderProps> = ({ products, onProductC
                 key={product.id}
                 onClick={() => handleProductClick(product)}
                 className="relative p-2 rounded-lg transition-all hover:bg-white/10"
+                title={product.name}
               >
                 <img
                   src={product.image}
                   alt={product.name}
-                  className="w-16 h-16 object-contain"
+                  className="w-28 h-28 object-contain"
                 />
               </button>
             ))}
@@ -84,7 +85,7 @@ export const NutritionalHeader: FC<ProductHeaderProps> = ({ products, onProductC
                   const IconComponent = iconComponents[item.icon as keyof typeof iconComponents];
                   return (
                     <Link key={item.name} to={item.path} target="_blank"
-                          className="text-white hover:text-white/80 transition-colors duration-200">
+                          className="hover:text-white hover:transform hover:scale-110 transition-transform duration-200">
                       <img src={IconComponent} alt={item.name} title={item.name} className="w-6 h-6"/>
                     </Link>
                   );
