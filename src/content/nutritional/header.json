@@ -5,7 +5,7 @@
       "name": "Pechuga de Pavo Escalonada Balance",
       "weight": "250 Gramos",
       "image": "/images/pechuga-de-pavo-escalonada.png",
-      "url": "/test",
+      "url": "/pechuca-de-pavo-escalonada",
       "ingredients": "Pechuga de pavo, agua, azúcares añadidos (azucar), saborizantes, cloruro de potasio, fécula, fosfato de sodio, sal yodada, carragenina, carmín."
     },
     {
@@ -13,7 +13,7 @@
       "name": "Pechuga de Pavo Rebanadas Delgadas",
       "weight": "200 Gramos",
       "image": "/images/pechuga-de-pavo-rebanadas-delgadas.png",
-      "url": "#",
+      "url": "/pechuga-de-pavo-rebanadas-delgadas",
       "ingredients": "Pechuga de pavo, agua, sal, especias."
     },
     {
@@ -21,7 +21,7 @@
       "name": "Salchicha de Pavo",
       "weight": "500 Gramos",
       "image": "/images/salchicha-de-pavo.png",
-      "url": "#",
+      "url": "/salchicha-de-pavo",
       "ingredients": "Carne de pavo, agua, especias, conservadores naturales."
     },
     {
@@ -29,7 +29,7 @@
       "name": "Pechuga de Pavo Rebanadas Sandwich",
       "weight": "300 Gramos",
       "image": "/images/pechuga-de-pavo-rebanadas-sandwich.png",
-      "url": "#",
+      "url": "/pechuga-de-pavo-rebanadas-sandwich",
       "ingredients": "Pechuga de pavo, agua, sal, especias, conservadores naturales."
     },
     {
@@ -37,7 +37,7 @@
       "name": "Salchicha de Pechuga de Pavo",
       "weight": "250 Gramos",
       "image": "/images/salchicha-de-pechuga-de-pavo.png",
-      "url": "#",
+      "url": "/salchicha-de-pechuga-de-pavo",
       "ingredients": "Pechuga de pavo, agua, especias, conservadores naturales."
     }
   ]

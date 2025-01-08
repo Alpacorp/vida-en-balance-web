@@ -1,5 +1,5 @@
 import { FC, useState } from 'react';
-import { Link } from "react-router-dom";
+import {Link, useNavigate} from "react-router-dom";
 
 import { social } from "@content/navigation/navigation.json";
 
@@ -27,6 +27,7 @@ const iconComponents = {
 }
 
 export const NutritionalHeader: FC<ProductHeaderProps> = ({ products, onProductChange }) => {
+  const navigate = useNavigate();
   const [activeProduct, setActiveProduct] = useState(products[0]);
   const [otherProducts, setOtherProducts] = useState(products.slice(1, 5));
 
@@ -37,6 +38,7 @@ export const NutritionalHeader: FC<ProductHeaderProps> = ({ products, onProductC
       activeProduct
     ]);
     onProductChange(clickedProduct);
+    navigate(clickedProduct.url);
   };
 
   return (
