@@ -1,43 +1,42 @@
-import { FC, useState } from 'react';
-import {Link, useNavigate} from "react-router-dom";
+import { FC, useState, useEffect } from 'react';
+import { Link, useNavigate } from "react-router-dom";
 
 import { social } from "@content/navigation/navigation.json";
 
 import { FacebookIcon, InstagramIcon, TikTokIcon, YouTubeIcon } from "@assets/icons";
 
-interface Product {
-  id: string;
-  name: string;
-  weight: string;
-  image: string;
-  url: string;
-  ingredients: string;
-}
+import { Product, ProductHeaderProps} from "@interfaces/interfaces";
 
-interface ProductHeaderProps {
-  products: Product[];
-  onProductChange: (product: Product) => void;
-}
-
-const iconComponents = {
+const iconComponents: Record<string,
+  | typeof FacebookIcon
+  | typeof InstagramIcon
+  | typeof YouTubeIcon
+  | typeof TikTokIcon
+> = {
   facebook: FacebookIcon,
   instagram: InstagramIcon,
   youtube: YouTubeIcon,
   tiktok: TikTokIcon,
 }
 
-export const NutritionalHeader: FC<ProductHeaderProps> = ({ products, onProductChange }) => {
+export const NutritionalHeader: FC<ProductHeaderProps> = ({ products, onProductChange, activeProduct }) => {
   const navigate = useNavigate();
-  const [activeProduct, setActiveProduct] = useState(products[0]);
-  const [otherProducts, setOtherProducts] = useState(products.slice(1, 5));
+  const [otherProducts, setOtherProducts] = useState<Product[]>([]);
+
+  useEffect(() => {
+    // Calculamos los otros productos, excluyendo el producto activo.
+    const remainingProducts = products.filter(product => product.id !== activeProduct.id);
+    setOtherProducts(remainingProducts.slice(0, 4));  // Limitamos a 4 productos
+  }, [activeProduct, products]); // Dependencias: recalculamos cuando activeProduct o products cambian
 
   const handleProductClick = (clickedProduct: Product) => {
-    setActiveProduct(clickedProduct);
-    setOtherProducts(prevProducts => [
-      ...prevProducts.filter(p => p.id !== clickedProduct.id),
-      activeProduct
-    ]);
-    onProductChange(clickedProduct);
+    // Establecemos el producto activo y actualizamos los otros productos
+    const remainingProducts = products.filter(product => product.id !== clickedProduct.id);
+    setOtherProducts(remainingProducts.slice(0, 4));  // Limitamos a 4 productos
+
+    onProductChange(clickedProduct);  // Llamamos a la función de cambio de producto
+
+    // Navegamos a la nueva URL
     navigate(clickedProduct.url);
   };
 

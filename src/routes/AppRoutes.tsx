@@ -1,6 +1,15 @@
 import {Route, Routes} from "react-router-dom";
 
-import { Body, Home, Mind, SteppedTurkeyBreast, Tips } from '@pages/index';
+import {
+  Body,
+  Home,
+  Mind,
+  SteppedTurkeyBreast,
+  Tips,
+  TurkeyBreastSandwichSlices,
+  TurkeyBreastThinSlices,
+  TurkeySausage
+} from '@pages/index';
 
 export default function AppRoutes() {
   return (
@@ -10,6 +19,10 @@ export default function AppRoutes() {
       <Route path="/mente-en-balance" element={<Mind />} />
       <Route path="/tips-balance" element={<Tips />} />
       <Route path="/pechuga-de-pavo-escalonada" element={<SteppedTurkeyBreast />} />
+      <Route path="/pechuga-de-pavo-rebanadas-delgadas" element={<TurkeyBreastThinSlices />} />
+      <Route path="/salchicha-de-pavo" element={<TurkeySausage />} />
+      <Route path="/pechuga-de-pavo-rebanadas-sandwich" element={<TurkeyBreastSandwichSlices />} />
+      <Route path="*" element={<Home />} />
     </Routes>
   );
 }

@@ -1,32 +1,8 @@
 import React from 'react';
 
-interface Product {
-  id: string;
-  name: string;
-  weight: string;
-  image: string;
-  ingredients: string;
-}
+import { ProductDetailsProps } from "@interfaces/interfaces";
 
-interface Stamp {
-  label: string;
-  image: string;
-  alt: string;
-}
-
-interface Presentation {
-  id: number;
-  label: string;
-  image: string;
-  stamps: Stamp[];
-}
-
-interface ProductDetailsProps {
-  product: Product;
-  presentations: Presentation[];
-}
-
-export const NutritionalDetails: React.FC<ProductDetailsProps> = ({ product, presentations }) => {
+export const NutritionalDetails: React.FC<ProductDetailsProps> = ({ product, presentations, ingredients }) => {
 
   return (
     <div>
@@ -38,7 +14,7 @@ export const NutritionalDetails: React.FC<ProductDetailsProps> = ({ product, pre
       <div className="mb-8">
         <h3 className="text-[#2A2A72] text-xl font-bold mb-4">INGREDIENTES</h3>
         <p className="text-gray-700">
-          {product.ingredients}
+          {ingredients}
         </p>
       </div>
 

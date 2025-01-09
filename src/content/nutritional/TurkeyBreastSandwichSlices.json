@@ -2,17 +2,17 @@
   "nutritionalInfo": [
     {
       "label": "Contenido energético",
-      "value": "96",
+      "value": "84 (355kj)",
       "unit": "Kcal"
     },
     {
-      "label": "Energía",
-      "value": "406",
-      "unit": "Kj"
+      "label": "Proteínas",
+      "value": "16.2",
+      "unit": "g"
     },
     {
       "label": "Grasas totales",
-      "value": "1",
+      "value": "0.9",
       "unit": "g"
     },
     {
@@ -22,7 +22,7 @@
     },
     {
       "label": "Grasa saturada",
-      "value": "0.2",
+      "value": "0.1",
       "unit": "g"
     },
     {
@@ -32,7 +32,7 @@
     },
     {
       "label": "Hidratos de carbono disponibles",
-      "value": "4.1",
+      "value": "2.7",
       "unit": "g"
     },
     {
@@ -42,12 +42,12 @@
     },
     {
       "label": "Azúcares",
-      "value": "2",
+      "value": "1.5",
       "unit": "g"
     },
     {
       "label": "Azúcares añadidos",
-      "value": "2",
+      "value": "1.2",
       "unit": "g"
     },
     {
@@ -57,26 +57,21 @@
     },
     {
       "label": "Sodio",
-      "value": "345",
+      "value": "780",
       "unit": "mg"
     },
     {
       "label": "Contenido energético por envase",
-      "value": "240 kcal (2015 kj)",
-      "unit": ""
-    },
-    {
-      "label": "Contenido energético por envase",
-      "value": "438 kcal (1851 kj)",
+      "value": "168 kcal (710 kj)",
       "unit": ""
     }
   ],
-  "ingredients": "Pechuga de pavo, agua, azúcares añadidos (azucar), saborizantes, cloruro de potasio, fécula, fosfato de sodio, sal yodada, carragenina, carmín.",
+  "ingredients": "Pechuga de pavo, agua, saborizantes, azúcares añadidos (azúcar), sal yodada, fosfato de sodio, cloruro de potasio, carragenina, carmín.",
   "presentations": [
     {
       "id": 1,
       "label": "A granel",
-      "image": "/images/pechuga-pavo-escalonada-granel.png",
+      "image": "/images/pechuga-pavo-rebanadas-sandwich-granel.png",
       "stamps": [
         {
           "label": "Bajo en grasa",
@@ -93,34 +88,29 @@
     {
       "id": 2,
       "label": "Family size",
-      "image": "/images/family-size.png",
+      "image": "/images/pechuga-pavo-rebanadas-sandwich-family.png",
       "stamps": [
-        {
-          "label": "Sin nitritos añadidos",
-          "image": "/images/sin-nitritos-anadidos.png",
-          "alt": "Sin nitritos añadidos"
-        },
         {
           "label": "Sin conservadores artificiales",
           "image": "/images/sin-conservadores-artificiales.png",
           "alt": "Sin conservadores artificiales"
+        },
+        {
+          "label": "Sin colorantes artificiales",
+          "image": "/images/sin-colorantes-artificiales.png",
+          "alt": "Sin colorantes artificiales"
         }
       ]
     },
     {
       "id": 3,
       "label": "Individual",
-      "image": "/images/pechuga-de-pavo-escalonada.png",
+      "image": "/images/pechuga-de-pavo-rebanadas-sandwich.png",
       "stamps": [
         {
           "label": "100% carne de pavo",
-          "image": "/images/carne-100-pavo.png",
+          "image": "/images/sin-nitritos-anadidos.png",
           "alt": "100% carne de pavo"
-        },
-        {
-          "label": "Sin colorantes artificiales",
-          "image": "/images/sin-colorantes-artificiales.png",
-          "alt": "Sin colorantes artificiales"
         }
       ]
     }

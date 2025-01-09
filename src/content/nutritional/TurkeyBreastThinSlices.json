@@ -11,6 +11,11 @@
       "unit": "Kj"
     },
     {
+      "label": "Proteínas",
+      "value": "17.6",
+      "unit": "g"
+    },
+    {
       "label": "Grasas totales",
       "value": "1",
       "unit": "g"
@@ -71,12 +76,12 @@
       "unit": ""
     }
   ],
-  "ingredients": "Pechuga de pavo, agua, azúcares añadidos (azucar), saborizantes, cloruro de potasio, fécula, fosfato de sodio, sal yodada, carragenina, carmín.",
+  "ingredients": "Pechuga de pavo, agua, azúcares añadidos (azúcar), saborizantes, cloruro de potasio, fécula, fosfato de sodio, sal yodada, carragenina, carmín.",
   "presentations": [
     {
       "id": 1,
       "label": "A granel",
-      "image": "/images/pechuga-pavo-escalonada-granel.png",
+      "image": "/images/pechuga-pavo-rebanadas-delgadas-granel.png",
       "stamps": [
         {
           "label": "Bajo en grasa",
@@ -87,14 +92,7 @@
           "label": "Sin gluten",
           "image": "/images/sin-gluten.png",
           "alt": "Sin lactosa"
-        }
-      ]
-    },
-    {
-      "id": 2,
-      "label": "Family size",
-      "image": "/images/family-size.png",
-      "stamps": [
+        },
         {
           "label": "Sin nitritos añadidos",
           "image": "/images/sin-nitritos-anadidos.png",
@@ -108,9 +106,9 @@
       ]
     },
     {
-      "id": 3,
+      "id": 2,
       "label": "Individual",
-      "image": "/images/pechuga-de-pavo-escalonada.png",
+      "image": "/images//pechuga-de-pavo-rebanadas-delgadas.png",
       "stamps": [
         {
           "label": "100% carne de pavo",

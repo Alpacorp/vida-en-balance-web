@@ -5,12 +5,12 @@ import { NutritionalHeader } from "@ui/sections/Nutritional/NutritionalHeader/Nu
 import { NutritionalInfo } from "@ui/sections/Nutritional/NutritionalInfo/NutritionalInfo.tsx";
 
 import { products } from "@content/nutritional/header.json";
-import { nutritionalInfo, presentations, ingredients } from "@content/nutritional/SteppedTurkeyBreast.json";
+import { nutritionalInfo, presentations, ingredients } from "@content/nutritional/TurkeyBreastThinSlices.json";
 
 import { Product } from "@interfaces/interfaces";
 
-export const SteppedTurkeyBreast = () => {
-  const [activeProduct, setActiveProduct] = useState<Product>(products[0]);
+export const TurkeyBreastThinSlices = () => {
+  const [activeProduct, setActiveProduct] = useState<Product>(products[1]);
 
   const handleProductChange = (newActiveProduct: Product) => {
     setActiveProduct(newActiveProduct);
