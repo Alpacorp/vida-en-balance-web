@@ -1,14 +1,6 @@
 import React from 'react';
 
-interface NutritionalItem {
-  label: string;
-  value: string;
-  unit: string;
-}
-
-interface NutritionalInfoProps {
-  nutritionalInfo: NutritionalItem[];
-}
+import { NutritionalInfoProps } from "@interfaces/interfaces";
 
 export const NutritionalInfo: React.FC<NutritionalInfoProps> = ({ nutritionalInfo }) => {
   return (

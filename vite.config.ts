@@ -14,6 +14,7 @@ export default defineConfig({
       "@routes": "/src/routes",
       "@ui": "/src/ui",
       "@utils": "/src/utils",
+      "@interfaces": "/src/interfaces",
     },
   },
 });
