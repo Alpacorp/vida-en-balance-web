@@ -24,7 +24,6 @@
         "url": "https://www.vidaenbalance.com/wp-content/uploads/2023/06/pechuga-pavo-escalonada.png",
         "name": "Presentación Individual",
         "description": "90 gramos"
-
       }
     ]
   },
@@ -33,7 +32,7 @@
     "name": "Pechuga de Pavo Rebanadas Delgadas",
     "description": "Aquí encontrarás recetas para todos. Recetas pensadas con nuestros productos, en tus tiempos y sobre todo, con el mejor sabor, el de San Rafael Balance ®",
     "image": "https://www.vidaenbalance.com/wp-content/uploads/2023/06/pechuga-pavo-rebanadas-delgadas-receta.jpg",
-    "nutritional_link": "/nutritional-information",
+    "nutritional_link": "/pechuga-de-pavo-rebanadas-delgadas",
     "recipes_link": "/recipes",
     "types": [
       {
@@ -55,7 +54,7 @@
     "name": "Salchicha de Pavo",
     "description": "Aquí encontrarás recetas para todos. Recetas pensadas con nuestros productos, en tus tiempos y sobre todo, con el mejor sabor, el de San Rafael Balance ®",
     "image": "https://www.vidaenbalance.com/wp-content/uploads/2023/03/receta_salch-1.png",
-    "nutritional_link": "/nutritional-information",
+    "nutritional_link": "/salchicha-de-pavo",
     "recipes_link": "/recipes",
     "types": [
       {
@@ -71,7 +70,7 @@
     "name": "Pechuga de Pavo Rebanadas Sandwich",
     "description": "Aquí encontrarás recetas para todos. Recetas pensadas con nuestros productos, en tus tiempos y sobre todo, con el mejor sabor, el de San Rafael Balance ®",
     "image": "https://www.vidaenbalance.com/wp-content/uploads/2023/06/pechuga-pavo-escalonada-receta.jpg",
-    "nutritional_link": "/nutritional-information",
+    "nutritional_link": "/pechuga-de-pavo-rebanadas-sandwich",
     "recipes_link": "/recipes",
     "types": [
       {
@@ -100,7 +99,7 @@
     "name": "Salchicha de Pechuga de Pavo",
     "description": "Aquí encontrarás recetas para todos. Recetas pensadas con nuestros productos, en tus tiempos y sobre todo, con el mejor sabor, el de San Rafael Balance ®",
     "image": "https://www.vidaenbalance.com/wp-content/uploads/2023/06/Tostadas-Salchicha-pechuga-de-pavo.jpg",
-    "nutritional_link": "/nutritional-information",
+    "nutritional_link": "/salchicha-de-pechuga-de-pavo",
     "recipes_link": "/recipes",
     "types": [
       {
