@@ -1,0 +1,109 @@
+{
+  "nutritionalInfo": [
+    {
+      "label": "Contenido energético",
+      "value": "139",
+      "unit": "Kcal"
+    },
+    {
+      "label": "Energía",
+      "value": "581",
+      "unit": "Kj"
+    },
+    {
+      "label": "Proteínas",
+      "value": "11.2",
+      "unit": "g"
+    },
+    {
+      "label": "Grasas totales",
+      "value": "8.2",
+      "unit": "g"
+    },
+    {
+      "label": "de las cuales",
+      "value": "----",
+      "unit": "----"
+    },
+    {
+      "label": "Grasa saturada",
+      "value": "2.2",
+      "unit": "g"
+    },
+    {
+      "label": "Grasa Trans",
+      "value": "0",
+      "unit": "mg"
+    },
+    {
+      "label": "Hidratos de carbono disponibles",
+      "value": "5.1",
+      "unit": "g"
+    },
+    {
+      "label": "de las cuales",
+      "value": "----",
+      "unit": "----"
+    },
+    {
+      "label": "Azúcares",
+      "value": "0.3",
+      "unit": "g"
+    },
+    {
+      "label": "Azúcares añadidos",
+      "value": "0.3",
+      "unit": "g"
+    },
+    {
+      "label": "Fibra dietética",
+      "value": "0.1",
+      "unit": "g"
+    },
+    {
+      "label": "Sodio",
+      "value": "345",
+      "unit": "mg"
+    },
+    {
+      "label": "Contenido energético por envase",
+      "value": "695 kcal (2905 kj)",
+      "unit": ""
+    },
+    {
+      "label": "Contenido energético por envase",
+      "value": "438 kcal (1851 kj)",
+      "unit": ""
+    }
+  ],
+  "ingredients": "Pechuga de pavo, agua, proteína de soya, fécula, saborizantes, cloruro de potasio, azúcares añadidos (dextrosa), fosfato de sodio, carín. Contiene: soya.",
+  "presentations": [
+    {
+      "id": 1,
+      "label": "Individual",
+      "image": "/images/salchicha-de-pechuga-de-pavo.png",
+      "stamps": [
+        {
+          "label": "Bajo en grasa",
+          "image": "/images/bajo-en-grasa.png",
+          "alt": "Sin gluten"
+        },
+        {
+          "label": "Sin gluten",
+          "image": "/images/sin-gluten.png",
+          "alt": "Sin lactosa"
+        },
+        {
+          "label": "100% carne de pavo",
+          "image": "/images/carne-100-pavo.png",
+          "alt": "100% carne de pavo"
+        },
+        {
+          "label": "Sin colorantes artificiales",
+          "image": "/images/sin-colorantes-artificiales.png",
+          "alt": "Sin colorantes artificiales"
+        }
+      ]
+    }
+  ]
+}

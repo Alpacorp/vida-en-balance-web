@@ -8,6 +8,7 @@ import {
   Tips,
   TurkeyBreastSandwichSlices,
   TurkeyBreastThinSlices,
+  TurkeyBreastSausage,
   TurkeySausage
 } from '@pages/index';
 
@@ -22,6 +23,7 @@ export default function AppRoutes() {
       <Route path="/pechuga-de-pavo-rebanadas-delgadas" element={<TurkeyBreastThinSlices />} />
       <Route path="/salchicha-de-pavo" element={<TurkeySausage />} />
       <Route path="/pechuga-de-pavo-rebanadas-sandwich" element={<TurkeyBreastSandwichSlices />} />
+      <Route path="/salchicha-de-pechuga-de-pavo" element={<TurkeyBreastSausage />} />
       <Route path="*" element={<Home />} />
     </Routes>
   );
