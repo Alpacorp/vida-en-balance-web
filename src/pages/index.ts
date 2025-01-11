@@ -6,6 +6,7 @@ import { SteppedTurkeyBreast } from "@pages/Nutritional/SteppedTurkeyBreast/Step
 import { TurkeyBreastThinSlices } from "@pages/Nutritional/TurkeyBreastThinSlices/TurkeyBreastThinSlices.tsx";
 import { TurkeySausage } from "@pages/Nutritional/TurkeySausage/TurkeySausage.tsx";
 import { TurkeyBreastSandwichSlices } from "@pages/Nutritional/TurkeyBreastSandwichSlices/TurkeyBreastSandwichSlices.tsx";
-import { TurkeyBreastSausage } from "@pages/Nutritional/TurkeyBreastSausage/TurkeyBreastSausage.tsx"
+import { TurkeyBreastSausage } from "@pages/Nutritional/TurkeyBreastSausage/TurkeyBreastSausage.tsx";
+import { ArticlePage } from "@pages/Blogs/ArticlePage.tsx";
 
-export { Home, Body, Tips, Mind, SteppedTurkeyBreast, TurkeyBreastThinSlices, TurkeySausage, TurkeyBreastSandwichSlices, TurkeyBreastSausage };
+export { ArticlePage, Home, Body, Tips, Mind, SteppedTurkeyBreast, TurkeyBreastThinSlices, TurkeySausage, TurkeyBreastSandwichSlices, TurkeyBreastSausage };

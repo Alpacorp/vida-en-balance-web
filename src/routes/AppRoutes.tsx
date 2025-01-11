@@ -1,6 +1,7 @@
 import {Route, Routes} from "react-router-dom";
 
 import {
+  ArticlePage,
   Body,
   Home,
   Mind,
@@ -24,6 +25,7 @@ export default function AppRoutes() {
       <Route path="/salchicha-de-pavo" element={<TurkeySausage />} />
       <Route path="/pechuga-de-pavo-rebanadas-sandwich" element={<TurkeyBreastSandwichSlices />} />
       <Route path="/salchicha-de-pechuga-de-pavo" element={<TurkeyBreastSausage />} />
+      <Route path="/:category/:slug" element={<ArticlePage />} />
       <Route path="*" element={<Home />} />
     </Routes>
   );

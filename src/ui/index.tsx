@@ -6,5 +6,6 @@ import { Health } from '@ui/sections/Home/Health/Health.tsx';
 import { Tabs } from '@ui/sections/Home/Tabs/Tabs.tsx';
 import { Footer } from '@ui/sections/Global/Footer/Footer.tsx';
 import { Header } from '@ui/sections/Global/Header/Header.tsx';
+import { ArticleLayout } from '@ui/layouts/ArticleLayout/ArticleLayout.tsx'
 
-export { Hero, Health, Tabs, Heading, Footer, Header, ArticleCard };
+export { Hero, Health, Tabs, Heading, Footer, Header, ArticleCard, ArticleLayout };
