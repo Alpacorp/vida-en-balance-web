@@ -1,3 +1,5 @@
+import React from "react";
+
 export interface Product {
   id: string;
   name: string;
@@ -39,4 +41,25 @@ export interface NutritionalItem {
 
 export interface NutritionalInfoProps {
   nutritionalInfo: NutritionalItem[];
+}
+
+export interface Article {
+  id: string;
+  category: string;
+  slug: string;
+  title: string;
+  subtitle: string;
+  coverImage: string;
+  author: string;
+  date: string;
+  readingTime: string;
+  content: React.ReactNode;
+  relatedArticles: Array<{
+    id: string;
+    title: string;
+    excerpt: string;
+    image: string;
+    slug: string;
+    category: string;
+  }>;
 }

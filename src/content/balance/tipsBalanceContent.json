@@ -14,7 +14,7 @@
       "imageUrl": "https://images.unsplash.com/photo-1486218119243-13883505764c?auto=format&fit=crop&w=300&h=200",
       "imageAlt": "Corredores en una carrera",
       "ctaText": "Nada mejor que correr",
-      "to": "/21k-juntos"
+      "to": "/tips-balance/21k-juntos"
     },
     {
       "title": "Evitando lesiones",
@@ -22,7 +22,7 @@
       "imageUrl": "https://images.unsplash.com/photo-1589698112632-f5dffc219c68?auto=format&fit=crop&w=300&h=200",
       "imageAlt": "Hombre cuidando lesión de un niño",
       "ctaText": "Conoce más",
-      "to": "/evitando-lesiones"
+      "to": "/tips-balance/evitando-lesiones"
     },
     {
       "title": "El mejor tratamiento para vivir en balance",
@@ -30,7 +30,7 @@
       "imageUrl": "https://images.unsplash.com/photo-1665686374006-b8f04cf62d57?auto=format&fit=crop&w=300&h=200",
       "imageAlt": "Dos mujeres felices hablando",
       "ctaText": "Conoce más",
-      "to": "/mejor-tratamiento"
+      "to": "/tips-balance/mejor-tratamiento"
     }
   ]
 }
