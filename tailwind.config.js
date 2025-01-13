@@ -1,6 +1,8 @@
 /** @type {import('tailwindcss').Config} */
 
 import typography from '@tailwindcss/typography';
+import aspectRatio from '@tailwindcss/aspect-ratio';
+import headlessUi from '@headlessui/tailwindcss';
 
 export default {
   content: ["./index.html", "./src/**/*.{js,ts,jsx,tsx}"],
@@ -55,5 +57,7 @@ export default {
   },
   plugins: [
     typography,
+    aspectRatio,
+    headlessUi,
   ],
 };

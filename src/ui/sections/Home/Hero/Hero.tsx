@@ -1,50 +1,11 @@
-import { useState, useEffect } from 'react';
+import { useState, useEffect, FC } from 'react';
+import { Link } from "react-router-dom";
 
-import { ArrowLeftIcon, ArrowRightIcon } from "@assets/icons";
+import { ArrowLeftIcon, ArrowRightIcon } from "@public/assets/icons";
 
-interface Slide {
-  id: number;
-  title: string;
-  subtitle: string;
-  image: string;
-  ctaPrimary: {
-    text: string;
-    url: string;
-  };
-  ctaSecondary?: {
-    text: string;
-    url: string;
-  };
-}
+import { slides } from "@content/home/hero/slides.ts";
 
-const slides: Slide[] = [
-  {
-    id: 1,
-    title: "Disfruta cuidándote",
-    subtitle: "Conoce nuestros productos y tips para llevar una vida saludable.",
-    image: "https://images.unsplash.com/photo-1498837167922-ddd27525d352?auto=format&fit=crop&w=1200&h=800",
-    ctaPrimary: {
-      text: "Tips Balance",
-      url: "/tips-balance"
-    },
-    ctaSecondary: {
-      text: "Cuerpo Balance",
-      url: "/cuerpo-balance"
-    }
-  },
-  {
-    id: 2,
-    title: "Family Size",
-    subtitle: "Más producto para toda la familia.",
-    image: "https://images.unsplash.com/photo-1576867757603-05b134ebc379?auto=format&fit=crop&w=1200&h=800",
-    ctaPrimary: {
-      text: "Mente en Balance",
-      url: "/mente-en-balance"
-    },
-  },
-];
-
-export const Hero = () => {
+export const Hero: FC = () => {
   const [currentSlide, setCurrentSlide] = useState(0);
 
   useEffect(() => {
@@ -78,27 +39,27 @@ export const Hero = () => {
           {/* Content */}
           <div className="relative z-10 flex h-full items-center justify-center px-4">
             <div className="max-w-4xl text-center">
-              <h1 className="mb-4 text-4xl font-bold text-white sm:text-5xl md:text-6xl">
+              <h1 className="mb-4 text-4xl font-montserrat-bold text-white sm:text-5xl md:text-6xl">
                 {slide.title}
               </h1>
               <p className="mb-8 text-lg text-white/90 sm:text-xl md:text-2xl">
                 {slide.subtitle}
               </p>
               <div className="flex flex-wrap justify-center gap-4">
-                <a
-                  href={slide.ctaPrimary.url}
-                  className="rounded-full bg-blue-600 px-8 py-3 font-medium text-white transition-colors hover:bg-blue-700"
+                <Link
+                  to={slide.ctaPrimary.url}
+                  className="rounded-full bg-blue-600 px-8 py-3 font-montserrat-medium text-white transition-colors hover:bg-blue-700"
                 >
                   {slide.ctaPrimary.text}
-                </a>
+                </Link>
                 {
                   slide.ctaSecondary && (
-                    <a
-                      href={slide.ctaSecondary.url}
-                      className="rounded-full bg-white/10 px-8 py-3 font-medium text-white transition-colors hover:bg-white/20"
+                    <Link
+                      to={slide.ctaSecondary.url}
+                      className="rounded-full bg-white/10 px-8 py-3 font-montserrat-medium text-white transition-colors hover:bg-white/20"
                     >
                       {slide.ctaSecondary.text}
-                    </a>
+                    </Link>
                   )
                 }
               </div>

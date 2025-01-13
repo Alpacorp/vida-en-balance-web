@@ -1,6 +1,6 @@
 import { FC } from "react";
 
-import { CardSection, HeroSection } from '@ui/sections';
+import { CardSection, HeroSection } from '@ui/index';
 
 import mindBalanceContent from "@content/balance/mindBalanceContent.json";
 

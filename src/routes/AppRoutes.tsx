@@ -1,32 +1,31 @@
-import {Route, Routes} from "react-router-dom";
+import { Route, Routes } from "react-router-dom";
 
 import {
   ArticlePage,
   Body,
-  Home,
+  HomePage,
   Mind,
-  SteppedTurkeyBreast,
   Tips,
-  TurkeyBreastSandwichSlices,
-  TurkeyBreastThinSlices,
-  TurkeyBreastSausage,
-  TurkeySausage
+  ProductRecipesPage,
+  RecipeDetailPage,
+  RecipesHomePage,
+  NutritionalPage,
+  NotFoundPage,
 } from '@pages/index';
 
 export default function AppRoutes() {
   return (
     <Routes>
-      <Route path="/" element={<Home />} />
+      <Route path="/" element={<HomePage />} />
       <Route path="/cuerpo-balance" element={<Body />} />
       <Route path="/mente-en-balance" element={<Mind />} />
       <Route path="/tips-balance" element={<Tips />} />
-      <Route path="/pechuga-de-pavo-escalonada" element={<SteppedTurkeyBreast />} />
-      <Route path="/pechuga-de-pavo-rebanadas-delgadas" element={<TurkeyBreastThinSlices />} />
-      <Route path="/salchicha-de-pavo" element={<TurkeySausage />} />
-      <Route path="/pechuga-de-pavo-rebanadas-sandwich" element={<TurkeyBreastSandwichSlices />} />
-      <Route path="/salchicha-de-pechuga-de-pavo" element={<TurkeyBreastSausage />} />
+      <Route path="/productos/:productSlug" element={<NutritionalPage />} />
       <Route path="/:category/:slug" element={<ArticlePage />} />
-      <Route path="*" element={<Home />} />
+      <Route path="/recetas" element={<RecipesHomePage />} />
+      <Route path="/recetas/:productSlug" element={<ProductRecipesPage />} />
+      <Route path="/recetas/:productSlug/:recipeId" element={<RecipeDetailPage />} />
+      <Route path="*" element={<NotFoundPage />} />
     </Routes>
   );
 }

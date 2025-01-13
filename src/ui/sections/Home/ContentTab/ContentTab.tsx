@@ -1,19 +1,7 @@
 import { FC, useEffect, useRef } from "react";
 import { Link } from "react-router-dom";
 
-interface ContentProps {
-  title?: string;
-  description?: string;
-  image?: string;
-  nutritional_link?: string | "";
-  recipes_link: string | "";
-  types?: {
-    id: number;
-    url: string;
-    name: string;
-    description: string;
-  }[];
-}
+import { ContentProps } from "@interfaces/interfaces";
 
 export const ContentTab: FC<ContentProps> = ({ title, description, image, types, nutritional_link, recipes_link }) => {
   const divRef = useRef<HTMLDivElement>(null);
@@ -44,7 +32,7 @@ export const ContentTab: FC<ContentProps> = ({ title, description, image, types,
                   {
                     nutritional_link && (
                       <Link
-                        className="inline-flex items-center rounded-md bg-amber-600 hover:bg-amber-700 px-3 py-2 text-sm font-semibold text-white shadow-xs  focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-amber-400 transition-transform duration-500 ease-in-out"
+                        className="inline-flex items-center rounded-md bg-amber-600 hover:bg-amber-700 px-3 py-2 text-sm font-montserrat-medium text-white shadow-xs  focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-amber-400 transition-transform duration-500 ease-in-out"
                         to={nutritional_link || ""}
                       >
                         Información nutrimental
@@ -54,7 +42,7 @@ export const ContentTab: FC<ContentProps> = ({ title, description, image, types,
                   {
                     recipes_link && (
                       <Link
-                          className="inline-flex items-center rounded-md bg-cyan-500 px-3 py-2 text-sm font-semibold text-white shadow-xs hover:bg-cyan-600 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-blue-700 transition-transform duration-500 ease-in-out"
+                          className="inline-flex items-center rounded-md bg-cyan-500 px-3 py-2 text-sm font-montserrat-medium text-white shadow-xs hover:bg-cyan-600 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-blue-700 transition-transform duration-500 ease-in-out"
                           to={recipes_link || ""}
                       >
                         Recetas

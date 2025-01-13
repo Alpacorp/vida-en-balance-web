@@ -1,6 +1,6 @@
 import { FC, Key} from 'react';
 
-import {ArticleCard} from "@ui/index.tsx";
+import { ArticleCard } from "@ui/index.tsx";
 
 interface CardSectionProps {
   title: string;

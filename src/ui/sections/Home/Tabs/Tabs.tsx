@@ -1,9 +1,9 @@
-import { useState } from "react";
+import { ChangeEvent, useState} from "react";
 import { ChevronDownIcon } from "@heroicons/react/16/solid";
 
 import { ContentTab } from "@ui/sections/Home/ContentTab/ContentTab.tsx";
 
-import tabs from "@content/tabs/tabs.json";
+import tabs from "@content/home/tabs/tabs.json";
 
 export const Tabs = () => {
   const [value, setValue] = useState(0);
@@ -11,7 +11,7 @@ export const Tabs = () => {
 
   const { id, name, description, image, types, nutritional_link, recipes_link } = tabs[value];
 
-  const handleSelectChange = (event: React.ChangeEvent<HTMLSelectElement>) => {
+  const handleSelectChange = (event: ChangeEvent<HTMLSelectElement>) => {
     const selectedTabName = event.target.value;
     const selectedTabIndex = tabs.findIndex(
       (tab) => tab.name === selectedTabName
@@ -61,7 +61,7 @@ export const Tabs = () => {
                   : "text-gray-500 bg-gray-50 hover:text-gray-700"
               } ${tabIdx === 0 ? "rounded-l-lg" : ""} ${
                 tabIdx === tabs.length - 1 ? "rounded-r-lg" : ""
-              } group relative min-w-0 flex-1 overflow-hidden px-4 py-4 text-center text-sm font-medium focus:z-10 border-b-2 border-gray-200`}
+              } group relative min-w-0 flex-1 overflow-hidden px-4 py-4 text-center text-sm font-montserrat-medium focus:z-10 border-b-2 border-gray-200`}
             >
               <span className="text-lg font-montserrat-medium">{tab.name}</span>
             </button>

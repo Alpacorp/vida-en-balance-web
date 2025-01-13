@@ -1,16 +1,10 @@
-import React from 'react';
+import { FC } from "react";
+
 import { Link } from 'react-router-dom';
 
-interface NutritionCardProps {
-  title: string;
-  description: string;
-  imageUrl: string;
-  imageAlt: string;
-  ctaText: string;
-  to: string;
-}
+import { NutritionCardProps } from "@interfaces/interfaces";
 
-export const ArticleCard: React.FC<NutritionCardProps> = ({title, description, imageUrl, imageAlt, ctaText, to}) => {
+export const ArticleCard: FC<NutritionCardProps> = ({title, description, imageUrl, imageAlt, ctaText, to}) => {
   return (
     <article className="bg-white rounded-lg overflow-hidden shadow-md hover:shadow-xl transition-shadow duration-300 ease-in-out flex flex-col">
       <div className="relative h-48 overflow-hidden">
