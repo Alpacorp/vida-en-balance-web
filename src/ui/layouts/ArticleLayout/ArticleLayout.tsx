@@ -1,24 +1,11 @@
-import React from 'react';
+import { FC } from 'react';
 import { Link, useNavigate } from 'react-router-dom';
 
-interface ArticleLayoutProps {
-  title: string;
-  subtitle: string;
-  coverImage: string;
-  author: string;
-  date: string;
-  readingTime: string;
-  content: React.ReactNode;
-  relatedArticles: Array<{
-    id: string;
-    title: string;
-    excerpt: string;
-    image: string;
-    slug: string;
-  }>;
-}
+import { ArrowLeft, Clock, Share2, Facebook, Twitter, Linkedin } from 'lucide-react';
 
-export const ArticleLayout = ({ title, subtitle, coverImage, author, date, readingTime, content, relatedArticles}: ArticleLayoutProps) => {
+import { ArticleLayoutProps } from "@interfaces/interfaces";
+
+export const ArticleLayout: FC<ArticleLayoutProps> = ({ title, subtitle, coverImage, author, date, readingTime, content, relatedArticles}) => {
   const navigate = useNavigate();
 
   return (
@@ -36,7 +23,7 @@ export const ArticleLayout = ({ title, subtitle, coverImage, author, date, readi
               onClick={() => navigate('/tips-balance')}
               className="mb-6 inline-flex items-center text-sm font-medium text-white/80 hover:text-white"
             >
-              {/*<ArrowLeft className="mr-2 h-4 w-4" />*/}
+              <ArrowLeft className="mr-2 h-4 w-4" />
               Volver a Tips Balance
             </button>
             <h1 className="mb-4 text-4xl font-bold sm:text-5xl lg:text-6xl">
@@ -54,7 +41,7 @@ export const ArticleLayout = ({ title, subtitle, coverImage, author, date, readi
           <div className="flex flex-wrap items-center justify-between gap-4">
             <div className="flex items-center gap-6">
               <div className="flex items-center text-sm text-gray-600">
-                {/*<Clock className="mr-2 h-4 w-4" />*/}
+                <Clock className="mr-2 h-4 w-4" />
                 {readingTime}
               </div>
               <div className="text-sm text-gray-600">
@@ -75,7 +62,7 @@ export const ArticleLayout = ({ title, subtitle, coverImage, author, date, readi
                 }}
                 className="inline-flex items-center text-sm text-gray-600 hover:text-gray-900"
               >
-                {/*<Share2 className="mr-2 h-4 w-4" />*/}
+                <Share2 className="mr-2 h-4 w-4" />
                 Compartir
               </button>
               <div className="flex items-center gap-2">
@@ -83,19 +70,19 @@ export const ArticleLayout = ({ title, subtitle, coverImage, author, date, readi
                   onClick={() => window.open(`https://www.facebook.com/sharer/sharer.php?u=${window.location.href}`, '_blank')}
                   className="rounded-full p-2 text-gray-600 hover:bg-gray-100 hover:text-blue-600"
                 >
-                  {/*<Facebook className="h-5 w-5" />*/}
+                  <Facebook className="h-5 w-5" />
                 </button>
                 <button
                   onClick={() => window.open(`https://twitter.com/intent/tweet?url=${window.location.href}&text=${title}`, '_blank')}
                   className="rounded-full p-2 text-gray-600 hover:bg-gray-100 hover:text-blue-400"
                 >
-                  {/*<Twitter className="h-5 w-5" />*/}
+                  <Twitter className="h-5 w-5" />
                 </button>
                 <button
                   onClick={() => window.open(`https://www.linkedin.com/sharing/share-offsite/?url=${window.location.href}`, '_blank')}
                   className="rounded-full p-2 text-gray-600 hover:bg-gray-100 hover:text-blue-700"
                 >
-                  {/*<Linkedin className="h-5 w-5" />*/}
+                  <Linkedin className="h-5 w-5" />
                 </button>
               </div>
             </div>

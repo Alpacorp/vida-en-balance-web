@@ -1,9 +1,9 @@
 import { useState, useEffect, FC } from 'react';
 import { Link, useLocation } from 'react-router-dom';
 
-import { headerLogo } from "@assets/images/components";
+import headerLogo from "@public/images/san-rafael-balance-logo.webp";
 
-import { main } from '@content/navigation/navigation.json';
+import { mainMenuLinks } from '@content/navigation/mainMenuLinks';
 
 export const Header: FC = () => {
   const [isScrolled, setIsScrolled] = useState(false);
@@ -23,7 +23,7 @@ export const Header: FC = () => {
     setIsMobileMenuOpen(false);
   }, [location]);
 
-  const isActive = (path: string) => location.pathname === path;
+  const isActive = (path: string) => location.pathname.startsWith(path);
 
   const toggleMobileMenu = () => {
     setIsMobileMenuOpen(!isMobileMenuOpen);
@@ -46,7 +46,7 @@ export const Header: FC = () => {
             />
           </Link>
           <nav className="hidden md:flex space-x-8">
-            {main.map((item) => (
+            {mainMenuLinks.map((item) => (
               <Link
                 key={item.path}
                 to={item.path}
@@ -116,7 +116,7 @@ export const Header: FC = () => {
         }`}
       >
         <nav className="pt-2 pb-3 space-y-1">
-          {main.map((item) => (
+          {mainMenuLinks.map((item) => (
             <Link
               key={item.path}
               to={item.path}

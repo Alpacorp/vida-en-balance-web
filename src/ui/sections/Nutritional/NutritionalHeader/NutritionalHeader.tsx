@@ -1,11 +1,11 @@
 import { FC, useState, useEffect } from 'react';
 import { Link, useNavigate } from "react-router-dom";
 
-import { social } from "@content/navigation/navigation.json";
+import { socialMenuLinks } from "@content/navigation/socialMenuLinks";
 
-import { FacebookIcon, InstagramIcon, TikTokIcon, YouTubeIcon } from "@assets/icons";
+import { FacebookIcon, InstagramIcon, TikTokIcon, YouTubeIcon } from "@public/assets/icons";
 
-import { Product, ProductHeaderProps} from "@interfaces/interfaces";
+import { Product, NutritionalHeaderProps } from "@interfaces/interfaces";
 
 const iconComponents: Record<string,
   | typeof FacebookIcon
@@ -19,7 +19,7 @@ const iconComponents: Record<string,
   tiktok: TikTokIcon,
 }
 
-export const NutritionalHeader: FC<ProductHeaderProps> = ({ products, onProductChange, activeProduct }) => {
+export const NutritionalHeader: FC<NutritionalHeaderProps> = ({ products, onProductChange, activeProduct }) => {
   const navigate = useNavigate();
   const [otherProducts, setOtherProducts] = useState<Product[]>([]);
 
@@ -37,7 +37,7 @@ export const NutritionalHeader: FC<ProductHeaderProps> = ({ products, onProductC
     onProductChange(clickedProduct);  // Llamamos a la función de cambio de producto
 
     // Navegamos a la nueva URL
-    navigate(clickedProduct.url);
+    navigate(clickedProduct.url as string);
   };
 
   return (
@@ -55,7 +55,7 @@ export const NutritionalHeader: FC<ProductHeaderProps> = ({ products, onProductC
             </div>
             <div className="text-white text-center md:text-left">
               <h1 className="text-2xl font-montserrat-bold w-full max-w-60">{activeProduct.name}</h1>
-              <p className="text-xl font-montserrat-regular">{activeProduct.weight}</p>
+              <p className="text-xl font-montserrat-medium">{activeProduct.weight}</p>
             </div>
           </div>
 
@@ -79,10 +79,10 @@ export const NutritionalHeader: FC<ProductHeaderProps> = ({ products, onProductC
 
           {/* Social Media */}
           <div className="flex flex-col items-center md:items-end gap-2">
-            <span className="text-white font-medium">Síguenos:</span>
+            <span className="text-white font-montserrat-medium">Síguenos:</span>
             <div className="flex gap-4">
               {
-                social.map((item) => {
+                socialMenuLinks.map((item) => {
                   const IconComponent = iconComponents[item.icon as keyof typeof iconComponents];
                   return (
                     <Link key={item.name} to={item.path} target="_blank"

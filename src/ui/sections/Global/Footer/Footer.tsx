@@ -1,11 +1,13 @@
 import { FC } from "react";
 import { Link } from "react-router-dom";
 
-import { main, footer, social } from "@content/navigation/navigation.json";
+import { mainMenuLinks } from "@content/navigation/mainMenuLinks.ts";
+import { footerMenuLinks } from "@content/navigation/footerMenuLinks.ts";
+import { socialMenuLinks } from "@content/navigation/socialMenuLinks.ts";
 
-import { footerLogo } from "@assets/images/components";
+import footerLogo from "@public/images/san-rafael-balance-logo.webp";
 
-import { FacebookIcon, InstagramIcon, TikTokIcon, YouTubeIcon } from "@assets/icons";
+import { FacebookIcon, InstagramIcon, TikTokIcon, YouTubeIcon } from "@public/assets/icons";
 
 const iconComponents = {
   facebook: FacebookIcon,
@@ -14,11 +16,11 @@ const iconComponents = {
   tiktok: TikTokIcon,
 }
 
-const footerMenu = main.concat(footer);
+const footerMenu = mainMenuLinks.concat(footerMenuLinks);
 
 export const Footer: FC = () => {
   return (
-    <footer className="bg-gradient-to-b from-[#293078] to-[#494986] font-montserrat-regular">
+    <footer className="bg-gradient-to-b from-[#293078] to-[#494986] font-montserrat-medium">
       <div className="mx-auto max-w-7xl overflow-hidden px-6 py-3 sm:py-10 lg:px-8">
         <img src={footerLogo} alt="San Rafael Balance" title="San Rafael Balance"
              className="w-40 text-center mx-auto my-5"/>
@@ -30,7 +32,7 @@ export const Footer: FC = () => {
           ))}
         </nav>
         <div className="mt-16 flex justify-center gap-x-10">
-          {social.map((item) => {
+          {socialMenuLinks.map((item) => {
             const IconComponent = iconComponents[item.icon as keyof typeof iconComponents];
             return (
               <Link key={item.name} to={item.path} target="_blank" className="text-gray-200 hover:text-white hover:transform hover:scale-110 transition-transform duration-200">
