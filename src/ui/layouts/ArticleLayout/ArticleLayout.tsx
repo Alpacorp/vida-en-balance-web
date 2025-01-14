@@ -21,15 +21,15 @@ export const ArticleLayout: FC<ArticleLayoutProps> = ({ title, subtitle, coverIm
           <div className="mx-auto max-w-4xl">
             <button
               onClick={() => navigate('/tips-balance')}
-              className="mb-6 inline-flex items-center text-sm font-medium text-white/80 hover:text-white"
+              className="mb-6 inline-flex items-center text-sm font-montserrat-medium text-white/80 hover:text-white"
             >
               <ArrowLeft className="mr-2 h-4 w-4" />
               Volver a Tips Balance
             </button>
-            <h1 className="mb-4 text-4xl font-bold sm:text-5xl lg:text-6xl">
+            <h1 className="mb-4 text-4xl font-montserrat-bold sm:text-5xl lg:text-6xl">
               {title}
             </h1>
-            <p className="text-xl text-white/90 sm:text-2xl">
+            <p className="text-xl text-white/90 sm:text-2xl font-montserrat-medium">
               {subtitle}
             </p>
           </div>
@@ -39,13 +39,13 @@ export const ArticleLayout: FC<ArticleLayoutProps> = ({ title, subtitle, coverIm
       <div className="border-b">
         <div className="mx-auto max-w-4xl px-4 py-6">
           <div className="flex flex-wrap items-center justify-between gap-4">
-            <div className="flex items-center gap-6">
+            <div className="flex items-center font-montserrat-medium gap-6">
               <div className="flex items-center text-sm text-gray-600">
                 <Clock className="mr-2 h-4 w-4" />
                 {readingTime}
               </div>
               <div className="text-sm text-gray-600">
-                Por <span className="font-medium">{author}</span>
+                Por <span>{author}</span>
               </div>
               <time className="text-sm text-gray-600">{date}</time>
             </div>
@@ -91,14 +91,14 @@ export const ArticleLayout: FC<ArticleLayoutProps> = ({ title, subtitle, coverIm
       </div>
 
       <div className="mx-auto max-w-4xl px-4 py-12">
-        <div className="prose prose-lg max-w-none">
+        <div className="prose prose-lg max-w-none font-montserrat-medium">
           {content}
         </div>
       </div>
 
       <div className="border-t bg-gray-50">
         <div className="mx-auto max-w-7xl px-4 py-16">
-          <h2 className="mb-8 text-2xl font-bold">Artículos relacionados</h2>
+          <h2 className="mb-8 text-2xl font-montserrat-bold">Artículos relacionados</h2>
           <div className="grid gap-8 sm:grid-cols-2 lg:grid-cols-3">
             {relatedArticles.map((article) => (
               <Link
@@ -114,8 +114,8 @@ export const ArticleLayout: FC<ArticleLayoutProps> = ({ title, subtitle, coverIm
                   />
                 </div>
                 <div className="p-6">
-                  <h3 className="mb-2 text-xl font-bold">{article.title}</h3>
-                  <p className="text-gray-600">{article.excerpt}</p>
+                  <h3 className="mb-2 text-xl font-montserrat-bold">{article.title}</h3>
+                  <p className="text-gray-600 font-montserrat-medium">{article.excerpt}</p>
                 </div>
               </Link>
             ))}

@@ -1,19 +1,8 @@
 import { FC, Key} from 'react';
 
-import { ArticleCard } from "@ui/index.tsx";
+import { ArticleCard } from "@ui/index";
 
-interface CardSectionProps {
-  title: string;
-  description: string;
-  imageUrl: string;
-  imageAlt: string;
-  ctaText: string;
-  to: string;
-}
-
-interface ArticleProps {
-  article: CardSectionProps[];
-}
+import { ArticleProps } from "@interfaces/interfaces";
 
 export const CardSection: FC<ArticleProps> = ({ article }) => {
   return (

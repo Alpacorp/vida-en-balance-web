@@ -1,4 +1,4 @@
-[
+export const buttonsHero = [
   {
     "text": "Cuerpo en balance",
     "to": "/cuerpo-balance"

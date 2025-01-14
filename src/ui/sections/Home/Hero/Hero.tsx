@@ -1,9 +1,9 @@
 import { useState, useEffect, FC } from 'react';
 import { Link } from "react-router-dom";
 
-import { ArrowLeftIcon, ArrowRightIcon } from "@public/assets/icons";
+import { ArrowLeftIcon, ArrowRightIcon } from "../../../../assets/icons";
 
-import { slides } from "@content/home/hero/slides.ts";
+import { slides } from "@content/home/hero/slides";
 
 export const Hero: FC = () => {
   const [currentSlide, setCurrentSlide] = useState(0);

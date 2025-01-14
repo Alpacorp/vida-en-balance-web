@@ -1,4 +1,4 @@
-import {useState, useEffect, FC} from 'react';
+import { useState, useEffect, FC } from 'react';
 import { useNavigate, useParams } from 'react-router-dom';
 
 import { ArticleLayout } from "@ui/layouts/ArticleLayout/ArticleLayout.tsx";

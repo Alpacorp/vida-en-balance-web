@@ -11,7 +11,7 @@ export const ProductHeader: FC<ProductHeaderRecipesProps> = ({ productName, prod
             <h1 className="text-2xl md:text-3xl lg:text-4xl font-montserrat-bold mb-6 leading-tight">
               RECETAS - {productName}
             </h1>
-            <p className="text-lg md:text-xl font-montserrat-regular leading-relaxed max-w-2xl">
+            <p className="text-lg md:text-xl font-montserrat-medium leading-relaxed max-w-2xl">
               {productDescription}
             </p>
           </div>
