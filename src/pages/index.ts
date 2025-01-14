@@ -1,17 +1,15 @@
-import { HomePage } from "@pages/Home/HomePage.tsx";
+import { HomePage } from "@pages/Home/HomePage";
 
-import { Body } from "@pages/Balance/Body/Body.tsx";
-import { Mind } from "@pages/Balance/Mind/Mind.tsx";
-import { Tips } from "@pages/Balance/Tips/Tips.tsx";
+import { NutritionalPage } from "@pages/Nutritional/NutritionalPage";
 
-import { NutritionalPage } from "@pages/Nutritional/NutritionalPage.tsx";
+import { ArticlePage } from "@pages/Blogs/ArticlePage";
 
-import { ArticlePage } from "@pages/Blogs/ArticlePage.tsx";
+import { ProductRecipesPage } from "@pages/Recipes/ProductRecipesPage";
+import { RecipeDetailPage } from "@pages/Recipes/RecipeDetailPage";
+import { RecipesHomePage } from "@pages/Recipes/RecipesHomePage";
 
-import { ProductRecipesPage } from "@pages/Recipes/ProductRecipesPage.tsx";
-import { RecipeDetailPage } from "@pages/Recipes/RecipeDetailPage.tsx";
-import { RecipesHomePage } from "@pages/Recipes/RecipesHomePage.tsx";
+import { BalancePage } from "@pages/Balance/BalancePage";
 
-import { NotFoundPage } from "@pages/NotFound/NotFoundPage.tsx";
+import { NotFoundPage } from "@pages/NotFound/NotFoundPage";
 
-export { ArticlePage, HomePage, Body, Tips, Mind, ProductRecipesPage, RecipeDetailPage, RecipesHomePage, NutritionalPage, NotFoundPage };
+export { ArticlePage, HomePage, ProductRecipesPage, RecipeDetailPage, RecipesHomePage, NutritionalPage, NotFoundPage, BalancePage };

@@ -29,7 +29,7 @@ export const RecipesHomePage: FC = () => {
               </div>
               <div className="p-6">
                 <h2 className="text-2xl font-montserrat-bold mb-2 text-violet">{product.name}</h2>
-                <p className="text-gray-600 font-montserrat-regular">{product.description}</p>
+                <p className="text-gray-600 font-montserrat-medium">{product.description}</p>
               </div>
             </Link>
           ))}

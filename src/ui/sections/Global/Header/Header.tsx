@@ -1,7 +1,7 @@
 import { useState, useEffect, FC } from 'react';
 import { Link, useLocation } from 'react-router-dom';
 
-import headerLogo from "@public/images/san-rafael-balance-logo.webp";
+import headerLogo from "@assets/images/san-rafael-balance-logo.webp";
 
 import { mainMenuLinks } from '@content/navigation/mainMenuLinks';
 

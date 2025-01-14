@@ -1,13 +1,13 @@
 import { FC } from "react";
 import { Link } from "react-router-dom";
 
-import { mainMenuLinks } from "@content/navigation/mainMenuLinks.ts";
-import { footerMenuLinks } from "@content/navigation/footerMenuLinks.ts";
-import { socialMenuLinks } from "@content/navigation/socialMenuLinks.ts";
+import { mainMenuLinks } from "@content/navigation/mainMenuLinks";
+import { footerMenuLinks } from "@content/navigation/footerMenuLinks";
+import { socialMenuLinks } from "@content/navigation/socialMenuLinks";
 
-import footerLogo from "@public/images/san-rafael-balance-logo.webp";
+import footerLogo from "@assets/images/san-rafael-balance-logo.webp";
 
-import { FacebookIcon, InstagramIcon, TikTokIcon, YouTubeIcon } from "@public/assets/icons";
+import { FacebookIcon, InstagramIcon, TikTokIcon, YouTubeIcon } from "../../../../assets/icons";
 
 const iconComponents = {
   facebook: FacebookIcon,

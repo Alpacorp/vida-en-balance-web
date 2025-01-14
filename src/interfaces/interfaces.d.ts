@@ -166,5 +166,52 @@ export interface HeadingProps {
   tag: "h1" | "h2";
 }
 
+export interface ButtonProps {
+  text: string;
+  to: string;
+}
+
+interface ImageProps {
+  alt: string;
+  src: string;
+}
+
+export interface HeroBalanceProps {
+  description: string;
+  image: ImageProps;
+  title: string;
+}
+
+interface CardSectionProps {
+  title: string;
+  description: string;
+  imageUrl: string;
+  imageAlt: string;
+  ctaText: string;
+  to: string;
+}
+
+export interface ArticleProps {
+  article: CardSectionProps[];
+}
+
+interface ArticlesProps {
+  title: string;
+  description: string;
+  imageUrl: string;
+  imageAlt: string;
+  ctaText: string;
+  to: string;
+}
+
+export interface BalancePageContent {
+  hero: {
+    description: string;
+    title: string;
+    image: { alt: string; src: string };
+  }
+  articles: ArticlesProps[];
+}
+
 
 

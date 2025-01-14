@@ -1,25 +1,11 @@
 import { FC } from 'react';
 import { Link, useLocation } from 'react-router-dom';
 
-import buttons from "@content/balance/buttonsBalanceContent.json"
+import { buttonsHero } from "@content/balance/heroBalance";
 
-interface ButtonProps {
-  text: string;
-  to: string;
-}
+import { HeroBalanceProps, ButtonProps } from "@interfaces/interfaces";
 
-interface ImageProps {
-  alt: string;
-  src: string;
-}
-
-interface HeroSectionProps {
-  description: string;
-  image: ImageProps;
-  title: string;
-}
-
-export const HeroSection: FC<HeroSectionProps> = ({ title, description, image }) => {
+export const HeroSection: FC<HeroBalanceProps> = ({ title, description, image }) => {
   const location = useLocation();
 
   const isActive = (to: string) => location.pathname === to;
@@ -35,18 +21,18 @@ export const HeroSection: FC<HeroSectionProps> = ({ title, description, image })
       <div className="absolute inset-0 bg-gradient-to-r from-orange-500/90 to-orange-400/90"></div>
       <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-full flex items-center">
         <div className="max-w-2xl">
-          <h1 className="text-4xl sm:text-5xl font-bold mb-6">
+          <h1 className="text-4xl sm:text-5xl font-montserrat-bold mb-6">
             {title}
           </h1>
-          <p className="text-xl mb-8 opacity-90">
+          <p className="text-xl mb-8 opacity-90 font-montserrat-medium">
             {description}
           </p>
           <div className="flex flex-wrap gap-4">
-            {buttons.map((button: ButtonProps, index) => (
+            {buttonsHero.map((button: ButtonProps, index) => (
               <Link
                 key={index}
                 to={button.to}
-                className={`px-6 py-3 font-medium rounded-md transition duration-300 ease-in-out transform hover:-translate-y-1 ${
+                className={`px-6 py-3 font-montserrat-medium rounded-md transition duration-300 ease-in-out transform hover:-translate-y-1 ${
                   isActive(button.to)
                     ? 'bg-white text-orange-500'
                     : 'bg-transparent border-2 border-white text-white hover:bg-white hover:text-orange-500'

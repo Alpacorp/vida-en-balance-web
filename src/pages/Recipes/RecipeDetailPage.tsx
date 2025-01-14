@@ -57,7 +57,7 @@ export const RecipeDetailPage: FC = () => {
               {recipe.ingredients.map((ingredient, index) => (
                 <li
                   key={index}
-                  className="flex items-center font-montserrat-regular"
+                  className="flex items-center font-montserrat-medium"
                 >
                   <span className="w-2 h-2 bg-violet rounded-full mr-3"></span>
                   {ingredient}
@@ -72,7 +72,7 @@ export const RecipeDetailPage: FC = () => {
               {recipe.preparation.map((step, index) => (
                 <li
                   key={index}
-                  className="flex font-montserrat-regular"
+                  className="flex font-montserrat-medium"
                 >
                   <span className="font-montserrat-bold mr-4">{index + 1}.</span>
                   {step}

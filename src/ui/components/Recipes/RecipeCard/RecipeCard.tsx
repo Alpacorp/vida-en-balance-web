@@ -10,7 +10,7 @@ export const RecipeCard: FC<RecipeCardProps> = ({ id, title, description, image,
         <img src={image} alt={title} className="w-full h-48 object-cover" />
         <div className="p-4">
           <h3 className="text-xl font-montserrat-bold mb-2 group-hover:text-violet">{title}</h3>
-          <p className="text-gray-600 font-montserrat-regular">{description}</p>
+          <p className="text-gray-600 font-montserrat-medium">{description}</p>
         </div>
       </div>
     </Link>

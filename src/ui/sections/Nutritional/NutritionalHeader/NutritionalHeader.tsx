@@ -3,7 +3,7 @@ import { Link, useNavigate } from "react-router-dom";
 
 import { socialMenuLinks } from "@content/navigation/socialMenuLinks";
 
-import { FacebookIcon, InstagramIcon, TikTokIcon, YouTubeIcon } from "@public/assets/icons";
+import { FacebookIcon, InstagramIcon, TikTokIcon, YouTubeIcon } from "../../../../assets/icons";
 
 import { Product, NutritionalHeaderProps } from "@interfaces/interfaces";
 
