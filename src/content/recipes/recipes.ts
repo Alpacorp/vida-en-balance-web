@@ -6,7 +6,7 @@ export const productsData = {
     recipes: [
       {
         id: '1',
-        title: 'Rollitos de pechuga de pavo rellenos de hummus sobre ensalada de farro',
+        title: 'Rollitos de pechuga de pavo rellenos de hummus',
         description: 'Deliciosos rollitos para un lunch',
         image: 'https://www.vidaenbalance.com/wp-content/uploads/2023/06/Rollitos-de-pechuga-de-pavo-rellenos-de-hummus-sobre-ensalada-de-farro-1.webp'
       },
