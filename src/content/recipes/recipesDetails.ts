@@ -3,29 +3,30 @@ import { RecipeDetail } from "@interfaces/interfaces";
 export const recipesDetails: Record<string, RecipeDetail> = {
   '1': {
     id: '1',
-    title: 'Sándwich Mediterráneo',
-    image: 'https://images.unsplash.com/photo-1528735602780-2552fd46c7af?auto=format&fit=crop&w=1600&h=900&q=80',
+    title: 'Rollitos de pechuga de pavo rellenos de hummus',
+    image: 'https://www.vidaenbalance.com/wp-content/uploads/2023/05/Rollitos-de-pechuga-de-pavo-rellenos-de-hummus-sobre-ensalada-de-farro-1.jpg',
     ingredients: [
-      '4 rebanadas de pan integral',
-      '100g de Pechuga de Pavo Balance®',
-      '1 tomate mediano en rodajas',
-      '1 aguacate',
-      'Hojas de lechuga fresca',
-      '2 cucharadas de aceite de oliva',
-      'Sal y pimienta al gusto',
-      'Hojas de albahaca fresca'
+      '1 taza de farro',
+      '3 tazas de agua',
+      '1 cucharadita de caldo de verdura en polvo',
+      '4 cucharadas de aceite de oliva',
+      '¼ de cebolla morada picada',
+      '3 cucharadas de perejil picado',
+      '2 jitomates picados',
+      '½ chile serrano picado',
+      '2 limones',
+      '1 taza de hummus',
+      '1 paquete de Pechuga de Pavo San Rafael® Balance®',
+      '½ taza de hojas pequeñas de albahaca',
+      'Sal y pimienta al gusto'
     ],
     preparation: [
-      'Tuesta ligeramente el pan integral.',
-      'Unta una capa delgada de aguacate machacado en cada rebanada de pan.',
-      'Coloca las lonchas de Pechuga de Pavo Balance® sobre el aguacate.',
-      'Añade las rodajas de tomate y las hojas de lechuga.',
-      'Decora con hojas de albahaca fresca.',
-      'Rocía un poco de aceite de oliva y añade sal y pimienta al gusto.',
-      'Cubre con la otra rebanada de pan y sirve inmediatamente.'
+      'Coloca el farro en una olla mediana con el agua. Deja remojar durante 20 minutos. Agrega el caldo de verdura, tapa y cuece a fuego alto hasta que comience a hervir. Baja el fuego al mínimo y cuece durante 20 minutos. Agrega el aceite de oliva y deja enfriar.',
+      'Integra la cebolla morada, perejil, jitomate, chile serrano y jugo de limón, salpimienta.',
+      'Rellena las rebanadas de Pechuga de Pavo San Rafael® Balance® con el hummus y enrolla. Sirve sobre una base de la mezcla anterior y termina con las hojas de albahaca.'
     ],
-    timePrep: '15 minutos',
-    portions: '2 porciones',
+    timePrep: '25 minutos',
+    portions: '5 porciones',
     difficulty: 'Fácil'
   },
   '2': {
