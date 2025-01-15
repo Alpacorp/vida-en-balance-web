@@ -1,7 +1,7 @@
 import { useState, useEffect, FC } from 'react';
 import { Link } from "react-router-dom";
 
-import { ArrowLeftIcon, ArrowRightIcon } from "../../../../assets/icons";
+import { ArrowLeftIcon, ArrowRightIcon } from "@assets/icons";
 
 import { slides } from "@content/home/hero/slides";
 
@@ -30,7 +30,7 @@ export const Hero: FC = () => {
           <div className="absolute inset-0">
             <img
               src={slide.image}
-              alt=""
+              alt={slide.title}
               className="h-full w-full object-cover"
             />
             <div className="absolute inset-0 bg-gradient-to-r from-black/70 to-black/50" />
