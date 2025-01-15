@@ -6,15 +6,15 @@ export const productsData = {
     recipes: [
       {
         id: '1',
-        title: 'Sándwich Mediterráneo',
-        description: 'Un delicioso sándwich con sabores frescos',
-        image: 'https://images.unsplash.com/photo-1528735602780-2552fd46c7af?auto=format&fit=crop&w=1600&h=900&q=80'
+        title: 'Rollitos de pechuga de pavo rellenos de hummus',
+        description: 'Deliciosos rollitos para un lunch',
+        image: 'https://www.vidaenbalance.com/wp-content/uploads/2023/06/Rollitos-de-pechuga-de-pavo-rellenos-de-hummus-sobre-ensalada-de-farro-1.webp'
       },
       {
         id: '2',
-        title: 'Wrap de Pavo y Aguacate',
-        description: 'Wrap saludable y lleno de sabor',
-        image: 'https://images.unsplash.com/photo-1626700051175-6818013e1d4f?auto=format&fit=crop&w=1600&h=900&q=80'
+        title: 'Sándwich abierto de pechuga de pavo con ensalada de col y pera',
+        description: 'La mejor receta con el mejor sabor',
+        image: 'https://www.vidaenbalance.com/wp-content/uploads/2023/06/Sandwich-abierto-de-pechuga-de-pavo-con-ensalada-de-col-y-pera1.webp'
       },
       {
         id: '3',
@@ -36,6 +36,12 @@ export const productsData = {
       },
       {
         id: '6',
+        title: 'Rollitos de Pavo',
+        description: 'Aperitivo ligero y delicioso',
+        image: 'https://images.unsplash.com/photo-1506084868230-bb9d95c24759?auto=format&fit=crop&w=1600&h=900&q=80'
+      },
+      {
+        id: '7',
         title: 'Rollitos de Pavo',
         description: 'Aperitivo ligero y delicioso',
         image: 'https://images.unsplash.com/photo-1506084868230-bb9d95c24759?auto=format&fit=crop&w=1600&h=900&q=80'
