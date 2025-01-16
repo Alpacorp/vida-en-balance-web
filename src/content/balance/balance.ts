@@ -8,6 +8,11 @@ export const balanceContent = {
         alt: "Persona ejercitándose"
       },
     },
+    seo: {
+      title: "Cuerpo Balance - Mantén tu cuerpo en equilibrio",
+      description: "Descubre consejos y técnicas para mantener tu cuerpo en perfecto equilibrio con Balance.",
+      keywords: "cuerpo, balance, salud, bienestar, ejercicio"
+    },
     articles: [
       {
         title: "Tu peso ideal",
@@ -51,6 +56,11 @@ export const balanceContent = {
         src: "https://images.unsplash.com/photo-1506126613408-eca07ce68773?auto=format&fit=crop&w=1200&h=600",
         alt: "Persona meditando"
       }
+    },
+    seo: {
+      title: "Mente en Balance - Equilibrio mental para una vida plena",
+      description: "Aprende técnicas de mindfulness y meditación para mantener tu mente en balance.",
+      keywords: "mente, balance, meditación, mindfulness, bienestar mental"
     },
     articles: [
       {
@@ -103,6 +113,11 @@ export const balanceContent = {
         src: "https://images.unsplash.com/photo-1490645935967-10de6ba17061?auto=format&fit=crop&w=1200&h=600",
         alt: "Persona meditando"
       }
+    },
+    seo: {
+      title: "Tips Balance - Consejos para una vida equilibrada",
+      description: "Descubre consejos prácticos para mantener un equilibrio en todos los aspectos de tu vida.",
+      keywords: "tips, balance, vida equilibrada, bienestar, salud"
     },
     articles: [
       {

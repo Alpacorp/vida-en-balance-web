@@ -8,216 +8,95 @@ export const productsData = {
         id: '1',
         title: 'Rollitos de pechuga de pavo rellenos de hummus',
         description: 'Deliciosos rollitos para un lunch',
-        image: 'https://www.vidaenbalance.com/wp-content/uploads/2023/06/Rollitos-de-pechuga-de-pavo-rellenos-de-hummus-sobre-ensalada-de-farro-1.webp'
+        image: 'https://www.vidaenbalance.com/wp-content/uploads/2023/05/Rollitos-de-pechuga-de-pavo-rellenos-de-hummus-sobre-ensalada-de-farro-1.jpg'
       },
       {
         id: '2',
         title: 'Sándwich abierto de pechuga de pavo con ensalada de col y pera',
         description: 'La mejor receta con el mejor sabor',
-        image: 'https://www.vidaenbalance.com/wp-content/uploads/2023/06/Sandwich-abierto-de-pechuga-de-pavo-con-ensalada-de-col-y-pera1.webp'
+        image: 'https://www.vidaenbalance.com/wp-content/uploads/2023/05/Sandwich-abierto-de-pechuga-de-pavo-con-ensalada-de-col-y-pera-1.jpg'
       },
       {
         id: '3',
-        title: 'Ensalada César con Pavo',
-        description: 'Una versión saludable del clásico',
-        image: 'https://images.unsplash.com/photo-1512852939750-1305098529bf?auto=format&fit=crop&w=1600&h=900&q=80'
+        title: 'Mitades de pan pita rellenas con pechuga de pavo, arúgula y salsa tzatziki',
+        description: 'Un platillo delicioso y saludable',
+        image: 'https://www.vidaenbalance.com/wp-content/uploads/2023/06/Mitades-de-pan-pita-rellenas-con-pechuga-de-pavo-arugula-y-salsa-tzatziki.webp'
       },
       {
         id: '4',
-        title: 'Bowl Proteico',
-        description: 'Bowl nutritivo y equilibrado',
-        image: 'https://images.unsplash.com/photo-1546069901-ba9599a7e63c?auto=format&fit=crop&w=1600&h=900&q=80'
+        title: 'Calabacitas rellenas de Pechuga de pavo San Rafael Balance® y piña',
+        description: 'Para una comida ligera y deliciosa',
+        image: 'https://www.vidaenbalance.com/wp-content/uploads/2024/03/673x890-Calabacitas.jpg'
       },
       {
         id: '5',
-        title: 'Tostadas de Pavo',
-        description: 'Perfectas para el desayuno',
-        image: 'https://images.unsplash.com/photo-1484723091739-30a097e8f929?auto=format&fit=crop&w=1600&h=900&q=80'
+        title: 'Molletes de camote y calabaza',
+        description: 'La combinación perfecta de sabores',
+        image: 'https://www.vidaenbalance.com/wp-content/uploads/2024/06/MOLLETES-DE-CAMOTE-Y-CALABAZA-873x890-1.jpg'
       },
       {
         id: '6',
-        title: 'Rollitos de Pavo',
+        title: 'Rollitos Thai',
         description: 'Aperitivo ligero y delicioso',
-        image: 'https://images.unsplash.com/photo-1506084868230-bb9d95c24759?auto=format&fit=crop&w=1600&h=900&q=80'
+        image: 'https://www.vidaenbalance.com/wp-content/uploads/2024/06/ROLLITOS-THAI-673x890-1.jpg'
       },
       {
         id: '7',
-        title: 'Rollitos de Pavo',
-        description: 'Aperitivo ligero y delicioso',
-        image: 'https://images.unsplash.com/photo-1506084868230-bb9d95c24759?auto=format&fit=crop&w=1600&h=900&q=80'
-      }
-    ]
-  },
-  'pechuga-de-pavo-rebanadas-delgadas': {
-    name: 'Pechuga de Pavo Rebanadas Delgadas',
-    description: 'Descubre recetas sabrosas con nuestro jamón de pavo Balance®',
-    image: 'https://images.unsplash.com/photo-1524438418049-ab2acb7aa48f?auto=format&fit=crop&w=800&h=600',
-    recipes: [
-      {
-        id: '1',
-        title: 'Sándwich Mediterráneo',
-        description: 'Un delicioso sándwich con sabores frescos',
-        image: 'https://images.unsplash.com/photo-1528735602780-2552fd46c7af?auto=format&fit=crop&w=1600&h=900&q=80'
-      },
-      {
-        id: '2',
-        title: 'Wrap de Pavo y Aguacate',
-        description: 'Wrap saludable y lleno de sabor',
-        image: 'https://images.unsplash.com/photo-1626700051175-6818013e1d4f?auto=format&fit=crop&w=1600&h=900&q=80'
-      },
-      {
-        id: '3',
-        title: 'Ensalada César con Pavo',
-        description: 'Una versión saludable del clásico',
-        image: 'https://images.unsplash.com/photo-1512852939750-1305098529bf?auto=format&fit=crop&w=1600&h=900&q=80'
-      },
-      {
-        id: '4',
-        title: 'Bowl Proteico',
-        description: 'Bowl nutritivo y equilibrado',
-        image: 'https://images.unsplash.com/photo-1546069901-ba9599a7e63c?auto=format&fit=crop&w=1600&h=900&q=80'
-      },
-      {
-        id: '5',
-        title: 'Tostadas de Pavo',
-        description: 'Perfectas para el desayuno',
-        image: 'https://images.unsplash.com/photo-1484723091739-30a097e8f929?auto=format&fit=crop&w=1600&h=900&q=80'
-      },
-      {
-        id: '6',
-        title: 'Rollitos de Pavo',
-        description: 'Aperitivo ligero y delicioso',
-        image: 'https://images.unsplash.com/photo-1506084868230-bb9d95c24759?auto=format&fit=crop&w=1600&h=900&q=80'
+        title: 'Cocktail de Mango',
+        description: 'Disfruta de un delicioso coctel',
+        image: 'https://www.vidaenbalance.com/wp-content/uploads/2024/06/COCKTAIL-CON-MANGO-673x890-1.jpg'
       }
     ]
   },
   'salchicha-de-pavo': {
     name: 'Salchicha de Pavo',
     description: 'Prepara platillos deliciosos con nuestras salchichas de pavo Balance®',
-    image: 'https://images.unsplash.com/photo-1599599810769-bcde5a160d32?auto=format&fit=crop&w=800&h=600',
+    image: 'https://www.vidaenbalance.com/wp-content/uploads/2023/06/Render_Sku909_Balance_Salchicha_Pechuga_Pavo_500g_Wholepack_Frontal-300x300.png',
     recipes: [
       {
-        id: '1',
-        title: 'Sándwich Mediterráneo',
-        description: 'Un delicioso sándwich con sabores frescos',
-        image: 'https://images.unsplash.com/photo-1528735602780-2552fd46c7af?auto=format&fit=crop&w=1600&h=900&q=80'
+        id: '8',
+        title: 'Aguacate relleno de arroz integral y salchicha de pavo',
+        description: 'Un aperiitivo delicioso y saludable',
+        image: 'https://www.vidaenbalance.com/wp-content/uploads/2023/08/Aguacate-relleno-de-arroz-integral-y-salchicha-de-pavo.webp'
       },
       {
-        id: '2',
-        title: 'Wrap de Pavo y Aguacate',
-        description: 'Wrap saludable y lleno de sabor',
-        image: 'https://images.unsplash.com/photo-1626700051175-6818013e1d4f?auto=format&fit=crop&w=1600&h=900&q=80'
+        id: '9',
+        title: 'Yakimeshi de Quinoa con Salchichas de Pavo San Rafael Balance®​',
+        description: 'Yakimeshi saludable y lleno de sabor',
+        image: 'https://www.vidaenbalance.com/wp-content/uploads/2023/06/Yakimeshi-Recetas-673-890.jpg'
       },
       {
-        id: '3',
-        title: 'Ensalada César con Pavo',
+        id: '10',
+        title: 'Portobellos Rellenos de Salchicha',
         description: 'Una versión saludable del clásico',
-        image: 'https://images.unsplash.com/photo-1512852939750-1305098529bf?auto=format&fit=crop&w=1600&h=900&q=80'
+        image: 'https://www.vidaenbalance.com/wp-content/uploads/2024/06/PORTOBELLO-RELLENO-DE-SALCHICHA-673x890-1.jpg'
       },
-      {
-        id: '4',
-        title: 'Bowl Proteico',
-        description: 'Bowl nutritivo y equilibrado',
-        image: 'https://images.unsplash.com/photo-1546069901-ba9599a7e63c?auto=format&fit=crop&w=1600&h=900&q=80'
-      },
-      {
-        id: '5',
-        title: 'Tostadas de Pavo',
-        description: 'Perfectas para el desayuno',
-        image: 'https://images.unsplash.com/photo-1484723091739-30a097e8f929?auto=format&fit=crop&w=1600&h=900&q=80'
-      },
-      {
-        id: '6',
-        title: 'Rollitos de Pavo',
-        description: 'Aperitivo ligero y delicioso',
-        image: 'https://images.unsplash.com/photo-1506084868230-bb9d95c24759?auto=format&fit=crop&w=1600&h=900&q=80'
-      }
     ]
   },
   'pechuga-de-pavo-rebanadas-sandwich': {
     name: 'Pechuga de Pavo Rebanadas Sandwich',
     description: 'Explora recetas creativas con nuestra mortadela de pavo Balance®',
-    image: 'https://images.unsplash.com/photo-1619221882220-947b3d3c8861?auto=format&fit=crop&w=800&h=600',
+    image: 'https://www.vidaenbalance.com/wp-content/uploads/2023/06/pechuga-pavo-rebanadas-sandwich-279x300.png',
     recipes: [
       {
-        id: '1',
-        title: 'Sándwich Mediterráneo',
+        id: '11',
+        title: 'Sándwich tostado de pechuga de pavo con manzana',
         description: 'Un delicioso sándwich con sabores frescos',
-        image: 'https://images.unsplash.com/photo-1528735602780-2552fd46c7af?auto=format&fit=crop&w=1600&h=900&q=80'
+        image: 'https://www.vidaenbalance.com/wp-content/uploads/2024/06/SANDWICH-CON-JAMON-Y-MANZAN-672x890-1.jpg'
       },
-      {
-        id: '2',
-        title: 'Wrap de Pavo y Aguacate',
-        description: 'Wrap saludable y lleno de sabor',
-        image: 'https://images.unsplash.com/photo-1626700051175-6818013e1d4f?auto=format&fit=crop&w=1600&h=900&q=80'
-      },
-      {
-        id: '3',
-        title: 'Ensalada César con Pavo',
-        description: 'Una versión saludable del clásico',
-        image: 'https://images.unsplash.com/photo-1512852939750-1305098529bf?auto=format&fit=crop&w=1600&h=900&q=80'
-      },
-      {
-        id: '4',
-        title: 'Bowl Proteico',
-        description: 'Bowl nutritivo y equilibrado',
-        image: 'https://images.unsplash.com/photo-1546069901-ba9599a7e63c?auto=format&fit=crop&w=1600&h=900&q=80'
-      },
-      {
-        id: '5',
-        title: 'Tostadas de Pavo',
-        description: 'Perfectas para el desayuno',
-        image: 'https://images.unsplash.com/photo-1484723091739-30a097e8f929?auto=format&fit=crop&w=1600&h=900&q=80'
-      },
-      {
-        id: '6',
-        title: 'Rollitos de Pavo',
-        description: 'Aperitivo ligero y delicioso',
-        image: 'https://images.unsplash.com/photo-1506084868230-bb9d95c24759?auto=format&fit=crop&w=1600&h=900&q=80'
-      }
     ]
   },
   'salchicha-de-pechuga-de-pavo': {
     name: 'Salchicha de Pechuga de Pavo',
     description: 'Crea platillos gourmet con nuestro salami de pavo Balance®',
-    image: 'https://images.unsplash.com/photo-1626200926749-ccb8b61e3bba?auto=format&fit=crop&w=800&h=600',
+    image: 'https://www.vidaenbalance.com/wp-content/uploads/2023/06/SKU345_SR_Render_Vista_Frontal_Balance-300x300.png',
     recipes: [
       {
-        id: '1',
-        title: 'Sándwich Mediterráneo',
-        description: 'Un delicioso sándwich con sabores frescos',
-        image: 'https://images.unsplash.com/photo-1528735602780-2552fd46c7af?auto=format&fit=crop&w=1600&h=900&q=80'
+        id: '12',
+        title: 'Poke de quinoa con salchichas de pechuga de pavo',
+        description: 'Un delicioso poke con sabores frescos',
+        image: 'https://www.vidaenbalance.com/wp-content/uploads/2023/06/Poke-de-quinoa-con-salchichas-de-pechuga-de-pavo.webp'
       },
-      {
-        id: '2',
-        title: 'Wrap de Pavo y Aguacate',
-        description: 'Wrap saludable y lleno de sabor',
-        image: 'https://images.unsplash.com/photo-1626700051175-6818013e1d4f?auto=format&fit=crop&w=1600&h=900&q=80'
-      },
-      {
-        id: '3',
-        title: 'Ensalada César con Pavo',
-        description: 'Una versión saludable del clásico',
-        image: 'https://images.unsplash.com/photo-1512852939750-1305098529bf?auto=format&fit=crop&w=1600&h=900&q=80'
-      },
-      {
-        id: '4',
-        title: 'Bowl Proteico',
-        description: 'Bowl nutritivo y equilibrado',
-        image: 'https://images.unsplash.com/photo-1546069901-ba9599a7e63c?auto=format&fit=crop&w=1600&h=900&q=80'
-      },
-      {
-        id: '5',
-        title: 'Tostadas de Pavo',
-        description: 'Perfectas para el desayuno',
-        image: 'https://images.unsplash.com/photo-1484723091739-30a097e8f929?auto=format&fit=crop&w=1600&h=900&q=80'
-      },
-      {
-        id: '6',
-        title: 'Rollitos de Pavo',
-        description: 'Aperitivo ligero y delicioso',
-        image: 'https://images.unsplash.com/photo-1506084868230-bb9d95c24759?auto=format&fit=crop&w=1600&h=900&q=80'
-      }
     ]
   }
 };

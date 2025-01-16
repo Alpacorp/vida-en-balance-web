@@ -5,7 +5,8 @@ import { CardSection, HeroSection } from '@ui/index';
 
 import { balanceContent } from "@content/balance/balance";
 
-import { NotFoundPage } from "@pages/NotFound/NotFoundPage.tsx";
+import { SEO } from "@utils/SEO.tsx";
+import { NotFoundPage } from "@pages/NotFound/NotFoundPage";
 
 import { BalancePageContent } from "@interfaces/interfaces";
 
@@ -24,8 +25,22 @@ export const BalancePage: FC = () => {
     return <NotFoundPage type="page" goBack={() => navigate(-1)} />;
   }
 
+  const seoData = {
+    ...pageContent.seo,
+    url: `https://www.vidaenbalance.com/${balanceType}`,
+    imageSeo: pageContent.hero.image.src,
+    schema: {
+      "@context": "https://schema.org",
+      "@type": "WebPage",
+      "name": pageContent.seo.title,
+      "description": pageContent.seo.description,
+      "url": `https://www.tudominio.com/${balanceType}`
+    }
+  };
+
   return (
     <>
+      <SEO {...seoData} />
       <HeroSection {...pageContent.hero} />
       <CardSection article={pageContent.articles} />
     </>

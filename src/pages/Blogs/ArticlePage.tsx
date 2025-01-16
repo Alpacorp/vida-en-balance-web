@@ -1,10 +1,11 @@
 import { useState, useEffect, FC } from 'react';
 import { useNavigate, useParams } from 'react-router-dom';
 
-import { ArticleLayout } from "@ui/layouts/ArticleLayout/ArticleLayout.tsx";
-import { NotFoundPage } from "@pages/NotFound/NotFoundPage.tsx";
+import { ArticleLayout } from "@ui/layouts/ArticleLayout/ArticleLayout";
+import { NotFoundPage } from "@pages/NotFound/NotFoundPage";
+import { SEO } from "@utils/SEO";
 
-import { getArticle, getRelatedArticles } from "@utils/getArticleContent.tsx";
+import { getArticle, getRelatedArticles } from "@utils/getArticleContent";
 
 import { Article } from "@interfaces/interfaces";
 
@@ -31,6 +32,44 @@ export const ArticlePage: FC = () => {
     return <NotFoundPage type="page" goBack={() => navigate(-1)} />;
   }
 
-  return <ArticleLayout {...article} />;
+  const seoData = {
+    title: `${article.title} - Balance`,
+    description: article.description,
+    keywords: `${article.title}, balance, ${category}, artículo`,
+    url: `https://www.vidaenbalance.com/${category}/${slug}`,
+    imageSeo: article.coverImage,
+    type: "article" as const,
+    schema: {
+      "@context": "https://schema.org",
+      "@type": "Article",
+      "headline": article.title,
+      "description": article.description,
+      "image": article.coverImage,
+      "author": {
+        "@type": "Person",
+        "name": article.author
+      },
+      "datePublished": article.date,
+      "publisher": {
+        "@type": "Organization",
+        "name": "Balance",
+        "logo": {
+          "@type": "ImageObject",
+          "url": "https://www.vidaenbalance.com/logo.png"
+        }
+      },
+      "mainEntityOfPage": {
+        "@type": "WebPage",
+        "@id": `https://www.vidaenbalance.com/${category}/${slug}`
+      }
+    }
+  };
+
+  return (
+    <>
+      <SEO {...seoData} />
+      <ArticleLayout {...article} />
+    </>
+  )
 }
 

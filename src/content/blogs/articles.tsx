@@ -8,41 +8,23 @@ export const articles: Article[] = [
     slug: "21k-juntos",
     title: "21K juntos",
     subtitle: "Descubre cómo prepararte para una carrera de 21 kilómetros.",
+    description: "Correr una media maratón es un objetivo desafiante pero alcanzable para muchos corredores. Con el entrenamiento adecuado y la preparación correcta, puedes completar los 21K de manera segura y satisfactoria.",
     coverImage: "https://images.unsplash.com/photo-1552674605-db6ffd4facb5?auto=format&fit=crop&q=80&w=2070&h=1000",
-    author: "Carlos Martínez",
-    date: "15 de Enero, 2024",
+    author: "Monica Gomez",
+    date: "15 de Enero, 2025",
     readingTime: "8 min de lectura",
     content: (
       <>
-        <h2 className="">Preparación para tu primera media maratón</h2>
+        <h2>¡¿Listos para empezar?!</h2>
         <p>
-        Correr una media maratón es un objetivo desafiante pero alcanzable para muchos corredores.
-          Con el entrenamiento adecuado y la preparación correcta, puedes completar los 21K de manera
-        segura y satisfactoria.
+          Es importante que antes de empezar conozcas tu ritmo para correr tus 21k, esto para poder adaptar ese paso en los intervalos “rápidos”. Si no sabes o es tu primera vez, simplemente hazlo basado en una escala de esfuerzos.
         </p>
 
-        <h3>Plan de entrenamiento básico</h3>
         <p>
-        Un plan de entrenamiento típico para una media maratón dura entre 12 y 16 semanas.
-          Durante este tiempo, aumentarás gradualmente tu kilometraje semanal y la distancia
-        de tus carreras largas.
+          Hoy les traigo una tabla de entrenamiento para 12 semanas, así llegaremos a la meta, juntos:
         </p>
 
-        <h3>Nutrición e hidratación</h3>
-        <p>
-        La nutrición adecuada es fundamental para el éxito en una media maratón. Necesitas
-        consumir suficientes carbohidratos para mantener tus niveles de energía durante el
-        entrenamiento y la carrera.
-        </p>
-
-        <h2>Consejos importantes</h2>
-        <ul>
-        <li>Aumenta el kilometraje gradualmente</li>
-        <li>Incluye días de descanso en tu plan</li>
-        <li>Hidrátate adecuadamente</li>
-        <li>Usa el equipo apropiado</li>
-        <li>Escucha a tu cuerpo</li>
-        </ul>
+        <img src="https://www.vidaenbalance.com/wp-content/uploads/2023/05/Tabla21K_DisfrutaCuidandote-768x913.jpg" alt="Tabla de entrenamiento para 21K" title="Tabla de entrenamiento para 21K" />
       </>
     ),
     relatedArticles: [
@@ -78,6 +60,7 @@ export const articles: Article[] = [
     slug: "evitando-lesiones",
     title: "Evitando lesiones: Guía esencial para corredores",
     subtitle: "Aprende a prevenir lesiones y mantener tu cuerpo en óptimas condiciones.",
+    description: "Las lesiones son uno de los mayores obstáculos para los corredores, tanto principiantes como experimentados. Afortunadamente, con las precauciones adecuadas, muchas lesiones comunes pueden prevenirse.",
     coverImage: "https://images.unsplash.com/photo-1434682881908-b43d0467b798?auto=format&fit=crop&q=80&w=2070&h=1000",
     author: "Ana Gómez",
     date: "22 de Enero, 2024",
@@ -150,6 +133,7 @@ export const articles: Article[] = [
     slug: "meditacion-para-corredores",
     title: "Meditación para corredores: Equilibrio mental en movimiento",
     subtitle: "Descubre cómo la meditación puede mejorar tu rendimiento y bienestar como corredor.",
+    description: "La meditación no es solo para quienes practican yoga. Los corredores pueden beneficiarse enormemente de esta práctica, mejorando tanto su rendimiento físico como su bienestar mental.",
     coverImage: "https://images.unsplash.com/photo-1506126613408-eca07ce68773?auto=format&fit=crop&q=80&w=2070&h=1000",
     author: "Laura Sánchez",
     date: "28 de Enero, 2024",
