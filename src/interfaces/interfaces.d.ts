@@ -53,6 +53,7 @@ export interface Article {
   slug: string;
   title: string;
   subtitle: string;
+  description: string;
   coverImage: string;
   author: string;
   date: string;
@@ -96,6 +97,7 @@ export interface NotFoundProps {
 
 export interface RecipeDetail {
   id: string;
+  description: string;
   title: string;
   image: string;
   ingredients: string[];
@@ -103,6 +105,7 @@ export interface RecipeDetail {
   timePrep: string;
   portions: string;
   difficulty: 'Fácil' | 'Media' | 'Difícil';
+  datePublished: string;
 }
 
 export interface Slide {
@@ -211,6 +214,11 @@ export interface BalancePageContent {
     image: { alt: string; src: string };
   }
   articles: ArticlesProps[];
+  seo: {
+    title: string;
+    description: string;
+    keywords: string;
+  };
 }
 
 

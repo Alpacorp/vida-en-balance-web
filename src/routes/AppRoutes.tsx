@@ -3,7 +3,7 @@ import { Route, Routes } from "react-router-dom";
 import {
   ArticlePage,
   HomePage,
-  ProductRecipesPage,
+  RecipesProductPage,
   RecipeDetailPage,
   RecipesHomePage,
   NutritionalPage,
@@ -18,7 +18,7 @@ export default function AppRoutes() {
       <Route path="/productos/:productSlug" element={<NutritionalPage />} />
       <Route path="/:category/:slug" element={<ArticlePage />} />
       <Route path="/recetas" element={<RecipesHomePage />} />
-      <Route path="/recetas/:productSlug" element={<ProductRecipesPage />} />
+      <Route path="/recetas/:productSlug" element={<RecipesProductPage />} />
       <Route path="/recetas/:productSlug/:recipeId" element={<RecipeDetailPage />} />
       <Route path="*" element={<NotFoundPage />} />
     </Routes>
