@@ -42,7 +42,7 @@ export const Footer: FC = () => {
             );
           })}
         </div>
-        <p className="mt-10 text-center text-sm/6 text-gray-200">&copy;{new Date().getFullYear()} San Rafael | Vida en Balance, Todos los derechos reservados.</p>
+        <p className="mt-10 text-center text-sm/6 text-gray-200">{new Date().getFullYear()} San Rafael&copy; | Vida en Balance&copy; Todos los derechos reservados.</p>
       </div>
     </footer>
   );
