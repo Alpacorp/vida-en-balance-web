@@ -88,7 +88,7 @@ export const recipesDetails: Record<string, RecipeDetail> = {
   },
   '4': {
     id: '4',
-    title: 'Calabacitas rellenas de Pechuga de pavo San Rafael Balance® y piña',
+    title: 'Calabacitas rellenas de Pechuga de pavo y piña',
     description: 'Disfruta de una comida ligera y deliciosa con estas calabacitas rellenas de Pechuga de pavo San Rafael Balance® y piña.',
     image: 'https://www.vidaenbalance.com/wp-content/uploads/2024/03/673x890-Calabacitas.jpg',
     ingredients: [
@@ -217,7 +217,7 @@ export const recipesDetails: Record<string, RecipeDetail> = {
   },
   '9': {
     id: '9',
-    title: 'Yakimeshi de Quinoa con Salchichas de Pavo San Rafael Balance®',
+    title: 'Yakimeshi de Quinoa con Salchichas de Pavo',
     description: 'Disfruta de un Yakimeshi saludable y lleno de sabor con esta receta de quinoa con salchichas de pavo San Rafael Balance®.',
     image: 'https://www.vidaenbalance.com/wp-content/uploads/2023/06/Yakimeshi-Recetas-673-890.jpg',
     ingredients: [

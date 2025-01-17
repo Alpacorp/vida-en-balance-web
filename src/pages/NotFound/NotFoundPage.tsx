@@ -5,6 +5,7 @@ import { Home, Search, ArrowLeft } from 'lucide-react';
 import { SEO } from "@utils/SEO";
 
 import { NotFoundProps } from "@interfaces/interfaces";
+import { BASE_URL } from "@config/config";
 
 export const NotFoundPage: FC<NotFoundProps> = ({ type = 'page', goBack }) => {
   const isRecipe = type === 'recipe';
@@ -15,7 +16,7 @@ export const NotFoundPage: FC<NotFoundProps> = ({ type = 'page', goBack }) => {
       ? "Lo sentimos, la receta que estás buscando no se encuentra en nuestro sitio."
       : "Lo sentimos, la página que estás buscando no existe en nuestro sitio.",
     keywords: "404, no encontrado, balance",
-    url: "https://www.tudominio.com/404",
+    url: `${BASE_URL}/404`,
     type: "website" as const,
     schema: {
       "@context": "https://schema.org",

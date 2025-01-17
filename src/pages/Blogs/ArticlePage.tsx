@@ -8,6 +8,9 @@ import { SEO } from "@utils/SEO";
 import { getArticle, getRelatedArticles } from "@utils/getArticleContent";
 
 import { Article } from "@interfaces/interfaces";
+import { BASE_URL } from "@config/config";
+
+import mainLogo from "@assets/images/san-rafael-balance-logo.webp";
 
 export const ArticlePage: FC = () => {
 
@@ -36,7 +39,7 @@ export const ArticlePage: FC = () => {
     title: `${article.title} - Balance`,
     description: article.description,
     keywords: `${article.title}, balance, ${category}, artículo`,
-    url: `https://www.vidaenbalance.com/${category}/${slug}`,
+    url: `${BASE_URL}/${category}/${slug}`,
     imageSeo: article.coverImage,
     type: "article" as const,
     schema: {
@@ -55,12 +58,12 @@ export const ArticlePage: FC = () => {
         "name": "Balance",
         "logo": {
           "@type": "ImageObject",
-          "url": "https://www.vidaenbalance.com/logo.png"
+          "url": `${BASE_URL}/assets/images/${mainLogo}`
         }
       },
       "mainEntityOfPage": {
         "@type": "WebPage",
-        "@id": `https://www.vidaenbalance.com/${category}/${slug}`
+        "@id": `${BASE_URL}/${category}/${slug}`
       }
     }
   };

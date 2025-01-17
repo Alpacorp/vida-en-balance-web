@@ -4,6 +4,7 @@ import { Link } from 'react-router-dom';
 import { SEO } from "@utils/SEO";
 
 import { productsData } from '@content/recipes/recipes';
+import { BASE_URL } from "@config/config";
 
 export const RecipesHomePage: FC = () => {
 
@@ -11,20 +12,20 @@ export const RecipesHomePage: FC = () => {
     title: "Recetas Balance - Descubre deliciosas recetas saludables",
     description: "Explora nuestra colección de recetas saludables y deliciosas utilizando los productos Balance. Encuentra inspiración para tus comidas diarias.",
     keywords: "recetas balance, comida saludable, recetas fáciles, productos balance",
-    url: "https://www.vidaenbalance.com/recetas",
-    imageSeo: "https://www.vidaenbalance.com/images/recetas-balance-banner.jpg",
+    url: `${BASE_URL}/recetas`,
+    imageSeo: "https://www.vidaenbalance.com/assets/images/recetas-balance-banner.jpg",
     type: "website" as const,
     schema: {
       "@context": "https://schema.org",
       "@type": "CollectionPage",
       "name": "Recetas Balance",
       "description": "Colección de recetas saludables utilizando productos Balance",
-      "url": "https://www.vidaenbalance.com/recetas",
+      "url": `${BASE_URL}/recetas`,
       "hasPart": Object.entries(productsData).map(([slug, product]) => ({
         "@type": "ItemList",
         "name": `Recetas con ${product.name}`,
         "description": product.description,
-        "url": `https://www.vidaenbalance.com/recetas/${slug}`
+        "url": `${BASE_URL}/recetas/${slug}`,
       }))
     }
   };

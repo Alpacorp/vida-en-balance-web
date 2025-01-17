@@ -9,15 +9,20 @@ interface SEOProps {
   url: string;
   type?: 'website' | 'article' | 'product';
   schema?: object;
+  noIndex?: boolean;
+  noFollow?: boolean;
 }
 
-export const SEO: FC<SEOProps> = ({ title, description, keywords, imageSeo, url, type = 'website', schema }) => {
+export const SEO: FC<SEOProps> = ({ title, description, keywords, imageSeo, url, type = 'website', schema, noIndex = false, noFollow = false }) => {
+  const robotsContent = `${noIndex ? 'noindex' : 'index'}, ${noFollow ? 'nofollow' : 'follow'}`;
+
   return (
     <HelmetProvider>
       <Helmet>
         <title>{title}</title>
         <meta name="description" content={description} />
         <meta name="keywords" content={keywords} />
+        <meta name="robots" content={robotsContent} />
         <meta property="og:title" content={title} />
         <meta property="og:description" content={description} />
         <meta property="og:type" content={type} />
