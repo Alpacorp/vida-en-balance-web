@@ -8,6 +8,7 @@ import { NotFoundPage } from "@pages/NotFound/NotFoundPage";
 import { SEO } from "@utils/SEO";
 
 import { productsData } from "@content/recipes/recipes";
+import { BASE_URL } from "@config/config";
 
 export const RecipesProductPage: FC = () => {
   const { productSlug } = useParams<{ productSlug: string }>();
@@ -22,7 +23,7 @@ export const RecipesProductPage: FC = () => {
     title: `Recetas con ${product.name} - Balance`,
     description: `Descubre deliciosas recetas utilizando ${product.name} de Balance. ${product.description}`,
     keywords: `recetas ${product.name}, balance, comida saludable, recetas fáciles`,
-    url: `https://www.vidaenbalance.com/recetas/${productSlug}`,
+    url: `${BASE_URL}/recetas/${productSlug}`,
     imageSeo: product.image,
     type: "website" as const,
     schema: {
@@ -30,12 +31,12 @@ export const RecipesProductPage: FC = () => {
       "@type": "ItemList",
       "name": `Recetas con ${product.name}`,
       "description": product.description,
-      "url": `https://www.vidaenbalance.com/recetas/${productSlug}`,
+      "url": `${BASE_URL}/recetas/${productSlug}`,
       "itemListElement": product.recipes.map((recipe, index) => ({
         "@type": "ListItem",
         "position": index + 1,
         "name": recipe.title,
-        "url": `https://www.vidaenbalance.com/recetas/${productSlug}/${recipe.id}`
+        "url": `${BASE_URL}/recetas/${productSlug}/${recipe.id}`
       }))
     }
   };

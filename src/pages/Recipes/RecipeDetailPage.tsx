@@ -7,6 +7,7 @@ import { NotFoundPage } from "@pages/NotFound/NotFoundPage";
 import { SEO } from "@utils/SEO";
 
 import { recipesDetails } from "@content/recipes/recipesDetails";
+import { BASE_URL } from "@config/config";
 
 export const RecipeDetailPage: FC = () => {
   const navigate = useNavigate();
@@ -21,7 +22,7 @@ export const RecipeDetailPage: FC = () => {
     title: `${recipe.title} - Recetas Balance`,
     description: recipe.description,
     keywords: `receta, ${recipe.title}, balance, saludable`,
-    url: `https://www.tudominio.com/recetas/${productSlug}/${recipeId}`,
+    url: `${BASE_URL}/recetas/${productSlug}/${recipeId}`,
     imageSeo: recipe.image,
     type: 'article' as const,
     schema: {

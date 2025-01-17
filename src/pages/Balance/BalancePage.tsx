@@ -5,10 +5,11 @@ import { CardSection, HeroSection } from '@ui/index';
 
 import { balanceContent } from "@content/balance/balance";
 
-import { SEO } from "@utils/SEO.tsx";
+import { SEO } from "@utils/SEO";
 import { NotFoundPage } from "@pages/NotFound/NotFoundPage";
 
 import { BalancePageContent } from "@interfaces/interfaces";
+import { BASE_URL } from "@config/config";
 
 export const BalancePage: FC = () => {
   const navigate = useNavigate();
@@ -27,14 +28,14 @@ export const BalancePage: FC = () => {
 
   const seoData = {
     ...pageContent.seo,
-    url: `https://www.vidaenbalance.com/${balanceType}`,
+    url: `${BASE_URL}/${balanceType}`,
     imageSeo: pageContent.hero.image.src,
     schema: {
       "@context": "https://schema.org",
       "@type": "WebPage",
       "name": pageContent.seo.title,
       "description": pageContent.seo.description,
-      "url": `https://www.tudominio.com/${balanceType}`
+      "url": `${BASE_URL}/${balanceType}`
     }
   };
 

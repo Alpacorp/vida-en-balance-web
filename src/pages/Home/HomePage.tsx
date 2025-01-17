@@ -3,22 +3,24 @@ import { FC } from "react";
 import { Heading, Hero, Health, Tabs } from "@ui/index";
 import { SEO } from "@utils/SEO";
 
+import { BASE_URL } from "@config/config";
+
 export const HomePage: FC = () => {
 
   const seoData = {
     title: 'Vida en Balance - Productos saludables para tu bienestar',
     description: 'Descubre nuestra gama de productos Balance para una vida más saludable y equilibrada.',
     keywords: 'balance, salud, bienestar, productos saludables',
-    url: 'https://www.vidaenbalance.com',
-    imageSeo: 'https://www.vidaenbalance.com/assets/images/disfruta-cuidandote.png',
+    url: `${BASE_URL}/`,
+    imageSeo: `${BASE_URL}/assets/images/disfruta-cuidandote.png`,
     schema: {
       "@context": "https://schema.org",
       "@type": "WebSite",
       "name": "Balance",
-      "url": "https://www.vidaenbalance.com",
+      "url": `${BASE_URL}/`,
       "potentialAction": {
         "@type": "SearchAction",
-        "target": "https://www.vidaenbalance.com/search?q={search_term_string}",
+        "target": `${BASE_URL}/search?q={search_term_string}`,
         "query-input": "required name=search_term_string"
       }
     }

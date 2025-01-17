@@ -24,7 +24,7 @@ export const productsData = {
       },
       {
         id: '4',
-        title: 'Calabacitas rellenas de Pechuga de pavo San Rafael Balance® y piña',
+        title: 'Calabacitas rellenas de Pechuga de pavo y piña',
         description: 'Para una comida ligera y deliciosa',
         image: 'https://www.vidaenbalance.com/wp-content/uploads/2024/03/673x890-Calabacitas.jpg'
       },
@@ -61,7 +61,7 @@ export const productsData = {
       },
       {
         id: '9',
-        title: 'Yakimeshi de Quinoa con Salchichas de Pavo San Rafael Balance®​',
+        title: 'Yakimeshi de Quinoa con Salchichas de Pavo',
         description: 'Yakimeshi saludable y lleno de sabor',
         image: 'https://www.vidaenbalance.com/wp-content/uploads/2023/06/Yakimeshi-Recetas-673-890.jpg'
       },

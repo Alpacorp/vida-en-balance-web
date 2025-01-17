@@ -5,9 +5,11 @@ import { NutritionalHeader, NutritionalDetails, NutritionalInfo } from "@ui/inde
 import { NotFoundPage } from "@pages/NotFound/NotFoundPage";
 import { SEO } from "@utils/SEO";
 
+import { productsData } from "@content/nutritional/products";
+import { BASE_URL } from "@config/config";
+
 import { Product } from "@interfaces/interfaces";
 
-import { productsData } from "@content/nutritional/products";
 
 export const NutritionalPage = () => {
   const navigate = useNavigate();
@@ -33,7 +35,7 @@ export const NutritionalPage = () => {
     title: `${activeProduct.name} - Información Nutricional`,
     description: `Descubre la información nutricional detallada de ${activeProduct.name} de Balance.`,
     keywords: `${activeProduct.name}, información nutricional, balance, salud`,
-    url: `https://www.vidaenbalance.com/productos/${productSlug}`,
+    url: `${BASE_URL}/productos/${productSlug}`,
     imageSeo: activeProduct.image,
     type: 'product' as const,
     schema: {
