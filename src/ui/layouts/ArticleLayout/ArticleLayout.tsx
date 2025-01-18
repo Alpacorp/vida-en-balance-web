@@ -20,11 +20,11 @@ export const ArticleLayout: FC<ArticleLayoutProps> = ({ title, subtitle, coverIm
         <div className="absolute inset-x-0 bottom-0 p-8 text-white">
           <div className="mx-auto max-w-4xl">
             <button
-              onClick={() => navigate('/tips-balance')}
+              onClick={() => navigate(-1)}
               className="mb-6 inline-flex items-center text-sm font-montserrat-medium text-white/80 hover:text-white"
             >
               <ArrowLeft className="mr-2 h-4 w-4" />
-              Volver a Tips Balance
+              Volver a atrás
             </button>
             <h1 className="mb-4 text-4xl font-montserrat-bold sm:text-5xl lg:text-6xl">
               {title}
@@ -103,7 +103,7 @@ export const ArticleLayout: FC<ArticleLayoutProps> = ({ title, subtitle, coverIm
             {relatedArticles.map((article) => (
               <Link
                 key={article.id}
-                to={`/tips-balance/${article.slug}`}
+                to={`/${article.category}/${article.slug}`}
                 className="group block overflow-hidden rounded-2xl bg-white shadow-sm transition hover:shadow-md"
               >
                 <div className="aspect-video overflow-hidden">

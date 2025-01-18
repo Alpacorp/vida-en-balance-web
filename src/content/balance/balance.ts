@@ -1,5 +1,5 @@
 export const balanceContent = {
-  "cuerpo-balance": {
+  "cuerpo-en-balance": {
     hero: {
       description: "Pensamos en rutinas que puedes hacer mientras estás en cualquier lugar y que te ayudarán a mantenerte en movimiento constante.",
       title: "Cuerpo en Balance",
@@ -20,7 +20,7 @@ export const balanceContent = {
         imageUrl: "https://images.unsplash.com/photo-1571019613454-1cb2f99b2d8b?auto=format&fit=crop&w=300&h=200",
         imageAlt: "Báscula de peso",
         ctaText: "Calcular mi peso ideal",
-        to: "/cuerpo-balance/peso-ideal"
+        to: "/cuerpo-en-balance/tu-peso-ideal"
       },
       {
         title: "La importancia de las proteínas",
@@ -28,15 +28,15 @@ export const balanceContent = {
         imageUrl: "https://images.unsplash.com/photo-1532550907401-a500c9a57435?auto=format&fit=crop&w=300&h=200",
         imageAlt: "Variedad de proteínas saludables",
         ctaText: "Guía de proteínas",
-        to: "/cuerpo-balance/guia-proteinas"
+        to: "/cuerpo-en-balance/la-importancia-de-las-proteinas"
       },
       {
-        title: "Nutrición y actividad física",
-        description: "Planes nutricionales adaptados a tu nivel de actividad física.",
+        title: "Qué comer según tu nivel de actividad física",
+        description: "Nutrientes: el combustible de tu cuerpo",
         imageUrl: "https://images.unsplash.com/photo-1517836357463-d25dfeac3438?auto=format&fit=crop&w=300&h=200",
         imageAlt: "Persona ejercitándose",
-        ctaText: "Ver planes",
-        to: "/cuerpo-balance/planes-nutricionales"
+        ctaText: "Planes nutricionales",
+        to: "/cuerpo-en-balance/que-comer-segun-tu-nivel-de-actividad-fisica"
       },
       {
         title: "Nutrición alcalina",
@@ -44,7 +44,7 @@ export const balanceContent = {
         imageUrl: "https://images.unsplash.com/photo-1540420773420-3366772f4999?auto=format&fit=crop&w=300&h=200",
         imageAlt: "Plato de comida alcalina",
         ctaText: "Aprender más",
-        to: "/cuerpo-balance/nutricion-alcalina"
+        to: "/cuerpo-en-balance/nutricion-alcalina"
       }
     ]
   },
@@ -69,7 +69,7 @@ export const balanceContent = {
         imageUrl: "https://images.unsplash.com/photo-1612251241057-bba56516bd40?auto=format&fit=crop&w=300&h=200",
         imageAlt: "Persona demostrando emociones",
         ctaText: "Aprender más",
-        to: "/mente-balance/emociones-salud"
+        to: "/mente-en-balance/como-afectan-las-emociones-a-mi-salud"
       },
       {
         title: "Mindfullness en tu vida diaria",
@@ -77,7 +77,7 @@ export const balanceContent = {
         imageUrl: "https://images.unsplash.com/photo-1603166868295-4ae2cba14063?auto=format&fit=crop&w=300&h=200",
         imageAlt: "Hombre meditando",
         ctaText: "Conoce más",
-        to: "/mente-balance/mindfullness"
+        to: "/mente-en-balance/mindfullness-en-tu-vida-diaria"
       },
       {
         title: "Paz interior, que nadie te la quite",
@@ -85,7 +85,7 @@ export const balanceContent = {
         imageUrl: "https://images.unsplash.com/photo-1591259354202-d1e6123e7b66?auto=format&fit=crop&w=300&h=200",
         imageAlt: "Mujer meditando",
         ctaText: "Descubrir más",
-        to: "/mente-balance/paz-interior"
+        to: "/mente-en-balance/paz-interior-que-nadie-te-la-quite"
       },
       {
         title: "Yoga feliz",
@@ -93,7 +93,7 @@ export const balanceContent = {
         imageUrl: "https://images.unsplash.com/photo-1447452001602-7090c7ab2db3?auto=format&fit=crop&w=300&h=200",
         imageAlt: "Mujer haciendo yoga",
         ctaText: "Aprender más",
-        to: "/mente-balance/yoga-feliz"
+        to: "/mente-en-balance/yoga-feliz"
       },
       {
         title: "Magia en el yoga",
@@ -101,7 +101,7 @@ export const balanceContent = {
         imageUrl: "https://images.unsplash.com/photo-1512291313931-d4291048e7b6?auto=format&fit=crop&w=300&h=200",
         imageAlt: "Mujer haciendo yoga",
         ctaText: "Aprender más",
-        to: "/mente-balance/magia-yoga"
+        to: "/mente-en-balance/magia-en-el-yoga"
       }
     ]
   },
@@ -142,7 +142,7 @@ export const balanceContent = {
         imageUrl: "https://images.unsplash.com/photo-1665686374006-b8f04cf62d57?auto=format&fit=crop&w=300&h=200",
         imageAlt: "Dos mujeres felices hablando",
         ctaText: "Conoce más",
-        to: "/tips-balance/mejor-tratamiento"
+        to: "/tips-balance/el-mejor-tratamiento-para-vivir-en-balance"
       }
     ]
   }
