@@ -1,7 +1,7 @@
 export const buttonsHero = [
   {
     "text": "Cuerpo en balance",
-    "to": "/cuerpo-balance"
+    "to": "/cuerpo-en-balance"
   },
   {
     "text": "Tips balance",

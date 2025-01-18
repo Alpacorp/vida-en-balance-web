@@ -2,7 +2,7 @@ export const healthOptions = [
   {
     id: 1,
     title: "Cuerpo en Balance",
-    href: "/cuerpo-balance",
+    href: "/cuerpo-en-balance",
     description:
       "A veces nos parece difícil cuidarnos, entre tantas tareas pareciera imposible. Por ello pensamos en rutinas que puedes hacer mientras estás en cualquier lugar y que te ayudarán a mantenerte en movimiento.",
     imageUrl:

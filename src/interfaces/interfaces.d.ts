@@ -137,6 +137,7 @@ export interface ArticleLayoutProps {
     excerpt: string;
     image: string;
     slug: string;
+    category: string;
   }>;
 }
 
