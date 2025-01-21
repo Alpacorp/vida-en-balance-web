@@ -20,7 +20,7 @@ export const ContentTab: FC<ContentProps> = ({ title, description, image, types,
 
   return (
       <div ref={divRef} className="bg-gray-100">
-        <div className="mx-auto max-w-7xl py-20 sm:px-2 sm:py-24 lg:px-4">
+        <div className="mx-auto max-w-7xl py-10 sm:px-2 sm:py-10 lg:px-4">
           <div className="mx-auto max-w-2xl px-4 lg:max-w-none">
             <div className="grid grid-cols-1 items-center gap-x-16 gap-y-10 lg:grid-cols-2">
               <div>
@@ -53,9 +53,9 @@ export const ContentTab: FC<ContentProps> = ({ title, description, image, types,
                 <div>
                   <div className="mt-16 flex items-end justify-start gap-8 h-auto">
                     {types?.map((type) => (
-                        <div key={type.id} className="sm:flex flex-col h-1/2 items-center justify-center">
+                        <div key={type.id} className="sm:flex flex-col items-center justify-center">
                           <div className="sm:shrink-0">
-                            <img alt={type.name} src={type.url} title={type.name} className="h-auto w-28 aspect-auto hover:-translate-y-1 transform transition-transform duration-300 ease-in-out" />
+                            <img alt={type.name} src={type.url} title={type.name} className="max-h-40 h-full max-w-28 w-full aspect-auto hover:-translate-y-1 transform transition-transform duration-300 ease-in-out" />
                           </div>
                           <div className="mt-4 sm:mt-0 sm:ml-6 lg:mt-6 lg:ml-0 text-center">
                             <h3 className="text-sm font-montserrat-medium text-gray-900">{type.name}</h3>
