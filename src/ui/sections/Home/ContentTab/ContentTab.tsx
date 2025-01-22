@@ -20,9 +20,9 @@ export const ContentTab: FC<ContentProps> = ({ title, description, image, types,
 
   return (
       <div ref={divRef} className="bg-gray-100">
-        <div className="mx-auto max-w-7xl py-10 sm:px-2 sm:py-10 lg:px-4">
-          <div className="mx-auto max-w-2xl px-4 lg:max-w-none">
-            <div className="grid grid-cols-1 items-center gap-x-16 gap-y-10 lg:grid-cols-2">
+        <div className="mx-auto max-w-7xl py-2 sm:px-2 sm:py-10 lg:px-4">
+          <div className="mx-auto max-w-2xl py-2 px-4 lg:max-w-none">
+            <div className="flex flex-wrap gap-x-16 gap-y-10 lg:flex-nowrap justify-center">
               <div>
                 <h2 className="text-4xl font-montserrat-medium tracking-tight text-gray-900">
                   {title}
@@ -51,15 +51,15 @@ export const ContentTab: FC<ContentProps> = ({ title, description, image, types,
                   }
                 </div>
                 <div>
-                  <div className="mt-16 flex items-end justify-start gap-8 h-auto">
+                  <div className="mt-10 flex items-end justify-center gap-8 h-auto">
                     {types?.map((type) => (
                         <div key={type.id} className="sm:flex flex-col items-center justify-center">
                           <div className="sm:shrink-0">
                             <img alt={type.name} src={type.url} title={type.name} className="max-h-40 h-full max-w-28 w-full aspect-auto hover:-translate-y-1 transform transition-transform duration-300 ease-in-out" />
                           </div>
-                          <div className="mt-4 sm:mt-0 sm:ml-6 lg:mt-6 lg:ml-0 text-center">
+                          <div className="mt-2 sm:mt-0 sm:ml-6 lg:mt-2 lg:ml-0 text-center">
                             <h3 className="text-sm font-montserrat-medium text-gray-900">{type.name}</h3>
-                            <p className="mt-2 text-sm font-montserrat-regular text-gray-500">{type.description}</p>
+                            <p className="text-sm font-montserrat-regular text-gray-500">{type.description}</p>
                           </div>
                         </div>
                     ))}
@@ -69,7 +69,7 @@ export const ContentTab: FC<ContentProps> = ({ title, description, image, types,
               <img
                   alt={title}
                   src={image}
-                  className="aspect-square w-full rounded-lg bg-gray-100 object-cover shadow-2xl"
+                  className="aspect-square w-full max-w-xs h-96 rounded-lg bg-gray-100 object-cover shadow-2xl"
               />
             </div>
           </div>
