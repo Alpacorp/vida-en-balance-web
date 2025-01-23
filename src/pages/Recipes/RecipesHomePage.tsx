@@ -52,7 +52,7 @@ export const RecipesHomePage: FC = () => {
                   <img
                     src={product.image}
                     alt={product.name}
-                    className="w-full h-full object-cover"
+                    className="w-full h-2/4 aspect-auto object-cover"
                   />
                 </div>
                 <div className="p-6">

@@ -33,12 +33,12 @@ export const Hero: FC = () => {
               alt={slide.title}
               className="h-full w-full object-cover"
             />
-            <div className="absolute inset-0 bg-gradient-to-r from-black/70 to-black/50" />
+            <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-black/30" />
           </div>
 
           {/* Content */}
           <div className="relative z-10 flex h-full items-center justify-center px-4">
-            <div className="max-w-4xl text-center">
+            <div className="max-w-4xl text-center mt-48">
               <h1 className="mb-4 text-4xl font-montserrat-bold text-white sm:text-5xl md:text-6xl">
                 {slide.title}
               </h1>

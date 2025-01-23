@@ -123,7 +123,7 @@ export const balanceContent = {
       {
         title: "21K juntos",
         description: "Descubre cómo prepararte para una carrera de 21 kilómetros.",
-        imageUrl: "https://images.unsplash.com/photo-1486218119243-13883505764c?auto=format&fit=crop&w=300&h=200",
+        imageUrl: "/assets/images/carrera.webp",
         imageAlt: "Corredores en una carrera",
         ctaText: "Nada mejor que correr",
         to: "/tips-balance/21k-juntos"
@@ -131,7 +131,7 @@ export const balanceContent = {
       {
         title: "Evitando lesiones",
         description: "Conoce cómo prevenir lesiones al correr.",
-        imageUrl: "https://images.unsplash.com/photo-1589698112632-f5dffc219c68?auto=format&fit=crop&w=300&h=200",
+        imageUrl: "/assets/images/lesiones.webp",
         imageAlt: "Hombre cuidando lesión de un niño",
         ctaText: "Conoce más",
         to: "/tips-balance/evitando-lesiones"
@@ -139,7 +139,7 @@ export const balanceContent = {
       {
         title: "El mejor tratamiento para vivir en balance",
         description: "Acciones diarias que hacen la diferencia",
-        imageUrl: "https://images.unsplash.com/photo-1665686374006-b8f04cf62d57?auto=format&fit=crop&w=300&h=200",
+        imageUrl: "/assets/images/tratamiento.webp",
         imageAlt: "Dos mujeres felices hablando",
         ctaText: "Conoce más",
         to: "/tips-balance/el-mejor-tratamiento-para-vivir-en-balance"

@@ -27,7 +27,7 @@ export const HomePage: FC = () => {
   };
 
   return (
-    <main>
+    <main className="overflow-x-hidden">
       <SEO {...seoData} />
       <Hero />
       <Heading tag="h1" text="Productos San Rafael Balance" customClassName="bg-amber-400" />

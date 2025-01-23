@@ -2,7 +2,7 @@ import React from 'react';
 
 import { ProductDetailsProps } from "@interfaces/interfaces";
 
-export const NutritionalDetails: React.FC<ProductDetailsProps> = ({ product, presentations, ingredients }) => {
+export const NutritionalDetails: React.FC<ProductDetailsProps> = ({ product, presentations, ingredients, stamps }) => {
 
   return (
     <div>
@@ -18,22 +18,39 @@ export const NutritionalDetails: React.FC<ProductDetailsProps> = ({ product, pre
         </p>
       </div>
 
-      <div className="grid grid-cols-3 gap-6">
-        {presentations.map((presentation, index) => (
-          <div key={presentation.id} className="flex flex-col items-center">
-            <img
-              src={presentation.image}
-              alt={`Presentación ${index}`}
-              title={`Presentación ${index}`}
-              className="w-32 h-32 object-contain mb-4"
-            />
-            <div className="grid grid-cols-2 gap-2">
-              {presentation.stamps.map((icon) => (
-                <img src={icon.image} alt={icon.alt} title={icon.label} key={icon.label} />
-              ))}
+      <div className="flex flex-col gap-10">
+        <div className="flex flex-wrap items-end justify-center gap-6">
+          {presentations.map((presentation) => {
+            const validateImage = presentation.label === "Granel"
+            return (
+              <div key={presentation.id}>
+                <img
+                  src={presentation.image}
+                  alt={`Presentación ${presentation.label}`}
+                  title={`Presentación ${presentation.label}`}
+                  className={`${validateImage ? 'h-60' : 'h-40'} w-40 object-contain object-bottom`}
+                />
             </div>
-          </div>
-        ))}
+            )
+          })}
+        </div>
+        <div>
+          {
+            stamps && (
+              <div className="flex justify-center flex-wrap gap-4">
+                {stamps.map((stamp) => (
+                  <img
+                    key={stamp.alt}
+                    src={stamp.image}
+                    alt={stamp.label}
+                    title={stamp.label}
+                    className="h-14 w-14 object-contain"
+                  />
+                ))}
+              </div>
+            )
+          }
+        </div>
       </div>
     </div>
   );

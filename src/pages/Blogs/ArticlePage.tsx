@@ -1,16 +1,16 @@
 import { useState, useEffect, FC } from 'react';
 import { useNavigate, useParams } from 'react-router-dom';
 
+import mainLogo from "@assets/images/san-rafael-balance-logo.webp";
 import { ArticleLayout } from "@ui/layouts/ArticleLayout/ArticleLayout";
 import { NotFoundPage } from "@pages/NotFound/NotFoundPage";
-import { SEO } from "@utils/SEO";
 
 import { getArticle, getRelatedArticles } from "@utils/getArticleContent";
 
 import { Article } from "@interfaces/interfaces";
 import { BASE_URL } from "@config/config";
 
-import mainLogo from "@assets/images/san-rafael-balance-logo.webp";
+import { SEO } from "@utils/SEO";
 
 export const ArticlePage: FC = () => {
 

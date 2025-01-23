@@ -79,6 +79,7 @@ export const NutritionalPage = () => {
               product={activeProduct}
               ingredients={activeProduct.ingredients}
               presentations={activeProduct.presentations}
+              stamps={activeProduct.stamps}
             />
             <NutritionalInfo nutritionalInfo={activeProduct.nutritionalInfo} />
           </div>

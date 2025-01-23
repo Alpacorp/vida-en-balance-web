@@ -10,11 +10,11 @@ export const ArticleLayout: FC<ArticleLayoutProps> = ({ title, subtitle, coverIm
 
   return (
     <article className="min-h-screen bg-white">
-      <div className="relative h-[60vh] min-h-[500px] w-full">
+      <div className="relative h-[60vh] min-h-[500px] w-full mt-20">
         <img
           src={coverImage}
           alt={title}
-          className="h-full w-full object-cover"
+          className="h-full w-full object-cover object-top"
         />
         <div className="absolute inset-0 bg-gradient-to-t from-black/70 to-black/30" />
         <div className="absolute inset-x-0 bottom-0 p-8 text-white">
@@ -24,7 +24,7 @@ export const ArticleLayout: FC<ArticleLayoutProps> = ({ title, subtitle, coverIm
               className="mb-6 inline-flex items-center text-sm font-montserrat-medium text-white/80 hover:text-white"
             >
               <ArrowLeft className="mr-2 h-4 w-4" />
-              Volver a atrás
+              Volver atrás
             </button>
             <h1 className="mb-4 text-4xl font-montserrat-bold sm:text-5xl lg:text-6xl">
               {title}
