@@ -7,6 +7,7 @@ export interface Product {
   nutritionalInfo: NutritionalItem[];
   ingredients: string;
   presentations: Presentation[];
+  stamps: Stamp[];
   weight: string;
   image: string;
   url: string
@@ -28,13 +29,13 @@ export interface Presentation {
   id: number;
   label: string;
   image: string;
-  stamps: Stamp[];
 }
 
 export interface ProductDetailsProps {
   product: Product;
   presentations: Presentation[];
   ingredients: string;
+  stamps: Stamp[];
 }
 
 export interface NutritionalItem {
@@ -86,7 +87,7 @@ export interface ContentProps {
     id: number;
     url: string;
     name: string;
-    description: string;
+    description: string[];
   }[];
 }
 

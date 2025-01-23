@@ -84,54 +84,50 @@ export const productsData: Product[] = [
     presentations: [
       {
         id: 1,
-        label: "A granel",
+        label: "Granel",
         image: "/assets/images/pechuga-pavo-escalonada-granel.png",
-        stamps: [
-          {
-            label: "Bajo en grasa",
-            image: "/assets/images/bajo-en-grasa.png",
-            alt: "Sin gluten"
-          },
-          {
-            label: "Sin gluten",
-            image: "/assets/images/sin-gluten.png",
-            alt: "Sin lactosa"
-          }
-        ]
       },
       {
         id: 2,
         label: "Family size",
         image: "/assets/images/family-size.png",
-        stamps: [
-          {
-            label: "Sin nitritos añadidos",
-            image: "/assets/images/sin-nitritos-anadidos.png",
-            alt: "Sin nitritos añadidos"
-          },
-          {
-            label: "Sin conservadores artificiales",
-            image: "/assets/images/sin-conservadores-artificiales.png",
-            alt: "Sin conservadores artificiales"
-          }
-        ]
       },
       {
         id: 3,
         label: "Individual",
         image: "/assets/images/pechuga-de-pavo-escalonada.png",
-        stamps: [
-          {
-            label: "100% carne de pavo",
-            image: "/assets/images/carne-100-pavo.png",
-            alt: "100% carne de pavo"
-          },
-          {
-            label: "Sin colorantes artificiales",
-            image: "/assets/images/sin-colorantes-artificiales.png",
-            alt: "Sin colorantes artificiales"
-          }
-        ]
+      }
+    ],
+    stamps: [
+      {
+        label: "Bajo en grasa",
+        image: "/assets/images/bajo-en-grasa.png",
+        alt: "Sin gluten"
+      },
+      {
+        label: "Sin gluten",
+        image: "/assets/images/sin-gluten.png",
+        alt: "Sin lactosa"
+      },
+      {
+        label: "Sin nitritos añadidos",
+        image: "/assets/images/sin-nitritos-anadidos.png",
+        alt: "Sin nitritos añadidos"
+      },
+      {
+        label: "Sin conservadores artificiales",
+        image: "/assets/images/sin-conservadores-artificiales.png",
+        alt: "Sin conservadores artificiales"
+      },
+      {
+        label: "100% carne de pavo",
+        image: "/assets/images/carne-100-pavo.png",
+        alt: "100% carne de pavo"
+      },
+      {
+        label: "Sin colorantes artificiales",
+        image: "/assets/images/sin-colorantes-artificiales.png",
+        alt: "Sin colorantes artificiales"
       }
     ]
   },
@@ -223,47 +219,45 @@ export const productsData: Product[] = [
     presentations: [
       {
         id: 1,
-        label: "A granel",
+        label: "Granel",
         image: "/assets/images/pechuga-pavo-rebanadas-delgadas-granel.png",
-        stamps: [
-          {
-            label: "Bajo en grasa",
-            image: "/assets/images/bajo-en-grasa.png",
-            alt: "Sin gluten"
-          },
-          {
-            label: "Sin gluten",
-            image: "/assets/images/sin-gluten.png",
-            alt: "Sin lactosa"
-          },
-          {
-            label: "Sin nitritos añadidos",
-            image: "/assets/images/sin-nitritos-anadidos.png",
-            alt: "Sin nitritos añadidos"
-          },
-          {
-            label: "Sin conservadores artificiales",
-            image: "/assets/images/sin-conservadores-artificiales.png",
-            alt: "Sin conservadores artificiales"
-          }
-        ]
       },
       {
         id: 2,
         label: "Individual",
         image: "/assets/images//pechuga-de-pavo-rebanadas-delgadas.png",
-        stamps: [
-          {
-            label: "100% carne de pavo",
-            image: "/assets/images/carne-100-pavo.png",
-            alt: "100% carne de pavo"
-          },
-          {
-            label: "Sin colorantes artificiales",
-            image: "/assets/images/sin-colorantes-artificiales.png",
-            alt: "Sin colorantes artificiales"
-          }
-        ]
+      }
+    ],
+    stamps: [
+      {
+        label: "Bajo en grasa",
+        image: "/assets/images/bajo-en-grasa.png",
+        alt: "Sin gluten"
+      },
+      {
+        label: "Sin gluten",
+        image: "/assets/images/sin-gluten.png",
+        alt: "Sin lactosa"
+      },
+      {
+        label: "Sin nitritos añadidos",
+        image: "/assets/images/sin-nitritos-anadidos.png",
+        alt: "Sin nitritos añadidos"
+      },
+      {
+        label: "Sin conservadores artificiales",
+        image: "/assets/images/sin-conservadores-artificiales.png",
+        alt: "Sin conservadores artificiales"
+      },
+      {
+        label: "100% carne de pavo",
+        image: "/assets/images/carne-100-pavo.png",
+        alt: "100% carne de pavo"
+      },
+      {
+        label: "Sin colorantes artificiales",
+        image: "/assets/images/sin-colorantes-artificiales.png",
+        alt: "Sin colorantes artificiales"
       }
     ]
   },
@@ -352,28 +346,28 @@ export const productsData: Product[] = [
         id: 1,
         label: "Individual",
         image: "/assets/images/salchicha-de-pavo.png",
-        stamps: [
-          {
-            label: "Bajo en grasa",
-            image: "/assets/images/bajo-en-grasa.png",
-            alt: "Sin gluten"
-          },
-          {
-            label: "Sin gluten",
-            image: "/assets/images/sin-gluten.png",
-            alt: "Sin lactosa"
-          },
-          {
-            label: "100% carne de pavo",
-            image: "/assets/images/carne-100-pavo.png",
-            alt: "100% carne de pavo"
-          },
-          {
-            label: "Sin colorantes artificiales",
-            image: "/assets/images/sin-colorantes-artificiales.png",
-            alt: "Sin colorantes artificiales"
-          }
-        ]
+      }
+    ],
+    stamps: [
+      {
+        label: "Bajo en grasa",
+        image: "/assets/images/bajo-en-grasa.png",
+        alt: "Sin gluten"
+      },
+      {
+        label: "Sin gluten",
+        image: "/assets/images/sin-gluten.png",
+        alt: "Sin lactosa"
+      },
+      {
+        label: "100% carne de pavo",
+        image: "/assets/images/carne-100-pavo.png",
+        alt: "100% carne de pavo"
+      },
+      {
+        label: "Sin colorantes artificiales",
+        image: "/assets/images/sin-colorantes-artificiales.png",
+        alt: "Sin colorantes artificiales"
       }
     ]
   },
@@ -455,49 +449,45 @@ export const productsData: Product[] = [
     presentations: [
       {
         id: 1,
-        label: "A granel",
+        label: "Granel",
         image: "/assets/images/pechuga-pavo-rebanadas-sandwich-granel.png",
-        stamps: [
-          {
-            label: "Bajo en grasa",
-            image: "/assets/images/bajo-en-grasa.png",
-            alt: "Sin gluten"
-          },
-          {
-            label: "Sin gluten",
-            image: "/assets/images/sin-gluten.png",
-            alt: "Sin lactosa"
-          }
-        ]
       },
       {
         id: 2,
         label: "Family size",
-        image: "/assets/images/pechuga-pavo-rebanadas-sandwich-family.png",
-        stamps: [
-          {
-            label: "Sin conservadores artificiales",
-            image: "/assets/images/sin-conservadores-artificiales.png",
-            alt: "Sin conservadores artificiales"
-          },
-          {
-            label: "Sin colorantes artificiales",
-            image: "/assets/images/sin-colorantes-artificiales.png",
-            alt: "Sin colorantes artificiales"
-          }
-        ]
+        image: "/assets/images/pechuga-pavo-rebanadas-sandwich-family-size.webp",
       },
       {
         id: 3,
         label: "Individual",
         image: "/assets/images/pechuga-de-pavo-rebanadas-sandwich.png",
-        stamps: [
-          {
-            label: "100% carne de pavo",
-            image: "/assets/images/sin-nitritos-anadidos.png",
-            alt: "100% carne de pavo"
-          }
-        ]
+      }
+    ],
+    stamps: [
+      {
+        label: "Bajo en grasa",
+        image: "/assets/images/bajo-en-grasa.png",
+        alt: "Sin gluten"
+      },
+      {
+        label: "Sin gluten",
+        image: "/assets/images/sin-gluten.png",
+        alt: "Sin lactosa"
+      },
+      {
+        label: "Sin conservadores artificiales",
+        image: "/assets/images/sin-conservadores-artificiales.png",
+        alt: "Sin conservadores artificiales"
+      },
+      {
+        label: "Sin colorantes artificiales",
+        image: "/assets/images/sin-colorantes-artificiales.png",
+        alt: "Sin colorantes artificiales"
+      },
+      {
+        label: "100% carne de pavo",
+        image: "/assets/images/sin-nitritos-anadidos.png",
+        alt: "100% carne de pavo"
       }
     ]
   },
@@ -591,28 +581,28 @@ export const productsData: Product[] = [
         id: 1,
         label: "Individual",
         image: "/assets/images/salchicha-de-pechuga-de-pavo.png",
-        stamps: [
-          {
-            label: "Bajo en grasa",
-            image: "/assets/images/bajo-en-grasa.png",
-            alt: "Sin gluten"
-          },
-          {
-            label: "Sin gluten",
-            image: "/assets/images/sin-gluten.png",
-            alt: "Sin lactosa"
-          },
-          {
-            label: "100% carne de pavo",
-            image: "/assets/images/carne-100-pavo.png",
-            alt: "100% carne de pavo"
-          },
-          {
-            label: "Sin colorantes artificiales",
-            image: "/assets/images/sin-colorantes-artificiales.png",
-            alt: "Sin colorantes artificiales"
-          }
-        ]
+      }
+    ],
+    stamps: [
+      {
+        label: "Bajo en grasa",
+        image: "/assets/images/bajo-en-grasa.png",
+        alt: "Sin gluten"
+      },
+      {
+        label: "Sin gluten",
+        image: "/assets/images/sin-gluten.png",
+        alt: "Sin lactosa"
+      },
+      {
+        label: "100% carne de pavo",
+        image: "/assets/images/carne-100-pavo.png",
+        alt: "100% carne de pavo"
+      },
+      {
+        label: "Sin colorantes artificiales",
+        image: "/assets/images/sin-colorantes-artificiales.png",
+        alt: "Sin colorantes artificiales"
       }
     ]
   }

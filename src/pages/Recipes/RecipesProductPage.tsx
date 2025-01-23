@@ -1,4 +1,4 @@
-import {FC} from "react";
+import { FC } from "react";
 
 import { useNavigate, useParams } from 'react-router-dom';
 
@@ -48,7 +48,7 @@ export const RecipesProductPage: FC = () => {
         <ProductHeader
           productName={product.name}
           productDescription={product.description}
-          productImage={product.image}
+          productImage={product.imageHero}
         />
         <div className="container mx-auto px-4 py-12">
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">

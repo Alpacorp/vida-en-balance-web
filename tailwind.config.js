@@ -1,7 +1,7 @@
 /** @type {import('tailwindcss').Config} */
 
 import typography from '@tailwindcss/typography';
-import aspectRatio from '@tailwindcss/aspect-ratio';
+// import aspectRatio from '@tailwindcss/aspect-ratio';
 import headlessUi from '@headlessui/tailwindcss';
 
 export default {
@@ -10,6 +10,11 @@ export default {
     extend: {
       colors: {
         violet: "#4C50A2",
+        main: "#0F2641",
+        secondary: "#00B4C2",
+        tertiary: "#009ED0",
+        quaternary: "#88C2C8",
+        white: "#FFFFFF",
       },
       fontFamily: {
         "montserrat-black": ["Montserrat Black", "sans-serif"],
@@ -37,10 +42,10 @@ export default {
         "montserrat-thin-italic": ["Montserrat ThinItalic", "sans-serif"],
       },
       keyframes: {
-        "slide-in-right": {
+        "fade-in-right": {
           "0%": {
-            "-webkit-transform": "translateX(1000px)",
-            transform: "translateX(1000px)",
+            "-webkit-transform": "translateX(50px)",
+            transform: "translateX(50px)",
             opacity: "0",
           },
           "100%": {
@@ -51,13 +56,13 @@ export default {
         }
       },
       animation: {
-        "slide-in-right": "slide-in-right 0.5s cubic-bezier(0.250, 0.460, 0.450, 0.940) both",
+        "fade-in-right": "fade-in-right 0.6s cubic-bezier(0.390, 0.575, 0.565, 1.000) both",
       },
     },
   },
   plugins: [
     typography,
-    aspectRatio,
+    // aspectRatio,
     headlessUi,
   ],
 };

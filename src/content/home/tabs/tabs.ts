@@ -11,19 +11,19 @@ export const tabsContent = [
         id: 1,
         url: "https://www.vidaenbalance.com/wp-content/uploads/2023/06/pechuga-pavo-escalonada-granel-e1686607991929.png",
         name: "Granel",
-        description: "190 gramos"
+        description: ["3 Kilogramos", "Lleva la cantidad que prefieras"]
       },
       {
         id: 2,
         url: "https://www.vidaenbalance.com/wp-content/uploads/2023/06/Render_Sku_2396_SRB_Pechuga_de_Pavo_350g_Family_Size-1536x1536.png",
         name: "Familiar",
-        description: "350 gramos"
+        description: ["250 gramos"]
       },
       {
         id: 3,
         url: "https://www.vidaenbalance.com/wp-content/uploads/2023/06/pechuga-pavo-escalonada.png",
         name: "Individual",
-        description: "90 gramos"
+        description: ["350 gramos"]
       }
     ]
   },
@@ -39,13 +39,13 @@ export const tabsContent = [
         id: 1,
         url: "https://www.vidaenbalance.com/wp-content/uploads/2023/06/pechuga-pavo-rebanadas-delgadas-granel.png",
         name: "Granel",
-        description: "120 gramos"
+        description: ["3 Kilogramos", "Lleva la cantidad que prefieras"]
       },
       {
         id: 2,
         url: "https://www.vidaenbalance.com/wp-content/uploads/elementor/thumbs/pechuga-pavo-rebanadas-delgadas-qijs85zrensd5atjlbh8bmehe5cciv8kzvlxvdalzc.png",
         name: "Familiar",
-        description: "250 gramos"
+        description: ["200 gramos"]
       }
     ]
   },
@@ -60,8 +60,8 @@ export const tabsContent = [
       {
         id: 1,
         url: "https://www.vidaenbalance.com/wp-content/uploads/2023/06/Salchichas-de-Pavo.png",
-        name: "Granel",
-        description: "120 gramos"
+        name: "Individual",
+        description: ["500 gramos"]
       }
     ]
   },
@@ -77,19 +77,19 @@ export const tabsContent = [
         id: 1,
         url: "https://www.vidaenbalance.com/wp-content/uploads/2023/06/pechuga-pavo-rebanadas-sandwich-granel.png",
         name: "Granel",
-        description: "120 gramos"
+        description: ["3 Kilogramos", "Lleva la cantidad que prefieras"]
       },
       {
         id: 2,
-        url: "https://www.vidaenbalance.com/wp-content/uploads/2023/06/Render_Sku_2395_SRB_Pechuga_Pavo_350g_Family_Size-768x768.png",
+        url: "/assets/images/pechuga-pavo-family-size.webp",
         name: "Familiar",
-        description: "350 gramos"
+        description: ["350 gramos"]
       },
       {
         id: 3,
         url: "https://www.vidaenbalance.com/wp-content/uploads/2023/06/pechuga-pavo-rebanadas-sandwich.png",
         name: "Individual",
-        description: "90 gramos"
+        description: ["200 gramos"]
 
       }
     ]
@@ -106,7 +106,7 @@ export const tabsContent = [
         id: 1,
         url: "https://www.vidaenbalance.com/wp-content/uploads/2023/06/SKU345_SR_Render_Vista_Frontal_Balance.png",
         name: "Individual",
-        description: "120 gramos"
+        description: ["500 gramos"]
       }
     ]
   }

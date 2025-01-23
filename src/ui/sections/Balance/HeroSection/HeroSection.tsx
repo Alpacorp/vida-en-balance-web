@@ -18,7 +18,7 @@ export const HeroSection: FC<HeroBalanceProps> = ({ title, description, image })
         className="absolute w-full h-full object-cover"
         title={title}
       />
-      <div className="absolute inset-0 bg-gradient-to-r from-orange-500/90 to-orange-400/90"></div>
+      <div className="absolute inset-0 bg-gradient-to-r from-tertiary to-secondary/60"></div>
       <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-full flex items-center">
         <div className="max-w-2xl">
           <h1 className="text-4xl sm:text-5xl font-montserrat-bold mb-6">
@@ -34,8 +34,8 @@ export const HeroSection: FC<HeroBalanceProps> = ({ title, description, image })
                 to={button.to}
                 className={`px-6 py-3 font-montserrat-medium rounded-md transition duration-300 ease-in-out transform hover:-translate-y-1 ${
                   isActive(button.to)
-                    ? 'bg-white text-orange-500'
-                    : 'bg-transparent border-2 border-white text-white hover:bg-white hover:text-orange-500'
+                    ? 'bg-white text-main'
+                    : 'bg-transparent border-2 border-white text-white hover:bg-white hover:text-main'
                 }`}
                 aria-current={isActive(button.to) ? 'page' : undefined}
               >

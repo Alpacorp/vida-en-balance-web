@@ -19,7 +19,7 @@ export const ArticleCard: FC<NutritionCardProps> = ({title, description, imageUr
         <p className="text-gray-600 mb-4 font-montserrat-medium flex-grow">{description}</p>
         <Link
           to={to}
-          className="w-full bg-orange-500 font-montserrat-medium text-white py-2 px-4 rounded-md hover:bg-orange-600 transition duration-300 ease-in-out transform hover:-translate-y-1 text-center"
+          className="w-full bg-main font-montserrat-medium text-white py-2 px-4 rounded-md hover:bg-tertiary transition duration-300 ease-in-out transform hover:-translate-y-1 text-center"
         >
           {ctaText}
         </Link>
