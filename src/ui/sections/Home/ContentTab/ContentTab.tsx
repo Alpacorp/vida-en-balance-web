@@ -8,12 +8,12 @@ export const ContentTab: FC<ContentProps> = ({ title, description, image, types,
 
   useEffect(() => {
     if (divRef.current) {
-      divRef.current.classList.add('animate-slide-in-bottom');
+      divRef.current.classList.add('animate-slide-in-right');
     }
 
     return () => {
       if (divRef["current"]) {
-        divRef["current"].classList.remove('animate-slide-in-bottom');
+        divRef["current"].classList.remove('animate-slide-in-right');
       }
     };
   }, []);
