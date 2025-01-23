@@ -41,9 +41,21 @@ export const Tabs = () => {
           aria-hidden="true"
           className="pointer-events-none col-start-1 row-start-1 mr-2 size-5 self-center justify-self-end fill-gray-500"
         />
+        {/* Content area mobile */}
+        <div className="flex-1 md:hidden">
+          <ContentTab
+            key={animationKey}
+            title={name}
+            description={description}
+            types={types}
+            image={image}
+            nutritional_link={nutritional_link}
+            recipes_link={recipes_link}
+          />
+        </div>
       </div>
       {/* Desktop layout */}
-      <div className="hidden sm:flex max-w-7xl mx-auto">
+      <div className="hidden sm:flex mx-auto">
         {/* Vertical tabs navigation */}
         <nav
           aria-label="Tabs"
@@ -65,7 +77,7 @@ export const Tabs = () => {
                 tabIdx === tabsContent.length - 1 ? "rounded-b-lg" : ""
               } relative overflow-hidden px-6 py-4 text-center text-sm font-montserrat-medium focus:z-10`}
             >
-              <div className="h-auto w-auto aspect-auto bg-white/10 p-1 flex items-center justify-evenly gap-2">
+              <div className="h-auto w-auto aspect-auto bg-white/10 p-1 flex items-center justify-between gap-2">
                 <img
                   src={tab.types[tab.types.length - 1].url}
                   alt={tab.name}
@@ -89,18 +101,6 @@ export const Tabs = () => {
             recipes_link={recipes_link}
           />
         </div>
-      </div>
-      {/* Content area mobile */}
-      <div className="flex-1 md:hidden">
-        <ContentTab
-          key={animationKey}
-          title={name}
-          description={description}
-          types={types}
-          image={image}
-          nutritional_link={nutritional_link}
-          recipes_link={recipes_link}
-        />
       </div>
     </section>
   );
