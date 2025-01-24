@@ -1,4 +1,4 @@
-import { useState, useEffect, FC } from 'react';
+import { useState, useEffect, FC } from "react";
 import { Link } from "react-router-dom";
 
 import { ArrowLeftIcon, ArrowRightIcon } from "@assets/icons";
@@ -23,7 +23,7 @@ export const Hero: FC = () => {
         <div
           key={slide.id}
           className={`absolute inset-0 transition-opacity duration-500 ease-in-out ${
-            currentSlide === index ? 'opacity-100' : 'opacity-0'
+            currentSlide === index ? "opacity-100" : "opacity-0"
           }`}
         >
           {/* Background Image */}
@@ -52,16 +52,14 @@ export const Hero: FC = () => {
                 >
                   {slide.ctaPrimary.text}
                 </Link>
-                {
-                  slide.ctaSecondary && (
-                    <Link
-                      to={slide.ctaSecondary.url}
-                      className="rounded-full bg-white/10 px-8 py-3 font-montserrat-medium text-white transition-colors hover:bg-white/20"
-                    >
-                      {slide.ctaSecondary.text}
-                    </Link>
-                  )
-                }
+                {slide.ctaSecondary && (
+                  <Link
+                    to={slide.ctaSecondary.url}
+                    className="rounded-full bg-white/10 px-8 py-3 font-montserrat-medium text-white transition-colors hover:bg-white/20"
+                  >
+                    {slide.ctaSecondary.text}
+                  </Link>
+                )}
               </div>
             </div>
           </div>
@@ -70,14 +68,22 @@ export const Hero: FC = () => {
 
       {/* Navigation Arrows */}
       <button
-        onClick={() => setCurrentSlide(currentSlide === 0 ? slides.length - 1 : currentSlide - 1)}
+        onClick={() =>
+          setCurrentSlide(
+            currentSlide === 0 ? slides.length - 1 : currentSlide - 1,
+          )
+        }
         className="absolute left-4 top-1/2 z-20 -translate-y-1/2 rounded-full bg-white/10 p-2 text-white transition-colors hover:bg-white/20"
         aria-label="Previous slide"
       >
         <img src={ArrowLeftIcon} alt="left" className="h-6 w-6" />
       </button>
       <button
-        onClick={() => setCurrentSlide(currentSlide === slides.length - 1 ? 0 : currentSlide + 1)}
+        onClick={() =>
+          setCurrentSlide(
+            currentSlide === slides.length - 1 ? 0 : currentSlide + 1,
+          )
+        }
         className="absolute right-4 top-1/2 z-20 -translate-y-1/2 rounded-full bg-white/10 p-2 text-white transition-colors hover:bg-white/20"
         aria-label="Next slide"
       >
@@ -91,7 +97,9 @@ export const Hero: FC = () => {
             key={index}
             onClick={() => setCurrentSlide(index)}
             className={`h-3 w-3 rounded-full transition-colors ${
-              currentSlide === index ? 'bg-white' : 'bg-white/40 hover:bg-white/60'
+              currentSlide === index
+                ? "bg-white"
+                : "bg-white/40 hover:bg-white/60"
             }`}
             aria-label={`Go to slide ${index + 1}`}
           />
@@ -99,4 +107,4 @@ export const Hero: FC = () => {
       </div>
     </div>
   );
-}
+};

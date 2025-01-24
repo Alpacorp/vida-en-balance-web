@@ -1,11 +1,15 @@
-import { FC } from 'react';
-import { Link, useLocation } from 'react-router-dom';
+import { FC } from "react";
+import { Link, useLocation } from "react-router-dom";
 
 import { buttonsHero } from "@content/balance/heroBalance";
 
 import { HeroBalanceProps, ButtonProps } from "@interfaces/interfaces";
 
-export const HeroSection: FC<HeroBalanceProps> = ({ title, description, image }) => {
+export const HeroSection: FC<HeroBalanceProps> = ({
+  title,
+  description,
+  image,
+}) => {
   const location = useLocation();
 
   const isActive = (to: string) => location.pathname === to;
@@ -34,10 +38,10 @@ export const HeroSection: FC<HeroBalanceProps> = ({ title, description, image })
                 to={button.to}
                 className={`px-6 py-3 font-montserrat-medium rounded-md transition duration-300 ease-in-out transform hover:-translate-y-1 ${
                   isActive(button.to)
-                    ? 'bg-white text-main'
-                    : 'bg-transparent border-2 border-white text-white hover:bg-white hover:text-main'
+                    ? "bg-white text-main"
+                    : "bg-transparent border-2 border-white text-white hover:bg-white hover:text-main"
                 }`}
-                aria-current={isActive(button.to) ? 'page' : undefined}
+                aria-current={isActive(button.to) ? "page" : undefined}
               >
                 {button.text}
               </Link>
@@ -48,4 +52,3 @@ export const HeroSection: FC<HeroBalanceProps> = ({ title, description, image })
     </section>
   );
 };
-

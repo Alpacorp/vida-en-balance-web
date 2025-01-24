@@ -1,11 +1,27 @@
-import { FC } from 'react';
-import { Link, useNavigate } from 'react-router-dom';
+import { FC } from "react";
+import { Link, useNavigate } from "react-router-dom";
 
-import { ArrowLeft, Clock, Share2, Facebook, Twitter, Linkedin } from 'lucide-react';
+import {
+  ArrowLeft,
+  Clock,
+  Share2,
+  Facebook,
+  Twitter,
+  Linkedin,
+} from "lucide-react";
 
 import { ArticleLayoutProps } from "@interfaces/interfaces";
 
-export const ArticleLayout: FC<ArticleLayoutProps> = ({ title, subtitle, coverImage, author, date, readingTime, content, relatedArticles}) => {
+export const ArticleLayout: FC<ArticleLayoutProps> = ({
+  title,
+  subtitle,
+  coverImage,
+  author,
+  date,
+  readingTime,
+  content,
+  relatedArticles,
+}) => {
   const navigate = useNavigate();
 
   return (
@@ -67,19 +83,34 @@ export const ArticleLayout: FC<ArticleLayoutProps> = ({ title, subtitle, coverIm
               </button>
               <div className="flex items-center gap-2">
                 <button
-                  onClick={() => window.open(`https://www.facebook.com/sharer/sharer.php?u=${window.location.href}`, '_blank')}
+                  onClick={() =>
+                    window.open(
+                      `https://www.facebook.com/sharer/sharer.php?u=${window.location.href}`,
+                      "_blank",
+                    )
+                  }
                   className="rounded-full p-2 text-gray-600 hover:bg-gray-100 hover:text-blue-600"
                 >
                   <Facebook className="h-5 w-5" />
                 </button>
                 <button
-                  onClick={() => window.open(`https://twitter.com/intent/tweet?url=${window.location.href}&text=${title}`, '_blank')}
+                  onClick={() =>
+                    window.open(
+                      `https://twitter.com/intent/tweet?url=${window.location.href}&text=${title}`,
+                      "_blank",
+                    )
+                  }
                   className="rounded-full p-2 text-gray-600 hover:bg-gray-100 hover:text-blue-400"
                 >
                   <Twitter className="h-5 w-5" />
                 </button>
                 <button
-                  onClick={() => window.open(`https://www.linkedin.com/sharing/share-offsite/?url=${window.location.href}`, '_blank')}
+                  onClick={() =>
+                    window.open(
+                      `https://www.linkedin.com/sharing/share-offsite/?url=${window.location.href}`,
+                      "_blank",
+                    )
+                  }
                   className="rounded-full p-2 text-gray-600 hover:bg-gray-100 hover:text-blue-700"
                 >
                   <Linkedin className="h-5 w-5" />
@@ -98,7 +129,9 @@ export const ArticleLayout: FC<ArticleLayoutProps> = ({ title, subtitle, coverIm
 
       <div className="border-t bg-gray-50">
         <div className="mx-auto max-w-7xl px-4 py-16">
-          <h2 className="mb-8 text-2xl font-montserrat-bold">Artículos relacionados</h2>
+          <h2 className="mb-8 text-2xl font-montserrat-bold">
+            Artículos relacionados
+          </h2>
           <div className="grid gap-8 sm:grid-cols-2 lg:grid-cols-3">
             {relatedArticles.map((article) => (
               <Link
@@ -114,8 +147,12 @@ export const ArticleLayout: FC<ArticleLayoutProps> = ({ title, subtitle, coverIm
                   />
                 </div>
                 <div className="p-6">
-                  <h3 className="mb-2 text-xl font-montserrat-bold">{article.title}</h3>
-                  <p className="text-gray-600 font-montserrat-medium">{article.excerpt}</p>
+                  <h3 className="mb-2 text-xl font-montserrat-bold">
+                    {article.title}
+                  </h3>
+                  <p className="text-gray-600 font-montserrat-medium">
+                    {article.excerpt}
+                  </p>
                 </div>
               </Link>
             ))}
@@ -124,4 +161,4 @@ export const ArticleLayout: FC<ArticleLayoutProps> = ({ title, subtitle, coverIm
       </div>
     </article>
   );
-}
+};

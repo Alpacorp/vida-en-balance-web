@@ -1,7 +1,11 @@
-import { useState, useEffect } from 'react';
-import {useNavigate, useParams} from 'react-router-dom';
+import { useState, useEffect } from "react";
+import { useNavigate, useParams } from "react-router-dom";
 
-import { NutritionalHeader, NutritionalDetails, NutritionalInfo } from "@ui/index";
+import {
+  NutritionalHeader,
+  NutritionalDetails,
+  NutritionalInfo,
+} from "@ui/index";
 import { NotFoundPage } from "@pages/NotFound/NotFoundPage";
 import { SEO } from "@utils/SEO";
 
@@ -10,14 +14,13 @@ import { BASE_URL } from "@config/config";
 
 import { Product } from "@interfaces/interfaces";
 
-
 export const NutritionalPage = () => {
   const navigate = useNavigate();
   const { productSlug } = useParams<{ productSlug: string }>();
   const [activeProduct, setActiveProduct] = useState<Product | null>(null);
 
   useEffect(() => {
-    const product = productsData.find(p => p.slug === productSlug);
+    const product = productsData.find((p) => p.slug === productSlug);
     if (product) {
       setActiveProduct(product);
     }
@@ -37,31 +40,42 @@ export const NutritionalPage = () => {
     keywords: `${activeProduct.name}, información nutricional, balance, salud`,
     url: `${BASE_URL}/productos/${productSlug}`,
     imageSeo: activeProduct.image,
-    type: 'product' as const,
+    type: "product" as const,
     schema: {
       "@context": "https://schema.org",
       "@type": "Product",
-      "name": activeProduct.name,
-      "image": activeProduct.presentations[0].image,
-      "description": `Información nutricional de ${activeProduct.name}`,
-      "brand": {
+      name: activeProduct.name,
+      image: activeProduct.presentations[0].image,
+      description: `Información nutricional de ${activeProduct.name}`,
+      brand: {
         "@type": "Brand",
-        "name": "Balance"
+        name: "Balance",
       },
-      "offers": {
+      offers: {
         "@type": "Offer",
-        "availability": "https://schema.org/InStock"
+        availability: "https://schema.org/InStock",
       },
-      "nutrition": {
+      nutrition: {
         "@type": "NutritionInformation",
-        "Energia": activeProduct.nutritionalInfo.find(n => n.label === 'Energía')?.value,
-        "Grasas totales": activeProduct.nutritionalInfo.find(n => n.label === 'Grasas totales')?.value,
-        "Grasa saturada": activeProduct.nutritionalInfo.find(n => n.label === 'Grasa saturada')?.value,
-        "Grasa Trans": activeProduct.nutritionalInfo.find(n => n.label === 'Grasa Trans')?.value,
-        "Azucares": activeProduct.nutritionalInfo.find(n => n.label === 'Azúcares')?.value,
-        "Sodio": activeProduct.nutritionalInfo.find(n => n.label === 'Sodio')?.value,
-      }
-    }
+        Energia: activeProduct.nutritionalInfo.find(
+          (n) => n.label === "Energía",
+        )?.value,
+        "Grasas totales": activeProduct.nutritionalInfo.find(
+          (n) => n.label === "Grasas totales",
+        )?.value,
+        "Grasa saturada": activeProduct.nutritionalInfo.find(
+          (n) => n.label === "Grasa saturada",
+        )?.value,
+        "Grasa Trans": activeProduct.nutritionalInfo.find(
+          (n) => n.label === "Grasa Trans",
+        )?.value,
+        Azucares: activeProduct.nutritionalInfo.find(
+          (n) => n.label === "Azúcares",
+        )?.value,
+        Sodio: activeProduct.nutritionalInfo.find((n) => n.label === "Sodio")
+          ?.value,
+      },
+    },
   };
 
   return (
@@ -87,4 +101,4 @@ export const NutritionalPage = () => {
       </div>
     </>
   );
-}
+};

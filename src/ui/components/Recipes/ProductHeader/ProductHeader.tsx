@@ -3,7 +3,11 @@ import { Link } from "react-router-dom";
 
 import { ProductHeaderRecipesProps } from "@interfaces/interfaces";
 
-export const ProductHeader: FC<ProductHeaderRecipesProps> = ({ productName, productDescription, productImage }) => {
+export const ProductHeader: FC<ProductHeaderRecipesProps> = ({
+  productName,
+  productDescription,
+  productImage,
+}) => {
   return (
     <div className="relative bg-[#2E2B6F] min-h-[400px] py-16 mt-20">
       <div className="container mx-auto px-4">

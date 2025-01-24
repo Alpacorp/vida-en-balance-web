@@ -27,7 +27,9 @@ export const Health: FC = () => {
                     {post.title}
                   </Link>
                 </h3>
-                <p className="mt-2 text-white font-montserrat-medium">{post.description}</p>
+                <p className="mt-2 text-white font-montserrat-medium">
+                  {post.description}
+                </p>
               </div>
             </article>
           ))}

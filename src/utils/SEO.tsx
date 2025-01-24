@@ -1,5 +1,5 @@
-import { FC } from 'react';
-import { Helmet, HelmetProvider } from 'react-helmet-async';
+import { FC } from "react";
+import { Helmet, HelmetProvider } from "react-helmet-async";
 
 interface SEOProps {
   title: string;
@@ -7,14 +7,24 @@ interface SEOProps {
   keywords: string;
   imageSeo?: string;
   url: string;
-  type?: 'website' | 'article' | 'product';
+  type?: "website" | "article" | "product";
   schema?: object;
   noIndex?: boolean;
   noFollow?: boolean;
 }
 
-export const SEO: FC<SEOProps> = ({ title, description, keywords, imageSeo, url, type = 'website', schema, noIndex = false, noFollow = false }) => {
-  const robotsContent = `${noIndex ? 'noindex' : 'index'}, ${noFollow ? 'nofollow' : 'follow'}`;
+export const SEO: FC<SEOProps> = ({
+  title,
+  description,
+  keywords,
+  imageSeo,
+  url,
+  type = "website",
+  schema,
+  noIndex = false,
+  noFollow = false,
+}) => {
+  const robotsContent = `${noIndex ? "noindex" : "index"}, ${noFollow ? "nofollow" : "follow"}`;
 
   return (
     <HelmetProvider>
@@ -34,12 +44,9 @@ export const SEO: FC<SEOProps> = ({ title, description, keywords, imageSeo, url,
         {imageSeo && <meta name="twitter:image" content={imageSeo} />}
         <link rel="canonical" href={url} />
         {schema && (
-          <script type="application/ld+json">
-            {JSON.stringify(schema)}
-          </script>
+          <script type="application/ld+json">{JSON.stringify(schema)}</script>
         )}
       </Helmet>
     </HelmetProvider>
   );
 };
-

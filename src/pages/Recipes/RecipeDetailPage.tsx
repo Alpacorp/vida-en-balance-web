@@ -1,7 +1,7 @@
 import { FC } from "react";
-import { useParams, Link, useNavigate } from 'react-router-dom';
+import { useParams, Link, useNavigate } from "react-router-dom";
 
-import { Clock, Users, ChefHat } from 'lucide-react';
+import { Clock, Users, ChefHat } from "lucide-react";
 
 import { NotFoundPage } from "@pages/NotFound/NotFoundPage";
 import { SEO } from "@utils/SEO";
@@ -11,7 +11,10 @@ import { BASE_URL } from "@config/config";
 
 export const RecipeDetailPage: FC = () => {
   const navigate = useNavigate();
-  const { productSlug, recipeId } = useParams<{ productSlug: string, recipeId: string }>();
+  const { productSlug, recipeId } = useParams<{
+    productSlug: string;
+    recipeId: string;
+  }>();
   const recipe = recipesDetails[recipeId as keyof typeof recipesDetails];
 
   if (!recipe) {
@@ -24,30 +27,30 @@ export const RecipeDetailPage: FC = () => {
     keywords: `receta, ${recipe.title}, balance, saludable`,
     url: `${BASE_URL}/recetas/${productSlug}/${recipeId}`,
     imageSeo: recipe.image,
-    type: 'article' as const,
+    type: "article" as const,
     schema: {
       "@context": "https://schema.org",
       "@type": "Recipe",
-      "name": recipe.title,
-      "image": recipe.image,
-      "description": recipe.description,
-      "keywords": `receta, ${recipe.title}, balance, saludable`,
-      "author": {
+      name: recipe.title,
+      image: recipe.image,
+      description: recipe.description,
+      keywords: `receta, ${recipe.title}, balance, saludable`,
+      author: {
         "@type": "Organization",
-        "name": "Balance"
+        name: "Balance",
       },
-      "datePublished": recipe.datePublished,
-      "prepTime": recipe.timePrep,
-      "cookTime": recipe.timePrep,
-      "totalTime": recipe.timePrep,
-      "recipeYield": recipe.portions,
-      "recipeIngredient": recipe.ingredients,
-      "recipeInstructions": recipe.preparation.map((step, index) => ({
+      datePublished: recipe.datePublished,
+      prepTime: recipe.timePrep,
+      cookTime: recipe.timePrep,
+      totalTime: recipe.timePrep,
+      recipeYield: recipe.portions,
+      recipeIngredient: recipe.ingredients,
+      recipeInstructions: recipe.preparation.map((step, index) => ({
         "@type": "HowToStep",
-        "position": index + 1,
-        "text": step
+        position: index + 1,
+        text: step,
       })),
-    }
+    },
   };
 
   return (
@@ -70,22 +73,32 @@ export const RecipeDetailPage: FC = () => {
             <div className="flex justify-between items-center bg-gray-50 p-4 rounded-lg">
               <div className="flex items-center">
                 <Clock className="w-5 h-5 text-violet mr-2" />
-                <span className="font-montserrat-medium">{recipe.timePrep}</span>
+                <span className="font-montserrat-medium">
+                  {recipe.timePrep}
+                </span>
               </div>
               <div className="flex items-center">
                 <Users className="w-5 h-5 text-violet mr-2" />
-                <span className="font-montserrat-medium">{recipe.portions}</span>
+                <span className="font-montserrat-medium">
+                  {recipe.portions}
+                </span>
               </div>
               <div className="flex items-center">
                 <ChefHat className="w-5 h-5 text-violet mr-2" />
-                <span className="font-montserrat-medium">{recipe.difficulty}</span>
+                <span className="font-montserrat-medium">
+                  {recipe.difficulty}
+                </span>
               </div>
             </div>
           </div>
           <div>
-            <h1 className="text-4xl font-montserrat-bold mb-6">{recipe.title}</h1>
+            <h1 className="text-4xl font-montserrat-bold mb-6">
+              {recipe.title}
+            </h1>
             <div className="mb-8">
-              <h2 className="text-2xl font-montserrat-semiBold mb-4 text-violet">Ingredientes</h2>
+              <h2 className="text-2xl font-montserrat-semiBold mb-4 text-violet">
+                Ingredientes
+              </h2>
               <ul className="space-y-2">
                 {recipe.ingredients.map((ingredient, index) => (
                   <li
@@ -99,14 +112,15 @@ export const RecipeDetailPage: FC = () => {
               </ul>
             </div>
             <div>
-              <h2 className="text-2xl font-montserrat-semiBold mb-4 text-violet">Preparación</h2>
+              <h2 className="text-2xl font-montserrat-semiBold mb-4 text-violet">
+                Preparación
+              </h2>
               <ol className="space-y-4">
                 {recipe.preparation.map((step, index) => (
-                  <li
-                    key={index}
-                    className="flex font-montserrat-medium"
-                  >
-                    <span className="font-montserrat-bold mr-4">{index + 1}.</span>
+                  <li key={index} className="flex font-montserrat-medium">
+                    <span className="font-montserrat-bold mr-4">
+                      {index + 1}.
+                    </span>
                     {step}
                   </li>
                 ))}
