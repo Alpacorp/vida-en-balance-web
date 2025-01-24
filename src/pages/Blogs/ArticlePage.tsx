@@ -1,5 +1,5 @@
-import { useState, useEffect, FC } from 'react';
-import { useNavigate, useParams } from 'react-router-dom';
+import { useState, useEffect, FC } from "react";
+import { useNavigate, useParams } from "react-router-dom";
 
 import mainLogo from "@assets/images/san-rafael-balance-logo.webp";
 import { ArticleLayout } from "@ui/layouts/ArticleLayout/ArticleLayout";
@@ -13,7 +13,6 @@ import { BASE_URL } from "@config/config";
 import { SEO } from "@utils/SEO";
 
 export const ArticlePage: FC = () => {
-
   const { category, slug } = useParams<{ category: string; slug: string }>();
   const [article, setArticle] = useState<Article>();
   const navigate = useNavigate();
@@ -24,12 +23,11 @@ export const ArticlePage: FC = () => {
       if (foundArticle) {
         setArticle({
           ...foundArticle,
-          relatedArticles: getRelatedArticles(category, slug)
+          relatedArticles: getRelatedArticles(category, slug),
         });
       }
     }
   }, [category, slug]);
-
 
   if (!article) {
     return <NotFoundPage type="page" goBack={() => navigate(-1)} />;
@@ -45,27 +43,27 @@ export const ArticlePage: FC = () => {
     schema: {
       "@context": "https://schema.org",
       "@type": "Article",
-      "headline": article.title,
-      "description": article.description,
-      "image": article.coverImage,
-      "author": {
+      headline: article.title,
+      description: article.description,
+      image: article.coverImage,
+      author: {
         "@type": "Person",
-        "name": article.author
+        name: article.author,
       },
-      "datePublished": article.date,
-      "publisher": {
+      datePublished: article.date,
+      publisher: {
         "@type": "Organization",
-        "name": "Balance",
-        "logo": {
+        name: "Balance",
+        logo: {
           "@type": "ImageObject",
-          "url": `${BASE_URL}/assets/images/${mainLogo}`
-        }
+          url: `${BASE_URL}/assets/images/${mainLogo}`,
+        },
       },
-      "mainEntityOfPage": {
+      mainEntityOfPage: {
         "@type": "WebPage",
-        "@id": `${BASE_URL}/${category}/${slug}`
-      }
-    }
+        "@id": `${BASE_URL}/${category}/${slug}`,
+      },
+    },
   };
 
   return (
@@ -73,6 +71,5 @@ export const ArticlePage: FC = () => {
       <SEO {...seoData} />
       <ArticleLayout {...article} />
     </>
-  )
-}
-
+  );
+};

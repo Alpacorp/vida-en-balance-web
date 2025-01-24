@@ -1,10 +1,17 @@
 import { FC } from "react";
 
-import { Link } from 'react-router-dom';
+import { Link } from "react-router-dom";
 
 import { NutritionCardProps } from "@interfaces/interfaces";
 
-export const ArticleCard: FC<NutritionCardProps> = ({title, description, imageUrl, imageAlt, ctaText, to}) => {
+export const ArticleCard: FC<NutritionCardProps> = ({
+  title,
+  description,
+  imageUrl,
+  imageAlt,
+  ctaText,
+  to,
+}) => {
   return (
     <article className="bg-white rounded-lg overflow-hidden shadow-md hover:shadow-xl transition-shadow duration-300 ease-in-out flex flex-col">
       <div className="relative h-48 overflow-hidden">
@@ -15,8 +22,12 @@ export const ArticleCard: FC<NutritionCardProps> = ({title, description, imageUr
         />
       </div>
       <div className="p-6 flex flex-col flex-grow">
-        <h2 className="text-xl font-montserrat-bold mb-3 text-gray-800">{title}</h2>
-        <p className="text-gray-600 mb-4 font-montserrat-medium flex-grow">{description}</p>
+        <h2 className="text-xl font-montserrat-bold mb-3 text-gray-800">
+          {title}
+        </h2>
+        <p className="text-gray-600 mb-4 font-montserrat-medium flex-grow">
+          {description}
+        </p>
         <Link
           to={to}
           className="w-full bg-main font-montserrat-medium text-white py-2 px-4 rounded-md hover:bg-tertiary transition duration-300 ease-in-out transform hover:-translate-y-1 text-center"
@@ -27,4 +38,3 @@ export const ArticleCard: FC<NutritionCardProps> = ({title, description, imageUr
     </article>
   );
 };
-

@@ -1,4 +1,4 @@
-import { ChangeEvent, useState} from "react";
+import { ChangeEvent, useState } from "react";
 import { ChevronDownIcon } from "@heroicons/react/16/solid";
 
 import { ContentTab } from "@ui/sections/Home/ContentTab/ContentTab";
@@ -9,12 +9,20 @@ export const Tabs = () => {
   const [value, setValue] = useState(0);
   const [animationKey, setAnimationKey] = useState(0);
 
-  const { id, name, description, image, types, nutritional_link, recipes_link } = tabsContent[value];
+  const {
+    id,
+    name,
+    description,
+    image,
+    types,
+    nutritional_link,
+    recipes_link,
+  } = tabsContent[value];
 
   const handleSelectChange = (event: ChangeEvent<HTMLSelectElement>) => {
     const selectedTabName = event.target.value;
     const selectedTabIndex = tabsContent.findIndex(
-      (tab) => tab.name === selectedTabName
+      (tab) => tab.name === selectedTabName,
     );
     setValue(selectedTabIndex);
     setAnimationKey((prev) => prev + 1);
@@ -65,8 +73,8 @@ export const Tabs = () => {
             <button
               key={tab.id}
               onClick={() => {
-                setValue(tabIdx)
-                setAnimationKey((prev: number) => prev + 1)
+                setValue(tabIdx);
+                setAnimationKey((prev: number) => prev + 1);
               }}
               aria-current={tab.id === id ? "page" : undefined}
               className={`${
@@ -83,7 +91,9 @@ export const Tabs = () => {
                   alt={tab.name}
                   className="w-18 h-24 object-contain filter drop-shadow-md"
                 />
-                <span className="text-lg font-montserrat-medium">{tab.name}</span>
+                <span className="text-lg font-montserrat-medium">
+                  {tab.name}
+                </span>
               </div>
             </button>
           ))}

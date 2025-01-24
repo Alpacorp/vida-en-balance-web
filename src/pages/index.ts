@@ -12,4 +12,13 @@ import { BalancePage } from "@pages/Balance/BalancePage";
 
 import { NotFoundPage } from "@pages/NotFound/NotFoundPage";
 
-export { ArticlePage, HomePage, RecipesProductPage, RecipeDetailPage, RecipesHomePage, NutritionalPage, NotFoundPage, BalancePage };
+export {
+  ArticlePage,
+  HomePage,
+  RecipesProductPage,
+  RecipeDetailPage,
+  RecipesHomePage,
+  NutritionalPage,
+  NotFoundPage,
+  BalancePage,
+};

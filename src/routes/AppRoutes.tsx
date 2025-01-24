@@ -7,8 +7,9 @@ import {
   RecipeDetailPage,
   RecipesHomePage,
   NutritionalPage,
-  NotFoundPage, BalancePage,
-} from '@pages/index';
+  NotFoundPage,
+  BalancePage,
+} from "@pages/index";
 
 export default function AppRoutes() {
   return (
@@ -19,7 +20,10 @@ export default function AppRoutes() {
       <Route path="/:category/:slug" element={<ArticlePage />} />
       <Route path="/recetas" element={<RecipesHomePage />} />
       <Route path="/recetas/:productSlug" element={<RecipesProductPage />} />
-      <Route path="/recetas/:productSlug/:recipeId" element={<RecipeDetailPage />} />
+      <Route
+        path="/recetas/:productSlug/:recipeId"
+        element={<RecipeDetailPage />}
+      />
       <Route path="*" element={<NotFoundPage />} />
     </Routes>
   );

@@ -10,7 +10,7 @@ export interface Product {
   stamps: Stamp[];
   weight: string;
   image: string;
-  url: string
+  url: string;
 }
 
 export interface NutritionalHeaderProps {
@@ -92,7 +92,7 @@ export interface ContentProps {
 }
 
 export interface NotFoundProps {
-  type?: 'recipe' | 'page';
+  type?: "recipe" | "page";
   goBack?: () => void;
 }
 
@@ -105,7 +105,7 @@ export interface RecipeDetail {
   preparation: string[];
   timePrep: string;
   portions: string;
-  difficulty: 'Fácil' | 'Media' | 'Difícil';
+  difficulty: "Fácil" | "Media" | "Difícil";
   datePublished: string;
 }
 
@@ -214,7 +214,7 @@ export interface BalancePageContent {
     description: string;
     title: string;
     image: { alt: string; src: string };
-  }
+  };
   articles: ArticlesProps[];
   seo: {
     title: string;
@@ -222,6 +222,3 @@ export interface BalancePageContent {
     keywords: string;
   };
 }
-
-
-

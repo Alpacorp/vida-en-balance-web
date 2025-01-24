@@ -1,6 +1,6 @@
 import { FC } from "react";
 
-import { useNavigate, useParams } from 'react-router-dom';
+import { useNavigate, useParams } from "react-router-dom";
 
 import { ProductHeader, RecipeCard } from "@ui/index";
 
@@ -29,16 +29,16 @@ export const RecipesProductPage: FC = () => {
     schema: {
       "@context": "https://schema.org",
       "@type": "ItemList",
-      "name": `Recetas con ${product.name}`,
-      "description": product.description,
-      "url": `${BASE_URL}/recetas/${productSlug}`,
-      "itemListElement": product.recipes.map((recipe, index) => ({
+      name: `Recetas con ${product.name}`,
+      description: product.description,
+      url: `${BASE_URL}/recetas/${productSlug}`,
+      itemListElement: product.recipes.map((recipe, index) => ({
         "@type": "ListItem",
-        "position": index + 1,
-        "name": recipe.title,
-        "url": `${BASE_URL}/recetas/${productSlug}/${recipe.id}`
-      }))
-    }
+        position: index + 1,
+        name: recipe.title,
+        url: `${BASE_URL}/recetas/${productSlug}/${recipe.id}`,
+      })),
+    },
   };
 
   return (
@@ -52,21 +52,26 @@ export const RecipesProductPage: FC = () => {
         />
         <div className="container mx-auto px-4 py-12">
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-            {product.recipes.map((recipe: { id: string; title: string; description: string; image: string; }) => (
-              <RecipeCard
-                key={recipe.id}
-                id={recipe.id}
-                title={recipe.title}
-                description={recipe.description}
-                image={recipe.image}
-                productSlug={productSlug as string}
-              />
-            ))}
+            {product.recipes.map(
+              (recipe: {
+                id: string;
+                title: string;
+                description: string;
+                image: string;
+              }) => (
+                <RecipeCard
+                  key={recipe.id}
+                  id={recipe.id}
+                  title={recipe.title}
+                  description={recipe.description}
+                  image={recipe.image}
+                  productSlug={productSlug as string}
+                />
+              ),
+            )}
           </div>
         </div>
       </div>
     </>
   );
 };
-
-

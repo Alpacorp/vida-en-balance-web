@@ -1,7 +1,7 @@
 import { FC, useEffect, useState } from "react";
 import { useNavigate, useParams } from "react-router-dom";
 
-import { CardSection, HeroSection } from '@ui/index';
+import { CardSection, HeroSection } from "@ui/index";
 
 import { balanceContent } from "@content/balance/balance";
 
@@ -14,11 +14,15 @@ import { BASE_URL } from "@config/config";
 export const BalancePage: FC = () => {
   const navigate = useNavigate();
   const { balanceType } = useParams<{ balanceType: string }>();
-  const [pageContent, setPageContent] = useState<BalancePageContent | null>(null);
+  const [pageContent, setPageContent] = useState<BalancePageContent | null>(
+    null,
+  );
 
   useEffect(() => {
     if (balanceType && balanceType in balanceContent) {
-      setPageContent(balanceContent[balanceType as keyof typeof balanceContent]);
+      setPageContent(
+        balanceContent[balanceType as keyof typeof balanceContent],
+      );
     }
   }, [balanceType]);
 
@@ -33,10 +37,10 @@ export const BalancePage: FC = () => {
     schema: {
       "@context": "https://schema.org",
       "@type": "WebPage",
-      "name": pageContent.seo.title,
-      "description": pageContent.seo.description,
-      "url": `${BASE_URL}/${balanceType}`
-    }
+      name: pageContent.seo.title,
+      description: pageContent.seo.description,
+      url: `${BASE_URL}/${balanceType}`,
+    },
   };
 
   return (
@@ -47,4 +51,3 @@ export const BalancePage: FC = () => {
     </>
   );
 };
-

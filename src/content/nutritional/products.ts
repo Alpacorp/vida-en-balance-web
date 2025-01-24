@@ -5,7 +5,8 @@ export const productsData: Product[] = [
     id: 1,
     name: "Pechuga de Pavo Escalonada",
     slug: "pechuga-de-pavo-escalonada",
-    ingredients: "Pechuga de pavo, agua, azúcares añadidos (azucar), saborizantes, cloruro de potasio, fécula, fosfato de sodio, sal yodada, carragenina, carmín.",
+    ingredients:
+      "Pechuga de pavo, agua, azúcares añadidos (azucar), saborizantes, cloruro de potasio, fécula, fosfato de sodio, sal yodada, carragenina, carmín.",
     weight: "250 Gramos",
     image: "/assets/images/pechuga-de-pavo-escalonada.png",
     url: "/productos/pechuga-de-pavo-escalonada",
@@ -13,73 +14,73 @@ export const productsData: Product[] = [
       {
         label: "Contenido energético",
         value: "96",
-        unit: "Kcal"
+        unit: "Kcal",
       },
       {
         label: "Energía",
         value: "406",
-        unit: "Kj"
+        unit: "Kj",
       },
       {
         label: "Grasas totales",
         value: "1",
-        unit: "g"
+        unit: "g",
       },
       {
         label: "de las cuales",
         value: "----",
-        unit: "----"
+        unit: "----",
       },
       {
         label: "Grasa saturada",
         value: "0.2",
-        unit: "g"
+        unit: "g",
       },
       {
         label: "Grasa Trans",
         value: "0",
-        unit: "mg"
+        unit: "mg",
       },
       {
         label: "Hidratos de carbono disponibles",
         value: "4.1",
-        unit: "g"
+        unit: "g",
       },
       {
         label: "de las cuales",
         value: "----",
-        unit: "----"
+        unit: "----",
       },
       {
         label: "Azúcares",
         value: "2",
-        unit: "g"
+        unit: "g",
       },
       {
         label: "Azúcares añadidos",
         value: "2",
-        unit: "g"
+        unit: "g",
       },
       {
         label: "Fibra dietética",
         value: "0",
-        unit: "g"
+        unit: "g",
       },
       {
         label: "Sodio",
         value: "345",
-        unit: "mg"
+        unit: "mg",
       },
       {
         label: "Contenido energético por envase",
         value: "240 kcal (2015 kj)",
-        unit: ""
+        unit: "",
       },
       {
         label: "Contenido energético por envase",
         value: "438 kcal (1851 kj)",
-        unit: ""
-      }
+        unit: "",
+      },
     ],
     presentations: [
       {
@@ -96,46 +97,47 @@ export const productsData: Product[] = [
         id: 3,
         label: "Individual",
         image: "/assets/images/pechuga-de-pavo-escalonada.png",
-      }
+      },
     ],
     stamps: [
       {
         label: "Bajo en grasa",
         image: "/assets/images/bajo-en-grasa.png",
-        alt: "Sin gluten"
+        alt: "Sin gluten",
       },
       {
         label: "Sin gluten",
         image: "/assets/images/sin-gluten.png",
-        alt: "Sin lactosa"
+        alt: "Sin lactosa",
       },
       {
         label: "Sin nitritos añadidos",
         image: "/assets/images/sin-nitritos-anadidos.png",
-        alt: "Sin nitritos añadidos"
+        alt: "Sin nitritos añadidos",
       },
       {
         label: "Sin conservadores artificiales",
         image: "/assets/images/sin-conservadores-artificiales.png",
-        alt: "Sin conservadores artificiales"
+        alt: "Sin conservadores artificiales",
       },
       {
         label: "100% carne de pavo",
         image: "/assets/images/carne-100-pavo.png",
-        alt: "100% carne de pavo"
+        alt: "100% carne de pavo",
       },
       {
         label: "Sin colorantes artificiales",
         image: "/assets/images/sin-colorantes-artificiales.png",
-        alt: "Sin colorantes artificiales"
-      }
-    ]
+        alt: "Sin colorantes artificiales",
+      },
+    ],
   },
   {
     id: 2,
     name: "Pechuga de Pavo Rebanadas Delgadas",
     slug: "pechuga-de-pavo-rebanadas-delgadas",
-    ingredients: "Pechuga de pavo, agua, azúcares añadidos (azúcar), saborizantes, cloruro de potasio, fécula, fosfato de sodio, sal yodada, carragenina, carmín.",
+    ingredients:
+      "Pechuga de pavo, agua, azúcares añadidos (azúcar), saborizantes, cloruro de potasio, fécula, fosfato de sodio, sal yodada, carragenina, carmín.",
     weight: "250 Gramos",
     image: "/assets/images/pechuga-de-pavo-rebanadas-delgadas.png",
     url: "/productos/pechuga-de-pavo-rebanadas-delgadas",
@@ -143,78 +145,78 @@ export const productsData: Product[] = [
       {
         label: "Contenido energético",
         value: "96",
-        unit: "Kcal"
+        unit: "Kcal",
       },
       {
         label: "Energía",
         value: "406",
-        unit: "Kj"
+        unit: "Kj",
       },
       {
         label: "Proteínas",
         value: "17.6",
-        unit: "g"
+        unit: "g",
       },
       {
         label: "Grasas totales",
         value: "1",
-        unit: "g"
+        unit: "g",
       },
       {
         label: "de las cuales",
         value: "----",
-        unit: "----"
+        unit: "----",
       },
       {
         label: "Grasa saturada",
         value: "0.2",
-        unit: "g"
+        unit: "g",
       },
       {
         label: "Grasa Trans",
         value: "0",
-        unit: "mg"
+        unit: "mg",
       },
       {
         label: "Hidratos de carbono disponibles",
         value: "4.1",
-        unit: "g"
+        unit: "g",
       },
       {
         label: "de las cuales",
         value: "----",
-        unit: "----"
+        unit: "----",
       },
       {
         label: "Azúcares",
         value: "2",
-        unit: "g"
+        unit: "g",
       },
       {
         label: "Azúcares añadidos",
         value: "2",
-        unit: "g"
+        unit: "g",
       },
       {
         label: "Fibra dietética",
         value: "0",
-        unit: "g"
+        unit: "g",
       },
       {
         label: "Sodio",
         value: "345",
-        unit: "mg"
+        unit: "mg",
       },
       {
         label: "Contenido energético por envase",
         value: "240 kcal (2015 kj)",
-        unit: ""
+        unit: "",
       },
       {
         label: "Contenido energético por envase",
         value: "438 kcal (1851 kj)",
-        unit: ""
-      }
+        unit: "",
+      },
     ],
     presentations: [
       {
@@ -226,46 +228,47 @@ export const productsData: Product[] = [
         id: 2,
         label: "Individual",
         image: "/assets/images//pechuga-de-pavo-rebanadas-delgadas.png",
-      }
+      },
     ],
     stamps: [
       {
         label: "Bajo en grasa",
         image: "/assets/images/bajo-en-grasa.png",
-        alt: "Sin gluten"
+        alt: "Sin gluten",
       },
       {
         label: "Sin gluten",
         image: "/assets/images/sin-gluten.png",
-        alt: "Sin lactosa"
+        alt: "Sin lactosa",
       },
       {
         label: "Sin nitritos añadidos",
         image: "/assets/images/sin-nitritos-anadidos.png",
-        alt: "Sin nitritos añadidos"
+        alt: "Sin nitritos añadidos",
       },
       {
         label: "Sin conservadores artificiales",
         image: "/assets/images/sin-conservadores-artificiales.png",
-        alt: "Sin conservadores artificiales"
+        alt: "Sin conservadores artificiales",
       },
       {
         label: "100% carne de pavo",
         image: "/assets/images/carne-100-pavo.png",
-        alt: "100% carne de pavo"
+        alt: "100% carne de pavo",
       },
       {
         label: "Sin colorantes artificiales",
         image: "/assets/images/sin-colorantes-artificiales.png",
-        alt: "Sin colorantes artificiales"
-      }
-    ]
+        alt: "Sin colorantes artificiales",
+      },
+    ],
   },
   {
     id: 3,
     name: "Salchicha de Pavo",
     slug: "salchicha-de-pavo",
-    ingredients: "Pechuga de pavo, agua, proteína de soya, fécula, saborizantes, cloruro de potasio, azúcares añadidos (dextrosa), fosfato de sodio, eritorbato de sodio, nitrito de sodio, carmín. Contiene: soya.",
+    ingredients:
+      "Pechuga de pavo, agua, proteína de soya, fécula, saborizantes, cloruro de potasio, azúcares añadidos (dextrosa), fosfato de sodio, eritorbato de sodio, nitrito de sodio, carmín. Contiene: soya.",
     weight: "500 Gramos",
     image: "/assets/images/salchicha-de-pavo.png",
     url: "/productos/salchicha-de-pavo",
@@ -273,109 +276,110 @@ export const productsData: Product[] = [
       {
         label: "Contenido energético",
         value: "139",
-        unit: "Kcal"
+        unit: "Kcal",
       },
       {
         label: "Energía",
         value: "581",
-        unit: "Kj"
+        unit: "Kj",
       },
       {
         label: "Proteínas",
         value: "11.2",
-        unit: "g"
+        unit: "g",
       },
       {
         label: "Grasas totales",
         value: "8.2",
-        unit: "g"
+        unit: "g",
       },
       {
         label: "de las cuales",
         value: "----",
-        unit: "----"
+        unit: "----",
       },
       {
         label: "Grasa saturada",
         value: "2.2",
-        unit: "g"
+        unit: "g",
       },
       {
         label: "Grasa Trans",
         value: "0",
-        unit: "mg"
+        unit: "mg",
       },
       {
         label: "Hidratos de carbono disponibles",
         value: "5.1",
-        unit: "g"
+        unit: "g",
       },
       {
         label: "de las cuales",
         value: "----",
-        unit: "----"
+        unit: "----",
       },
       {
         label: "Azúcares",
         value: "0.3",
-        unit: "g"
+        unit: "g",
       },
       {
         label: "Azúcares añadidos",
         value: "0.3",
-        unit: "g"
+        unit: "g",
       },
       {
         label: "Fibra dietética",
         value: "0.1",
-        unit: "g"
+        unit: "g",
       },
       {
         label: "Sodio",
         value: "345",
-        unit: "mg"
+        unit: "mg",
       },
       {
         label: "Contenido energético por envase",
         value: "695 kcal (2905 kj)",
-        unit: ""
-      }
+        unit: "",
+      },
     ],
     presentations: [
       {
         id: 1,
         label: "Individual",
         image: "/assets/images/salchicha-de-pavo.png",
-      }
+      },
     ],
     stamps: [
       {
         label: "Bajo en grasa",
         image: "/assets/images/bajo-en-grasa.png",
-        alt: "Sin gluten"
+        alt: "Sin gluten",
       },
       {
         label: "Sin gluten",
         image: "/assets/images/sin-gluten.png",
-        alt: "Sin lactosa"
+        alt: "Sin lactosa",
       },
       {
         label: "100% carne de pavo",
         image: "/assets/images/carne-100-pavo.png",
-        alt: "100% carne de pavo"
+        alt: "100% carne de pavo",
       },
       {
         label: "Sin colorantes artificiales",
         image: "/assets/images/sin-colorantes-artificiales.png",
-        alt: "Sin colorantes artificiales"
-      }
-    ]
+        alt: "Sin colorantes artificiales",
+      },
+    ],
   },
   {
     id: 4,
     name: "Pechuga de Pavo Rebanadas para Sandwich",
     slug: "pechuga-de-pavo-rebanadas-sandwich",
-    ingredients: "Pechuga de pavo, agua, saborizantes, azúcares añadidos (azúcar), sal yodada, fosfato de sodio, cloruro de potasio, carragenina, carmín.",
+    ingredients:
+      "Pechuga de pavo, agua, saborizantes, azúcares añadidos (azúcar), sal yodada, fosfato de sodio, cloruro de potasio, carragenina, carmín.",
     weight: "200 Gramos",
     image: "/assets/images/pechuga-de-pavo-rebanadas-sandwich.png",
     url: "/productos/pechuga-de-pavo-rebanadas-sandwich",
@@ -383,68 +387,68 @@ export const productsData: Product[] = [
       {
         label: "Contenido energético",
         value: "84 (355kj)",
-        unit: "Kcal"
+        unit: "Kcal",
       },
       {
         label: "Proteínas",
         value: "16.2",
-        unit: "g"
+        unit: "g",
       },
       {
         label: "Grasas totales",
         value: "0.9",
-        unit: "g"
+        unit: "g",
       },
       {
         label: "de las cuales",
         value: "----",
-        unit: "----"
+        unit: "----",
       },
       {
         label: "Grasa saturada",
         value: "0.1",
-        unit: "g"
+        unit: "g",
       },
       {
         label: "Grasa Trans",
         value: "0",
-        unit: "mg"
+        unit: "mg",
       },
       {
         label: "Hidratos de carbono disponibles",
         value: "2.7",
-        unit: "g"
+        unit: "g",
       },
       {
         label: "de las cuales",
         value: "----",
-        unit: "----"
+        unit: "----",
       },
       {
         label: "Azúcares",
         value: "1.5",
-        unit: "g"
+        unit: "g",
       },
       {
         label: "Azúcares añadidos",
         value: "1.2",
-        unit: "g"
+        unit: "g",
       },
       {
         label: "Fibra dietética",
         value: "0",
-        unit: "g"
+        unit: "g",
       },
       {
         label: "Sodio",
         value: "780",
-        unit: "mg"
+        unit: "mg",
       },
       {
         label: "Contenido energético por envase",
         value: "168 kcal (710 kj)",
-        unit: ""
-      }
+        unit: "",
+      },
     ],
     presentations: [
       {
@@ -455,47 +459,49 @@ export const productsData: Product[] = [
       {
         id: 2,
         label: "Family size",
-        image: "/assets/images/pechuga-pavo-rebanadas-sandwich-family-size.webp",
+        image:
+          "/assets/images/pechuga-pavo-rebanadas-sandwich-family-size.webp",
       },
       {
         id: 3,
         label: "Individual",
         image: "/assets/images/pechuga-de-pavo-rebanadas-sandwich.png",
-      }
+      },
     ],
     stamps: [
       {
         label: "Bajo en grasa",
         image: "/assets/images/bajo-en-grasa.png",
-        alt: "Sin gluten"
+        alt: "Sin gluten",
       },
       {
         label: "Sin gluten",
         image: "/assets/images/sin-gluten.png",
-        alt: "Sin lactosa"
+        alt: "Sin lactosa",
       },
       {
         label: "Sin conservadores artificiales",
         image: "/assets/images/sin-conservadores-artificiales.png",
-        alt: "Sin conservadores artificiales"
+        alt: "Sin conservadores artificiales",
       },
       {
         label: "Sin colorantes artificiales",
         image: "/assets/images/sin-colorantes-artificiales.png",
-        alt: "Sin colorantes artificiales"
+        alt: "Sin colorantes artificiales",
       },
       {
         label: "100% carne de pavo",
         image: "/assets/images/sin-nitritos-anadidos.png",
-        alt: "100% carne de pavo"
-      }
-    ]
+        alt: "100% carne de pavo",
+      },
+    ],
   },
   {
     id: 5,
     name: "Salchicha de Pechuga de Pavo",
     slug: "salchicha-de-pechuga-de-pavo",
-    ingredients: "Pechuga de pavo, agua, proteína de soya, fécula, saborizantes, cloruro de potasio, azúcares añadidos (dextrosa), fosfato de sodio, carín. Contiene: soya.",
+    ingredients:
+      "Pechuga de pavo, agua, proteína de soya, fécula, saborizantes, cloruro de potasio, azúcares añadidos (dextrosa), fosfato de sodio, carín. Contiene: soya.",
     weight: "500 Gramos",
     image: "/assets/images/salchicha-de-pechuga-de-pavo.png",
     url: "/productos/salchicha-de-pechuga-de-pavo",
@@ -503,108 +509,107 @@ export const productsData: Product[] = [
       {
         label: "Contenido energético",
         value: "139",
-        unit: "Kcal"
+        unit: "Kcal",
       },
       {
         label: "Energía",
         value: "581",
-        unit: "Kj"
+        unit: "Kj",
       },
       {
         label: "Proteínas",
         value: "11.2",
-        unit: "g"
+        unit: "g",
       },
       {
         label: "Grasas totales",
         value: "8.2",
-        unit: "g"
+        unit: "g",
       },
       {
         label: "de las cuales",
         value: "----",
-        unit: "----"
+        unit: "----",
       },
       {
         label: "Grasa saturada",
         value: "2.2",
-        unit: "g"
+        unit: "g",
       },
       {
         label: "Grasa Trans",
         value: "0",
-        unit: "mg"
+        unit: "mg",
       },
       {
         label: "Hidratos de carbono disponibles",
         value: "5.1",
-        unit: "g"
+        unit: "g",
       },
       {
         label: "de las cuales",
         value: "----",
-        unit: "----"
+        unit: "----",
       },
       {
         label: "Azúcares",
         value: "0.3",
-        unit: "g"
+        unit: "g",
       },
       {
         label: "Azúcares añadidos",
         value: "0.3",
-        unit: "g"
+        unit: "g",
       },
       {
         label: "Fibra dietética",
         value: "0.1",
-        unit: "g"
+        unit: "g",
       },
       {
         label: "Sodio",
         value: "345",
-        unit: "mg"
+        unit: "mg",
       },
       {
         label: "Contenido energético por envase",
         value: "695 kcal (2905 kj)",
-        unit: ""
+        unit: "",
       },
       {
         label: "Contenido energético por envase",
         value: "438 kcal (1851 kj)",
-        unit: ""
-      }
+        unit: "",
+      },
     ],
     presentations: [
       {
         id: 1,
         label: "Individual",
         image: "/assets/images/salchicha-de-pechuga-de-pavo.png",
-      }
+      },
     ],
     stamps: [
       {
         label: "Bajo en grasa",
         image: "/assets/images/bajo-en-grasa.png",
-        alt: "Sin gluten"
+        alt: "Sin gluten",
       },
       {
         label: "Sin gluten",
         image: "/assets/images/sin-gluten.png",
-        alt: "Sin lactosa"
+        alt: "Sin lactosa",
       },
       {
         label: "100% carne de pavo",
         image: "/assets/images/carne-100-pavo.png",
-        alt: "100% carne de pavo"
+        alt: "100% carne de pavo",
       },
       {
         label: "Sin colorantes artificiales",
         image: "/assets/images/sin-colorantes-artificiales.png",
-        alt: "Sin colorantes artificiales"
-      }
-    ]
-  }
+        alt: "Sin colorantes artificiales",
+      },
+    ],
+  },
 ];
-

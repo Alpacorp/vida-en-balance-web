@@ -1,9 +1,9 @@
-import { useState, useEffect, FC } from 'react';
-import { Link, useLocation } from 'react-router-dom';
+import { useState, useEffect, FC } from "react";
+import { Link, useLocation } from "react-router-dom";
 
 import headerLogo from "@assets/images/san-rafael-balance-logo.webp";
 
-import { mainMenuLinks } from '@content/navigation/mainMenuLinks';
+import { mainMenuLinks } from "@content/navigation/mainMenuLinks";
 
 export const Header: FC = () => {
   const [isScrolled, setIsScrolled] = useState(false);
@@ -15,8 +15,8 @@ export const Header: FC = () => {
       setIsScrolled(window.scrollY > 0);
     };
 
-    window.addEventListener('scroll', handleScroll);
-    return () => window.removeEventListener('scroll', handleScroll);
+    window.addEventListener("scroll", handleScroll);
+    return () => window.removeEventListener("scroll", handleScroll);
   }, []);
 
   useEffect(() => {
@@ -32,7 +32,7 @@ export const Header: FC = () => {
   return (
     <header
       className={`fixed top-0 left-0 right-0 z-50 bg-white transition-shadow duration-300 ${
-        isScrolled ? 'shadow-md' : ''
+        isScrolled ? "shadow-md" : ""
       }`}
     >
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -52,8 +52,8 @@ export const Header: FC = () => {
                 to={item.path}
                 className={`inline-flex items-center uppercase px-1 pt-1 text-sm font-montserrat-bold transition-colors duration-200 ${
                   isActive(item.path)
-                    ? 'text-blue-900 border-b-2 border-blue-900'
-                    : 'text-gray-700 hover:text-blue-900'
+                    ? "text-blue-900 border-b-2 border-blue-900"
+                    : "text-gray-700 hover:text-blue-900"
                 }`}
               >
                 {item.name}
@@ -69,7 +69,7 @@ export const Header: FC = () => {
             aria-expanded={isMobileMenuOpen}
           >
             <span className="sr-only">
-              {isMobileMenuOpen ? 'Cerrar menú' : 'Abrir menú'}
+              {isMobileMenuOpen ? "Cerrar menú" : "Abrir menú"}
             </span>
             {/* Menu icon */}
             {isMobileMenuOpen ? (
@@ -111,8 +111,8 @@ export const Header: FC = () => {
       <div
         className={`md:hidden transition-all duration-300 ease-in-out ${
           isMobileMenuOpen
-            ? 'max-h-96 opacity-100'
-            : 'max-h-0 opacity-0 overflow-hidden'
+            ? "max-h-96 opacity-100"
+            : "max-h-0 opacity-0 overflow-hidden"
         }`}
       >
         <nav className="pt-2 pb-3 space-y-1">
@@ -122,8 +122,8 @@ export const Header: FC = () => {
               to={item.path}
               className={`block pl-3 pr-4 py-2 text-base font-montserrat-bold ${
                 isActive(item.path)
-                  ? 'text-blue-900 bg-blue-50 border-l-4 border-blue-900'
-                  : 'text-gray-700 hover:bg-gray-50 hover:text-blue-900'
+                  ? "text-blue-900 bg-blue-50 border-l-4 border-blue-900"
+                  : "text-gray-700 hover:bg-gray-50 hover:text-blue-900"
               }`}
             >
               {item.name}

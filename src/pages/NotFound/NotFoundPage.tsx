@@ -1,17 +1,19 @@
-import { FC } from 'react';
-import { Link } from 'react-router-dom';
+import { FC } from "react";
+import { Link } from "react-router-dom";
 
-import { Home, Search, ArrowLeft } from 'lucide-react';
+import { Home, Search, ArrowLeft } from "lucide-react";
 import { SEO } from "@utils/SEO";
 
 import { NotFoundProps } from "@interfaces/interfaces";
 import { BASE_URL } from "@config/config";
 
-export const NotFoundPage: FC<NotFoundProps> = ({ type = 'page', goBack }) => {
-  const isRecipe = type === 'recipe';
+export const NotFoundPage: FC<NotFoundProps> = ({ type = "page", goBack }) => {
+  const isRecipe = type === "recipe";
 
   const seoData = {
-    title: isRecipe ? "Receta no encontrada - Balance" : "Página no encontrada - Balance",
+    title: isRecipe
+      ? "Receta no encontrada - Balance"
+      : "Página no encontrada - Balance",
     description: isRecipe
       ? "Lo sentimos, la receta que estás buscando no se encuentra en nuestro sitio."
       : "Lo sentimos, la página que estás buscando no existe en nuestro sitio.",
@@ -21,11 +23,11 @@ export const NotFoundPage: FC<NotFoundProps> = ({ type = 'page', goBack }) => {
     schema: {
       "@context": "https://schema.org",
       "@type": "WebPage",
-      "name": isRecipe ? "Receta no encontrada" : "Página no encontrada",
-      "description": isRecipe
+      name: isRecipe ? "Receta no encontrada" : "Página no encontrada",
+      description: isRecipe
         ? "Lo sentimos, la receta que estás buscando no se encuentra en nuestro sitio."
-        : "Lo sentimos, la página que estás buscando no existe en nuestro sitio."
-    }
+        : "Lo sentimos, la página que estás buscando no existe en nuestro sitio.",
+    },
   };
 
   return (
@@ -36,19 +38,22 @@ export const NotFoundPage: FC<NotFoundProps> = ({ type = 'page', goBack }) => {
           <div className="p-8">
             <div className="text-center mb-8">
               <h1 className="text-4xl font-montserrat-bold text-gray-800 mb-2">
-                {isRecipe ? '¡Ups! Receta no encontrada' : '¡Ups! Página no encontrada'}
+                {isRecipe
+                  ? "¡Ups! Receta no encontrada"
+                  : "¡Ups! Página no encontrada"}
               </h1>
               <p className="text-gray-600 font-montserrat-medium">
                 {isRecipe
-                  ? 'Parece que la receta que buscas no está en nuestro menú.'
-                  : 'Parece que la página que buscas no existe.'}
+                  ? "Parece que la receta que buscas no está en nuestro menú."
+                  : "Parece que la página que buscas no existe."}
               </p>
             </div>
             <div className="mb-8">
               <img
-                src={isRecipe
-                  ? 'https://images.unsplash.com/photo-1495521821757-a1efb6729352?auto=format&fit=crop&q=80&w=800&h=600'
-                  : 'https://images.unsplash.com/photo-1584824486509-112e4181ff6b?auto=format&fit=crop&q=80&w=800&h=600'
+                src={
+                  isRecipe
+                    ? "https://images.unsplash.com/photo-1495521821757-a1efb6729352?auto=format&fit=crop&q=80&w=800&h=600"
+                    : "https://images.unsplash.com/photo-1584824486509-112e4181ff6b?auto=format&fit=crop&q=80&w=800&h=600"
                 }
                 alt={isRecipe ? "Cocina vacía" : "Señal de camino"}
                 className="w-full h-48 object-cover rounded-lg"
