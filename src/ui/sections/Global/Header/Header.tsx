@@ -43,6 +43,8 @@ export const Header: FC = () => {
               title="San Rafael Balance"
               alt="San Rafael Balance"
               className="h-24 w-auto"
+              height="96"
+              width="96"
             />
           </Link>
           <nav className="hidden md:flex space-x-8">

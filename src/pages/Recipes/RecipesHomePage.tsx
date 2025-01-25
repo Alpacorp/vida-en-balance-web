@@ -1,7 +1,7 @@
 import { FC } from "react";
 import { Link } from "react-router-dom";
 
-import { SEO } from "@utils/SEO";
+import { Seo } from "@utils/Seo.tsx";
 
 import { productsData } from "@content/recipes/recipes";
 import { BASE_URL } from "@config/config";
@@ -35,7 +35,7 @@ export const RecipesHomePage: FC = () => {
 
   return (
     <>
-      <SEO {...seoData} />
+      <Seo {...seoData} />
       <div className="min-h-screen bg-gray-100 mt-20">
         <div className="bg-violet text-white py-16">
           <div className="container mx-auto px-4">

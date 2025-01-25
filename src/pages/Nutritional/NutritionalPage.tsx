@@ -7,7 +7,7 @@ import {
   NutritionalInfo,
 } from "@ui/index";
 import { NotFoundPage } from "@pages/NotFound/NotFoundPage";
-import { SEO } from "@utils/SEO";
+import { Seo } from "@utils/Seo.tsx";
 
 import { productsData } from "@content/nutritional/products";
 import { BASE_URL } from "@config/config";
@@ -80,7 +80,7 @@ export const NutritionalPage = () => {
 
   return (
     <>
-      <SEO {...seoData} />
+      <Seo {...seoData} />
       <div className="min-h-screen bg-white">
         <NutritionalHeader
           products={productsData}

@@ -29,12 +29,12 @@ export const ContentTab: FC<ContentProps> = ({
     <div ref={divRef} className="bg-gray-100">
       <div className="mx-auto max-w-7xl py-2 sm:px-2 sm:py-10 lg:px-4">
         <div className="mx-auto max-w-2xl py-2 px-4 lg:max-w-none">
-          <div className="flex flex-wrap gap-x-16 gap-y-10 lg:flex-nowrap justify-center">
+          <div className="flex flex-wrap gap-x-16 gap-y-10 lg:flex-nowrap justify-center items-center">
             <div>
               <h2 className="text-4xl font-montserrat-medium tracking-tight text-gray-900">
                 {title}
               </h2>
-              <p className="mt-4 text-base font-montserrat-medium text-gray-500">
+              <p className="mt-4 text-base font-montserrat-medium text-gray-800">
                 {description}
               </p>
               <div className="mt-5 flex gap-1">
@@ -56,7 +56,7 @@ export const ContentTab: FC<ContentProps> = ({
                 )}
               </div>
               <div>
-                <div className="mt-10 flex items-end justify-center gap-8 h-auto">
+                <div className="mt-10 flex justify-center items-baseline gap-8 h-auto">
                   {types?.map((type) => {
                     const validateImage = type.name === "Granel";
                     return (
@@ -69,7 +69,9 @@ export const ContentTab: FC<ContentProps> = ({
                             alt={`Presentación ${type.name}`}
                             src={type.url}
                             title={`Presentación ${type.name}`}
-                            className={`${validateImage ? "max-h-40" : "max-h-24"} h-full max-w-28 w-full aspect-auto hover:-translate-y-1 transform transition-transform duration-300 ease-in-out`}
+                            className={`${validateImage ? "max-h-60" : "max-h-40"} h-full w-full max-w-28 aspect-auto hover:-translate-y-1 transform transition-transform duration-300 ease-in-out`}
+                            height="auto"
+                            width="auto"
                           />
                         </div>
                         <div className="text-center">
@@ -78,7 +80,7 @@ export const ContentTab: FC<ContentProps> = ({
                           </h3>
                           {type.description.map((description) => (
                             <p
-                              className="text-sm font-montserrat-regular text-gray-500"
+                              className="text-sm font-montserrat-regular text-gray-700"
                               key={description}
                             >
                               {description}
@@ -95,6 +97,9 @@ export const ContentTab: FC<ContentProps> = ({
               alt={title}
               src={image}
               className="aspect-square w-full max-w-xs h-96 rounded-lg bg-gray-100 object-cover shadow-2xl"
+              height="320"
+              width="384"
+              loading="lazy"
             />
           </div>
         </div>

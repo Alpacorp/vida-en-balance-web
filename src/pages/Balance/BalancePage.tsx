@@ -5,7 +5,7 @@ import { CardSection, HeroSection } from "@ui/index";
 
 import { balanceContent } from "@content/balance/balance";
 
-import { SEO } from "@utils/SEO";
+import { Seo } from "@utils/Seo.tsx";
 import { NotFoundPage } from "@pages/NotFound/NotFoundPage";
 
 import { BalancePageContent } from "@interfaces/interfaces";
@@ -45,7 +45,7 @@ export const BalancePage: FC = () => {
 
   return (
     <>
-      <SEO {...seoData} />
+      <Seo {...seoData} />
       <HeroSection {...pageContent.hero} />
       <CardSection article={pageContent.articles} />
     </>

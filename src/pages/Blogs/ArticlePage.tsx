@@ -10,7 +10,7 @@ import { getArticle, getRelatedArticles } from "@utils/getArticleContent";
 import { Article } from "@interfaces/interfaces";
 import { BASE_URL } from "@config/config";
 
-import { SEO } from "@utils/SEO";
+import { Seo } from "@utils/Seo.tsx";
 
 export const ArticlePage: FC = () => {
   const { category, slug } = useParams<{ category: string; slug: string }>();
@@ -68,7 +68,7 @@ export const ArticlePage: FC = () => {
 
   return (
     <>
-      <SEO {...seoData} />
+      <Seo {...seoData} />
       <ArticleLayout {...article} />
     </>
   );
