@@ -55,7 +55,7 @@ export const tabsContent = [
   },
   {
     id: 3,
-    name: "Salchicha de Pavo",
+    name: "Salchicha de Pavo receta original",
     description:
       "Aquí encontrarás recetas para todos. Recetas pensadas con nuestros productos, en tus tiempos y sobre todo, con el mejor sabor, el de San Rafael Balance ®",
     image:

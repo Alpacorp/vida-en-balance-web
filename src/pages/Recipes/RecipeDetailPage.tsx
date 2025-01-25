@@ -4,7 +4,7 @@ import { useParams, Link, useNavigate } from "react-router-dom";
 import { Clock, Users, ChefHat } from "lucide-react";
 
 import { NotFoundPage } from "@pages/NotFound/NotFoundPage";
-import { SEO } from "@utils/SEO";
+import { Seo } from "@utils/Seo.tsx";
 
 import { recipesDetails } from "@content/recipes/recipesDetails";
 import { BASE_URL } from "@config/config";
@@ -55,7 +55,7 @@ export const RecipeDetailPage: FC = () => {
 
   return (
     <>
-      <SEO {...seoData} />
+      <Seo {...seoData} />
       <div className="container mx-auto px-4 py-8 mt-20">
         <Link
           to={`/recetas/${productSlug}`}

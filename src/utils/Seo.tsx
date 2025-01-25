@@ -13,7 +13,7 @@ interface SEOProps {
   noFollow?: boolean;
 }
 
-export const SEO: FC<SEOProps> = ({
+export const Seo: FC<SEOProps> = ({
   title,
   description,
   keywords,

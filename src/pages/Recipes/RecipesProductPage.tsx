@@ -5,7 +5,7 @@ import { useNavigate, useParams } from "react-router-dom";
 import { ProductHeader, RecipeCard } from "@ui/index";
 
 import { NotFoundPage } from "@pages/NotFound/NotFoundPage";
-import { SEO } from "@utils/SEO";
+import { Seo } from "@utils/Seo.tsx";
 
 import { productsData } from "@content/recipes/recipes";
 import { BASE_URL } from "@config/config";
@@ -43,7 +43,7 @@ export const RecipesProductPage: FC = () => {
 
   return (
     <>
-      <SEO {...seoData} />
+      <Seo {...seoData} />
       <div>
         <ProductHeader
           productName={product.name}

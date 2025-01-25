@@ -1,7 +1,7 @@
 import { FC } from "react";
 
 import { Heading, Hero, Health, Tabs } from "@ui/index";
-import { SEO } from "@utils/SEO";
+import { Seo } from "@utils/Seo.tsx";
 
 import { BASE_URL } from "@config/config";
 
@@ -28,7 +28,7 @@ export const HomePage: FC = () => {
 
   return (
     <main className="overflow-x-hidden">
-      <SEO {...seoData} />
+      <Seo {...seoData} />
       <Hero />
       <Heading
         tag="h1"

@@ -32,6 +32,8 @@ export const Footer: FC = () => {
           alt="San Rafael Balance"
           title="San Rafael Balance"
           className="w-40 text-center mx-auto my-5"
+          height="160"
+          width="160"
         />
         <nav
           aria-label="Footer"
@@ -61,9 +63,11 @@ export const Footer: FC = () => {
                 <span className="sr-only">{item.name}</span>
                 <img
                   src={IconComponent}
-                  alt={item.name}
+                  alt={`Logo de ${item.name}`}
                   title={item.name}
                   className="w-6 h-6"
+                  height="24"
+                  width="24"
                 />
               </Link>
             );

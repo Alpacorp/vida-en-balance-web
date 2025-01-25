@@ -88,10 +88,12 @@ export const Tabs = () => {
               <div className="h-auto w-auto aspect-auto bg-white/10 p-1 flex items-center justify-between gap-2">
                 <img
                   src={tab.types[tab.types.length - 1].url}
-                  alt={tab.name}
-                  className="w-18 h-24 object-contain filter drop-shadow-md"
+                  alt={`Empaque individual de ${tab.name}`}
+                  className="w-16 h-24 object-contain filter drop-shadow-md"
+                  height="96"
+                  width="64"
                 />
-                <span className="text-lg font-montserrat-medium">
+                <span className="text-lg font-montserrat-medium max-w-72">
                   {tab.name}
                 </span>
               </div>

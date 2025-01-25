@@ -96,7 +96,7 @@ export const Hero: FC = () => {
           <button
             key={index}
             onClick={() => setCurrentSlide(index)}
-            className={`h-3 w-3 rounded-full transition-colors ${
+            className={`h-4 w-4 rounded-full transition-colors ${
               currentSlide === index
                 ? "bg-white"
                 : "bg-white/40 hover:bg-white/60"

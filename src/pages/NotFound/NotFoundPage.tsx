@@ -2,7 +2,7 @@ import { FC } from "react";
 import { Link } from "react-router-dom";
 
 import { Home, Search, ArrowLeft } from "lucide-react";
-import { SEO } from "@utils/SEO";
+import { Seo } from "@utils/Seo.tsx";
 
 import { NotFoundProps } from "@interfaces/interfaces";
 import { BASE_URL } from "@config/config";
@@ -32,7 +32,7 @@ export const NotFoundPage: FC<NotFoundProps> = ({ type = "page", goBack }) => {
 
   return (
     <>
-      <SEO {...seoData} />
+      <Seo {...seoData} />
       <div className="min-h-screen bg-gray-100 flex flex-col justify-center items-center px-4 py-12">
         <div className="max-w-md w-full bg-white shadow-lg rounded-lg overflow-hidden">
           <div className="p-8">
