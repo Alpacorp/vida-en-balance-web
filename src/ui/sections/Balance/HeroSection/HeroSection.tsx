@@ -15,7 +15,7 @@ export const HeroSection: FC<HeroBalanceProps> = ({
   const isActive = (to: string) => location.pathname === to;
 
   return (
-    <section className="relative h-[600px] text-white overflow-hidden">
+    <section className="relative h-[600px] text-white overflow-hidden mt-20">
       <img
         src={image.src}
         alt={image.alt}

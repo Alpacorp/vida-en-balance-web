@@ -35,6 +35,8 @@ export const NutritionalDetails: React.FC<ProductDetailsProps> = ({
                   alt={`Presentación ${presentation.label}`}
                   title={`Presentación ${presentation.label}`}
                   className={`${validateImage ? "h-60" : "h-40"} w-40 object-contain object-bottom`}
+                  height="160"
+                  width="160"
                 />
               </div>
             );

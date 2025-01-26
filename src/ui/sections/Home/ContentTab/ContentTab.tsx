@@ -69,9 +69,9 @@ export const ContentTab: FC<ContentProps> = ({
                             alt={`Presentación ${type.name}`}
                             src={type.url}
                             title={`Presentación ${type.name}`}
-                            className={`${validateImage ? "max-h-60" : "max-h-40"} h-full w-full max-w-28 aspect-auto hover:-translate-y-1 transform transition-transform duration-300 ease-in-out`}
-                            height="auto"
-                            width="auto"
+                            className={`${validateImage ? "h-60" : "h-40"} w-40 object-contain aspect-auto hover:-translate-y-1 transform transition-transform duration-300 ease-in-out`}
+                            height="160"
+                            width="160"
                           />
                         </div>
                         <div className="text-center">

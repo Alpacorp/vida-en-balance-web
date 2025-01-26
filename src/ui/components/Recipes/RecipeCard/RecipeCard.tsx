@@ -13,9 +13,15 @@ export const RecipeCard: FC<RecipeCardProps> = ({
   return (
     <Link to={`/recetas/${productSlug}/${id}`} className="group">
       <div className="bg-white rounded-lg shadow-md overflow-hidden transition-transform duration-300 transform hover:scale-105">
-        <img src={image} alt={title} className="w-full h-48 object-cover" />
+        <img
+          src={image}
+          alt={title}
+          className="w-full h-48 object-cover"
+          height="192"
+          width="384"
+        />
         <div className="p-4">
-          <h3 className="text-xl font-montserrat-bold mb-2 group-hover:text-violet">
+          <h3 className="text-xl font-montserrat-bold mb-2 text-gray-800 group-hover:text-violet">
             {title}
           </h3>
           <p className="text-gray-600 font-montserrat-medium">{description}</p>

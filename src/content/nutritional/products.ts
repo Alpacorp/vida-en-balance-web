@@ -8,7 +8,7 @@ export const productsData: Product[] = [
     ingredients:
       "Pechuga de pavo, agua, azúcares añadidos (azucar), saborizantes, cloruro de potasio, fécula, fosfato de sodio, sal yodada, carragenina, carmín.",
     weight: "250 Gramos",
-    image: "/assets/images/pechuga-de-pavo-escalonada.png",
+    image: "/assets/" + "images/pechuga-pavo-escalonada-individual.webp",
     url: "/productos/pechuga-de-pavo-escalonada",
     nutritionalInfo: [
       {
@@ -86,48 +86,48 @@ export const productsData: Product[] = [
       {
         id: 1,
         label: "Granel",
-        image: "/assets/images/pechuga-pavo-escalonada-granel.png",
+        image: "/assets/" + "images/pechuga-pavo-escalonada-granel.webp",
       },
       {
         id: 2,
         label: "Family size",
-        image: "/assets/images/family-size.png",
+        image: "/assets/" + "images/pechuga-pavo-escalonada-familiar.webp",
       },
       {
         id: 3,
         label: "Individual",
-        image: "/assets/images/pechuga-de-pavo-escalonada.png",
+        image: "/assets/" + "images/pechuga-pavo-escalonada-individual.webp",
       },
     ],
     stamps: [
       {
         label: "Bajo en grasa",
-        image: "/assets/images/bajo-en-grasa.png",
+        image: "/assets/" + "images/bajo-en-grasa.png",
         alt: "Sin gluten",
       },
       {
         label: "Sin gluten",
-        image: "/assets/images/sin-gluten.png",
+        image: "/assets/" + "images/sin-gluten.png",
         alt: "Sin lactosa",
       },
       {
         label: "Sin nitritos añadidos",
-        image: "/assets/images/sin-nitritos-anadidos.png",
+        image: "/assets/" + "images/sin-nitritos-anadidos.png",
         alt: "Sin nitritos añadidos",
       },
       {
         label: "Sin conservadores artificiales",
-        image: "/assets/images/sin-conservadores-artificiales.png",
+        image: "/assets/" + "images/sin-conservadores-artificiales.png",
         alt: "Sin conservadores artificiales",
       },
       {
         label: "100% carne de pavo",
-        image: "/assets/images/carne-100-pavo.png",
+        image: "/assets/" + "images/carne-100-pavo.png",
         alt: "100% carne de pavo",
       },
       {
         label: "Sin colorantes artificiales",
-        image: "/assets/images/sin-colorantes-artificiales.png",
+        image: "/assets/" + "images/sin-colorantes-artificiales.png",
         alt: "Sin colorantes artificiales",
       },
     ],
@@ -139,7 +139,7 @@ export const productsData: Product[] = [
     ingredients:
       "Pechuga de pavo, agua, azúcares añadidos (azúcar), saborizantes, cloruro de potasio, fécula, fosfato de sodio, sal yodada, carragenina, carmín.",
     weight: "250 Gramos",
-    image: "/assets/images/pechuga-de-pavo-rebanadas-delgadas.png",
+    image: "/assets/" + "images/pechuga-pavo-rebanadas-delgadas-familiar.webp",
     url: "/productos/pechuga-de-pavo-rebanadas-delgadas",
     nutritionalInfo: [
       {
@@ -222,43 +222,45 @@ export const productsData: Product[] = [
       {
         id: 1,
         label: "Granel",
-        image: "/assets/images/pechuga-pavo-rebanadas-delgadas-granel.png",
+        image:
+          "/assets/" + "images/pechuga-pavo-rebanadas-delgadas-granel.webp",
       },
       {
         id: 2,
         label: "Individual",
-        image: "/assets/images//pechuga-de-pavo-rebanadas-delgadas.png",
+        image:
+          "/assets/" + "images/pechuga-pavo-rebanadas-delgadas-familiar.webp",
       },
     ],
     stamps: [
       {
         label: "Bajo en grasa",
-        image: "/assets/images/bajo-en-grasa.png",
+        image: "/assets/" + "images/bajo-en-grasa.png",
         alt: "Sin gluten",
       },
       {
         label: "Sin gluten",
-        image: "/assets/images/sin-gluten.png",
+        image: "/assets/" + "images/sin-gluten.png",
         alt: "Sin lactosa",
       },
       {
         label: "Sin nitritos añadidos",
-        image: "/assets/images/sin-nitritos-anadidos.png",
+        image: "/assets/" + "images/sin-nitritos-anadidos.png",
         alt: "Sin nitritos añadidos",
       },
       {
         label: "Sin conservadores artificiales",
-        image: "/assets/images/sin-conservadores-artificiales.png",
+        image: "/assets/" + "images/sin-conservadores-artificiales.png",
         alt: "Sin conservadores artificiales",
       },
       {
         label: "100% carne de pavo",
-        image: "/assets/images/carne-100-pavo.png",
+        image: "/assets/" + "images/carne-100-pavo.png",
         alt: "100% carne de pavo",
       },
       {
         label: "Sin colorantes artificiales",
-        image: "/assets/images/sin-colorantes-artificiales.png",
+        image: "/assets/" + "images/sin-colorantes-artificiales.png",
         alt: "Sin colorantes artificiales",
       },
     ],
@@ -270,7 +272,7 @@ export const productsData: Product[] = [
     ingredients:
       "Pechuga de pavo, agua, proteína de soya, fécula, saborizantes, cloruro de potasio, azúcares añadidos (dextrosa), fosfato de sodio, eritorbato de sodio, nitrito de sodio, carmín. Contiene: soya.",
     weight: "500 Gramos",
-    image: "/assets/images/salchicha-de-pavo.png",
+    image: "/assets/" + "images/salchicha-pavo.webp",
     url: "/productos/salchicha-de-pavo",
     nutritionalInfo: [
       {
@@ -348,28 +350,28 @@ export const productsData: Product[] = [
       {
         id: 1,
         label: "Individual",
-        image: "/assets/images/salchicha-de-pavo.png",
+        image: "/assets/" + "images/salchicha-pavo.webp",
       },
     ],
     stamps: [
       {
         label: "Bajo en grasa",
-        image: "/assets/images/bajo-en-grasa.png",
+        image: "/assets/" + "images/bajo-en-grasa.png",
         alt: "Sin gluten",
       },
       {
         label: "Sin gluten",
-        image: "/assets/images/sin-gluten.png",
+        image: "/assets/" + "images/sin-gluten.png",
         alt: "Sin lactosa",
       },
       {
         label: "100% carne de pavo",
-        image: "/assets/images/carne-100-pavo.png",
+        image: "/assets/" + "images/carne-100-pavo.png",
         alt: "100% carne de pavo",
       },
       {
         label: "Sin colorantes artificiales",
-        image: "/assets/images/sin-colorantes-artificiales.png",
+        image: "/assets/" + "images/sin-colorantes-artificiales.png",
         alt: "Sin colorantes artificiales",
       },
     ],
@@ -381,7 +383,8 @@ export const productsData: Product[] = [
     ingredients:
       "Pechuga de pavo, agua, saborizantes, azúcares añadidos (azúcar), sal yodada, fosfato de sodio, cloruro de potasio, carragenina, carmín.",
     weight: "200 Gramos",
-    image: "/assets/images/pechuga-de-pavo-rebanadas-sandwich.png",
+    image:
+      "/assets/" + "images/pechuga-pavo-rebanadas-sandwich-individual.webp",
     url: "/productos/pechuga-de-pavo-rebanadas-sandwich",
     nutritionalInfo: [
       {
@@ -454,44 +457,47 @@ export const productsData: Product[] = [
       {
         id: 1,
         label: "Granel",
-        image: "/assets/images/pechuga-pavo-rebanadas-sandwich-granel.png",
+        image:
+          "/assets/" + "images/pechuga-pavo-rebanadas-sandwich-granel.webp",
       },
       {
         id: 2,
         label: "Family size",
         image:
-          "/assets/images/pechuga-pavo-rebanadas-sandwich-family-size.webp",
+          "/assets/" +
+          "images/pechuga-pavo-rebanadas-sandwich-family-size.webp",
       },
       {
         id: 3,
         label: "Individual",
-        image: "/assets/images/pechuga-de-pavo-rebanadas-sandwich.png",
+        image:
+          "/assets/" + "images/pechuga-pavo-rebanadas-sandwich-individual.webp",
       },
     ],
     stamps: [
       {
         label: "Bajo en grasa",
-        image: "/assets/images/bajo-en-grasa.png",
+        image: "/assets/" + "images/bajo-en-grasa.png",
         alt: "Sin gluten",
       },
       {
         label: "Sin gluten",
-        image: "/assets/images/sin-gluten.png",
+        image: "/assets/" + "images/sin-gluten.png",
         alt: "Sin lactosa",
       },
       {
         label: "Sin conservadores artificiales",
-        image: "/assets/images/sin-conservadores-artificiales.png",
+        image: "/assets/" + "images/sin-conservadores-artificiales.png",
         alt: "Sin conservadores artificiales",
       },
       {
         label: "Sin colorantes artificiales",
-        image: "/assets/images/sin-colorantes-artificiales.png",
+        image: "/assets/" + "images/sin-colorantes-artificiales.png",
         alt: "Sin colorantes artificiales",
       },
       {
         label: "100% carne de pavo",
-        image: "/assets/images/sin-nitritos-anadidos.png",
+        image: "/assets/" + "images/sin-nitritos-anadidos.png",
         alt: "100% carne de pavo",
       },
     ],
@@ -503,7 +509,7 @@ export const productsData: Product[] = [
     ingredients:
       "Pechuga de pavo, agua, proteína de soya, fécula, saborizantes, cloruro de potasio, azúcares añadidos (dextrosa), fosfato de sodio, carín. Contiene: soya.",
     weight: "500 Gramos",
-    image: "/assets/images/salchicha-de-pechuga-de-pavo.png",
+    image: "/assets/" + "images/salchicha-pechuga-pavo-individual.webp",
     url: "/productos/salchicha-de-pechuga-de-pavo",
     nutritionalInfo: [
       {
@@ -586,28 +592,28 @@ export const productsData: Product[] = [
       {
         id: 1,
         label: "Individual",
-        image: "/assets/images/salchicha-de-pechuga-de-pavo.png",
+        image: "/assets/" + "images/salchicha-pechuga-pavo-individual.webp",
       },
     ],
     stamps: [
       {
         label: "Bajo en grasa",
-        image: "/assets/images/bajo-en-grasa.png",
+        image: "/assets/" + "images/bajo-en-grasa.png",
         alt: "Sin gluten",
       },
       {
         label: "Sin gluten",
-        image: "/assets/images/sin-gluten.png",
+        image: "/assets/" + "images/sin-gluten.png",
         alt: "Sin lactosa",
       },
       {
         label: "100% carne de pavo",
-        image: "/assets/images/carne-100-pavo.png",
+        image: "/assets/" + "images/carne-100-pavo.png",
         alt: "100% carne de pavo",
       },
       {
         label: "Sin colorantes artificiales",
-        image: "/assets/images/sin-colorantes-artificiales.png",
+        image: "/assets/" + "images/sin-colorantes-artificiales.png",
         alt: "Sin colorantes artificiales",
       },
     ],

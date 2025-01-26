@@ -2,45 +2,39 @@ export const productsData = {
   "pechuga-de-pavo-escalonada": {
     name: "Pechuga de Pavo Escalonada",
     description: "Deliciosas recetas con nuestra pechuga de pavo Balance®",
-    image: "/assets/images/pechuga-pavo-escalonada-recetas.webp",
-    imageHero:
-      "https://www.vidaenbalance.com/wp-content/uploads/2023/06/pechuga-pavo-escalonada.png",
+    image: "/assets/" + "images/pechuga-pavo-escalonada-recetas.webp",
+    imageHero: "/assets/" + "images/pechuga-pavo-escalonada-individual.webp",
     recipes: [
       {
         id: "1",
         title: "Rollitos de pechuga de pavo rellenos de hummus",
         description: "Deliciosos rollitos para un lunch",
-        image:
-          "https://www.vidaenbalance.com/wp-content/uploads/2023/05/Rollitos-de-pechuga-de-pavo-rellenos-de-hummus-sobre-ensalada-de-farro-1.jpg",
+        image: "/assets/" + "images/rollitos-pechuga-pavo.webp",
       },
       {
         id: "2",
         title: "Sándwich abierto de pechuga de pavo con ensalada de col y pera",
         description: "La mejor receta con el mejor sabor",
-        image:
-          "https://www.vidaenbalance.com/wp-content/uploads/2023/05/Sandwich-abierto-de-pechuga-de-pavo-con-ensalada-de-col-y-pera-1.jpg",
+        image: "/assets/" + "images/sandwich-abierto-pechuga-pavo.webp",
       },
       {
         id: "3",
         title:
           "Mitades de pan pita rellenas con pechuga de pavo, arúgula y salsa tzatziki",
         description: "Un platillo delicioso y saludable",
-        image:
-          "https://www.vidaenbalance.com/wp-content/uploads/2023/06/Mitades-de-pan-pita-rellenas-con-pechuga-de-pavo-arugula-y-salsa-tzatziki.webp",
+        image: "/assets/" + "images/mitades-pan-pita-rellenas.webp",
       },
       {
         id: "5",
         title: "Molletes de camote y calabaza",
         description: "La combinación perfecta de sabores",
-        image:
-          "https://www.vidaenbalance.com/wp-content/uploads/2024/06/MOLLETES-DE-CAMOTE-Y-CALABAZA-873x890-1.jpg",
+        image: "/assets/" + "images/molletes-camote.webp",
       },
       {
         id: "6",
         title: "Rollitos Thai",
         description: "Aperitivo ligero y delicioso",
-        image:
-          "https://www.vidaenbalance.com/wp-content/uploads/2024/06/ROLLITOS-THAI-673x890-1.jpg",
+        image: "/assets/" + "images/rollitos-thai.webp",
       },
     ],
   },
@@ -48,30 +42,26 @@ export const productsData = {
     name: "Salchicha de Pavo",
     description:
       "Prepara platillos deliciosos con nuestras salchichas de pavo Balance®",
-    image: "/assets/images/salchicha-pavo-recetas.webp",
-    imageHero:
-      "https://www.vidaenbalance.com/wp-content/uploads/2023/06/Salchichas-de-Pavo.png",
+    image: "/assets/" + "images/salchicha-pavo-recetas.webp",
+    imageHero: "/assets/" + "images/salchicha-pavo.webp",
     recipes: [
       {
         id: "8",
         title: "Aguacate relleno de arroz integral y salchicha de pavo",
         description: "Un aperiitivo delicioso y saludable",
-        image:
-          "https://www.vidaenbalance.com/wp-content/uploads/2023/08/Aguacate-relleno-de-arroz-integral-y-salchicha-de-pavo.webp",
+        image: "/assets/" + "images/aguacate-relleno.webp",
       },
       {
         id: "9",
         title: "Yakimeshi de Quinoa con Salchichas de Pavo",
         description: "Yakimeshi saludable y lleno de sabor",
-        image:
-          "https://www.vidaenbalance.com/wp-content/uploads/2023/06/Yakimeshi-Recetas-673-890.jpg",
+        image: "/assets/" + "images/yakimeshi.webp",
       },
       {
         id: "10",
         title: "Portobellos Rellenos de Salchicha",
         description: "Una versión saludable del clásico",
-        image:
-          "https://www.vidaenbalance.com/wp-content/uploads/2024/06/PORTOBELLO-RELLENO-DE-SALCHICHA-673x890-1.jpg",
+        image: "/assets/" + "images/portobello.webp",
       },
     ],
   },
@@ -79,39 +69,35 @@ export const productsData = {
     name: "Pechuga de Pavo Rebanadas Sandwich",
     description:
       "Explora recetas creativas con nuestra mortadela de pavo Balance®",
-    image: "/assets/images/pechuga-pavo-rebanadas-sandwich-recetas.webp",
+    image: "/assets/" + "images/pechuga-pavo-rebanadas-sandwich-recetas.webp",
     imageHero:
-      "https://www.vidaenbalance.com/wp-content/uploads/2023/06/pechuga-pavo-rebanadas-sandwich.png",
+      "/assets" + "/images/pechuga-pavo-rebanadas-sandwich-individual.webp",
     recipes: [
       {
         id: "11",
         title: "Sándwich tostado de pechuga de pavo con manzana",
         description: "Un delicioso sándwich con sabores frescos",
-        image:
-          "https://www.vidaenbalance.com/wp-content/uploads/2024/06/SANDWICH-CON-JAMON-Y-MANZAN-672x890-1.jpg",
+        image: "/assets/" + "images/sandwich-tostado.webp",
       },
     ],
   },
   "salchicha-de-pechuga-de-pavo": {
     name: "Salchicha de Pechuga de Pavo",
     description: "Crea platillos gourmet con nuestro salami de pavo Balance®",
-    image: "/assets/images/salchicha-pechuga-pavo-recetas.webp",
-    imageHero:
-      "https://www.vidaenbalance.com/wp-content/uploads/2023/06/SKU345_SR_Render_Vista_Frontal_Balance.png",
+    image: "/assets/" + "images/salchicha-pechuga-pavo-recetas.webp",
+    imageHero: "/assets/" + "images/salchicha-pechuga-pavo-individual.webp",
     recipes: [
       {
         id: "12",
         title: "Poke de quinoa con salchichas de pechuga de pavo",
         description: "Un delicioso poke con sabores frescos",
-        image:
-          "https://www.vidaenbalance.com/wp-content/uploads/2023/06/Poke-de-quinoa-con-salchichas-de-pechuga-de-pavo.webp",
+        image: "/assets/" + "images/poke-quinoa.webp",
       },
       {
         id: "7",
         title: "Cocktail de Mango",
         description: "Disfruta de un delicioso coctel",
-        image:
-          "https://www.vidaenbalance.com/wp-content/uploads/2024/06/COCKTAIL-CON-MANGO-673x890-1.jpg",
+        image: "/assets/" + "images/cocktail-mango.webp",
       },
     ],
   },
@@ -119,15 +105,14 @@ export const productsData = {
     name: "Pechuga de Pavo Rebanadas Delgadas",
     description:
       "Es momento de preparar recetas deliciosas con nuestra pechuga de pavo Balance®",
-    image: "/assets/images/salchicha-pechuga-pavo-recetas.webp",
-    imageHero: "/assets/images/pechuga-pavo-family-size.webp",
+    image: "/assets/" + "images/salchicha-pechuga-pavo-recetas.webp",
+    imageHero: "/assets/" + "images/pechuga-pavo-family-size.webp",
     recipes: [
       {
         id: "4",
         title: "Calabacitas rellenas de Pechuga de pavo y piña",
         description: "Para una comida ligera y deliciosa",
-        image:
-          "https://www.vidaenbalance.com/wp-content/uploads/2024/03/673x890-Calabacitas.jpg",
+        image: "/assets/" + "images/calabacitas.webp",
       },
     ],
   },

@@ -9,7 +9,7 @@ export const articles: Article[] = [
     subtitle: "Prepárate para tu primera media maratón",
     description:
       "Correr una media maratón es un objetivo desafiante pero alcanzable para muchos corredores. Con el entrenamiento adecuado y la preparación correcta, puedes completar los 21K de manera segura y satisfactoria.",
-    coverImage: "/assets/images/21k-juntos.webp",
+    coverImage: "/assets/" + "images/21k-juntos.webp",
     author: "Monica Gomez",
     date: "15 de Enero, 2025",
     readingTime: "8 min de lectura",
@@ -29,9 +29,12 @@ export const articles: Article[] = [
         </p>
 
         <img
-          src="https://www.vidaenbalance.com/wp-content/uploads/2023/05/Tabla21K_DisfrutaCuidandote-768x913.jpg"
+          src="/assets/images/tabla-21K-disfruta-cuidandote.webp"
           alt="Tabla de entrenamiento para 21K"
           title="Tabla de entrenamiento para 21K"
+          height="913"
+          width="768"
+          className="w-full"
         />
       </>
     ),
@@ -40,8 +43,7 @@ export const articles: Article[] = [
         id: "2",
         title: "Evitando lesiones",
         excerpt: "Aprende a prevenir lesiones",
-        image:
-          "https://images.unsplash.com/photo-1434682881908-b43d0467b798?auto=format&fit=crop&w=800&h=500",
+        image: "/assets/" + "images/evitando-lesiones-banner.webp",
         slug: "evitando-lesiones",
         category: "tips-balance",
       },
@@ -49,7 +51,7 @@ export const articles: Article[] = [
         id: "3",
         title: "El mejor tratamiento para vivir en balance",
         excerpt: "Meditación para corredores",
-        image: "/assets/images/vivir-balance.webp",
+        image: "/assets/" + "images/vivir-balance.webp",
         slug: "el-mejor-tratamiento-para-vivir-en-balance",
         category: "tips-balance",
       },
@@ -63,8 +65,7 @@ export const articles: Article[] = [
     subtitle: "Aprende a prevenir lesiones",
     description:
       "Las lesiones son uno de los mayores obstáculos para los corredores, tanto principiantes como experimentados. Afortunadamente, con las precauciones adecuadas, muchas lesiones comunes pueden prevenirse.",
-    coverImage:
-      "https://images.unsplash.com/photo-1434682881908-b43d0467b798?auto=format&fit=crop&q=80&w=2070&h=1000",
+    coverImage: "/assets/" + "images/evitando-lesiones-banner.webp",
     author: "Iñigo Salazar",
     date: "16 de Enero, 2025",
     readingTime: "6 min de lectura",
@@ -179,7 +180,7 @@ export const articles: Article[] = [
         id: "1",
         title: "21K juntos",
         excerpt: "Prepárate para tu primera media maratón",
-        image: "/assets/images/21k-juntos.webp",
+        image: "/assets/" + "images/21k-juntos.webp",
         slug: "21k-juntos",
         category: "tips-balance",
       },
@@ -187,7 +188,7 @@ export const articles: Article[] = [
         id: "3",
         title: "El mejor tratamiento para vivir en balance",
         excerpt: "Meditación para corredores",
-        image: "/assets/images/vivir-balance.webp",
+        image: "/assets/" + "images/vivir-balance.webp",
         slug: "el-mejor-tratamiento-para-vivir-en-balance",
         category: "tips-balance",
       },
@@ -201,7 +202,7 @@ export const articles: Article[] = [
     subtitle: "Meditación para corredores",
     description:
       "La meditación no es solo para quienes practican yoga. Los corredores pueden beneficiarse enormemente de esta práctica, mejorando tanto su rendimiento físico como su bienestar mental.",
-    coverImage: "/assets/images/vivir-balance.webp",
+    coverImage: "/assets/" + "images/vivir-balance.webp",
     author: "Vida en Balance",
     date: "16 de Enero, 2025",
     readingTime: "7 min de lectura",
@@ -252,7 +253,7 @@ export const articles: Article[] = [
         id: "1",
         title: "21K juntos",
         excerpt: "Prepárate para tu primera media maratón",
-        image: "/assets/images/21k-juntos.webp",
+        image: "/assets/" + "images/21k-juntos.webp",
         slug: "21k-juntos",
         category: "tips-balance",
       },
@@ -260,8 +261,7 @@ export const articles: Article[] = [
         id: "2",
         title: "Evitando lesiones",
         excerpt: "Aprende a prevenir lesiones",
-        image:
-          "https://images.unsplash.com/photo-1434682881908-b43d0467b798?auto=format&fit=crop&w=800&h=500",
+        image: "/assets/" + "images/evitando-lesiones-banner.webp",
         slug: "evitando-lesiones",
         category: "tips-balance",
       },
@@ -275,7 +275,7 @@ export const articles: Article[] = [
     subtitle: "Definiendo tu peso ideal y salud",
     description:
       "El peso ideal no es universal. Aprende cómo la salud, el bienestar y la auto-percepción definen tu peso perfecto más allá del IMC.",
-    coverImage: "/assets/images/tu-peso-ideal.webp",
+    coverImage: "/assets/" + "images/tu-peso-ideal.webp",
     author: "Karina Salazar",
     date: "16 de Enero, 2025",
     readingTime: "7 min de lectura",
@@ -370,7 +370,7 @@ export const articles: Article[] = [
         id: "5",
         title: "La importancia de las proteínas",
         excerpt: "Proteínas: pilares esenciales para tu salud",
-        image: "/assets/images/importancia-proteinas.webp",
+        image: "/assets/" + "images/importancia-proteinas.webp",
         slug: "la-importancia-de-las-proteinas",
         category: "cuerpo-en-balance",
       },
@@ -378,7 +378,7 @@ export const articles: Article[] = [
         id: "6",
         title: "Qué comer según tu nivel de actividad física",
         excerpt: "Nutrientes: el combustible de tu cuerpo",
-        image: "/assets/images/que-comer.webp",
+        image: "/assets/" + "images/que-comer.webp",
         slug: "que-comer-segun-tu-nivel-de-actividad-fisica",
         category: "cuerpo-en-balance",
       },
@@ -386,7 +386,7 @@ export const articles: Article[] = [
         id: "7",
         title: "Nutrición alcalina ¿Sabes lo que es?",
         excerpt: "Equilibra tu pH para una vida más saludable",
-        image: "/assets/images/nutricion-alcalina.webp",
+        image: "/assets/" + "images/nutricion-alcalina.webp",
         slug: "nutricion-alcalina",
         category: "cuerpo-en-balance",
       },
@@ -400,7 +400,7 @@ export const articles: Article[] = [
     subtitle: "Proteínas: pilares esenciales para tu salud",
     description:
       "Descubre la importancia de las proteínas, su rol en el organismo, cómo calcular tu ingesta diaria y las mejores fuentes naturales para mantener una alimentación balanceada.",
-    coverImage: "/assets/images/importancia-proteinas.webp",
+    coverImage: "/assets/" + "images/importancia-proteinas.webp",
     author: "Karina Salazar",
     date: "17 de Enero, 2025",
     readingTime: "4 min de lectura",
@@ -523,7 +523,7 @@ export const articles: Article[] = [
         id: "4",
         title: "Tu peso ideal: Más que un número",
         excerpt: "Definiendo tu peso ideal y salud",
-        image: "/assets/images/tu-peso-ideal.webp",
+        image: "/assets/" + "images/tu-peso-ideal.webp",
         slug: "tu-peso-ideal",
         category: "cuerpo-en-balance",
       },
@@ -531,7 +531,7 @@ export const articles: Article[] = [
         id: "6",
         title: "Qué comer según tu nivel de actividad física",
         excerpt: "Nutrientes: el combustible de tu cuerpo",
-        image: "/assets/images/que-comer.webp",
+        image: "/assets/" + "images/que-comer.webp",
         slug: "que-comer-segun-tu-nivel-de-actividad-fisica",
         category: "cuerpo-en-balance",
       },
@@ -539,7 +539,7 @@ export const articles: Article[] = [
         id: "7",
         title: "Nutrición alcalina ¿Sabes lo que es?",
         excerpt: "Equilibra tu pH para una vida más saludable",
-        image: "/assets/images/nutricion-alcalina.webp",
+        image: "/assets/" + "images/nutricion-alcalina.webp",
         slug: "nutricion-alcalina",
         category: "cuerpo-en-balance",
       },
@@ -553,7 +553,7 @@ export const articles: Article[] = [
     subtitle: "Nutrientes: el combustible de tu cuerpo",
     description:
       "Descubre cómo los carbohidratos y proteínas son esenciales para el rendimiento de tu cuerpo. Aprende a calcular tus necesidades diarias y elegir las mejores fuentes para mantenerte activo y saludable.",
-    coverImage: "/assets/images/que-comer.webp",
+    coverImage: "/assets/" + "images/que-comer.webp",
     author: "Maricarmen Osés - Nutrióloga",
     date: "17 de Enero, 2025",
     readingTime: "3 min de lectura",
@@ -600,9 +600,12 @@ export const articles: Article[] = [
         </p>
 
         <img
-          src="https://www.vidaenbalance.com/wp-content/uploads/2023/05/quecomer-img1.jpg"
+          src="/assets/images/que-comer-blog.webp"
           alt="Tabla de necesidades diaria para energía y recuperación"
           title="Tabla de necesidades para energía y recuperación"
+          height="752"
+          width="589"
+          className="w-full"
         />
 
         <h2>Proteínas: esenciales para el rendimiento</h2>
@@ -643,9 +646,12 @@ export const articles: Article[] = [
         </ul>
 
         <img
-          src="https://www.vidaenbalance.com/wp-content/uploads/2023/05/quecomer-img2.jpg"
+          src="/assets/images/tipo-deporte.webp"
           alt="Tabla de proteína y ejercicio"
-          title="Protein and exercise"
+          title="Tabla de proteína y ejercicio"
+          height="365"
+          width="589"
+          className="w-full"
         />
       </>
     ),
@@ -654,7 +660,7 @@ export const articles: Article[] = [
         id: "7",
         title: "Nutrición alcalina ¿Sabes lo que es?",
         excerpt: "Equilibra tu pH para una vida más saludable",
-        image: "/assets/images/nutricion-alcalina.webp",
+        image: "/assets/" + "images/nutricion-alcalina.webp",
         slug: "nutricion-alcalina",
         category: "cuerpo-en-balance",
       },
@@ -662,7 +668,7 @@ export const articles: Article[] = [
         id: "4",
         title: "Tu peso ideal: Más que un número",
         excerpt: "Definiendo tu peso ideal y salud",
-        image: "/assets/images/tu-peso-ideal.webp",
+        image: "/assets/" + "images/tu-peso-ideal.webp",
         slug: "tu-peso-ideal",
         category: "cuerpo-en-balance",
       },
@@ -670,7 +676,7 @@ export const articles: Article[] = [
         id: "5",
         title: "La importancia de las proteínas",
         excerpt: "Proteínas: pilares esenciales para tu salud",
-        image: "/assets/images/importancia-proteinas.webp",
+        image: "/assets/" + "images/importancia-proteinas.webp",
         slug: "la-importancia-de-las-proteinas",
         category: "cuerpo-en-balance",
       },
@@ -684,7 +690,7 @@ export const articles: Article[] = [
     subtitle: "Equilibra tu pH para una vida más saludable",
     description:
       "Descubre cómo alcalinizar tu cuerpo, equilibrar tu pH y disfrutar de una dieta balanceada. Aprende a incluir alimentos alcalinos en tu día para una vida llena de energía y vitalidad.",
-    coverImage: "/assets/images/nutricion-alcalina.webp",
+    coverImage: "/assets/" + "images/nutricion-alcalina.webp",
     author: "Marisol G Ficachi - Yoga Wellness Coach",
     date: "17 de Enero, 2025",
     readingTime: "3 min de lectura",
@@ -758,9 +764,12 @@ export const articles: Article[] = [
         </p>
 
         <img
-          src="https://www.vidaenbalance.com/wp-content/uploads/2023/05/nutricion-alcalina-img1.jpg"
+          src="/assets/images/consume.webp"
           alt="Lista de alimentos recomendados con sus cantidades"
           title="Guía de consumo de alimentos saludables según cantidades recomendadas."
+          height="377"
+          width="589"
+          className="w-full"
         />
 
         <p>
@@ -789,15 +798,21 @@ export const articles: Article[] = [
         </ol>
 
         <img
-          src="https://www.vidaenbalance.com/wp-content/uploads/2023/05/quecomer-img1.jpg"
+          src="/assets/images/tabla-necesidades.webp"
           alt="Tabla de necesidades diaria para energía y recuperación"
           title="Tabla de necesidades para energía y recuperación"
+          height="752"
+          width="589"
+          className="w-full"
         />
 
         <img
-          src="https://www.vidaenbalance.com/wp-content/uploads/2023/05/nutricion-alcalina-img2.jpg"
+          src="/assets/images/alimentos-alcalinos.webp"
           alt="Lista de alimentos alcalinos organizada por categoría"
           title="Tabla de alimentos alcalinos para una dieta equilibrada y saludable."
+          height="1094"
+          width="575"
+          className="w-full"
         />
       </>
     ),
@@ -806,7 +821,7 @@ export const articles: Article[] = [
         id: "4",
         title: "Tu peso ideal: Más que un número",
         excerpt: "Definiendo tu peso ideal y salud",
-        image: "/assets/images/tu-peso-ideal.webp",
+        image: "/assets/" + "images/tu-peso-ideal.webp",
         slug: "tu-peso-ideal",
         category: "cuerpo-en-balance",
       },
@@ -814,7 +829,7 @@ export const articles: Article[] = [
         id: "5",
         title: "La importancia de las proteínas",
         excerpt: "Proteínas: pilares esenciales para tu salud",
-        image: "/assets/images/importancia-proteinas.webp",
+        image: "/assets/" + "images/importancia-proteinas.webp",
         slug: "la-importancia-de-las-proteinas",
         category: "cuerpo-en-balance",
       },
@@ -822,7 +837,7 @@ export const articles: Article[] = [
         id: "6",
         title: "Qué comer según tu nivel de actividad física",
         excerpt: "Nutrientes: el combustible de tu cuerpo",
-        image: "/assets/images/que-comer.webp",
+        image: "/assets/" + "images/que-comer.webp",
         slug: "que-comer-segun-tu-nivel-de-actividad-fisica",
         category: "cuerpo-en-balance",
       },
@@ -836,7 +851,7 @@ export const articles: Article[] = [
     subtitle: "Abraza tus emociones para una vida equilibrada",
     description:
       "Aprende a identificar, aceptar y liberar tus emociones de manera responsable. Descubre cómo conectar contigo mismo y encontrar el equilibrio emocional para una vida más plena y feliz",
-    coverImage: "/assets/images/emociones-salud.webp",
+    coverImage: "/assets/" + "images/emociones-salud.webp",
     author: "María Leal",
     date: "17 de Enero, 2025",
     readingTime: "4 min de lectura",
@@ -927,7 +942,7 @@ export const articles: Article[] = [
         id: "9",
         title: "Mindfullness en tu vida diaria",
         excerpt: "Mindfullness: el arte de vivir en el presente",
-        image: "/assets/images/mindfullness.webp",
+        image: "/assets/" + "images/mindfullness.webp",
         slug: "mindfullness-en-tu-vida-diaria",
         category: "mente-en-balance",
       },
@@ -935,7 +950,7 @@ export const articles: Article[] = [
         id: "10",
         title: "Paz interior, que nadie te la quite",
         excerpt: "Domina tus emociones ",
-        image: "/assets/images/paz-interior.webp",
+        image: "/assets/" + "images/paz-interior.webp",
         slug: "paz-interior-que-nadie-te-la-quite",
         category: "mente-en-balance",
       },
@@ -943,7 +958,7 @@ export const articles: Article[] = [
         id: "11",
         title: "Yoga Feliz",
         excerpt: "Santosha: el camino a la felicidad interior",
-        image: "/assets/images/yoga-feliz.webp",
+        image: "/assets/" + "images/yoga-feliz.webp",
         slug: "yoga-feliz",
         category: "mente-en-balance",
       },
@@ -951,8 +966,7 @@ export const articles: Article[] = [
         id: "12",
         title: "Magia en el yoga",
         excerpt: "Descubre tu verdadero ser",
-        image:
-          "https://images.unsplash.com/photo-1506126613408-eca07ce68773?auto=format&fit=crop&q=80&w=2070&h=1000",
+        image: "/assets/" + "images/magia-yoga-blog.webp",
         slug: "magia-en-el-yoga",
         category: "mente-en-balance",
       },
@@ -966,7 +980,7 @@ export const articles: Article[] = [
     subtitle: "Mindfullness: el arte de vivir en el presente",
     description:
       "Descubre cómo practicar mindfulness para reducir el estrés, mejorar tu concentración y vivir plenamente en el aquí y el ahora. Solo necesitas 5 minutos al día para transformar tu calidad de vida.",
-    coverImage: "/assets/images/mindfullness.webp",
+    coverImage: "/assets/" + "images/mindfullness.webp",
     author: "María Leal",
     date: "17 de Enero, 2025",
     readingTime: "4 min de lectura",
@@ -1064,7 +1078,7 @@ export const articles: Article[] = [
         id: "10",
         title: "Paz interior, que nadie te la quite",
         excerpt: "Domina tus emociones ",
-        image: "/assets/images/paz-interior.webp",
+        image: "/assets/" + "images/paz-interior.webp",
         slug: "paz-interior-que-nadie-te-la-quite",
         category: "mente-en-balance",
       },
@@ -1072,7 +1086,7 @@ export const articles: Article[] = [
         id: "11",
         title: "Yoga Feliz",
         excerpt: "Santosha: el camino a la felicidad interior",
-        image: "/assets/images/yoga-feliz.webp",
+        image: "/assets/" + "images/yoga-feliz.webp",
         slug: "yoga-feliz",
         category: "mente-en-balance",
       },
@@ -1080,8 +1094,7 @@ export const articles: Article[] = [
         id: "12",
         title: "Magia en el yoga",
         excerpt: "Descubre tu verdadero ser",
-        image:
-          "https://images.unsplash.com/photo-1506126613408-eca07ce68773?auto=format&fit=crop&q=80&w=2070&h=1000",
+        image: "/assets/" + "images/magia-yoga-blog.webp",
         slug: "magia-en-el-yoga",
         category: "mente-en-balance",
       },
@@ -1089,7 +1102,7 @@ export const articles: Article[] = [
         id: "8",
         title: "¿Cómo afectan las emociones a mi salud?",
         excerpt: "Abraza tus emociones para una vida equilibrada",
-        image: "/assets/images/emociones-salud.webp",
+        image: "/assets/" + "images/emociones-salud.webp",
         slug: "como-afectan-las-emociones-a-mi-salud",
         category: "mente-en-balance",
       },
@@ -1103,7 +1116,7 @@ export const articles: Article[] = [
     subtitle: "Domina tus emociones y encuentra la paz interior",
     description:
       "Aprende cómo dejar de querer controlarlo todo, sanar tus emociones y descubrir tu verdadera esencia para vivir en paz, armonía y plenitud",
-    coverImage: "/assets/images/paz-interior.webp",
+    coverImage: "/assets/" + "images/paz-interior.webp",
     author: "Vero Marcos",
     date: "17 de Enero, 2025",
     readingTime: "4 min de lectura",
@@ -1211,7 +1224,7 @@ export const articles: Article[] = [
         id: "11",
         title: "Yoga Feliz",
         excerpt: "Santosha: el camino a la felicidad interior",
-        image: "/assets/images/yoga-feliz.webp",
+        image: "/assets/" + "images/yoga-feliz.webp",
         slug: "yoga-feliz",
         category: "mente-en-balance",
       },
@@ -1219,8 +1232,7 @@ export const articles: Article[] = [
         id: "12",
         title: "Magia en el yoga",
         excerpt: "Descubre tu verdadero ser",
-        image:
-          "https://images.unsplash.com/photo-1506126613408-eca07ce68773?auto=format&fit=crop&q=80&w=2070&h=1000",
+        image: "/assets/" + "images/magia-yoga-blog.webp",
         slug: "magia-en-el-yoga",
         category: "mente-en-balance",
       },
@@ -1228,7 +1240,7 @@ export const articles: Article[] = [
         id: "8",
         title: "¿Cómo afectan las emociones a mi salud?",
         excerpt: "Abraza tus emociones para una vida equilibrada",
-        image: "/assets/images/emociones-salud.webp",
+        image: "/assets/" + "images/emociones-salud.webp",
         slug: "como-afectan-las-emociones-a-mi-salud",
         category: "mente-en-balance",
       },
@@ -1236,7 +1248,7 @@ export const articles: Article[] = [
         id: "9",
         title: "Mindfullness en tu vida diaria",
         excerpt: "Mindfullness: el arte de vivir en el presente",
-        image: "/assets/images/mindfullness.webp",
+        image: "/assets/" + "images/mindfullness.webp",
         slug: "mindfullness-en-tu-vida-diaria",
         category: "mente-en-balance",
       },
@@ -1250,7 +1262,7 @@ export const articles: Article[] = [
     subtitle: "Santosha: el camino a la felicidad interior",
     description:
       "Descubre cómo Santosha, un principio del yoga, te ayuda a encontrar alegría y satisfacción en tu vida diaria. Aprende a dejar atrás los deseos innecesarios y a conectarte con tu felicidad interior.",
-    coverImage: "/assets/images/yoga-feliz.webp",
+    coverImage: "/assets/" + "images/yoga-feliz.webp",
     author: "Marisol G Ficachi - Yoga Wellness Coach",
     date: "17 de Enero, 2025",
     readingTime: "3 min de lectura",
@@ -1339,8 +1351,7 @@ export const articles: Article[] = [
         id: "12",
         title: "Magia en el yoga",
         excerpt: "Descubre tu verdadero ser",
-        image:
-          "https://images.unsplash.com/photo-1506126613408-eca07ce68773?auto=format&fit=crop&q=80&w=2070&h=1000",
+        image: "/assets/" + "images/magia-yoga-blog.webp",
         slug: "magia-en-el-yoga",
         category: "mente-en-balance",
       },
@@ -1348,7 +1359,7 @@ export const articles: Article[] = [
         id: "8",
         title: "¿Cómo afectan las emociones a mi salud?",
         excerpt: "Abraza tus emociones para una vida equilibrada",
-        image: "/assets/images/emociones-salud.webp",
+        image: "/assets/" + "images/emociones-salud.webp",
         slug: "como-afectan-las-emociones-a-mi-salud",
         category: "mente-en-balance",
       },
@@ -1356,7 +1367,7 @@ export const articles: Article[] = [
         id: "9",
         title: "Mindfullness en tu vida diaria",
         excerpt: "Mindfullness: el arte de vivir en el presente",
-        image: "/assets/images/mindfullness.webp",
+        image: "/assets/" + "images/mindfullness.webp",
         slug: "mindfullness-en-tu-vida-diaria",
         category: "mente-en-balance",
       },
@@ -1364,7 +1375,7 @@ export const articles: Article[] = [
         id: "10",
         title: "Paz interior, que nadie te la quite",
         excerpt: "Domina tus emociones ",
-        image: "/assets/images/paz-interior.webp",
+        image: "/assets/" + "images/paz-interior.webp",
         slug: "paz-interior-que-nadie-te-la-quite",
         category: "mente-en-balance",
       },
@@ -1378,8 +1389,7 @@ export const articles: Article[] = [
     subtitle: "Descubre tu verdadero ser a través de la introspección",
     description:
       "Conoce cómo escuchar a tu verdadera consciencia, diferenciarla del ego y conectarte contigo mismo mediante el silencio interno, la meditación y la atención plena.",
-    coverImage:
-      "https://images.unsplash.com/photo-1506126613408-eca07ce68773?auto=format&fit=crop&q=80&w=2070&h=1000",
+    coverImage: "/assets/" + "images/magia-yoga-banner.webp",
     author: "Marisol G Ficachi - Yoga Wellness Coach",
     date: "17 de Enero, 2025",
     readingTime: "3 min de lectura",
@@ -1429,7 +1439,7 @@ export const articles: Article[] = [
         id: "8",
         title: "¿Cómo afectan las emociones a mi salud?",
         excerpt: "Abraza tus emociones para una vida equilibrada",
-        image: "/assets/images/emociones-salud.webp",
+        image: "/assets/" + "images/emociones-salud.webp",
         slug: "como-afectan-las-emociones-a-mi-salud",
         category: "mente-en-balance",
       },
@@ -1437,7 +1447,7 @@ export const articles: Article[] = [
         id: "9",
         title: "Mindfullness en tu vida diaria",
         excerpt: "Mindfullness: el arte de vivir en el presente",
-        image: "/assets/images/mindfullness.webp",
+        image: "/assets/" + "images/mindfullness.webp",
         slug: "mindfullness-en-tu-vida-diaria",
         category: "mente-en-balance",
       },
@@ -1445,7 +1455,7 @@ export const articles: Article[] = [
         id: "10",
         title: "Paz interior, que nadie te la quite",
         excerpt: "Domina tus emociones ",
-        image: "/assets/images/paz-interior.webp",
+        image: "/assets/" + "images/paz-interior.webp",
         slug: "paz-interior-que-nadie-te-la-quite",
         category: "mente-en-balance",
       },
@@ -1453,7 +1463,7 @@ export const articles: Article[] = [
         id: "11",
         title: "Yoga Feliz",
         excerpt: "Santosha: el camino a la felicidad interior",
-        image: "/assets/images/yoga-feliz.webp",
+        image: "/assets/" + "images/yoga-feliz.webp",
         slug: "yoga-feliz",
         category: "mente-en-balance",
       },
