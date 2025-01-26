@@ -64,35 +64,37 @@ export const RecipeDetailPage: FC = () => {
           <span className="mr-2">←</span> Volver a recetas
         </Link>
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12">
-          <div>
+          <div className="w-full">
             <img
               src={recipe.image}
               alt={recipe.title}
-              className="w-full h-[400px] object-cover rounded-lg shadow-lg mb-6"
+              className="h-[400px] w-auto object-contain rounded-lg shadow-lg mb-6 mx-auto"
+              height="400"
+              width="400"
             />
             <div className="flex justify-between items-center bg-gray-50 p-4 rounded-lg">
               <div className="flex items-center">
                 <Clock className="w-5 h-5 text-violet mr-2" />
-                <span className="font-montserrat-medium">
+                <span className="font-montserrat-medium text-gray-800">
                   {recipe.timePrep}
                 </span>
               </div>
               <div className="flex items-center">
                 <Users className="w-5 h-5 text-violet mr-2" />
-                <span className="font-montserrat-medium">
+                <span className="font-montserrat-medium text-gray-800">
                   {recipe.portions}
                 </span>
               </div>
               <div className="flex items-center">
                 <ChefHat className="w-5 h-5 text-violet mr-2" />
-                <span className="font-montserrat-medium">
+                <span className="font-montserrat-medium text-gray-800">
                   {recipe.difficulty}
                 </span>
               </div>
             </div>
           </div>
           <div>
-            <h1 className="text-4xl font-montserrat-bold mb-6">
+            <h1 className="text-4xl font-montserrat-bold mb-6 text-gray-800">
               {recipe.title}
             </h1>
             <div className="mb-8">
@@ -103,7 +105,7 @@ export const RecipeDetailPage: FC = () => {
                 {recipe.ingredients.map((ingredient, index) => (
                   <li
                     key={index}
-                    className="flex items-center font-montserrat-medium"
+                    className="flex items-center font-montserrat-medium text-gray-700"
                   >
                     <span className="w-2 h-2 bg-violet rounded-full mr-3"></span>
                     {ingredient}
@@ -117,8 +119,11 @@ export const RecipeDetailPage: FC = () => {
               </h2>
               <ol className="space-y-4">
                 {recipe.preparation.map((step, index) => (
-                  <li key={index} className="flex font-montserrat-medium">
-                    <span className="font-montserrat-bold mr-4">
+                  <li
+                    key={index}
+                    className="flex font-montserrat-medium text-gray-700"
+                  >
+                    <span className="font-montserrat-bold mr-4 text-violet">
                       {index + 1}.
                     </span>
                     {step}

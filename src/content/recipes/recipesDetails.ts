@@ -6,8 +6,7 @@ export const recipesDetails: Record<string, RecipeDetail> = {
     title: "Rollitos de pechuga de pavo rellenos de hummus",
     description:
       "Disfruta de unos deliciosos rollitos de pechuga de pavo rellenos de hummus, perfectos para un almuerzo saludable y rápido.",
-    image:
-      "https://www.vidaenbalance.com/wp-content/uploads/2023/05/Rollitos-de-pechuga-de-pavo-rellenos-de-hummus-sobre-ensalada-de-farro-1.jpg",
+    image: "/assets/" + "images/rollitos-pechuga-pavo.webp",
     ingredients: [
       "1 taza de farro",
       "3 tazas de agua",
@@ -38,8 +37,7 @@ export const recipesDetails: Record<string, RecipeDetail> = {
     title: "Sándwich abierto de pechuga de pavo con ensalada de col y pera",
     description:
       "Delicioso sándwich abierto con pechuga de pavo, ensalada de col y pera, perfecto para una comida ligera y saludable.",
-    image:
-      "https://www.vidaenbalance.com/wp-content/uploads/2023/05/Sandwich-abierto-de-pechuga-de-pavo-con-ensalada-de-col-y-pera-1.jpg",
+    image: "/assets/" + "images/sandwich-abierto-pechuga-pavo.webp",
     ingredients: [
       "8 rebanadas de pan Ezequiel",
       "4 cucharadas de cacahuates tostados",
@@ -72,8 +70,7 @@ export const recipesDetails: Record<string, RecipeDetail> = {
       "Mitades de pan pita rellenas con pechuga de pavo, arúgula y salsa tzatziki",
     description:
       "Disfruta de un platillo delicioso y saludable con estas mitades de pan pita rellenas de pechuga de pavo, arúgula y salsa tzatziki.",
-    image:
-      "https://www.vidaenbalance.com/wp-content/uploads/2023/06/Mitades-de-pan-pita-rellenas-con-pechuga-de-pavo-arugula-y-salsa-tzatziki.webp",
+    image: "/assets/" + "images/mitades-pan-pita-rellenas.webp",
     ingredients: [
       "1 taza de jocoque",
       "3 cucharadas de hierbabuena picada",
@@ -99,8 +96,7 @@ export const recipesDetails: Record<string, RecipeDetail> = {
     title: "Calabacitas rellenas de Pechuga de pavo y piña",
     description:
       "Disfruta de una comida ligera y deliciosa con estas calabacitas rellenas de Pechuga de pavo San Rafael Balance® y piña.",
-    image:
-      "https://www.vidaenbalance.com/wp-content/uploads/2024/03/673x890-Calabacitas.jpg",
+    image: "/assets/" + "images/calabacitas.webp",
     ingredients: [
       "4 Calabacitas redondas",
       "1 Pechuga de pavo San Rafael Balance®",
@@ -123,8 +119,7 @@ export const recipesDetails: Record<string, RecipeDetail> = {
     title: "Molletes de camote y calabaza",
     description:
       "Disfruta de la combinación perfecta de sabores con estos molletes de camote y calabaza.",
-    image:
-      "https://www.vidaenbalance.com/wp-content/uploads/2024/06/MOLLETES-DE-CAMOTE-Y-CALABAZA-873x890-1.jpg",
+    image: "/assets/" + "images/molletes-camote.webp",
     ingredients: [
       "1 camote",
       "1 calabaza",
@@ -152,8 +147,7 @@ export const recipesDetails: Record<string, RecipeDetail> = {
     title: "Rollitos Thai",
     description:
       "Disfruta de un aperitivo ligero y delicioso con estos rollitos Thai.",
-    image:
-      "https://www.vidaenbalance.com/wp-content/uploads/2024/06/ROLLITOS-THAI-673x890-1.jpg",
+    image: "/assets/" + "images/rollitos-thai.webp",
     ingredients: [
       "Pechuga de pavo rebanadas redondas San Rafael Balance®",
       "1 Lechuga",
@@ -179,8 +173,7 @@ export const recipesDetails: Record<string, RecipeDetail> = {
     title: "Cocktail de Mango",
     description:
       "Disfruta de un delicioso cóctel de mango, perfecto para acompañar tus reuniones.",
-    image:
-      "https://www.vidaenbalance.com/wp-content/uploads/2024/06/COCKTAIL-CON-MANGO-673x890-1.jpg",
+    image: "/assets/" + "images/cocktail-mango.webp",
     ingredients: [
       "2 Mangos",
       "3 Chiles serranos",
@@ -206,8 +199,7 @@ export const recipesDetails: Record<string, RecipeDetail> = {
     title: "Aguacate relleno de arroz integral y salchicha de pavo",
     description:
       "Disfruta de un aperitivo delicioso y saludable con este aguacate relleno de arroz integral y salchicha de pavo.",
-    image:
-      "https://www.vidaenbalance.com/wp-content/uploads/2023/08/Aguacate-relleno-de-arroz-integral-y-salchicha-de-pavo.webp",
+    image: "/assets/" + "images/aguacate-relleno.webp",
     ingredients: [
       "2 aguacates",
       "1 taza de arroz integral con cebada perla",
@@ -239,8 +231,7 @@ export const recipesDetails: Record<string, RecipeDetail> = {
     title: "Yakimeshi de Quinoa con Salchichas de Pavo",
     description:
       "Disfruta de un Yakimeshi saludable y lleno de sabor con esta receta de quinoa con salchichas de pavo San Rafael Balance®.",
-    image:
-      "https://www.vidaenbalance.com/wp-content/uploads/2023/06/Yakimeshi-Recetas-673-890.jpg",
+    image: "/assets/" + "images/yakimeshi.webp",
     ingredients: [
       "1 taza de quinoa cocida",
       "1 paquete de salchichas de pavo San Rafael Balance®",
@@ -271,8 +262,7 @@ export const recipesDetails: Record<string, RecipeDetail> = {
     title: "Portobellos Rellenos de Salchicha",
     description:
       "Disfruta de una versión saludable del clásico con estos Portobellos rellenos de salchicha.",
-    image:
-      "https://www.vidaenbalance.com/wp-content/uploads/2024/06/PORTOBELLO-RELLENO-DE-SALCHICHA-673x890-1.jpg",
+    image: "/assets/" + "images/portobello.webp",
     ingredients: [
       "2 Portobellos",
       "1 Papa",
@@ -297,8 +287,7 @@ export const recipesDetails: Record<string, RecipeDetail> = {
     title: "Sándwich tostado de pechuga de pavo con manzana",
     description:
       "Disfruta de un delicioso sándwich con sabores frescos con este sándwich tostado de pechuga de pavo con manzana.",
-    image:
-      "https://www.vidaenbalance.com/wp-content/uploads/2024/06/SANDWICH-CON-JAMON-Y-MANZAN-672x890-1.jpg",
+    image: "/assets/" + "images/sandwich-tostado.webp",
     ingredients: [
       "Pan blanco",
       "Pechuga de Pavo Rebanadas Cuadradas San Rafael Balance®",
@@ -324,8 +313,7 @@ export const recipesDetails: Record<string, RecipeDetail> = {
     title: "Poke de quinoa con salchichas de pechuga de pavo",
     description:
       "Disfruta de un delicioso poke con sabores frescos con este poke de quinoa con salchichas de pechuga de pavo.",
-    image:
-      "https://www.vidaenbalance.com/wp-content/uploads/2023/06/Poke-de-quinoa-con-salchichas-de-pechuga-de-pavo.webp",
+    image: "/assets/" + "images/poke-quinoa.webp",
     ingredients: [
       "8 Salchichas de Pechuga de Pavo San Rafael® Balance® en rodajas",
       "1 taza de quinoa",

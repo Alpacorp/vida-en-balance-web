@@ -129,7 +129,7 @@ export const ArticleLayout: FC<ArticleLayoutProps> = ({
 
       <div className="border-t bg-gray-50">
         <div className="mx-auto max-w-7xl px-4 py-16">
-          <h2 className="mb-8 text-2xl font-montserrat-bold">
+          <h2 className="mb-8 text-2xl font-montserrat-bold text-gray-800">
             Artículos relacionados
           </h2>
           <div className="grid gap-8 sm:grid-cols-2 lg:grid-cols-3">
@@ -143,14 +143,16 @@ export const ArticleLayout: FC<ArticleLayoutProps> = ({
                   <img
                     src={article.image}
                     alt={article.title}
-                    className="h-full w-full object-cover transition group-hover:scale-105"
+                    className="h-48 max-w-96 w-full object-cover transition group-hover:scale-105"
+                    height="192"
+                    width="384"
                   />
                 </div>
                 <div className="p-6">
-                  <h3 className="mb-2 text-xl font-montserrat-bold">
+                  <h3 className="mb-2 text-xl font-montserrat-bold text-gray-800 group-hover:text-violet">
                     {article.title}
                   </h3>
-                  <p className="text-gray-600 font-montserrat-medium">
+                  <p className="text-gray-600 font-montserrat-medium group-hover:text-gray-800">
                     {article.excerpt}
                   </p>
                 </div>
