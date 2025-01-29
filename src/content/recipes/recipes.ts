@@ -105,8 +105,9 @@ export const productsData = {
     name: "Pechuga de Pavo Rebanadas Delgadas",
     description:
       "Es momento de preparar recetas deliciosas con nuestra pechuga de pavo Balance®",
-    image: "/assets/" + "images/salchicha-pechuga-pavo-recetas.webp",
-    imageHero: "/assets/" + "images/pechuga-pavo-family-size.webp",
+    image: "/assets/" + "images/pechuga-pavo-rebanadas-delgadas.webp",
+    imageHero:
+      "/assets/" + "images/pechuga-pavo-rebanadas-delgadas-familiar.webp",
     recipes: [
       {
         id: "4",
