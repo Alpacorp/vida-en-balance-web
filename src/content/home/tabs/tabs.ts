@@ -33,7 +33,7 @@ export const tabsContent = [
     name: "Pechuga de Pavo Rebanadas Delgadas",
     description:
       "Aquí encontrarás recetas para todos. Recetas pensadas con nuestros productos, en tus tiempos y sobre todo, con el mejor sabor, el de San Rafael Balance ®",
-    image: "/assets/" + "images/pechuga-pavo-rebanadas-delgadas-receta.webp",
+    image: "/assets/" + "images/calabacitas.webp",
     nutritional_link: "/productos/pechuga-de-pavo-rebanadas-delgadas",
     recipes_link: "/recetas/pechuga-de-pavo-rebanadas-delgadas",
     types: [
