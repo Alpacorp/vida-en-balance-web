@@ -64,9 +64,9 @@ export const NutritionalHeader: FC<NutritionalHeaderProps> = ({
               <img
                 src={activeProduct.image}
                 alt={activeProduct.name}
-                className="w-full h-80 max-w-44 object-contain rounded-lg"
+                className="w-full h-80 max-w-48 object-contain rounded-lg"
                 height="320"
-                width="176"
+                width="192"
               />
             </div>
             <div className="text-white text-center md:text-left">
@@ -91,7 +91,9 @@ export const NutritionalHeader: FC<NutritionalHeaderProps> = ({
                 <img
                   src={product.image}
                   alt={product.name}
-                  className="w-28 h-28 object-contain"
+                  className="w-full max-h-28 max-w-32 object-contain"
+                  height="112"
+                  width="128"
                 />
               </button>
             ))}

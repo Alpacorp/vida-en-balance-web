@@ -272,7 +272,7 @@ export const productsData: Product[] = [
     ingredients:
       "Pechuga de pavo, agua, proteína de soya, fécula, saborizantes, cloruro de potasio, azúcares añadidos (dextrosa), fosfato de sodio, eritorbato de sodio, nitrito de sodio, carmín. Contiene: soya.",
     weight: "500 Gramos",
-    image: "/assets/" + "images/salchicha-pavo.webp",
+    image: "/assets/" + "images/salchicha-pavo-individual.webp",
     url: "/productos/salchicha-de-pavo",
     nutritionalInfo: [
       {
@@ -350,7 +350,7 @@ export const productsData: Product[] = [
       {
         id: 1,
         label: "Individual",
-        image: "/assets/" + "images/salchicha-pavo.webp",
+        image: "/assets/" + "images/salchicha-pavo-individual.webp",
       },
     ],
     stamps: [

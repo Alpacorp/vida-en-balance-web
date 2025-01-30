@@ -42,7 +42,7 @@ export const articles: Article[] = [
       {
         id: "2",
         title: "Evitando lesiones",
-        excerpt: "Aprende a prevenir lesiones",
+        excerpt: "Aprende a prevenir lesiones.",
         image: "/assets/" + "images/evitando-lesiones-banner.webp",
         slug: "evitando-lesiones",
         category: "tips-balance",
@@ -50,7 +50,7 @@ export const articles: Article[] = [
       {
         id: "3",
         title: "El mejor tratamiento para vivir en balance",
-        excerpt: "Meditación para corredores",
+        excerpt: "Meditación para corredores.",
         image: "/assets/" + "images/vivir-balance.webp",
         slug: "el-mejor-tratamiento-para-vivir-en-balance",
         category: "tips-balance",
@@ -179,7 +179,7 @@ export const articles: Article[] = [
       {
         id: "1",
         title: "21K juntos",
-        excerpt: "Prepárate para tu primera media maratón",
+        excerpt: "Prepárate para tu primera media maratón.",
         image: "/assets/" + "images/21k-juntos.webp",
         slug: "21k-juntos",
         category: "tips-balance",
@@ -187,7 +187,7 @@ export const articles: Article[] = [
       {
         id: "3",
         title: "El mejor tratamiento para vivir en balance",
-        excerpt: "Meditación para corredores",
+        excerpt: "Meditación para corredores.",
         image: "/assets/" + "images/vivir-balance.webp",
         slug: "el-mejor-tratamiento-para-vivir-en-balance",
         category: "tips-balance",
@@ -252,7 +252,7 @@ export const articles: Article[] = [
       {
         id: "1",
         title: "21K juntos",
-        excerpt: "Prepárate para tu primera media maratón",
+        excerpt: "Prepárate para tu primera media maratón.",
         image: "/assets/" + "images/21k-juntos.webp",
         slug: "21k-juntos",
         category: "tips-balance",
@@ -260,7 +260,7 @@ export const articles: Article[] = [
       {
         id: "2",
         title: "Evitando lesiones",
-        excerpt: "Aprende a prevenir lesiones",
+        excerpt: "Aprende a prevenir lesiones.",
         image: "/assets/" + "images/evitando-lesiones-banner.webp",
         slug: "evitando-lesiones",
         category: "tips-balance",
@@ -369,7 +369,7 @@ export const articles: Article[] = [
       {
         id: "5",
         title: "La importancia de las proteínas",
-        excerpt: "Proteínas: pilares esenciales para tu salud",
+        excerpt: "Proteínas: pilares esenciales para tu salud.",
         image: "/assets/" + "images/importancia-proteinas.webp",
         slug: "la-importancia-de-las-proteinas",
         category: "cuerpo-en-balance",
@@ -377,7 +377,7 @@ export const articles: Article[] = [
       {
         id: "6",
         title: "Qué comer según tu nivel de actividad física",
-        excerpt: "Nutrientes: el combustible de tu cuerpo",
+        excerpt: "Nutrientes: el combustible de tu cuerpo.",
         image: "/assets/" + "images/que-comer.webp",
         slug: "que-comer-segun-tu-nivel-de-actividad-fisica",
         category: "cuerpo-en-balance",
@@ -385,7 +385,7 @@ export const articles: Article[] = [
       {
         id: "7",
         title: "Nutrición alcalina ¿Sabes lo que es?",
-        excerpt: "Equilibra tu pH para una vida más saludable",
+        excerpt: "Equilibra tu pH para una vida más saludable.",
         image: "/assets/" + "images/nutricion-alcalina.webp",
         slug: "nutricion-alcalina",
         category: "cuerpo-en-balance",
@@ -522,7 +522,7 @@ export const articles: Article[] = [
       {
         id: "4",
         title: "Tu peso ideal: Más que un número",
-        excerpt: "Definiendo tu peso ideal y salud",
+        excerpt: "Definiendo tu peso ideal y salud.",
         image: "/assets/" + "images/tu-peso-ideal.webp",
         slug: "tu-peso-ideal",
         category: "cuerpo-en-balance",
@@ -530,7 +530,7 @@ export const articles: Article[] = [
       {
         id: "6",
         title: "Qué comer según tu nivel de actividad física",
-        excerpt: "Nutrientes: el combustible de tu cuerpo",
+        excerpt: "Nutrientes: el combustible de tu cuerpo.",
         image: "/assets/" + "images/que-comer.webp",
         slug: "que-comer-segun-tu-nivel-de-actividad-fisica",
         category: "cuerpo-en-balance",
@@ -538,7 +538,7 @@ export const articles: Article[] = [
       {
         id: "7",
         title: "Nutrición alcalina ¿Sabes lo que es?",
-        excerpt: "Equilibra tu pH para una vida más saludable",
+        excerpt: "Equilibra tu pH para una vida más saludable.",
         image: "/assets/" + "images/nutricion-alcalina.webp",
         slug: "nutricion-alcalina",
         category: "cuerpo-en-balance",
@@ -659,7 +659,7 @@ export const articles: Article[] = [
       {
         id: "7",
         title: "Nutrición alcalina ¿Sabes lo que es?",
-        excerpt: "Equilibra tu pH para una vida más saludable",
+        excerpt: "Equilibra tu pH para una vida más saludable.",
         image: "/assets/" + "images/nutricion-alcalina.webp",
         slug: "nutricion-alcalina",
         category: "cuerpo-en-balance",
@@ -667,7 +667,7 @@ export const articles: Article[] = [
       {
         id: "4",
         title: "Tu peso ideal: Más que un número",
-        excerpt: "Definiendo tu peso ideal y salud",
+        excerpt: "Definiendo tu peso ideal y salud.",
         image: "/assets/" + "images/tu-peso-ideal.webp",
         slug: "tu-peso-ideal",
         category: "cuerpo-en-balance",
@@ -675,7 +675,7 @@ export const articles: Article[] = [
       {
         id: "5",
         title: "La importancia de las proteínas",
-        excerpt: "Proteínas: pilares esenciales para tu salud",
+        excerpt: "Proteínas: pilares esenciales para tu salud.",
         image: "/assets/" + "images/importancia-proteinas.webp",
         slug: "la-importancia-de-las-proteinas",
         category: "cuerpo-en-balance",
@@ -820,7 +820,7 @@ export const articles: Article[] = [
       {
         id: "4",
         title: "Tu peso ideal: Más que un número",
-        excerpt: "Definiendo tu peso ideal y salud",
+        excerpt: "Definiendo tu peso ideal y salud.",
         image: "/assets/" + "images/tu-peso-ideal.webp",
         slug: "tu-peso-ideal",
         category: "cuerpo-en-balance",
@@ -828,7 +828,7 @@ export const articles: Article[] = [
       {
         id: "5",
         title: "La importancia de las proteínas",
-        excerpt: "Proteínas: pilares esenciales para tu salud",
+        excerpt: "Proteínas: pilares esenciales para tu salud.",
         image: "/assets/" + "images/importancia-proteinas.webp",
         slug: "la-importancia-de-las-proteinas",
         category: "cuerpo-en-balance",
@@ -836,7 +836,7 @@ export const articles: Article[] = [
       {
         id: "6",
         title: "Qué comer según tu nivel de actividad física",
-        excerpt: "Nutrientes: el combustible de tu cuerpo",
+        excerpt: "Nutrientes: el combustible de tu cuerpo.",
         image: "/assets/" + "images/que-comer.webp",
         slug: "que-comer-segun-tu-nivel-de-actividad-fisica",
         category: "cuerpo-en-balance",
@@ -941,7 +941,7 @@ export const articles: Article[] = [
       {
         id: "9",
         title: "Mindfullness en tu vida diaria",
-        excerpt: "Mindfullness: el arte de vivir en el presente",
+        excerpt: "Mindfullness: el arte de vivir en el presente.",
         image: "/assets/" + "images/mindfullness.webp",
         slug: "mindfullness-en-tu-vida-diaria",
         category: "mente-en-balance",
@@ -949,7 +949,7 @@ export const articles: Article[] = [
       {
         id: "10",
         title: "Paz interior, que nadie te la quite",
-        excerpt: "Domina tus emociones ",
+        excerpt: "Domina tus emociones.",
         image: "/assets/" + "images/paz-interior.webp",
         slug: "paz-interior-que-nadie-te-la-quite",
         category: "mente-en-balance",
@@ -957,7 +957,7 @@ export const articles: Article[] = [
       {
         id: "11",
         title: "Yoga Feliz",
-        excerpt: "Santosha: el camino a la felicidad interior",
+        excerpt: "Santosha: el camino a la felicidad interior.",
         image: "/assets/" + "images/yoga-feliz.webp",
         slug: "yoga-feliz",
         category: "mente-en-balance",
@@ -965,7 +965,7 @@ export const articles: Article[] = [
       {
         id: "12",
         title: "Magia en el yoga",
-        excerpt: "Descubre tu verdadero ser",
+        excerpt: "Descubre tu verdadero ser.",
         image: "/assets/" + "images/magia-yoga-blog.webp",
         slug: "magia-en-el-yoga",
         category: "mente-en-balance",
@@ -1077,7 +1077,7 @@ export const articles: Article[] = [
       {
         id: "10",
         title: "Paz interior, que nadie te la quite",
-        excerpt: "Domina tus emociones ",
+        excerpt: "Domina tus emociones.",
         image: "/assets/" + "images/paz-interior.webp",
         slug: "paz-interior-que-nadie-te-la-quite",
         category: "mente-en-balance",
@@ -1085,7 +1085,7 @@ export const articles: Article[] = [
       {
         id: "11",
         title: "Yoga Feliz",
-        excerpt: "Santosha: el camino a la felicidad interior",
+        excerpt: "Santosha: el camino a la felicidad interior.",
         image: "/assets/" + "images/yoga-feliz.webp",
         slug: "yoga-feliz",
         category: "mente-en-balance",
@@ -1093,7 +1093,7 @@ export const articles: Article[] = [
       {
         id: "12",
         title: "Magia en el yoga",
-        excerpt: "Descubre tu verdadero ser",
+        excerpt: "Descubre tu verdadero ser.",
         image: "/assets/" + "images/magia-yoga-blog.webp",
         slug: "magia-en-el-yoga",
         category: "mente-en-balance",
@@ -1101,7 +1101,7 @@ export const articles: Article[] = [
       {
         id: "8",
         title: "¿Cómo afectan las emociones a mi salud?",
-        excerpt: "Abraza tus emociones para una vida equilibrada",
+        excerpt: "Abraza tus emociones para una vida equilibrada.",
         image: "/assets/" + "images/emociones-salud.webp",
         slug: "como-afectan-las-emociones-a-mi-salud",
         category: "mente-en-balance",
@@ -1223,7 +1223,7 @@ export const articles: Article[] = [
       {
         id: "11",
         title: "Yoga Feliz",
-        excerpt: "Santosha: el camino a la felicidad interior",
+        excerpt: "Santosha: el camino a la felicidad interior.",
         image: "/assets/" + "images/yoga-feliz.webp",
         slug: "yoga-feliz",
         category: "mente-en-balance",
@@ -1231,7 +1231,7 @@ export const articles: Article[] = [
       {
         id: "12",
         title: "Magia en el yoga",
-        excerpt: "Descubre tu verdadero ser",
+        excerpt: "Descubre tu verdadero ser.",
         image: "/assets/" + "images/magia-yoga-blog.webp",
         slug: "magia-en-el-yoga",
         category: "mente-en-balance",
@@ -1239,7 +1239,7 @@ export const articles: Article[] = [
       {
         id: "8",
         title: "¿Cómo afectan las emociones a mi salud?",
-        excerpt: "Abraza tus emociones para una vida equilibrada",
+        excerpt: "Abraza tus emociones para una vida equilibrada.",
         image: "/assets/" + "images/emociones-salud.webp",
         slug: "como-afectan-las-emociones-a-mi-salud",
         category: "mente-en-balance",
@@ -1247,7 +1247,7 @@ export const articles: Article[] = [
       {
         id: "9",
         title: "Mindfullness en tu vida diaria",
-        excerpt: "Mindfullness: el arte de vivir en el presente",
+        excerpt: "Mindfullness: el arte de vivir en el presente.",
         image: "/assets/" + "images/mindfullness.webp",
         slug: "mindfullness-en-tu-vida-diaria",
         category: "mente-en-balance",
@@ -1350,7 +1350,7 @@ export const articles: Article[] = [
       {
         id: "12",
         title: "Magia en el yoga",
-        excerpt: "Descubre tu verdadero ser",
+        excerpt: "Descubre tu verdadero ser.",
         image: "/assets/" + "images/magia-yoga-blog.webp",
         slug: "magia-en-el-yoga",
         category: "mente-en-balance",
@@ -1358,7 +1358,7 @@ export const articles: Article[] = [
       {
         id: "8",
         title: "¿Cómo afectan las emociones a mi salud?",
-        excerpt: "Abraza tus emociones para una vida equilibrada",
+        excerpt: "Abraza tus emociones para una vida equilibrada.",
         image: "/assets/" + "images/emociones-salud.webp",
         slug: "como-afectan-las-emociones-a-mi-salud",
         category: "mente-en-balance",
@@ -1366,7 +1366,7 @@ export const articles: Article[] = [
       {
         id: "9",
         title: "Mindfullness en tu vida diaria",
-        excerpt: "Mindfullness: el arte de vivir en el presente",
+        excerpt: "Mindfullness: el arte de vivir en el presente.",
         image: "/assets/" + "images/mindfullness.webp",
         slug: "mindfullness-en-tu-vida-diaria",
         category: "mente-en-balance",
@@ -1374,7 +1374,7 @@ export const articles: Article[] = [
       {
         id: "10",
         title: "Paz interior, que nadie te la quite",
-        excerpt: "Domina tus emociones ",
+        excerpt: "Domina tus emociones.",
         image: "/assets/" + "images/paz-interior.webp",
         slug: "paz-interior-que-nadie-te-la-quite",
         category: "mente-en-balance",
@@ -1438,7 +1438,7 @@ export const articles: Article[] = [
       {
         id: "8",
         title: "¿Cómo afectan las emociones a mi salud?",
-        excerpt: "Abraza tus emociones para una vida equilibrada",
+        excerpt: "Abraza tus emociones para una vida equilibrada.",
         image: "/assets/" + "images/emociones-salud.webp",
         slug: "como-afectan-las-emociones-a-mi-salud",
         category: "mente-en-balance",
@@ -1446,7 +1446,7 @@ export const articles: Article[] = [
       {
         id: "9",
         title: "Mindfullness en tu vida diaria",
-        excerpt: "Mindfullness: el arte de vivir en el presente",
+        excerpt: "Mindfullness: el arte de vivir en el presente.",
         image: "/assets/" + "images/mindfullness.webp",
         slug: "mindfullness-en-tu-vida-diaria",
         category: "mente-en-balance",
@@ -1454,7 +1454,7 @@ export const articles: Article[] = [
       {
         id: "10",
         title: "Paz interior, que nadie te la quite",
-        excerpt: "Domina tus emociones ",
+        excerpt: "Domina tus emociones.",
         image: "/assets/" + "images/paz-interior.webp",
         slug: "paz-interior-que-nadie-te-la-quite",
         category: "mente-en-balance",
@@ -1462,7 +1462,7 @@ export const articles: Article[] = [
       {
         id: "11",
         title: "Yoga Feliz",
-        excerpt: "Santosha: el camino a la felicidad interior",
+        excerpt: "Santosha: el camino a la felicidad interior.",
         image: "/assets/" + "images/yoga-feliz.webp",
         slug: "yoga-feliz",
         category: "mente-en-balance",
