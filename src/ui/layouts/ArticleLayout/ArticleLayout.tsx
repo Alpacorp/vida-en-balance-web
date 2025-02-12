@@ -1,15 +1,6 @@
 import { FC } from "react";
 import { Link, useNavigate } from "react-router-dom";
 
-import {
-  ArrowLeft,
-  Clock,
-  Share2,
-  Facebook,
-  Twitter,
-  Linkedin,
-} from "lucide-react";
-
 import { ArticleLayoutProps } from "@interfaces/interfaces";
 
 export const ArticleLayout: FC<ArticleLayoutProps> = ({
@@ -39,7 +30,21 @@ export const ArticleLayout: FC<ArticleLayoutProps> = ({
               onClick={() => navigate(-1)}
               className="mb-6 inline-flex items-center text-sm font-montserrat-medium text-white/80 hover:text-white"
             >
-              <ArrowLeft className="mr-2 h-4 w-4" />
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="24"
+                height="24"
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                strokeWidth="2"
+                strokeLinecap="round"
+                strokeLinejoin="round"
+                className="lucide lucide-arrow-left mr-2 h-4 w-4"
+              >
+                <path d="m12 19-7-7 7-7" />
+                <path d="M19 12H5" />
+              </svg>
               Volver atrás
             </button>
             <h1 className="mb-4 text-4xl font-montserrat-bold sm:text-5xl lg:text-6xl">
@@ -57,7 +62,21 @@ export const ArticleLayout: FC<ArticleLayoutProps> = ({
           <div className="flex flex-wrap items-center justify-between gap-4">
             <div className="flex items-center font-montserrat-medium gap-6">
               <div className="flex items-center text-sm text-gray-600">
-                <Clock className="mr-2 h-4 w-4" />
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="24"
+                  height="24"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  strokeWidth="2"
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
+                  className="lucide lucide-clock mr-2 h-4 w-4"
+                >
+                  <circle cx="12" cy="12" r="10" />
+                  <polyline points="12 6 12 12 16 14" />
+                </svg>
                 {readingTime}
               </div>
               <div className="text-sm text-gray-600">
@@ -78,7 +97,24 @@ export const ArticleLayout: FC<ArticleLayoutProps> = ({
                 }}
                 className="inline-flex items-center text-sm text-gray-600 hover:text-gray-900"
               >
-                <Share2 className="mr-2 h-4 w-4" />
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="24"
+                  height="24"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  strokeWidth="2"
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
+                  className="lucide lucide-share-2 mr-2 h-4 w-4"
+                >
+                  <circle cx="18" cy="5" r="3" />
+                  <circle cx="6" cy="12" r="3" />
+                  <circle cx="18" cy="19" r="3" />
+                  <line x1="8.59" x2="15.42" y1="13.51" y2="17.49" />
+                  <line x1="15.41" x2="8.59" y1="6.51" y2="10.49" />
+                </svg>
                 Compartir
               </button>
               <div className="flex items-center gap-2">
@@ -91,18 +127,20 @@ export const ArticleLayout: FC<ArticleLayoutProps> = ({
                   }
                   className="rounded-full p-2 text-gray-600 hover:bg-gray-100 hover:text-blue-600"
                 >
-                  <Facebook className="h-5 w-5" />
-                </button>
-                <button
-                  onClick={() =>
-                    window.open(
-                      `https://twitter.com/intent/tweet?url=${window.location.href}&text=${title}`,
-                      "_blank",
-                    )
-                  }
-                  className="rounded-full p-2 text-gray-600 hover:bg-gray-100 hover:text-blue-400"
-                >
-                  <Twitter className="h-5 w-5" />
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    width="24"
+                    height="24"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    stroke="currentColor"
+                    strokeWidth="2"
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
+                    className="lucide lucide-facebook h-5 w-5"
+                  >
+                    <path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z" />
+                  </svg>
                 </button>
                 <button
                   onClick={() =>
@@ -113,7 +151,22 @@ export const ArticleLayout: FC<ArticleLayoutProps> = ({
                   }
                   className="rounded-full p-2 text-gray-600 hover:bg-gray-100 hover:text-blue-700"
                 >
-                  <Linkedin className="h-5 w-5" />
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    width="24"
+                    height="24"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    stroke="currentColor"
+                    strokeWidth="2"
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
+                    className="lucide lucide-linkedin h-5 w-5"
+                  >
+                    <path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z" />
+                    <rect width="4" height="12" x="2" y="9" />
+                    <circle cx="4" cy="4" r="2" />
+                  </svg>
                 </button>
               </div>
             </div>
