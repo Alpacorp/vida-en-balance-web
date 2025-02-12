@@ -1,8 +1,6 @@
 import { FC } from "react";
 import { useParams, Link, useNavigate } from "react-router-dom";
 
-import { Clock, Users, ChefHat } from "lucide-react";
-
 import { NotFoundPage } from "@pages/NotFound/NotFoundPage";
 import { Seo } from "@utils/Seo.tsx";
 
@@ -74,19 +72,63 @@ export const RecipeDetailPage: FC = () => {
             />
             <div className="flex justify-between items-center bg-gray-50 p-4 rounded-lg">
               <div className="flex items-center">
-                <Clock className="w-5 h-5 text-violet mr-2" />
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="24"
+                  height="24"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  strokeWidth="2"
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
+                  className="lucide lucide-clock w-5 h-5 text-violet mr-2"
+                >
+                  <circle cx="12" cy="12" r="10" />
+                  <polyline points="12 6 12 12 16 14" />
+                </svg>
                 <span className="font-montserrat-medium text-gray-800">
                   {recipe.timePrep}
                 </span>
               </div>
               <div className="flex items-center">
-                <Users className="w-5 h-5 text-violet mr-2" />
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="24"
+                  height="24"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  strokeWidth="2"
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
+                  className="lucide lucide-users w-5 h-5 text-violet mr-2"
+                >
+                  <path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2" />
+                  <circle cx="9" cy="7" r="4" />
+                  <path d="M22 21v-2a4 4 0 0 0-3-3.87" />
+                  <path d="M16 3.13a4 4 0 0 1 0 7.75" />
+                </svg>
                 <span className="font-montserrat-medium text-gray-800">
                   {recipe.portions}
                 </span>
               </div>
               <div className="flex items-center">
-                <ChefHat className="w-5 h-5 text-violet mr-2" />
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="24"
+                  height="24"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  strokeWidth="2"
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
+                  className="lucide lucide-chef-hat w-5 h-5 text-violet mr-2"
+                >
+                  <path d="M17 21a1 1 0 0 0 1-1v-5.35c0-.457.316-.844.727-1.041a4 4 0 0 0-2.134-7.589 5 5 0 0 0-9.186 0 4 4 0 0 0-2.134 7.588c.411.198.727.585.727 1.041V20a1 1 0 0 0 1 1Z" />
+                  <path d="M6 17h12" />
+                </svg>
                 <span className="font-montserrat-medium text-gray-800">
                   {recipe.difficulty}
                 </span>

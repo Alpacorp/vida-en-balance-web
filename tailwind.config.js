@@ -1,8 +1,8 @@
 /** @type {import('tailwindcss').Config} */
 
-import typography from '@tailwindcss/typography';
-// import aspectRatio from '@tailwindcss/aspect-ratio';
-import headlessUi from '@headlessui/tailwindcss';
+import typography from "@tailwindcss/typography";
+import aspectRatio from "@tailwindcss/aspect-ratio";
+import headlessUi from "@headlessui/tailwindcss";
 
 export default {
   content: ["./index.html", "./src/**/*.{js,ts,jsx,tsx}"],
@@ -52,17 +52,14 @@ export default {
             "-webkit-transform": "translateX(0)",
             transform: "translateX(0)",
             opacity: "1",
-          }
-        }
+          },
+        },
       },
       animation: {
-        "fade-in-right": "fade-in-right 0.6s cubic-bezier(0.390, 0.575, 0.565, 1.000) both",
+        "fade-in-right":
+          "fade-in-right 0.6s cubic-bezier(0.390, 0.575, 0.565, 1.000) both",
       },
     },
   },
-  plugins: [
-    typography,
-    // aspectRatio,
-    headlessUi,
-  ],
+  plugins: [typography, aspectRatio, headlessUi],
 };
