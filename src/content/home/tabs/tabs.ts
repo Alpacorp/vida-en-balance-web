@@ -4,7 +4,7 @@ export const tabsContent = [
     name: "Pechuga de Pavo Escalonada",
     description:
       "Aquí encontrarás recetas para todos. Recetas pensadas con nuestros productos, en tus tiempos y sobre todo, con el mejor sabor, el de San Rafael Balance ®",
-    image: "/assets/" + "images/pechuga-pavo-escalonada-receta.webp",
+    image: "/assets/" + "images/pechuga-pavo-escalonada-receta-v2.webp",
     nutritional_link: "/productos/pechuga-de-pavo-escalonada",
     recipes_link: "/recetas/pechuga-de-pavo-escalonada",
     types: [
@@ -104,7 +104,7 @@ export const tabsContent = [
     name: "Salchicha de Pechuga de Pavo",
     description:
       "Aquí encontrarás recetas para todos. Recetas pensadas con nuestros productos, en tus tiempos y sobre todo, con el mejor sabor, el de San Rafael Balance ®",
-    image: "/assets/" + "images/salchicha-pechuga-pavo-receta.webp",
+    image: "/assets/" + "images/salchicha-pechuga-pavo-receta-v2.webp",
     nutritional_link: "/productos/salchicha-de-pechuga-de-pavo",
     recipes_link: "/recetas/salchicha-de-pechuga-de-pavo",
     types: [
