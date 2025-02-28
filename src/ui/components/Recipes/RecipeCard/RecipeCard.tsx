@@ -16,8 +16,8 @@ export const RecipeCard: FC<RecipeCardProps> = ({
         <img
           src={image}
           alt={title}
-          className="w-full h-48 object-cover"
-          height="192"
+          className="w-full h-80 object-cover"
+          height="320"
           width="384"
         />
         <div className="p-4">
