@@ -3,6 +3,7 @@ import { FC } from "react";
 import { Link } from "react-router-dom";
 
 import { NutritionCardProps } from "@interfaces/interfaces";
+import { articlePageLoader } from "@utils/loaders";
 
 export const ArticleCard: FC<NutritionCardProps> = ({
   title,
@@ -31,6 +32,8 @@ export const ArticleCard: FC<NutritionCardProps> = ({
         <Link
           to={to}
           className="w-full bg-main font-montserrat-medium text-white py-2 px-4 rounded-md hover:bg-tertiary transition duration-300 ease-in-out transform hover:-translate-y-1 text-center"
+          onMouseEnter={() => articlePageLoader()}
+          onFocus={() => articlePageLoader()}
         >
           {ctaText}
         </Link>

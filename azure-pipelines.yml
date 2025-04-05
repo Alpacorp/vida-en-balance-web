@@ -1,0 +1,41 @@
+trigger:
+  branches:
+    include:
+      - main
+
+pool:
+  vmImage: 'ubuntu-latest'
+
+variables:
+  imageName: vida-en-balance-web
+  containerRegistry: tu-registro.azurecr.io # ⚠️
+  VITE_BASE_URL: 'https://vida-en-balance-web.vercel.app'
+  dockerfilePath: Dockerfile
+  tag: latest
+
+steps:
+  - checkout: self
+
+  - task: DockerInstaller@0
+    inputs:
+      dockerVersion: '17.09.0-ce'
+
+  - task: Docker@2
+    displayName: 'Build Docker image'
+    inputs:
+      command: build
+      repository: $(containerRegistry)/$(imageName)
+      Dockerfile: $(dockerfilePath)
+      buildContext: .
+      tags: |
+        $(tag)
+      arguments: |
+        --build-arg VITE_BASE_URL=$(VITE_BASE_URL)
+
+  - task: Docker@2
+    displayName: 'Push Docker image'
+    inputs:
+      command: push
+      repository: $(containerRegistry)/$(imageName)
+      tags: |
+        $(tag)

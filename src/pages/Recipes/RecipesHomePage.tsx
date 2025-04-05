@@ -5,8 +5,9 @@ import { Seo } from "@utils/Seo.tsx";
 
 import { productsData } from "@content/recipes/recipes";
 import { BASE_URL } from "@config/config";
+import { recipesProductPageLoader } from "@utils/loaders";
 
-export const RecipesHomePage: FC = () => {
+const RecipesHomePage: FC = () => {
   const seoData = {
     title: "Recetas Balance - Descubre deliciosas recetas saludables",
     description:
@@ -54,6 +55,10 @@ export const RecipesHomePage: FC = () => {
                 key={slug}
                 to={`/recetas/${slug}`}
                 className="bg-white rounded-lg shadow-md overflow-hidden transition-transform duration-300 hover:scale-105"
+                title={`Recetas con ${product.name}`}
+                aria-label={`Recetas con ${product.name}`}
+                onMouseEnter={() => recipesProductPageLoader()}
+                onFocus={() => recipesProductPageLoader()}
               >
                 <div className="aspect-w-16 aspect-h-9 bg-[#029FA7]">
                   <img
@@ -80,3 +85,5 @@ export const RecipesHomePage: FC = () => {
     </>
   );
 };
+
+export default RecipesHomePage;

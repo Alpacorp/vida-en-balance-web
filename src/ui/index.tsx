@@ -3,6 +3,7 @@ import { Heading } from "@ui/components/Heading/Heading";
 import { ArticleCard } from "@ui/components/ArticleCard/ArticleCard";
 import { ProductHeader } from "@ui/components/Recipes/ProductHeader/ProductHeader";
 import { RecipeCard } from "@ui/components/Recipes/RecipeCard/RecipeCard";
+import { Loader } from "@ui/components/Loader/Loader";
 
 // layouts
 import { ArticleLayout } from "@ui/layouts/ArticleLayout/ArticleLayout";
@@ -44,4 +45,5 @@ export {
   NutritionalHeader,
   NutritionalInfo,
   NutritionalDetails,
+  Loader,
 };

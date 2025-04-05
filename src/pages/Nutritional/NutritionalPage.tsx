@@ -6,7 +6,7 @@ import {
   NutritionalDetails,
   NutritionalInfo,
 } from "@ui/index";
-import { NotFoundPage } from "@pages/NotFound/NotFoundPage";
+import NotFoundPage from "@pages/NotFound/NotFoundPage";
 import { Seo } from "@utils/Seo.tsx";
 
 import { productsData } from "@content/nutritional/products";
@@ -14,7 +14,7 @@ import { BASE_URL } from "@config/config";
 
 import { Product } from "@interfaces/interfaces";
 
-export const NutritionalPage = () => {
+const NutritionalPage = () => {
   const navigate = useNavigate();
   const { productSlug } = useParams<{ productSlug: string }>();
   const [activeProduct, setActiveProduct] = useState<Product | null>(null);
@@ -102,3 +102,5 @@ export const NutritionalPage = () => {
     </>
   );
 };
+
+export default NutritionalPage;

@@ -4,13 +4,13 @@ import { useNavigate, useParams } from "react-router-dom";
 
 import { ProductHeader, RecipeCard } from "@ui/index";
 
-import { NotFoundPage } from "@pages/NotFound/NotFoundPage";
+import NotFoundPage from "@pages/NotFound/NotFoundPage";
 import { Seo } from "@utils/Seo.tsx";
 
 import { productsData } from "@content/recipes/recipes";
 import { BASE_URL } from "@config/config";
 
-export const RecipesProductPage: FC = () => {
+const RecipesProductPage: FC = () => {
   const { productSlug } = useParams<{ productSlug: string }>();
   const product = productsData[productSlug as keyof typeof productsData];
   const navigate = useNavigate();
@@ -75,3 +75,5 @@ export const RecipesProductPage: FC = () => {
     </>
   );
 };
+
+export default RecipesProductPage;

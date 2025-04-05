@@ -2,6 +2,7 @@ import { FC } from "react";
 import { Link, useNavigate } from "react-router-dom";
 
 import { ArticleLayoutProps } from "@interfaces/interfaces";
+import { articlePageLoader } from "@utils/loaders";
 
 export const ArticleLayout: FC<ArticleLayoutProps> = ({
   title,
@@ -191,6 +192,8 @@ export const ArticleLayout: FC<ArticleLayoutProps> = ({
                 key={article.id}
                 to={`/${article.category}/${article.slug}`}
                 className="group block overflow-hidden rounded-2xl bg-white shadow-sm transition hover:shadow-md"
+                onMouseEnter={() => articlePageLoader()}
+                onFocus={() => articlePageLoader()}
               >
                 <div className="aspect-video overflow-hidden">
                   <img

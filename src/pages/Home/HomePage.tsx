@@ -5,7 +5,7 @@ import { Seo } from "@utils/Seo.tsx";
 
 import { BASE_URL } from "@config/config";
 
-export const HomePage: FC = () => {
+const HomePage: FC = () => {
   const seoData = {
     title: "Vida en Balance - Productos saludables para tu bienestar",
     description:
@@ -45,3 +45,5 @@ export const HomePage: FC = () => {
     </main>
   );
 };
+
+export default HomePage;
