@@ -6,7 +6,7 @@ import { Seo } from "@utils/Seo.tsx";
 import { NotFoundProps } from "@interfaces/interfaces";
 import { BASE_URL } from "@config/config";
 
-export const NotFoundPage: FC<NotFoundProps> = ({ type = "page", goBack }) => {
+const NotFoundPage: FC<NotFoundProps> = ({ type = "page", goBack }) => {
   const isRecipe = type === "recipe";
 
   const seoData = {
@@ -133,3 +133,5 @@ export const NotFoundPage: FC<NotFoundProps> = ({ type = "page", goBack }) => {
     </>
   );
 };
+
+export default NotFoundPage;

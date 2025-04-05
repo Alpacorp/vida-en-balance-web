@@ -14,6 +14,8 @@ import {
   YouTubeIcon,
 } from "@assets/icons";
 
+import { routesLoaders } from "@utils/loaders";
+
 const iconComponents = {
   facebook: FacebookIcon,
   instagram: InstagramIcon,
@@ -43,7 +45,10 @@ export const Footer: FC = () => {
             <Link
               key={item.name}
               to={item.path}
+              target={item.name === "Aviso de privacidad" ? "_blank" : "_self"}
               className="text-gray-200 hover:text-white hover:underline hover:underline-offset-4 transition-transform duration-100"
+              onMouseEnter={() => routesLoaders[item.path]?.()}
+              onFocus={() => routesLoaders[item.path]?.()}
             >
               {item.name}
             </Link>

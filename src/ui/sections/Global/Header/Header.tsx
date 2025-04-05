@@ -5,6 +5,8 @@ import headerLogo from "@assets/images/san-rafael-balance-logo.webp";
 
 import { mainMenuLinks } from "@content/navigation/mainMenuLinks";
 
+import { homePageLoader, routesLoaders } from "@utils/loaders";
+
 export const Header: FC = () => {
   const [isScrolled, setIsScrolled] = useState(false);
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
@@ -37,7 +39,11 @@ export const Header: FC = () => {
     >
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex justify-between items-center h-20">
-          <Link to="/" className="flex-shrink-0 mt-6">
+          <Link
+            to="/"
+            className="flex-shrink-0 mt-6"
+            onMouseEnter={() => homePageLoader()}
+          >
             <img
               src={headerLogo}
               title="San Rafael Balance"
@@ -57,6 +63,8 @@ export const Header: FC = () => {
                     ? "text-blue-900 border-b-2 border-blue-900"
                     : "text-gray-700 hover:text-blue-900"
                 }`}
+                onMouseEnter={() => routesLoaders[item.path]?.()}
+                onFocus={() => routesLoaders[item.path]?.()}
               >
                 {item.name}
               </Link>
@@ -127,6 +135,8 @@ export const Header: FC = () => {
                   ? "text-blue-900 bg-blue-50 border-l-4 border-blue-900"
                   : "text-gray-700 hover:bg-gray-50 hover:text-blue-900"
               }`}
+              onMouseEnter={() => routesLoaders[item.path]?.()}
+              onFocus={() => routesLoaders[item.path]?.()}
             >
               {item.name}
             </Link>

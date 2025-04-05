@@ -3,7 +3,7 @@ import { useNavigate, useParams } from "react-router-dom";
 
 import mainLogo from "@assets/images/san-rafael-balance-logo.webp";
 import { ArticleLayout } from "@ui/layouts/ArticleLayout/ArticleLayout";
-import { NotFoundPage } from "@pages/NotFound/NotFoundPage";
+import NotFoundPage from "@pages/NotFound/NotFoundPage";
 
 import { getArticle, getRelatedArticles } from "@utils/getArticleContent";
 
@@ -12,7 +12,7 @@ import { BASE_URL } from "@config/config";
 
 import { Seo } from "@utils/Seo.tsx";
 
-export const ArticlePage: FC = () => {
+const ArticlePage: FC = () => {
   const { category, slug } = useParams<{ category: string; slug: string }>();
   const [article, setArticle] = useState<Article>();
   const navigate = useNavigate();
@@ -73,3 +73,5 @@ export const ArticlePage: FC = () => {
     </>
   );
 };
+
+export default ArticlePage;

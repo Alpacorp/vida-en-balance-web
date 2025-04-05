@@ -1,5 +1,9 @@
 import { Menu } from "@interfaces/interfaces";
 
 export const footerMenuLinks: Menu[] = [
-  { id: "1", name: "Aviso de privacidad", path: "#" },
+  {
+    id: "5",
+    name: "Aviso de privacidad",
+    path: "https://www.sigma-alimentos.com/avisodeprivacidad/",
+  },
 ];

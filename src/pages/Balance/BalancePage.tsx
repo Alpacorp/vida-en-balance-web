@@ -6,12 +6,12 @@ import { CardSection, HeroSection } from "@ui/index";
 import { balanceContent } from "@content/balance/balance";
 
 import { Seo } from "@utils/Seo.tsx";
-import { NotFoundPage } from "@pages/NotFound/NotFoundPage";
+import NotFoundPage from "@pages/NotFound/NotFoundPage";
 
 import { BalancePageContent } from "@interfaces/interfaces";
 import { BASE_URL } from "@config/config";
 
-export const BalancePage: FC = () => {
+const BalancePage: FC = () => {
   const navigate = useNavigate();
   const { balanceType } = useParams<{ balanceType: string }>();
   const [pageContent, setPageContent] = useState<BalancePageContent | null>(
@@ -51,3 +51,5 @@ export const BalancePage: FC = () => {
     </>
   );
 };
+
+export default BalancePage;

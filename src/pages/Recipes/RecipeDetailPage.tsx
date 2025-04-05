@@ -1,13 +1,14 @@
 import { FC } from "react";
 import { useParams, Link, useNavigate } from "react-router-dom";
 
-import { NotFoundPage } from "@pages/NotFound/NotFoundPage";
+import NotFoundPage from "@pages/NotFound/NotFoundPage";
 import { Seo } from "@utils/Seo.tsx";
 
 import { recipesDetails } from "@content/recipes/recipesDetails";
 import { BASE_URL } from "@config/config";
+import { recipesProductPageLoader } from "@utils/loaders.ts";
 
-export const RecipeDetailPage: FC = () => {
+const RecipeDetailPage: FC = () => {
   const navigate = useNavigate();
   const { productSlug, recipeId } = useParams<{
     productSlug: string;
@@ -58,6 +59,8 @@ export const RecipeDetailPage: FC = () => {
         <Link
           to={`/recetas/${productSlug}`}
           className="inline-flex items-center text-violet hover:underline mb-8 font-montserrat-medium"
+          onMouseEnter={() => recipesProductPageLoader()}
+          onFocus={() => recipesProductPageLoader()}
         >
           <span className="mr-2">←</span> Volver a recetas
         </Link>
@@ -179,3 +182,5 @@ export const RecipeDetailPage: FC = () => {
     </>
   );
 };
+
+export default RecipeDetailPage;

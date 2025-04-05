@@ -2,6 +2,7 @@ import { FC } from "react";
 import { Link } from "react-router-dom";
 
 import { RecipeCardProps } from "@interfaces/interfaces";
+import { recipeDetailPageLoader } from "@utils/loaders";
 
 export const RecipeCard: FC<RecipeCardProps> = ({
   id,
@@ -11,7 +12,12 @@ export const RecipeCard: FC<RecipeCardProps> = ({
   productSlug,
 }) => {
   return (
-    <Link to={`/recetas/${productSlug}/${id}`} className="group">
+    <Link
+      to={`/recetas/${productSlug}/${id}`}
+      className="group"
+      onMouseEnter={() => recipeDetailPageLoader()}
+      onFocus={() => recipeDetailPageLoader()}
+    >
       <div className="bg-white rounded-lg shadow-md overflow-hidden transition-transform duration-300 transform hover:scale-105">
         <img
           src={image}
@@ -20,6 +26,7 @@ export const RecipeCard: FC<RecipeCardProps> = ({
           height="320"
           width="384"
         />
+        test
         <div className="p-4">
           <h3 className="text-xl font-montserrat-bold mb-2 text-gray-800 group-hover:text-violet">
             {title}

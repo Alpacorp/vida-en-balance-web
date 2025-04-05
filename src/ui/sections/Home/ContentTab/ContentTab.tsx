@@ -2,6 +2,10 @@ import { FC, useEffect, useRef } from "react";
 import { Link } from "react-router-dom";
 
 import { ContentProps } from "@interfaces/interfaces";
+import {
+  nutritionalPageLoader,
+  recipesProductPageLoader,
+} from "@utils/loaders";
 
 export const ContentTab: FC<ContentProps> = ({
   title,
@@ -42,6 +46,7 @@ export const ContentTab: FC<ContentProps> = ({
                   <Link
                     className="inline-flex items-center rounded-md bg-main hover:bg-secondary px-3 py-2 text-sm font-montserrat-medium text-white shadow-xs  focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-main transition-transform duration-500 ease-in-out"
                     to={nutritional_link || ""}
+                    onMouseEnter={() => nutritionalPageLoader()}
                   >
                     Información nutrimental
                   </Link>
@@ -50,6 +55,7 @@ export const ContentTab: FC<ContentProps> = ({
                   <Link
                     className="inline-flex items-center rounded-md bg-violet px-3 py-2 text-sm font-montserrat-medium text-white shadow-xs hover:bg-secondary focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-blue-700 transition-transform duration-500 ease-in-out"
                     to={recipes_link || ""}
+                    onMouseEnter={() => recipesProductPageLoader()}
                   >
                     Recetas
                   </Link>
