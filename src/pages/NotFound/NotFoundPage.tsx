@@ -4,6 +4,7 @@ import { Link } from "react-router-dom";
 import { Seo } from "@utils/Seo.tsx";
 
 import { NotFoundProps } from "@interfaces/interfaces";
+
 import { BASE_URL } from "@config/config";
 
 const NotFoundPage: FC<NotFoundProps> = ({ type = "page", goBack }) => {
@@ -51,10 +52,10 @@ const NotFoundPage: FC<NotFoundProps> = ({ type = "page", goBack }) => {
               <img
                 src={
                   isRecipe
-                    ? "https://images.unsplash.com/photo-1495521821757-a1efb6729352?auto=format&fit=crop&q=80&w=800&h=600"
-                    : "https://images.unsplash.com/photo-1584824486509-112e4181ff6b?auto=format&fit=crop&q=80&w=800&h=600"
+                    ? "/assets/images/recipes-not-found.webp"
+                    : "/assets/images/404-not-found.webp"
                 }
-                alt={isRecipe ? "Cocina vacía" : "Señal de camino"}
+                alt={isRecipe ? "No hay recetas" : "404 Not Found"}
                 className="w-full h-48 object-cover rounded-lg"
               />
             </div>
