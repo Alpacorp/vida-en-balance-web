@@ -6,7 +6,7 @@ import { Seo } from "@utils/Seo.tsx";
 
 import { recipesDetails } from "@content/recipes/recipesDetails";
 import { BASE_URL } from "@config/config";
-import { recipesProductPageLoader } from "@utils/loaders.ts";
+import { recipesProductPageLoader } from "@utils/loaders";
 
 const RecipeDetailPage: FC = () => {
   const navigate = useNavigate();
