@@ -61,5 +61,5 @@ export default {
       },
     },
   },
-  plugins: [typography, aspectRatio, headlessUi],
+  plugins: [typography, aspectRatio],
 };
