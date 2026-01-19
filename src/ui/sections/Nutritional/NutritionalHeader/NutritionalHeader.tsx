@@ -55,7 +55,7 @@ export const NutritionalHeader: FC<NutritionalHeaderProps> = ({
   };
 
   return (
-    <header className="bg-gradient-to-r from-[#40BFB4] to-[#2A9D8F] py-8 mt-20">
+    <header className="bg-linear-to-r from-[#40BFB4] to-[#2A9D8F] py-8 mt-20">
       <div className="max-w-7xl mx-auto px-4">
         <div className="flex flex-col md:flex-row items-center justify-between gap-8">
           {/* Active Product */}

@@ -22,11 +22,11 @@ export const ArticleCard: FC<NutritionCardProps> = ({
           className="w-full h-full object-cover transition-transform duration-300 ease-in-out transform hover:scale-105"
         />
       </div>
-      <div className="p-6 flex flex-col flex-grow">
+      <div className="p-6 flex flex-col grow">
         <h2 className="text-xl font-montserrat-bold mb-3 text-gray-800">
           {title}
         </h2>
-        <p className="text-gray-600 mb-4 font-montserrat-medium flex-grow">
+        <p className="text-gray-600 mb-4 font-montserrat-medium grow">
           {description}
         </p>
         <Link

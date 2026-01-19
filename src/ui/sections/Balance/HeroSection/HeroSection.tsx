@@ -15,14 +15,14 @@ export const HeroSection: FC<HeroBalanceProps> = ({
   const isActive = (to: string) => location.pathname === to;
 
   return (
-    <section className="relative h-[600px] text-white overflow-hidden mt-20">
+    <section className="relative h-150 text-white overflow-hidden mt-20">
       <img
         src={image.src}
         alt={image.alt}
         className="absolute w-full h-full object-cover"
         title={title}
       />
-      <div className="absolute inset-0 bg-gradient-to-r from-tertiary to-secondary/60"></div>
+      <div className="absolute inset-0 bg-linear-to-r from-tertiary to-secondary/60"></div>
       <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-full flex items-center">
         <div className="max-w-2xl">
           <h1 className="text-4xl sm:text-5xl font-montserrat-bold mb-6">

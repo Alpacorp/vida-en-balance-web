@@ -69,7 +69,7 @@ const RecipeDetailPage: FC = () => {
             <img
               src={recipe.image}
               alt={recipe.title}
-              className="h-[400px] w-auto object-contain rounded-lg shadow-lg mb-6 mx-auto"
+              className="h-100 w-auto object-contain rounded-lg shadow-lg mb-6 mx-auto"
               height="400"
               width="400"
             />

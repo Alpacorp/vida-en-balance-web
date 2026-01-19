@@ -27,7 +27,7 @@ const footerMenu = mainMenuLinks.concat(footerMenuLinks);
 
 export const Footer: FC = () => {
   return (
-    <footer className="bg-gradient-to-b from-[#293078] to-[#494986] font-montserrat-medium">
+    <footer className="bg-linear-to-b from-[#293078] to-[#494986] font-montserrat-medium">
       <div className="mx-auto max-w-7xl overflow-hidden px-6 py-3 sm:py-10 lg:px-8">
         <img
           src={footerLogo}

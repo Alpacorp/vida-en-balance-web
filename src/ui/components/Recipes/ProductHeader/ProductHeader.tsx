@@ -9,7 +9,7 @@ export const ProductHeader: FC<ProductHeaderRecipesProps> = ({
   productImage,
 }) => {
   return (
-    <div className="relative bg-[#2E2B6F] min-h-[400px] py-16 mt-20">
+    <div className="relative bg-[#2E2B6F] min-h-100 py-16 mt-20">
       <div className="container mx-auto px-4">
         <Link
           to={`/recetas`}
@@ -30,7 +30,7 @@ export const ProductHeader: FC<ProductHeaderRecipesProps> = ({
             <img
               src={productImage}
               alt={productName}
-              className="w-auto h-[300px] object-contain animate-fade-in-right"
+              className="w-auto h-75 object-contain animate-fade-in-right"
             />
           </div>
         </div>

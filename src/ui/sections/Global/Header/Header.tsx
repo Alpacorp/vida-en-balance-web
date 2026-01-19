@@ -41,7 +41,7 @@ export const Header: FC = () => {
         <div className="flex justify-between items-center h-20">
           <Link
             to="/"
-            className="flex-shrink-0 mt-6"
+            className="shrink-0 mt-6"
             onMouseEnter={() => homePageLoader()}
           >
             <img

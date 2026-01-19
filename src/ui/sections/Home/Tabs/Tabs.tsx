@@ -67,7 +67,7 @@ export const Tabs = () => {
         {/* Vertical tabs navigation */}
         <nav
           aria-label="Tabs"
-          className="isolate flex flex-col min-w-[250px] divide-y divide-gray-200 rounded-lg shadow-sm border"
+          className="isolate flex flex-col min-w-62.5 divide-y divide-gray-200 rounded-lg shadow-sm border"
         >
           {tabsContent.map((tab, tabIdx) => (
             <button
@@ -79,7 +79,7 @@ export const Tabs = () => {
               aria-current={tab.id === id ? "page" : undefined}
               className={`${
                 tab.id === id
-                  ? "text-[#4C50A2] bg-gray-100 !border-r-4 !border-[#4C50A2] !border-t-0"
+                  ? "text-[#4C50A2] bg-gray-100 border-r-4! border-[#4C50A2]! border-t-0!"
                   : "text-gray-500 bg-gray-50 hover:text-gray-700"
               } ${tabIdx === 0 ? "rounded-t-lg" : ""} ${
                 tabIdx === tabsContent.length - 1 ? "rounded-b-lg" : ""

@@ -18,13 +18,13 @@ export const ArticleLayout: FC<ArticleLayoutProps> = ({
 
   return (
     <article className="min-h-screen bg-white">
-      <div className="relative h-[60vh] min-h-[500px] w-full mt-20">
+      <div className="relative h-[60vh] min-h-125 w-full mt-20">
         <img
           src={coverImage}
           alt={title}
           className="h-full w-full object-cover object-top"
         />
-        <div className="absolute inset-0 bg-gradient-to-t from-black/70 to-black/30" />
+        <div className="absolute inset-0 bg-linear-to-t from-black/70 to-black/30" />
         <div className="absolute inset-x-0 bottom-0 p-8 text-white">
           <div className="mx-auto max-w-4xl">
             <button

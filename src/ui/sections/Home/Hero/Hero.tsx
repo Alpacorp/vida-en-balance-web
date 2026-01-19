@@ -17,7 +17,7 @@ export const Hero: FC = () => {
   }, []);
 
   return (
-    <div className="relative h-[600px] w-full overflow-hidden bg-gray-100 mt-20">
+    <div className="relative h-150 w-full overflow-hidden bg-gray-100 mt-20">
       {/* Slides */}
       {slides.map((slide, index) => (
         <div
@@ -33,7 +33,7 @@ export const Hero: FC = () => {
               alt={slide.title}
               className="h-full w-full object-cover"
             />
-            <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-black/30" />
+            <div className="absolute inset-0 bg-linear-to-t from-black/60 to-black/30" />
           </div>
 
           {/* Content */}
