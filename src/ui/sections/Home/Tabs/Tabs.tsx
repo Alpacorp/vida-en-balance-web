@@ -1,5 +1,5 @@
 import { ChangeEvent, useState } from "react";
-import { ChevronDownIcon } from "@heroicons/react/16/solid";
+import { ChevronDownIcon } from "@ui/components/Icons";
 
 import { ContentTab } from "@ui/sections/Home/ContentTab/ContentTab";
 
