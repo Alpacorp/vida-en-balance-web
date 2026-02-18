@@ -8,8 +8,8 @@ pool:
 
 variables:
   imageName: vida-en-balance-web
-  containerRegistry: tu-registro.azurecr.io # ⚠️
-  VITE_BASE_URL: 'https://vida-en-balance-web.vercel.app'
+  containerRegistry: siaazacr.azurecr.io # ⚠️
+  VITE_BASE_URL: 'https://webapp-vida-en-balance-prd.azurewebsites.net'
   dockerfilePath: Dockerfile
   tag: latest
 
