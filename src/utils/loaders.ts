@@ -1,4 +1,6 @@
 export const routesLoaders: Record<string, () => Promise<never>> = {
+  "/productos": () =>
+    import("@pages/Products/ProductsPage") as Promise<never>,
   "/recetas": () => import("@pages/Recipes/RecipesHomePage") as Promise<never>,
   "/cuerpo-en-balance": () =>
     import("@pages/Balance/BalancePage") as Promise<never>,

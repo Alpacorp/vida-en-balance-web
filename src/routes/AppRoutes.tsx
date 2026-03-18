@@ -18,6 +18,8 @@ const RecipeDetailPage = lazy(() => import("@pages/Recipes/RecipeDetailPage"));
 
 const RecipesHomePage = lazy(() => import("@pages/Recipes/RecipesHomePage"));
 
+const ProductsPage = lazy(() => import("@pages/Products/ProductsPage"));
+
 const RecipesProductPage = lazy(
   () => import("@pages/Recipes/RecipesProductPage"),
 );
@@ -27,6 +29,7 @@ export default function AppRoutes() {
     <Suspense fallback={<Loader />}>
       <Routes>
         <Route path="/" element={<HomePage />} />
+        <Route path="/productos" element={<ProductsPage />} />
         <Route path="/:balanceType" element={<BalancePage />} />
         <Route path="/productos/:productSlug" element={<NutritionalPage />} />
         <Route path="/:category/:slug" element={<ArticlePage />} />
