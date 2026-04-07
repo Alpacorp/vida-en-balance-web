@@ -7,9 +7,14 @@ export const ProductHeader: FC<ProductHeaderRecipesProps> = ({
   productName,
   productDescription,
   productImage,
+  gradient,
 }) => {
+  const backgroundStyle = gradient
+    ? { background: `linear-gradient(to right, ${gradient.to}, ${gradient.from})`, transition: "background 0.6s ease" }
+    : { background: "#2E2B6F" };
+
   return (
-    <div className="relative bg-[#2E2B6F] min-h-100 py-16 mt-20">
+    <div className="relative min-h-100 py-16 mt-20" style={backgroundStyle}>
       <div className="container mx-auto px-4">
         <Link
           to={`/recetas`}
