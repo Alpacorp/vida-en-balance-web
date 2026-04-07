@@ -18,13 +18,13 @@ export const tabsContent = [
         id: 2,
         url: "/assets/" + "images/pechuga-pavo-escalonada-familiar.webp",
         name: "Familiar",
-        description: ["250 gramos"],
+        description: ["350 gramos"],
       },
       {
         id: 3,
         url: "/assets/" + "images/pechuga-pavo-escalonada-individual.webp",
         name: "Individual",
-        description: ["350 gramos"],
+        description: ["250 gramos"],
       },
     ],
   },
@@ -33,7 +33,7 @@ export const tabsContent = [
     name: "Pechuga de Pavo Rebanadas Delgadas",
     description:
       "Aquí encontrarás recetas para todos. Recetas pensadas con nuestros productos, en tus tiempos y sobre todo, con el mejor sabor, el de San Rafael Balance ®",
-    image: "/assets/" + "images/calabacitas.webp",
+    image: "/assets/" + "images/receta-pechuga-de-pavo-rebanadas-delgadas.webp",
     nutritional_link: "/productos/pechuga-de-pavo-rebanadas-delgadas",
     recipes_link: "/recetas/pechuga-de-pavo-rebanadas-delgadas",
     types: [
