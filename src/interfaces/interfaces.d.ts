@@ -111,16 +111,18 @@ export interface RecipeDetail {
 
 export interface Slide {
   id: number;
-  title: string;
-  subtitle: string;
+  title?: string;
+  subtitle?: string;
   image: string;
   ctaPrimary: {
     text: string;
     url: string;
+    external?: boolean;
   };
   ctaSecondary?: {
     text: string;
     url: string;
+    external?: boolean;
   };
 }
 

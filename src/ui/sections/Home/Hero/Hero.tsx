@@ -33,32 +33,54 @@ export const Hero: FC = () => {
               alt={slide.title}
               className="h-full w-full object-cover"
             />
-            <div className="absolute inset-0 bg-linear-to-t from-black/60 to-black/30" />
+            <div className="absolute inset-0 bg-linear-to-t from-black/30 to-transparent" />
           </div>
 
           {/* Content */}
           <div className="relative z-10 flex h-full items-center justify-center px-4">
-            <div className="max-w-4xl text-center mt-48">
-              <h1 className="mb-4 text-4xl font-montserrat-bold text-white sm:text-5xl md:text-6xl">
+            <div className="max-w-4xl text-center mt-4 sm:mt-48">
+              <h1 className="mb-4 text-4xl font-montserrat-bold text-white drop-shadow-[0_2px_8px_rgba(0,0,0,0.8)] sm:text-5xl md:text-6xl">
                 {slide.title}
               </h1>
-              <p className="mb-8 text-lg text-white/90 sm:text-xl md:text-2xl">
+              <p className="mb-8 text-lg text-white drop-shadow-[0_1px_6px_rgba(0,0,0,0.9)] sm:text-xl md:text-2xl">
                 {slide.subtitle}
               </p>
               <div className="flex flex-wrap justify-center gap-4">
-                <Link
-                  to={slide.ctaPrimary.url}
-                  className="rounded-full bg-blue-600 px-8 py-3 font-montserrat-medium text-white transition-colors hover:bg-blue-700"
-                >
-                  {slide.ctaPrimary.text}
-                </Link>
-                {slide.ctaSecondary && (
-                  <Link
-                    to={slide.ctaSecondary.url}
-                    className="rounded-full bg-white/10 px-8 py-3 font-montserrat-medium text-white transition-colors hover:bg-white/20"
+                {slide.ctaPrimary.external ? (
+                  <a
+                    href={slide.ctaPrimary.url}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="rounded-full bg-blue-600 px-8 py-3 font-montserrat-medium text-white transition-colors hover:bg-blue-700"
                   >
-                    {slide.ctaSecondary.text}
+                    {slide.ctaPrimary.text}
+                  </a>
+                ) : (
+                  <Link
+                    to={slide.ctaPrimary.url}
+                    className="rounded-full bg-blue-600 px-8 py-3 font-montserrat-medium text-white transition-colors hover:bg-blue-700"
+                  >
+                    {slide.ctaPrimary.text}
                   </Link>
+                )}
+                {slide.ctaSecondary && (
+                  slide.ctaSecondary.external ? (
+                    <a
+                      href={slide.ctaSecondary.url}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="rounded-full bg-white/10 px-8 py-3 font-montserrat-medium text-white transition-colors hover:bg-white/20"
+                    >
+                      {slide.ctaSecondary.text}
+                    </a>
+                  ) : (
+                    <Link
+                      to={slide.ctaSecondary.url}
+                      className="rounded-full bg-white/10 px-8 py-3 font-montserrat-medium text-white transition-colors hover:bg-white/20"
+                    >
+                      {slide.ctaSecondary.text}
+                    </Link>
+                  )
                 )}
               </div>
             </div>
