@@ -17,7 +17,7 @@ export const Hero: FC = () => {
   }, []);
 
   return (
-    <div className="relative h-150 w-full overflow-hidden bg-gray-100 mt-20">
+    <div className="relative w-full overflow-hidden bg-gray-100 mt-20" style={{ height: "clamp(420px, 50vw, 680px)" }}>
       {/* Slides */}
       {slides.map((slide, index) => (
         <div
@@ -38,7 +38,7 @@ export const Hero: FC = () => {
 
           {/* Content */}
           <div className="relative z-10 flex h-full items-center justify-center px-4">
-            <div className="max-w-4xl text-center mt-4 sm:mt-48">
+            <div className="max-w-4xl text-center">
               <h1 className="mb-4 text-4xl font-montserrat-bold text-white drop-shadow-[0_2px_8px_rgba(0,0,0,0.8)] sm:text-5xl md:text-6xl">
                 {slide.title}
               </h1>
@@ -51,14 +51,14 @@ export const Hero: FC = () => {
                     href={slide.ctaPrimary.url}
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="rounded-full bg-blue-600 px-8 py-3 font-montserrat-medium text-white transition-colors hover:bg-blue-700"
+                    className="rounded-md bg-blue-600 px-8 py-3 font-montserrat-medium text-white transition-colors hover:bg-blue-700"
                   >
                     {slide.ctaPrimary.text}
                   </a>
                 ) : (
                   <Link
                     to={slide.ctaPrimary.url}
-                    className="rounded-full bg-blue-600 px-8 py-3 font-montserrat-medium text-white transition-colors hover:bg-blue-700"
+                    className="rounded-md bg-blue-600 px-8 py-3 font-montserrat-medium text-white transition-colors hover:bg-blue-700"
                   >
                     {slide.ctaPrimary.text}
                   </Link>
@@ -69,14 +69,14 @@ export const Hero: FC = () => {
                       href={slide.ctaSecondary.url}
                       target="_blank"
                       rel="noopener noreferrer"
-                      className="rounded-full bg-white/10 px-8 py-3 font-montserrat-medium text-white transition-colors hover:bg-white/20"
+                      className="rounded-md bg-white/10 px-8 py-3 font-montserrat-medium text-white transition-colors hover:bg-white/20"
                     >
                       {slide.ctaSecondary.text}
                     </a>
                   ) : (
                     <Link
                       to={slide.ctaSecondary.url}
-                      className="rounded-full bg-white/10 px-8 py-3 font-montserrat-medium text-white transition-colors hover:bg-white/20"
+                      className="rounded-md bg-white/10 px-8 py-3 font-montserrat-medium text-white transition-colors hover:bg-white/20"
                     >
                       {slide.ctaSecondary.text}
                     </Link>
@@ -95,7 +95,7 @@ export const Hero: FC = () => {
             currentSlide === 0 ? slides.length - 1 : currentSlide - 1,
           )
         }
-        className="absolute left-4 top-1/2 z-20 -translate-y-1/2 rounded-full bg-white/10 p-2 text-white transition-colors hover:bg-white/20"
+        className="absolute left-4 top-1/2 z-20 -translate-y-1/2 rounded-md bg-white/10 p-2 text-white transition-colors hover:bg-white/20"
         aria-label="Previous slide"
       >
         <img src={ArrowLeftIcon} alt="left" className="h-6 w-6" />
@@ -106,7 +106,7 @@ export const Hero: FC = () => {
             currentSlide === slides.length - 1 ? 0 : currentSlide + 1,
           )
         }
-        className="absolute right-4 top-1/2 z-20 -translate-y-1/2 rounded-full bg-white/10 p-2 text-white transition-colors hover:bg-white/20"
+        className="absolute right-4 top-1/2 z-20 -translate-y-1/2 rounded-md bg-white/10 p-2 text-white transition-colors hover:bg-white/20"
         aria-label="Next slide"
       >
         <img src={ArrowRightIcon} alt="right" className="h-6 w-6" />
