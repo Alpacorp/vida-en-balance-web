@@ -1,29 +1,7 @@
 import { FC, useState, useEffect } from "react";
-import { Link, useNavigate } from "react-router-dom";
-
-import { socialMenuLinks } from "@content/navigation/socialMenuLinks";
-
-import {
-  FacebookIcon,
-  InstagramIcon,
-  TikTokIcon,
-  YouTubeIcon,
-} from "../../../../assets/icons";
+import { useNavigate } from "react-router-dom";
 
 import { Product, NutritionalHeaderProps } from "@interfaces/interfaces";
-
-const iconComponents: Record<
-  string,
-  | typeof FacebookIcon
-  | typeof InstagramIcon
-  | typeof YouTubeIcon
-  | typeof TikTokIcon
-> = {
-  facebook: FacebookIcon,
-  instagram: InstagramIcon,
-  youtube: YouTubeIcon,
-  tiktok: TikTokIcon,
-};
 
 export const NutritionalHeader: FC<NutritionalHeaderProps> = ({
   products,
@@ -34,37 +12,38 @@ export const NutritionalHeader: FC<NutritionalHeaderProps> = ({
   const [otherProducts, setOtherProducts] = useState<Product[]>([]);
 
   useEffect(() => {
-    // Calculamos los otros productos, excluyendo el producto activo.
     const remainingProducts = products.filter(
       (product) => product.id !== activeProduct.id,
     );
-    setOtherProducts(remainingProducts.slice(0, 4)); // Limitamos a 4 productos
-  }, [activeProduct, products]); // Dependencias: recalculamos cuando activeProduct o products cambian
+    setOtherProducts(remainingProducts.slice(0, 4));
+  }, [activeProduct, products]);
 
   const handleProductClick = (clickedProduct: Product) => {
-    // Establecemos el producto activo y actualizamos los otros productos
     const remainingProducts = products.filter(
       (product) => product.id !== clickedProduct.id,
     );
-    setOtherProducts(remainingProducts.slice(0, 4)); // Limitamos a 4 productos
-
-    onProductChange(clickedProduct); // Llamamos a la función de cambio de producto
-
-    // Navegamos a la nueva URL
+    setOtherProducts(remainingProducts.slice(0, 4));
+    onProductChange(clickedProduct);
     navigate(clickedProduct.url as string);
   };
 
+  const gradientStyle = {
+    background: `linear-gradient(to right, ${activeProduct.gradient.to}, ${activeProduct.gradient.from})`,
+    transition: "background 0.6s ease",
+  };
+
   return (
-    <header className="bg-linear-to-r from-[#40BFB4] to-[#2A9D8F] py-8 mt-20">
+    <header className="py-8 mt-20" style={gradientStyle}>
       <div className="max-w-7xl mx-auto px-4">
         <div className="flex flex-col md:flex-row items-center justify-between gap-8">
+
           {/* Active Product */}
           <div className="flex flex-col md:flex-row items-center gap-6">
             <div className="transition-transform duration-300 hover:scale-105">
               <img
                 src={activeProduct.image}
                 alt={activeProduct.name}
-                className="w-full h-80 max-w-48 object-contain rounded-lg"
+                className="w-full h-80 max-w-48 object-contain"
                 height="320"
                 width="192"
               />
@@ -80,52 +59,27 @@ export const NutritionalHeader: FC<NutritionalHeaderProps> = ({
           </div>
 
           {/* Product Navigation */}
-          <div className="flex flex-wrap justify-center gap-4">
+          <div className="flex flex-wrap justify-center gap-3">
             {otherProducts.map((product) => (
               <button
                 key={product.id}
                 onClick={() => handleProductClick(product)}
-                className="relative p-2 rounded-lg transition-all hover:bg-white/10"
-                title={product.name}
+                className="flex flex-col items-center gap-2 p-3 rounded-xl transition-all duration-200 hover:scale-105 hover:bg-white/20 hover:ring-2 hover:ring-white/50 focus:outline-none focus:ring-2 focus:ring-white/50"
               >
                 <img
                   src={product.image}
                   alt={product.name}
-                  className="w-full max-h-28 max-w-32 object-contain"
-                  height="112"
-                  width="128"
+                  className="w-full max-h-24 max-w-28 object-contain"
+                  height="96"
+                  width="112"
                 />
+                <span className="text-white text-xs font-montserrat-medium text-center w-28 leading-tight line-clamp-2">
+                  {product.name}
+                </span>
               </button>
             ))}
           </div>
 
-          {/* Social Media */}
-          <div className="flex flex-col items-center md:items-end gap-2">
-            <span className="text-white font-montserrat-medium">Síguenos:</span>
-            <div className="flex gap-4">
-              {socialMenuLinks.map((item) => {
-                const IconComponent =
-                  iconComponents[item.icon as keyof typeof iconComponents];
-                return (
-                  <Link
-                    key={item.name}
-                    to={item.path}
-                    target="_blank"
-                    className="hover:text-white hover:transform hover:scale-110 transition-transform duration-200"
-                  >
-                    <img
-                      src={IconComponent}
-                      alt={item.name}
-                      title={item.name}
-                      className="w-6 h-6"
-                      height="24"
-                      width="24"
-                    />
-                  </Link>
-                );
-              })}
-            </div>
-          </div>
         </div>
       </div>
     </header>

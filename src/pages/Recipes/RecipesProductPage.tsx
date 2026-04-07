@@ -8,12 +8,14 @@ import NotFoundPage from "@pages/NotFound/NotFoundPage";
 import { Seo } from "@utils/Seo.tsx";
 
 import { productsData } from "@content/recipes/recipes";
+import { productGradients } from "@content/nutritional/products";
 import { BASE_URL } from "@config/config";
 
 const RecipesProductPage: FC = () => {
   const { productSlug } = useParams<{ productSlug: string }>();
   const product = productsData[productSlug as keyof typeof productsData];
   const navigate = useNavigate();
+  const gradient = productSlug ? productGradients[productSlug] : undefined;
 
   if (!product) {
     return <NotFoundPage type="page" goBack={() => navigate(-1)} />;
@@ -49,6 +51,7 @@ const RecipesProductPage: FC = () => {
           productName={product.name}
           productDescription={product.description}
           productImage={product.imageHero}
+          gradient={gradient}
         />
         <div className="container mx-auto px-4 py-12">
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">

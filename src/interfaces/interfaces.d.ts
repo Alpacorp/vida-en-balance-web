@@ -11,6 +11,7 @@ export interface Product {
   weight: string;
   image: string;
   url: string;
+  gradient: { from: string; to: string };
 }
 
 export interface NutritionalHeaderProps {
@@ -111,16 +112,18 @@ export interface RecipeDetail {
 
 export interface Slide {
   id: number;
-  title: string;
-  subtitle: string;
+  title?: string;
+  subtitle?: string;
   image: string;
   ctaPrimary: {
     text: string;
     url: string;
+    external?: boolean;
   };
   ctaSecondary?: {
     text: string;
     url: string;
+    external?: boolean;
   };
 }
 
@@ -154,6 +157,7 @@ export interface ProductHeaderRecipesProps {
   productName: string;
   productDescription: string;
   productImage: string;
+  gradient?: { from: string; to: string };
 }
 
 export interface NutritionCardProps {
