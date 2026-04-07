@@ -33,22 +33,22 @@ export const Header: FC = () => {
 
   return (
     <header
-      className={`fixed top-0 left-0 right-0 z-50 bg-white transition-shadow duration-300 ${
+      className={`fixed top-0 left-0 right-0 z-50 bg-white transition-all duration-300 ${
         isScrolled ? "shadow-md" : ""
       }`}
     >
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="flex justify-between items-center h-20">
+        <div className={`flex justify-between items-center transition-all duration-300 ${isScrolled ? "h-14" : "h-20"}`}>
           <Link
             to="/"
-            className="shrink-0 mt-6"
+            className={`shrink-0 transition-all duration-300 ${isScrolled ? "mt-0" : "mt-6"}`}
             onMouseEnter={() => homePageLoader()}
           >
             <img
               src={headerLogo}
               title="San Rafael Balance"
               alt="San Rafael Balance"
-              className="h-24 w-auto"
+              className={`w-auto transition-all duration-300 ${isScrolled ? "h-12" : "h-24"}`}
               height="96"
               width="96"
             />
