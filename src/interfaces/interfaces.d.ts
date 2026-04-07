@@ -11,6 +11,7 @@ export interface Product {
   weight: string;
   image: string;
   url: string;
+  gradient: { from: string; to: string };
 }
 
 export interface NutritionalHeaderProps {
@@ -156,6 +157,7 @@ export interface ProductHeaderRecipesProps {
   productName: string;
   productDescription: string;
   productImage: string;
+  gradient?: { from: string; to: string };
 }
 
 export interface NutritionCardProps {

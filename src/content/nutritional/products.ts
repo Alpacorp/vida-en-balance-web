@@ -1,10 +1,19 @@
 import { Product } from "@interfaces/interfaces";
 
+export const productGradients: Record<string, { from: string; to: string }> = {
+  "pechuga-de-pavo-escalonada": { from: "#8DCACF", to: "#1AA8A0" },
+  "pechuga-de-pavo-rebanadas-delgadas": { from: "#4AAED5", to: "#0D6EA0" },
+  "salchicha-de-pavo": { from: "#6B5BA8", to: "#252268" },
+  "pechuga-de-pavo-rebanadas-sandwich": { from: "#82C5CA", to: "#1AABA5" },
+  "salchicha-de-pechuga-de-pavo": { from: "#8ECDD0", to: "#1AA8A2" },
+};
+
 export const productsData: Product[] = [
   {
     id: 1,
     name: "Pechuga de Pavo Escalonada",
     slug: "pechuga-de-pavo-escalonada",
+    gradient: { from: "#8DCACF", to: "#1AA8A0" },
     ingredients:
       "Pechuga de pavo, agua, azúcares añadidos (azucar), saborizantes, cloruro de potasio, fécula, fosfato de sodio, sal yodada, carragenina, carmín.",
     weight: "250 Gramos",
@@ -136,6 +145,7 @@ export const productsData: Product[] = [
     id: 2,
     name: "Pechuga de Pavo Rebanadas Delgadas",
     slug: "pechuga-de-pavo-rebanadas-delgadas",
+    gradient: { from: "#4AAED5", to: "#0D6EA0" },
     ingredients:
       "Pechuga de pavo, agua, azúcares añadidos (azúcar), saborizantes, cloruro de potasio, fécula, fosfato de sodio, sal yodada, carragenina, carmín.",
     weight: "250 Gramos",
@@ -269,6 +279,7 @@ export const productsData: Product[] = [
     id: 3,
     name: "Salchicha de Pavo",
     slug: "salchicha-de-pavo",
+    gradient: { from: "#6B5BA8", to: "#252268" },
     ingredients:
       "Pechuga de pavo, agua, proteína de soya, fécula, saborizantes, cloruro de potasio, azúcares añadidos (dextrosa), fosfato de sodio, eritorbato de sodio, nitrito de sodio, carmín. Contiene: soya.",
     weight: "500 Gramos",
@@ -380,6 +391,7 @@ export const productsData: Product[] = [
     id: 4,
     name: "Pechuga de Pavo Rebanadas para Sandwich",
     slug: "pechuga-de-pavo-rebanadas-sandwich",
+    gradient: { from: "#82C5CA", to: "#1AABA5" },
     ingredients:
       "Pechuga de pavo, agua, saborizantes, azúcares añadidos (azúcar), sal yodada, fosfato de sodio, cloruro de potasio, carragenina, carmín.",
     weight: "200 Gramos",
@@ -506,6 +518,7 @@ export const productsData: Product[] = [
     id: 5,
     name: "Salchicha de Pechuga de Pavo",
     slug: "salchicha-de-pechuga-de-pavo",
+    gradient: { from: "#8ECDD0", to: "#1AA8A2" },
     ingredients:
       "Pechuga de pavo, agua, proteína de soya, fécula, saborizantes, cloruro de potasio, azúcares añadidos (dextrosa), fosfato de sodio, carín. Contiene: soya.",
     weight: "500 Gramos",
