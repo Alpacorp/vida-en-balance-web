@@ -3,7 +3,7 @@ export const tabsContent = [
     id: 1,
     name: "Pechuga de Pavo Escalonada",
     description:
-      "Aquí encontrarás recetas para todos. Recetas pensadas con nuestros productos, en tus tiempos y sobre todo, con el mejor sabor, el de San Rafael Balance ®",
+      "Aquí encontrarás recetas para todos. Recetas pensadas con nuestros productos, en tus tiempos y sobre todo, con el mejor sabor, el de San Rafael Balance®",
     image: "/assets/" + "images/pechuga-pavo-escalonada-receta-v2.webp",
     nutritional_link: "/productos/pechuga-de-pavo-escalonada",
     recipes_link: "/recetas/pechuga-de-pavo-escalonada",
@@ -32,7 +32,7 @@ export const tabsContent = [
     id: 2,
     name: "Pechuga de Pavo Rebanadas Delgadas",
     description:
-      "Aquí encontrarás recetas para todos. Recetas pensadas con nuestros productos, en tus tiempos y sobre todo, con el mejor sabor, el de San Rafael Balance ®",
+      "Aquí encontrarás recetas para todos. Recetas pensadas con nuestros productos, en tus tiempos y sobre todo, con el mejor sabor, el de San Rafael Balance®",
     image: "/assets/" + "images/receta-pechuga-de-pavo-rebanadas-delgadas.webp",
     nutritional_link: "/productos/pechuga-de-pavo-rebanadas-delgadas",
     recipes_link: "/recetas/pechuga-de-pavo-rebanadas-delgadas",
@@ -56,7 +56,7 @@ export const tabsContent = [
     id: 3,
     name: "Salchicha de Pavo receta original",
     description:
-      "Aquí encontrarás recetas para todos. Recetas pensadas con nuestros productos, en tus tiempos y sobre todo, con el mejor sabor, el de San Rafael Balance ®",
+      "Aquí encontrarás recetas para todos. Recetas pensadas con nuestros productos, en tus tiempos y sobre todo, con el mejor sabor, el de San Rafael Balance®",
     image: "/assets/" + "images/salchicha-pavo-receta.webp",
     nutritional_link: "/productos/salchicha-de-pavo",
     recipes_link: "/recetas/salchicha-de-pavo",
@@ -73,7 +73,7 @@ export const tabsContent = [
     id: 4,
     name: "Pechuga de Pavo Rebanadas Sandwich",
     description:
-      "Aquí encontrarás recetas para todos. Recetas pensadas con nuestros productos, en tus tiempos y sobre todo, con el mejor sabor, el de San Rafael Balance ®",
+      "Aquí encontrarás recetas para todos. Recetas pensadas con nuestros productos, en tus tiempos y sobre todo, con el mejor sabor, el de San Rafael Balance®",
     image: "/assets/" + "images/pechuga-pavo-rebanadas-sandwich-receta.webp",
     nutritional_link: "/productos/pechuga-de-pavo-rebanadas-sandwich",
     recipes_link: "/recetas/pechuga-de-pavo-rebanadas-sandwich",
@@ -97,7 +97,7 @@ export const tabsContent = [
     id: 5,
     name: "Salchicha de Pechuga de Pavo",
     description:
-      "Aquí encontrarás recetas para todos. Recetas pensadas con nuestros productos, en tus tiempos y sobre todo, con el mejor sabor, el de San Rafael Balance ®",
+      "Aquí encontrarás recetas para todos. Recetas pensadas con nuestros productos, en tus tiempos y sobre todo, con el mejor sabor, el de San Rafael Balance®",
     image: "/assets/" + "images/salchicha-pechuga-pavo-receta-v2.webp",
     nutritional_link: "/productos/salchicha-de-pechuga-de-pavo",
     recipes_link: "/recetas/salchicha-de-pechuga-de-pavo",

@@ -36,8 +36,8 @@ const NutritionalPage = () => {
 
   const seoData = {
     title: `${activeProduct.name} - Información Nutricional`,
-    description: `Descubre la información nutricional detallada de ${activeProduct.name} de Balance.`,
-    keywords: `${activeProduct.name}, información nutricional, balance, salud`,
+    description: `Descubre la información nutricional detallada de ${activeProduct.name} de San Rafael Balance®.`,
+    keywords: `${activeProduct.name}, información nutricional, San Rafael Balance, salud`,
     url: `${BASE_URL}/productos/${productSlug}`,
     imageSeo: activeProduct.image,
     type: "product" as const,
@@ -49,7 +49,7 @@ const NutritionalPage = () => {
       description: `Información nutricional de ${activeProduct.name}`,
       brand: {
         "@type": "Brand",
-        name: "Balance",
+        name: "San Rafael Balance®",
       },
       offers: {
         "@type": "Offer",

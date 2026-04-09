@@ -1,7 +1,7 @@
 export const productsData = {
   "pechuga-de-pavo-escalonada": {
     name: "Pechuga de Pavo Escalonada",
-    description: "Deliciosas recetas con nuestra pechuga de pavo Balance®.",
+    description: "Deliciosas recetas con nuestra pechuga de pavo San Rafael Balance®.",
     image: "/assets/" + "images/pechuga-pavo-escalonada-recetas.webp",
     imageHero: "/assets/" + "images/pechuga-pavo-escalonada-individual.webp",
     recipes: [
@@ -41,7 +41,7 @@ export const productsData = {
   "salchicha-de-pavo": {
     name: "Salchicha de Pavo",
     description:
-      "Prepara platillos deliciosos con nuestras salchichas de pavo Balance®.",
+      "Prepara platillos deliciosos con nuestras salchichas de pavo San Rafael Balance®.",
     image: "/assets/" + "images/salchicha-pavo-recetas.webp",
     imageHero: "/assets/" + "images/salchicha-pavo.webp",
     recipes: [
@@ -68,7 +68,7 @@ export const productsData = {
   "pechuga-de-pavo-rebanadas-sandwich": {
     name: "Pechuga de Pavo Rebanadas Sandwich",
     description:
-      "Explora recetas creativas con nuestra mortadela de pavo Balance®.",
+      "Explora recetas creativas con nuestra mortadela de pavo San Rafael Balance®.",
     image: "/assets/" + "images/pechuga-pavo-rebanadas-sandwich-recetas.webp",
     imageHero:
       "/assets" + "/images/pechuga-pavo-rebanadas-sandwich-individual.webp",
@@ -83,7 +83,7 @@ export const productsData = {
   },
   "salchicha-de-pechuga-de-pavo": {
     name: "Salchicha de Pechuga de Pavo",
-    description: "Crea platillos gourmet con nuestro salami de pavo Balance®.",
+    description: "Crea platillos gourmet con nuestro salami de pavo San Rafael Balance®.",
     image: "/assets/" + "images/salchicha-pechuga-pavo-recetas.webp",
     imageHero: "/assets/" + "images/salchicha-pechuga-pavo-individual.webp",
     recipes: [
@@ -104,7 +104,7 @@ export const productsData = {
   "pechuga-de-pavo-rebanadas-delgadas": {
     name: "Pechuga de Pavo Rebanadas Delgadas",
     description:
-      "Es momento de preparar recetas deliciosas con nuestra pechuga de pavo Balance®.",
+      "Es momento de preparar recetas deliciosas con nuestra pechuga de pavo San Rafael Balance®.",
     image: "/assets/" + "images/pechuga-pavo-rebanadas-delgadas.webp",
     imageHero:
       "/assets/" + "images/pechuga-pavo-rebanadas-delgadas-familiar.webp",

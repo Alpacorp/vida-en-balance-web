@@ -46,8 +46,8 @@ export const Header: FC = () => {
           >
             <img
               src={headerLogo}
-              title="San Rafael Balance"
-              alt="San Rafael Balance"
+              title="San Rafael Balance®"
+              alt="San Rafael Balance®"
               className={`w-auto transition-all duration-300 ${isScrolled ? "h-12" : "h-24"}`}
               height="96"
               width="96"
