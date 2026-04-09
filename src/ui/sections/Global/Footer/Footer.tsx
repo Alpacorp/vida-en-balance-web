@@ -5,8 +5,6 @@ import { mainMenuLinks } from "@content/navigation/mainMenuLinks";
 import { footerMenuLinks } from "@content/navigation/footerMenuLinks";
 import { socialMenuLinks } from "@content/navigation/socialMenuLinks";
 
-import footerLogo from "@assets/images/san-rafael-balance-logo.webp";
-
 import {
   FacebookIcon,
   InstagramIcon,
@@ -28,25 +26,18 @@ const footerMenu = mainMenuLinks.concat(footerMenuLinks);
 export const Footer: FC = () => {
   return (
     <footer className="bg-linear-to-b from-[#293078] to-[#494986] font-montserrat-medium">
-      <div className="mx-auto max-w-7xl overflow-hidden px-6 py-3 sm:py-10 lg:px-8">
-        <img
-          src={footerLogo}
-          alt="San Rafael Balance"
-          title="San Rafael Balance"
-          className="w-40 text-center mx-auto my-5"
-          height="160"
-          width="160"
-        />
+      <div className="mx-auto max-w-7xl overflow-hidden px-6 py-10 lg:px-8">
+        {/* Nav links */}
         <nav
           aria-label="Footer"
-          className="-mb-6 flex flex-wrap justify-center gap-x-12 gap-y-3 text-sm/6"
+          className="flex flex-wrap justify-center gap-x-8 gap-y-4 text-sm/6"
         >
           {footerMenu.map((item) => (
             <Link
               key={item.name}
               to={item.path}
               target={item.name === "Aviso de privacidad" ? "_blank" : "_self"}
-              className="text-gray-200 hover:text-white hover:underline hover:underline-offset-4 transition-transform duration-100"
+              className="text-gray-300 hover:text-white hover:underline hover:underline-offset-4 transition-colors duration-150"
               onMouseEnter={() => routesLoaders[item.path]?.()}
               onFocus={() => routesLoaders[item.path]?.()}
             >
@@ -54,34 +45,40 @@ export const Footer: FC = () => {
             </Link>
           ))}
         </nav>
-        <div className="mt-16 flex justify-center gap-x-10">
-          {socialMenuLinks.map((item) => {
-            const IconComponent =
-              iconComponents[item.icon as keyof typeof iconComponents];
-            return (
-              <Link
-                key={item.name}
-                to={item.path}
-                target="_blank"
-                className="text-gray-200 hover:text-white hover:transform hover:scale-110 transition-transform duration-200"
-              >
-                <span className="sr-only">{item.name}</span>
-                <img
-                  src={IconComponent}
-                  alt={`Logo de ${item.name}`}
-                  title={item.name}
-                  className="w-6 h-6"
-                  height="24"
-                  width="24"
-                />
-              </Link>
-            );
-          })}
+
+        {/* Divider */}
+        <div className="mt-8 border-t border-white/10" />
+
+        {/* Bottom row: copyright + social */}
+        <div className="mt-6 flex flex-col sm:flex-row items-center justify-between gap-4">
+          <p className="text-sm text-gray-300 text-center sm:text-left">
+            {new Date().getFullYear()} San Rafael&copy; | Vida en Balance&copy; Todos los derechos reservados.
+          </p>
+          <div className="flex items-center gap-6">
+            {socialMenuLinks.map((item) => {
+              const IconComponent =
+                iconComponents[item.icon as keyof typeof iconComponents];
+              return (
+                <Link
+                  key={item.name}
+                  to={item.path}
+                  target="_blank"
+                  className="text-gray-300 hover:text-white hover:scale-110 transition-transform duration-200"
+                >
+                  <span className="sr-only">{item.name}</span>
+                  <img
+                    src={IconComponent}
+                    alt={`Logo de ${item.name}`}
+                    title={item.name}
+                    className="w-5 h-5"
+                    height="20"
+                    width="20"
+                  />
+                </Link>
+              );
+            })}
+          </div>
         </div>
-        <p className="mt-10 text-center text-sm/6 text-gray-200">
-          {new Date().getFullYear()} San Rafael&copy; | Vida en Balance&copy;
-          Todos los derechos reservados.
-        </p>
       </div>
     </footer>
   );
