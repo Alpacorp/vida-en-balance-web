@@ -8,19 +8,19 @@ import { nutritionalPageLoader } from "@utils/loaders";
 
 const ProductsPage: FC = () => {
   const seoData = {
-    title: "Productos Balance - Línea completa de productos de pavo",
+    title: "Productos San Rafael Balance® - Línea completa de productos de pavo",
     description:
-      "Conoce toda la línea de productos Balance: pechugas de pavo y salchichas bajas en grasa, sin gluten, sin nitritos añadidos y 100% carne de pavo.",
+      "Conoce toda la línea de productos San Rafael Balance®: pechugas de pavo y salchichas bajas en grasa, sin gluten, sin nitritos añadidos y 100% carne de pavo.",
     keywords:
-      "productos balance, pechuga de pavo, salchicha de pavo, bajo en grasa, sin gluten, productos saludables",
+      "productos San Rafael Balance, pechuga de pavo, salchicha de pavo, bajo en grasa, sin gluten, productos saludables",
     url: `${BASE_URL}/productos`,
     imageSeo: productsData[0]?.image,
     type: "website" as const,
     schema: {
       "@context": "https://schema.org",
       "@type": "CollectionPage",
-      name: "Productos Balance",
-      description: "Línea completa de productos Balance de pavo",
+      name: "Productos San Rafael Balance®",
+      description: "Línea completa de productos San Rafael Balance® de pavo",
       url: `${BASE_URL}/productos`,
       hasPart: productsData.map((product) => ({
         "@type": "Product",

@@ -7,16 +7,16 @@ import { BASE_URL } from "@config/config";
 
 const HomePage: FC = () => {
   const seoData = {
-    title: "Vida en Balance - Productos saludables para tu bienestar",
+    title: "San Rafael Balance® - Productos saludables para tu bienestar",
     description:
-      "Descubre nuestra gama de productos Balance para una vida más saludable y equilibrada.",
-    keywords: "balance, salud, bienestar, productos saludables",
+      "Descubre nuestra gama de productos San Rafael Balance® para una vida más saludable y equilibrada.",
+    keywords: "San Rafael Balance, balance, salud, bienestar, productos saludables",
     url: `${BASE_URL}/`,
     imageSeo: `${BASE_URL}/assets/images/disfruta-cuidandote.png`,
     schema: {
       "@context": "https://schema.org",
       "@type": "WebSite",
-      name: "Balance",
+      name: "San Rafael Balance®",
       url: `${BASE_URL}/`,
       potentialAction: {
         "@type": "SearchAction",
@@ -32,7 +32,7 @@ const HomePage: FC = () => {
       <Hero />
       <Heading
         tag="h1"
-        text="Productos San Rafael Balance"
+        text="Productos San Rafael Balance®"
         customClassName="bg-amber-400"
       />
       <Tabs />

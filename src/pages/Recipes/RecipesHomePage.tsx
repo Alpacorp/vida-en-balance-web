@@ -9,11 +9,11 @@ import { recipesProductPageLoader } from "@utils/loaders";
 
 const RecipesHomePage: FC = () => {
   const seoData = {
-    title: "Recetas Balance - Descubre deliciosas recetas saludables",
+    title: "Recetas San Rafael Balance® - Descubre deliciosas recetas saludables",
     description:
-      "Explora nuestra colección de recetas saludables y deliciosas utilizando los productos Balance. Encuentra inspiración para tus comidas diarias.",
+      "Explora nuestra colección de recetas saludables y deliciosas utilizando los productos San Rafael Balance®. Encuentra inspiración para tus comidas diarias.",
     keywords:
-      "recetas balance, comida saludable, recetas fáciles, productos balance",
+      "recetas San Rafael Balance, comida saludable, recetas fáciles, productos San Rafael Balance",
     url: `${BASE_URL}/recetas`,
     imageSeo:
       "https://www.vidaenbalance.com/assets/images/recetas-balance-banner.jpg",
@@ -21,9 +21,9 @@ const RecipesHomePage: FC = () => {
     schema: {
       "@context": "https://schema.org",
       "@type": "CollectionPage",
-      name: "Recetas Balance",
+      name: "Recetas San Rafael Balance®",
       description:
-        "Colección de recetas saludables utilizando productos Balance",
+        "Colección de recetas saludables utilizando productos San Rafael Balance®",
       url: `${BASE_URL}/recetas`,
       hasPart: Object.entries(productsData).map(([slug, product]) => ({
         "@type": "ItemList",
@@ -41,10 +41,10 @@ const RecipesHomePage: FC = () => {
         <div className="bg-violet text-white py-16">
           <div className="container mx-auto px-4">
             <h1 className="text-3xl md:text-4xl font-montserrat-bold mb-4">
-              Recetas Balance
+              Recetas San Rafael Balance®
             </h1>
             <p className="text-xl font-montserrat-regular">
-              Descubre deliciosas recetas con nuestros productos Balance
+              Descubre deliciosas recetas con nuestros productos San Rafael Balance®
             </p>
           </div>
         </div>

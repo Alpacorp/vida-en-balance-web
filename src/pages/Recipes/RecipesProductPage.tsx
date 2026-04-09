@@ -22,9 +22,9 @@ const RecipesProductPage: FC = () => {
   }
 
   const seoData = {
-    title: `Recetas con ${product.name} - Balance`,
-    description: `Descubre deliciosas recetas utilizando ${product.name} de Balance. ${product.description}`,
-    keywords: `recetas ${product.name}, balance, comida saludable, recetas fáciles`,
+    title: `Recetas con ${product.name} - San Rafael Balance®`,
+    description: `Descubre deliciosas recetas utilizando ${product.name} de San Rafael Balance®. ${product.description}`,
+    keywords: `recetas ${product.name}, San Rafael Balance, comida saludable, recetas fáciles`,
     url: `${BASE_URL}/recetas/${productSlug}`,
     imageSeo: product.image,
     type: "website" as const,

@@ -52,7 +52,7 @@ export const Footer: FC = () => {
         {/* Bottom row: copyright + social */}
         <div className="mt-6 flex flex-col sm:flex-row items-center justify-between gap-4">
           <p className="text-sm text-gray-300 text-center sm:text-left">
-            {new Date().getFullYear()} San Rafael&copy; | Vida en Balance&copy; Todos los derechos reservados.
+            {new Date().getFullYear()} San Rafael Balance® | Vida en Balance Todos los derechos reservados.
           </p>
           <div className="flex items-center gap-6">
             {socialMenuLinks.map((item) => {

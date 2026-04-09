@@ -34,9 +34,9 @@ const ArticlePage: FC = () => {
   }
 
   const seoData = {
-    title: `${article.title} - Balance`,
+    title: `${article.title} - San Rafael Balance®`,
     description: article.description,
-    keywords: `${article.title}, balance, ${category}, artículo`,
+    keywords: `${article.title}, San Rafael Balance, ${category}, artículo`,
     url: `${BASE_URL}/${category}/${slug}`,
     imageSeo: article.coverImage,
     type: "article" as const,
