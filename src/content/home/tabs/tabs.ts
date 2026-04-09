@@ -79,12 +79,6 @@ export const tabsContent = [
     recipes_link: "/recetas/pechuga-de-pavo-rebanadas-sandwich",
     types: [
       {
-        id: 1,
-        url: "/assets/" + "images/pechuga-pavo-rebanadas-sandwich-granel.webp",
-        name: "Granel",
-        description: ["3 Kilogramos", "Lleva la cantidad que prefieras"],
-      },
-      {
         id: 2,
         url: "/assets/" + "images/pechuga-pavo-family-size.webp",
         name: "Familiar",
