@@ -171,8 +171,10 @@ export interface NutritionCardProps {
 
 export interface HeadingProps {
   text: string;
-  customClassName?: string;
   tag: "h1" | "h2";
+  id?: string;
+  uppercase?: boolean;
+  customClassName?: string;
 }
 
 export interface ButtonProps {
