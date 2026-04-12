@@ -119,12 +119,12 @@ export interface Slide {
   ctaPrimary: {
     text: string;
     url: string;
-    external?: boolean;
+    isExternal?: boolean;
   };
   ctaSecondary?: {
     text: string;
     url: string;
-    external?: boolean;
+    isExternal?: boolean;
   };
 }
 
@@ -174,7 +174,7 @@ export interface HeadingProps {
   text: string;
   tag: "h1" | "h2";
   id?: string;
-  uppercase?: boolean;
+  isUppercase?: boolean;
   customClassName?: string;
 }
 

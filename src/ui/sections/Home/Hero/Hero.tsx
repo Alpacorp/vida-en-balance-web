@@ -77,7 +77,7 @@ export const Hero: FC = () => {
                 {slide.subtitle}
               </p>
               <div className="flex flex-wrap justify-center gap-4">
-                {slide.ctaPrimary.external ? (
+                {slide.ctaPrimary.isExternal ? (
                   <a
                     href={slide.ctaPrimary.url}
                     target="_blank"
@@ -95,7 +95,7 @@ export const Hero: FC = () => {
                   </Link>
                 )}
                 {slide.ctaSecondary && (
-                  slide.ctaSecondary.external ? (
+                  slide.ctaSecondary.isExternal ? (
                     <a
                       href={slide.ctaSecondary.url}
                       target="_blank"
