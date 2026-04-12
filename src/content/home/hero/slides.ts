@@ -4,6 +4,7 @@ export const slides: Slide[] = [
   {
     id: 1,
     image: "/assets/" + "images/carrera-balance.webp",
+    mobileImage: "/assets/" + "images/carrera-balance-mobile.webp",
     ctaPrimary: {
       text: "Inscríbete aquí",
       url: "https://asdeporte.com/evento/carrera-san-rafael-balance--2026-qk6/datos-del-evento",

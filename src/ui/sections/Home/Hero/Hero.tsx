@@ -1,4 +1,4 @@
-import { useState, useEffect, FC } from "react";
+import { useState, useEffect, useRef, FC } from "react";
 import { Link } from "react-router-dom";
 
 import { ArrowLeftIcon, ArrowRightIcon } from "@assets/icons";
@@ -7,6 +7,7 @@ import { slides } from "@content/home/hero/slides";
 
 export const Hero: FC = () => {
   const [currentSlide, setCurrentSlide] = useState(0);
+  const touchStartX = useRef<number | null>(null);
 
   useEffect(() => {
     const timer = setInterval(() => {
@@ -16,8 +17,30 @@ export const Hero: FC = () => {
     return () => clearInterval(timer);
   }, []);
 
+  const handleTouchStart = (e: React.TouchEvent) => {
+    touchStartX.current = e.touches[0].clientX;
+  };
+
+  const handleTouchEnd = (e: React.TouchEvent) => {
+    if (touchStartX.current === null) return;
+    const diff = touchStartX.current - e.changedTouches[0].clientX;
+    if (Math.abs(diff) > 40) {
+      setCurrentSlide((prev) =>
+        diff > 0
+          ? prev === slides.length - 1 ? 0 : prev + 1
+          : prev === 0 ? slides.length - 1 : prev - 1
+      );
+    }
+    touchStartX.current = null;
+  };
+
   return (
-    <div className="relative w-full overflow-hidden bg-gray-100 mt-20" style={{ height: "clamp(420px, 50vw, 680px)" }}>
+    <div
+      className="relative w-full overflow-hidden bg-gray-100 mt-20"
+      style={{ height: "clamp(420px, 50vw, 680px)" }}
+      onTouchStart={handleTouchStart}
+      onTouchEnd={handleTouchEnd}
+    >
       {/* Slides */}
       {slides.map((slide, index) => (
         <div
@@ -28,11 +51,19 @@ export const Hero: FC = () => {
         >
           {/* Background Image */}
           <div className="absolute inset-0">
-            <img
-              src={slide.image}
-              alt={slide.title}
-              className="h-full w-full object-cover"
-            />
+            <picture>
+              {slide.mobileImage && (
+                <source
+                  srcSet={slide.mobileImage}
+                  media="(max-width: 639px)"
+                />
+              )}
+              <img
+                src={slide.image}
+                alt={slide.title}
+                className={`h-full w-full object-cover ${slide.mobileImage ? "object-top sm:object-center" : "object-center"}`}
+              />
+            </picture>
             <div className="absolute inset-0 bg-linear-to-t from-black/30 to-transparent" />
           </div>
 
@@ -51,14 +82,14 @@ export const Hero: FC = () => {
                     href={slide.ctaPrimary.url}
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="rounded-md bg-blue-600 px-8 py-3 font-montserrat-medium text-white transition-colors hover:bg-blue-700"
+                    className="rounded-md bg-secondary px-8 py-3 font-montserrat-medium text-white transition-colors hover:bg-tertiary"
                   >
                     {slide.ctaPrimary.text}
                   </a>
                 ) : (
                   <Link
                     to={slide.ctaPrimary.url}
-                    className="rounded-md bg-blue-600 px-8 py-3 font-montserrat-medium text-white transition-colors hover:bg-blue-700"
+                    className="rounded-md bg-secondary px-8 py-3 font-montserrat-medium text-white transition-colors hover:bg-tertiary"
                   >
                     {slide.ctaPrimary.text}
                   </Link>
@@ -118,7 +149,7 @@ export const Hero: FC = () => {
           <button
             key={index}
             onClick={() => setCurrentSlide(index)}
-            className={`h-4 w-4 rounded-full transition-colors ${
+            className={`h-2 w-2 sm:h-3 sm:w-3 rounded-full transition-colors ${
               currentSlide === index
                 ? "bg-white"
                 : "bg-white/40 hover:bg-white/60"
