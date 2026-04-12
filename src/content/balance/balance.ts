@@ -35,14 +35,6 @@ export const balanceContent = {
         to: "/cuerpo-en-balance/la-importancia-de-las-proteinas",
       },
       {
-        title: "Qué comer según tu nivel de actividad física",
-        description: "Nutrientes: el combustible de tu cuerpo.",
-        imageUrl: "/assets/" + "images/actividad-fisica-blog.webp",
-        imageAlt: "Persona ejercitándose",
-        ctaText: "Planes nutricionales",
-        to: "/cuerpo-en-balance/que-comer-segun-tu-nivel-de-actividad-fisica",
-      },
-      {
         title: "Nutrición alcalina",
         description: "Explora los beneficios de una dieta alcalina balanceada.",
         imageUrl: "/assets/" + "images/nutricion-alcalina-blog.webp",
@@ -94,15 +86,6 @@ export const balanceContent = {
         imageAlt: "Mujer meditando",
         ctaText: "Descubrir más",
         to: "/mente-en-balance/paz-interior-que-nadie-te-la-quite",
-      },
-      {
-        title: "Yoga feliz",
-        description:
-          "Descubre los beneficios del yoga para tu bienestar emocional.",
-        imageUrl: "/assets/" + "images/yoga-feliz-blog.webp",
-        imageAlt: "Mujer haciendo yoga",
-        ctaText: "Aprender más",
-        to: "/mente-en-balance/yoga-feliz",
       },
       {
         title: "Magia en el yoga",
