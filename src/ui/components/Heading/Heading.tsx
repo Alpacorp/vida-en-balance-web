@@ -9,7 +9,7 @@ export const Heading: FC<HeadingProps> = ({
   uppercase = true,
   customClassName,
 }) => {
-  const baseClass = `px-4 py-8 sm:py-12 sm:px-6 lg:px-8 bg-linear-to-b from-[#293078] to-[#494986]${uppercase ? " uppercase" : ""}${customClassName ? ` ${customClassName}` : ""}`;
+  const baseClass = `px-4 py-8 sm:py-12 sm:px-6 lg:px-8 bg-linear-to-b from-main to-tertiary${uppercase ? " uppercase" : ""}${customClassName ? ` ${customClassName}` : ""}`;
   const textClass = "font-montserrat-bold text-white text-center";
 
   return (
