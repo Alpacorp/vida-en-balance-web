@@ -25,7 +25,7 @@ const footerMenu = mainMenuLinks.concat(footerMenuLinks);
 
 export const Footer: FC = () => {
   return (
-    <footer className="bg-linear-to-b from-[#293078] to-[#494986] font-montserrat-medium">
+    <footer className="bg-linear-to-b from-main to-tertiary font-montserrat-medium">
       <div className="mx-auto max-w-7xl overflow-hidden px-6 py-10 lg:px-8">
         {/* Nav links */}
         <nav
