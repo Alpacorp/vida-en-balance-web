@@ -60,8 +60,8 @@ export const Header: FC = () => {
                 to={item.path}
                 className={`inline-flex items-center uppercase px-1 pt-1 text-sm font-montserrat-bold transition-colors duration-200 ${
                   isActive(item.path)
-                    ? "text-blue-900 border-b-2 border-blue-900"
-                    : "text-gray-700 hover:text-blue-900"
+                    ? "text-main border-b-2 border-main"
+                    : "text-gray-700 hover:text-main"
                 }`}
                 onMouseEnter={() => routesLoaders[item.path]?.()}
                 onFocus={() => routesLoaders[item.path]?.()}
@@ -75,7 +75,7 @@ export const Header: FC = () => {
           <button
             type="button"
             onClick={toggleMobileMenu}
-            className="md:hidden inline-flex items-center justify-center p-2 rounded-md text-gray-700 hover:text-blue-900 hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-inset focus:ring-blue-900"
+            className="md:hidden inline-flex items-center justify-center p-2 rounded-md text-gray-700 hover:text-main hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-inset focus:ring-main"
             aria-expanded={isMobileMenuOpen}
           >
             <span className="sr-only">
@@ -132,8 +132,8 @@ export const Header: FC = () => {
               to={item.path}
               className={`block pl-3 pr-4 py-2 text-base font-montserrat-bold ${
                 isActive(item.path)
-                  ? "text-blue-900 bg-blue-50 border-l-4 border-blue-900"
-                  : "text-gray-700 hover:bg-gray-50 hover:text-blue-900"
+                  ? "text-main bg-cyan-50 border-l-4 border-main"
+                  : "text-gray-700 hover:bg-gray-50 hover:text-main"
               }`}
               onMouseEnter={() => routesLoaders[item.path]?.()}
               onFocus={() => routesLoaders[item.path]?.()}

@@ -12,8 +12,8 @@ const NotFoundPage: FC<NotFoundProps> = ({ type = "page", goBack }) => {
 
   const seoData = {
     title: isRecipe
-      ? "Receta no encontrada - Balance"
-      : "Página no encontrada - Balance",
+      ? "Receta no encontrada - San Rafael Balance®"
+      : "Página no encontrada - San Rafael Balance®",
     description: isRecipe
       ? "Lo sentimos, la receta que estás buscando no se encuentra en nuestro sitio."
       : "Lo sentimos, la página que estás buscando no existe en nuestro sitio.",
@@ -62,7 +62,7 @@ const NotFoundPage: FC<NotFoundProps> = ({ type = "page", goBack }) => {
             <div className="flex flex-col space-y-4">
               <Link
                 to="/"
-                className="flex items-center justify-center bg-violet text-white py-2 px-4 rounded-lg font-montserrat-medium hover:bg-violet-700 transition duration-300"
+                className="flex items-center justify-center bg-secondary text-white py-2 px-4 rounded-lg font-montserrat-medium hover:bg-tertiary transition duration-300"
               >
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
@@ -84,7 +84,7 @@ const NotFoundPage: FC<NotFoundProps> = ({ type = "page", goBack }) => {
               {isRecipe && (
                 <Link
                   to="/recetas"
-                  className="flex items-center justify-center bg-white text-violet border border-violet py-2 px-4 rounded-lg font-montserrat-medium hover:bg-violet hover:text-white transition duration-300"
+                  className="flex items-center justify-center bg-white text-secondary border border-secondary py-2 px-4 rounded-lg font-montserrat-medium hover:bg-secondary hover:text-white transition duration-300"
                 >
                   <svg
                     xmlns="http://www.w3.org/2000/svg"

@@ -28,7 +28,7 @@ export const Tabs = () => {
                 onClick={() => handleTabChange(tabIdx)}
                 className={`shrink-0 flex items-center gap-2 px-3 py-2 rounded-full text-sm font-montserrat-medium transition-colors duration-200 ${
                   tab.id === id
-                    ? "bg-[#4C50A2] text-white shadow-sm"
+                    ? "bg-secondary text-white shadow-sm"
                     : "bg-white text-gray-600 border border-gray-200 hover:bg-gray-50"
                 }`}
               >
@@ -69,7 +69,7 @@ export const Tabs = () => {
               aria-current={tab.id === id ? "page" : undefined}
               className={`${
                 tab.id === id
-                  ? "text-[#4C50A2] bg-purple-50 border-r-[5px] border-r-[#4C50A2]"
+                  ? "text-secondary bg-cyan-50 border-r-[5px] border-r-secondary"
                   : "text-gray-500 bg-white border-r-[5px] border-r-transparent hover:bg-gray-50 hover:text-gray-700"
               } ${tabIdx === 0 ? "rounded-tl-lg rounded-tr-lg" : ""} ${
                 tabIdx === tabsContent.length - 1

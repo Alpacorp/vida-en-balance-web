@@ -27,7 +27,7 @@ export const RecipeCard: FC<RecipeCardProps> = ({
           width="384"
         />
         <div className="p-4">
-          <h3 className="text-xl font-montserrat-bold mb-2 text-gray-800 group-hover:text-violet">
+          <h3 className="text-xl font-montserrat-bold mb-2 text-gray-800 group-hover:text-secondary">
             {title}
           </h3>
           <p className="text-gray-600 font-montserrat-medium">{description}</p>

@@ -63,7 +63,7 @@ export const ContentTab: FC<ContentProps> = ({
               )}
               {recipes_link && (
                 <Link
-                  className="inline-flex items-center rounded-md bg-violet px-3 py-2 text-sm font-montserrat-medium text-white shadow-xs hover:bg-secondary focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-blue-700 transition-colors duration-200"
+                  className="inline-flex items-center rounded-md bg-tertiary px-3 py-2 text-sm font-montserrat-medium text-white shadow-xs hover:bg-secondary focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-tertiary transition-colors duration-200"
                   to={recipes_link}
                   onMouseEnter={() => recipesProductPageLoader()}
                 >

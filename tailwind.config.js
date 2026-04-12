@@ -8,7 +8,6 @@ export default {
   theme: {
     extend: {
       colors: {
-        violet: "#4C50A2",
         main: "#0F2641",
         secondary: "#00B4C2",
         tertiary: "#009ED0",

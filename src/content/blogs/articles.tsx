@@ -7,7 +7,7 @@ export const articles: Article[] = [
     slug: "21k-juntos",
     title: "21K juntos",
     subtitle: "Prepárate para tu primera media maratón",
-    description:
+    description: 
       "Correr una media maratón es un objetivo desafiante pero alcanzable para muchos corredores. Con el entrenamiento adecuado y la preparación correcta, puedes completar los 21K de manera segura y satisfactoria.",
     coverImage: "/assets/" + "images/21k-juntos.webp",
     author: "Monica Gomez",
@@ -375,14 +375,6 @@ export const articles: Article[] = [
         category: "cuerpo-en-balance",
       },
       {
-        id: "6",
-        title: "Qué comer según tu nivel de actividad física",
-        excerpt: "Nutrientes: el combustible de tu cuerpo.",
-        image: "/assets/" + "images/que-comer.webp",
-        slug: "que-comer-segun-tu-nivel-de-actividad-fisica",
-        category: "cuerpo-en-balance",
-      },
-      {
         id: "7",
         title: "Nutrición alcalina ¿Sabes lo que es?",
         excerpt: "Equilibra tu pH para una vida más saludable.",
@@ -528,156 +520,11 @@ export const articles: Article[] = [
         category: "cuerpo-en-balance",
       },
       {
-        id: "6",
-        title: "Qué comer según tu nivel de actividad física",
-        excerpt: "Nutrientes: el combustible de tu cuerpo.",
-        image: "/assets/" + "images/que-comer.webp",
-        slug: "que-comer-segun-tu-nivel-de-actividad-fisica",
-        category: "cuerpo-en-balance",
-      },
-      {
         id: "7",
         title: "Nutrición alcalina ¿Sabes lo que es?",
         excerpt: "Equilibra tu pH para una vida más saludable.",
         image: "/assets/" + "images/nutricion-alcalina.webp",
         slug: "nutricion-alcalina",
-        category: "cuerpo-en-balance",
-      },
-    ],
-  },
-  {
-    id: "6",
-    category: "cuerpo-en-balance",
-    slug: "que-comer-segun-tu-nivel-de-actividad-fisica",
-    title: "Qué comer según tu nivel de actividad física",
-    subtitle: "Nutrientes: el combustible de tu cuerpo",
-    description:
-      "Descubre cómo los carbohidratos y proteínas son esenciales para el rendimiento de tu cuerpo. Aprende a calcular tus necesidades diarias y elegir las mejores fuentes para mantenerte activo y saludable.",
-    coverImage: "/assets/" + "images/que-comer.webp",
-    author: "Maricarmen Osés - Nutrióloga",
-    date: "17 de Enero, 2025",
-    readingTime: "3 min de lectura",
-    content: (
-      <>
-        <h2>La importancia de nutrir tu cuerpo</h2>
-        <p>
-          Tu cuerpo siempre da todo por ti, y los nutrientes son esenciales para
-          que nunca se detenga. Por eso, necesitará que tú lo ayudes dándole el
-          alimento que necesita.
-        </p>
-
-        <h2>Tu cuerpo como el auto de tus sueños</h2>
-
-        <p>
-          Supongamos que tu cuerpo es el auto de tus sueños y tú eres el
-          conductor. Necesitas gasolina para andar. El tanque te pedirá cierto
-          combustible para llevar a cabo tus funciones vitales, tales como
-          respirar, mantener tu temperatura corporal, mantener tu latido
-          cardíaco, entre muchas otras.
-        </p>
-        <p>
-          Pero además de eso, tu cuerpo tiene ganas de hacer más cosas, como
-          hacer ejercicio, correr, escalar, practicar yoga o simplemente andar
-          en bici. Necesitarás un extra de energía, y no cualquier combustible
-          te dará lo que necesitas.
-        </p>
-        <p>
-          Entre más te esfuerces durante el día, mayor será la cantidad de
-          nutrientes que vas a necesitar, en especial carbohidratos y proteínas.
-        </p>
-
-        <h3>¿Cuántos carbohidratos necesitas?</h3>
-
-        <p>
-          Los carbohidratos son la fuente de energía número uno para tu cuerpo,
-          pero siempre deben ir de acuerdo con tu peso. Por ejemplo:
-        </p>
-
-        <p>
-          Si haces ejercicio aeróbico o deportes de fondo como triatlones o
-          carreras, y tu peso es de 60 kg, calcula:{" "}
-          <strong>60 x 9 g = 540 g de carbohidratos al día.</strong>
-        </p>
-
-        <img
-          src="/assets/images/que-comer-blog.webp"
-          alt="Tabla de necesidades diaria para energía y recuperación"
-          title="Tabla de necesidades para energía y recuperación"
-          height="752"
-          width="589"
-          className="w-full"
-        />
-
-        <h2>Proteínas: esenciales para el rendimiento</h2>
-        <p>
-          Por otro lado, las proteínas también son un nutriente importante que
-          puedes obtener en productos de origen animal como pescado, carne,
-          pollo, queso, leche, yogurt, o carnes frías bajas en grasa como la
-          línea de San Rafael Balance®.
-        </p>
-
-        <h3>¿Cuántas proteínas necesitas?</h3>
-
-        <p>
-          Las proteínas también deben calcularse según tu peso y actividad
-          física. Por ejemplo:
-        </p>
-
-        <p>
-          Si pesas 60 kg y practicas deportes de resistencia como correr o
-          nadar: <strong>60 x 1.3 g = 78 g de proteína al día.</strong>
-        </p>
-
-        <h2>Ejemplos para cubrir tus necesidades diarias de proteínas</h2>
-
-        <p>Algunas opciones para alcanzar tu ingesta de proteínas:</p>
-
-        <ul>
-          <li>1 huevo: 7 g de proteína</li>
-          <li>
-            1 pieza de Salchicha de Pavo San Rafael Balance®: 6.5 g de proteína
-          </li>
-          <li>
-            1 rebanada de Pechuga de Pavo San Rafael Balance®: 2.2 g de
-            proteína
-          </li>
-          <li>1 vaso de leche (240 ml): 9 g de proteína</li>
-          <li>40 g de salmón: 7 g de proteína</li>
-        </ul>
-
-        <img
-          src="/assets/images/tipo-deporte.webp"
-          alt="Tabla de proteína y ejercicio"
-          title="Tabla de proteína y ejercicio"
-          height="365"
-          width="589"
-          className="w-full"
-        />
-      </>
-    ),
-    relatedArticles: [
-      {
-        id: "7",
-        title: "Nutrición alcalina ¿Sabes lo que es?",
-        excerpt: "Equilibra tu pH para una vida más saludable.",
-        image: "/assets/" + "images/nutricion-alcalina.webp",
-        slug: "nutricion-alcalina",
-        category: "cuerpo-en-balance",
-      },
-      {
-        id: "4",
-        title: "Tu peso ideal: Más que un número",
-        excerpt: "Definiendo tu peso ideal y salud.",
-        image: "/assets/" + "images/tu-peso-ideal.webp",
-        slug: "tu-peso-ideal",
-        category: "cuerpo-en-balance",
-      },
-      {
-        id: "5",
-        title: "La importancia de las proteínas",
-        excerpt: "Proteínas: pilares esenciales para tu salud.",
-        image: "/assets/" + "images/importancia-proteinas.webp",
-        slug: "la-importancia-de-las-proteinas",
         category: "cuerpo-en-balance",
       },
     ],
@@ -833,14 +680,6 @@ export const articles: Article[] = [
         slug: "la-importancia-de-las-proteinas",
         category: "cuerpo-en-balance",
       },
-      {
-        id: "6",
-        title: "Qué comer según tu nivel de actividad física",
-        excerpt: "Nutrientes: el combustible de tu cuerpo.",
-        image: "/assets/" + "images/que-comer.webp",
-        slug: "que-comer-segun-tu-nivel-de-actividad-fisica",
-        category: "cuerpo-en-balance",
-      },
     ],
   },
   {
@@ -952,14 +791,6 @@ export const articles: Article[] = [
         excerpt: "Domina tus emociones.",
         image: "/assets/" + "images/paz-interior.webp",
         slug: "paz-interior-que-nadie-te-la-quite",
-        category: "mente-en-balance",
-      },
-      {
-        id: "11",
-        title: "Yoga Feliz",
-        excerpt: "Santosha: el camino a la felicidad interior.",
-        image: "/assets/" + "images/yoga-feliz.webp",
-        slug: "yoga-feliz",
         category: "mente-en-balance",
       },
       {
@@ -1080,14 +911,6 @@ export const articles: Article[] = [
         excerpt: "Domina tus emociones.",
         image: "/assets/" + "images/paz-interior.webp",
         slug: "paz-interior-que-nadie-te-la-quite",
-        category: "mente-en-balance",
-      },
-      {
-        id: "11",
-        title: "Yoga Feliz",
-        excerpt: "Santosha: el camino a la felicidad interior.",
-        image: "/assets/" + "images/yoga-feliz.webp",
-        slug: "yoga-feliz",
         category: "mente-en-balance",
       },
       {
@@ -1221,14 +1044,6 @@ export const articles: Article[] = [
     ),
     relatedArticles: [
       {
-        id: "11",
-        title: "Yoga Feliz",
-        excerpt: "Santosha: el camino a la felicidad interior.",
-        image: "/assets/" + "images/yoga-feliz.webp",
-        slug: "yoga-feliz",
-        category: "mente-en-balance",
-      },
-      {
         id: "12",
         title: "Magia en el yoga",
         excerpt: "Descubre tu verdadero ser.",
@@ -1250,133 +1065,6 @@ export const articles: Article[] = [
         excerpt: "Mindfullness: el arte de vivir en el presente.",
         image: "/assets/" + "images/mindfullness.webp",
         slug: "mindfullness-en-tu-vida-diaria",
-        category: "mente-en-balance",
-      },
-    ],
-  },
-  {
-    id: "11",
-    category: "mente-en-balance",
-    slug: "yoga-feliz",
-    title: "Yoga Feliz",
-    subtitle: "Santosha: el camino a la felicidad interior",
-    description:
-      "Descubre cómo Santosha, un principio del yoga, te ayuda a encontrar alegría y satisfacción en tu vida diaria. Aprende a dejar atrás los deseos innecesarios y a conectarte con tu felicidad interior.",
-    coverImage: "/assets/" + "images/yoga-feliz.webp",
-    author: "Marisol G Ficachi - Yoga Wellness Coach",
-    date: "17 de Enero, 2025",
-    readingTime: "3 min de lectura",
-    content: (
-      <>
-        <h2>Santosha: el arte de la felicidad y la paz interior</h2>
-        <p>
-          Sentirte feliz sólo depende de ti, y de nadie más. Lo único que
-          necesitas para estar alegre todos los días es realmente desearlo.
-          ¿Quieres saber cómo? Conoce Santosha, un eje principal del yoga, su
-          significado es: “sentirte gozoso, alegre y satisfecho”.
-        </p>
-        <p>
-          Ahora que lo conoces, vámonos más a fondo. Practicar yoga es todo un
-          viaje introspectivo, voltear a ver a tu interior y estar consciente de
-          tu presente. La felicidad es el estado natural de todos los seres
-          humanos, y que dentro de ti hay paz.
-        </p>
-
-        <h3>¿Cómo encontrar la paz interior con Santosha?</h3>
-
-        <p>
-          Los yoguis ancestrales eran sabios, nos dicen que desear sin control
-          es la razón que nos hace infelices. Pero aprendiendo a manejar la
-          mente como un maestro controlamos estos deseos, y llegamos a un estado
-          de felicidad que nos harán sentir alegría y paz.
-        </p>
-
-        <p>
-          Sí, se siente bien cuando comes rico, cuando compras lo que quieres,
-          cuando viajas, etc., pero es pasajero, lo tienes y ¡pum!, se esfumó el
-          placer. Además, el placer y el dolor son los dos lados de una misma
-          moneda. Pero cuando hablamos de placer y felicidad, hay una
-          diferencia, cuando eres feliz es abundante, pero sobre todo permanente
-          porque siempre se va a encontrar en ti.
-        </p>
-
-        <h2>La felicidad auténtica proviene de tu interior</h2>
-
-        <p>
-          Los placeres sólo dan pequeños destellos de lo que eres, pero eres
-          mucho más que eso, la felicidad es lo que te representa, viene de ti y
-          de ningún otro lado. No viene de una pareja, un viaje, familia o
-          cualquier cosa que puedas pagar.
-        </p>
-
-        <p>
-          Cuando le dices adiós al deseo, también se va la tensión y dejas de
-          sobreanalizar todo lo que te pasa. Estás en paz con tu presente, y te
-          sientes libre para tener una experiencia más verdadera y que sea la
-          que domina tu consciencia.
-        </p>
-
-        <h3>Practícalo y recuerda:</h3>
-
-        <ol>
-          <li>Siéntete agradecido por lo que tienes.</li>
-          <li>Diviértete, para eso estamos aquí.</li>
-          <li>Tener cosas no te hace sufrir, sino querer más y más.</li>
-          <li>
-            La felicidad se construye y es independiente de cualquier
-            circunstancia.
-          </li>
-          <li>
-            Haz una limpieza emocional, deja esos sentimientos del pasado que
-            pesan y no sientas ansiedad por el futuro.
-          </li>
-          <li>
-            Sólo tú sabes qué te hace feliz, no dejes que nadie te diga cómo
-            serlo.
-          </li>
-          <li>
-            Trabaja para conectar contigo, así podrás conectarte con el
-            universo.
-          </li>
-          <li>
-            Recuerda, el yoga te ayudará a sentirte libre de los conceptos
-            propios que te atan, de tus deseos y hábitos. Ser feliz puede ser
-            una experiencia de todos tus días.
-          </li>
-        </ol>
-      </>
-    ),
-    relatedArticles: [
-      {
-        id: "12",
-        title: "Magia en el yoga",
-        excerpt: "Descubre tu verdadero ser.",
-        image: "/assets/" + "images/magia-yoga-blog.webp",
-        slug: "magia-en-el-yoga",
-        category: "mente-en-balance",
-      },
-      {
-        id: "8",
-        title: "¿Cómo afectan las emociones a mi salud?",
-        excerpt: "Abraza tus emociones para una vida equilibrada.",
-        image: "/assets/" + "images/emociones-salud.webp",
-        slug: "como-afectan-las-emociones-a-mi-salud",
-        category: "mente-en-balance",
-      },
-      {
-        id: "9",
-        title: "Mindfullness en tu vida diaria",
-        excerpt: "Mindfullness: el arte de vivir en el presente.",
-        image: "/assets/" + "images/mindfullness.webp",
-        slug: "mindfullness-en-tu-vida-diaria",
-        category: "mente-en-balance",
-      },
-      {
-        id: "10",
-        title: "Paz interior, que nadie te la quite",
-        excerpt: "Domina tus emociones.",
-        image: "/assets/" + "images/paz-interior.webp",
-        slug: "paz-interior-que-nadie-te-la-quite",
         category: "mente-en-balance",
       },
     ],
@@ -1457,14 +1145,6 @@ export const articles: Article[] = [
         excerpt: "Domina tus emociones.",
         image: "/assets/" + "images/paz-interior.webp",
         slug: "paz-interior-que-nadie-te-la-quite",
-        category: "mente-en-balance",
-      },
-      {
-        id: "11",
-        title: "Yoga Feliz",
-        excerpt: "Santosha: el camino a la felicidad interior.",
-        image: "/assets/" + "images/yoga-feliz.webp",
-        slug: "yoga-feliz",
         category: "mente-en-balance",
       },
     ],

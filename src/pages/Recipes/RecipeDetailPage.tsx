@@ -58,7 +58,7 @@ const RecipeDetailPage: FC = () => {
       <div className="container mx-auto px-4 py-8 mt-20">
         <Link
           to={`/recetas/${productSlug}`}
-          className="inline-flex items-center text-violet hover:underline mb-8 font-montserrat-medium"
+          className="inline-flex items-center text-secondary hover:underline mb-8 font-montserrat-medium"
           onMouseEnter={() => recipesProductPageLoader()}
           onFocus={() => recipesProductPageLoader()}
         >
@@ -85,7 +85,7 @@ const RecipeDetailPage: FC = () => {
                   strokeWidth="2"
                   strokeLinecap="round"
                   strokeLinejoin="round"
-                  className="lucide lucide-clock w-5 h-5 text-violet mr-2"
+                  className="lucide lucide-clock w-5 h-5 text-secondary mr-2"
                 >
                   <circle cx="12" cy="12" r="10" />
                   <polyline points="12 6 12 12 16 14" />
@@ -105,7 +105,7 @@ const RecipeDetailPage: FC = () => {
                   strokeWidth="2"
                   strokeLinecap="round"
                   strokeLinejoin="round"
-                  className="lucide lucide-users w-5 h-5 text-violet mr-2"
+                  className="lucide lucide-users w-5 h-5 text-secondary mr-2"
                 >
                   <path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2" />
                   <circle cx="9" cy="7" r="4" />
@@ -127,7 +127,7 @@ const RecipeDetailPage: FC = () => {
                   strokeWidth="2"
                   strokeLinecap="round"
                   strokeLinejoin="round"
-                  className="lucide lucide-chef-hat w-5 h-5 text-violet mr-2"
+                  className="lucide lucide-chef-hat w-5 h-5 text-secondary mr-2"
                 >
                   <path d="M17 21a1 1 0 0 0 1-1v-5.35c0-.457.316-.844.727-1.041a4 4 0 0 0-2.134-7.589 5 5 0 0 0-9.186 0 4 4 0 0 0-2.134 7.588c.411.198.727.585.727 1.041V20a1 1 0 0 0 1 1Z" />
                   <path d="M6 17h12" />
@@ -143,7 +143,7 @@ const RecipeDetailPage: FC = () => {
               {recipe.title}
             </h1>
             <div className="mb-8">
-              <h2 className="text-2xl font-montserrat-semiBold mb-4 text-violet">
+              <h2 className="text-2xl font-montserrat-semiBold mb-4 text-secondary">
                 Ingredientes
               </h2>
               <ul className="space-y-2">
@@ -152,14 +152,14 @@ const RecipeDetailPage: FC = () => {
                     key={index}
                     className="flex items-center font-montserrat-medium text-gray-700"
                   >
-                    <span className="w-2 h-2 bg-violet rounded-full mr-3"></span>
+                    <span className="w-2 h-2 bg-secondary rounded-full mr-3"></span>
                     {ingredient}
                   </li>
                 ))}
               </ul>
             </div>
             <div>
-              <h2 className="text-2xl font-montserrat-semiBold mb-4 text-violet">
+              <h2 className="text-2xl font-montserrat-semiBold mb-4 text-secondary">
                 Preparación
               </h2>
               <ol className="space-y-4">
@@ -168,7 +168,7 @@ const RecipeDetailPage: FC = () => {
                     key={index}
                     className="flex font-montserrat-medium text-gray-700"
                   >
-                    <span className="font-montserrat-bold mr-4 text-violet">
+                    <span className="font-montserrat-bold mr-4 text-secondary">
                       {index + 1}.
                     </span>
                     {step}

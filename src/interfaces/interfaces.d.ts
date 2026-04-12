@@ -115,6 +115,7 @@ export interface Slide {
   title?: string;
   subtitle?: string;
   image: string;
+  mobileImage?: string;
   ctaPrimary: {
     text: string;
     url: string;

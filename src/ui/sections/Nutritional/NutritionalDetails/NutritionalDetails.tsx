@@ -10,7 +10,7 @@ export const NutritionalDetails: React.FC<ProductDetailsProps> = ({
 }) => {
   return (
     <div>
-      <h2 className="text-[#2A2A72] text-2xl font-montserrat-bold mb-4">
+      <h2 className="text-main text-2xl font-montserrat-bold mb-4">
         {product.name}
       </h2>
       <p className="text-lg text-gray-600 font-montserrat-medium mb-6">
@@ -18,7 +18,7 @@ export const NutritionalDetails: React.FC<ProductDetailsProps> = ({
       </p>
 
       <div className="mb-8">
-        <h3 className="text-[#2A2A72] text-xl font-montserrat-bold mb-4">
+        <h3 className="text-main text-xl font-montserrat-bold mb-4">
           INGREDIENTES
         </h3>
         <p className="text-gray-700 font-montserrat-medium">{ingredients}</p>
