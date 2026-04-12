@@ -38,7 +38,7 @@ const RecipesHomePage: FC = () => {
     <>
       <Seo {...seoData} />
       <div className="min-h-screen bg-gray-100 mt-20">
-        <div className="bg-violet text-white py-16">
+        <div className="bg-main text-white py-16">
           <div className="container mx-auto px-4">
             <h1 className="text-3xl md:text-4xl font-montserrat-bold mb-4">
               Recetas San Rafael Balance®
@@ -60,7 +60,7 @@ const RecipesHomePage: FC = () => {
                 onMouseEnter={() => recipesProductPageLoader()}
                 onFocus={() => recipesProductPageLoader()}
               >
-                <div className="aspect-w-16 aspect-h-9 bg-[#029FA7]">
+                <div className="aspect-w-16 aspect-h-9 bg-secondary">
                   <img
                     src={product.image}
                     alt={product.name}
@@ -70,7 +70,7 @@ const RecipesHomePage: FC = () => {
                   />
                 </div>
                 <div className="p-6">
-                  <h2 className="text-2xl font-montserrat-bold mb-2 text-violet">
+                  <h2 className="text-2xl font-montserrat-bold mb-2 text-tertiary">
                     {product.name}
                   </h2>
                   <p className="text-gray-600 font-montserrat-medium">

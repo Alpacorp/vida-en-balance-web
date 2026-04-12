@@ -36,7 +36,7 @@ const ProductsPage: FC = () => {
       <Seo {...seoData} />
       <div className="min-h-screen bg-gray-100 mt-20">
         {/* Hero header */}
-        <div className="bg-linear-to-r from-[#40BFB4] to-[#2A9D8F] text-white py-16">
+        <div className="bg-linear-to-r from-secondary to-tertiary text-white py-16">
           <div className="container mx-auto px-4">
             <h1 className="text-3xl md:text-4xl font-montserrat-bold mb-4">
               Nuestros Productos
@@ -57,7 +57,7 @@ const ProductsPage: FC = () => {
                 className="bg-white rounded-lg shadow-md overflow-hidden flex flex-col transition-transform duration-300 hover:scale-105"
               >
                 {/* Image */}
-                <div className="bg-[#029FA7] flex items-center justify-center p-6 h-56">
+                <div className="bg-secondary flex items-center justify-center p-6 h-56">
                   <img
                     src={product.image}
                     alt={product.name}

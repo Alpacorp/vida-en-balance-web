@@ -126,7 +126,7 @@ export const ArticleLayout: FC<ArticleLayoutProps> = ({
                       "_blank",
                     )
                   }
-                  className="rounded-full p-2 text-gray-600 hover:bg-gray-100 hover:text-blue-600"
+                  className="rounded-full p-2 text-gray-600 hover:bg-gray-100 hover:text-secondary"
                 >
                   <svg
                     xmlns="http://www.w3.org/2000/svg"
@@ -150,7 +150,7 @@ export const ArticleLayout: FC<ArticleLayoutProps> = ({
                       "_blank",
                     )
                   }
-                  className="rounded-full p-2 text-gray-600 hover:bg-gray-100 hover:text-blue-700"
+                  className="rounded-full p-2 text-gray-600 hover:bg-gray-100 hover:text-tertiary"
                 >
                   <svg
                     xmlns="http://www.w3.org/2000/svg"
@@ -205,7 +205,7 @@ export const ArticleLayout: FC<ArticleLayoutProps> = ({
                   />
                 </div>
                 <div className="p-6">
-                  <h3 className="mb-2 text-xl font-montserrat-bold text-gray-800 group-hover:text-violet">
+                  <h3 className="mb-2 text-xl font-montserrat-bold text-gray-800 group-hover:text-secondary">
                     {article.title}
                   </h3>
                   <p className="text-gray-600 font-montserrat-medium group-hover:text-gray-800">

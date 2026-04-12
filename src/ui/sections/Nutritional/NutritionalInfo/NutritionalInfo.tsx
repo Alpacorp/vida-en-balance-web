@@ -7,7 +7,7 @@ export const NutritionalInfo: FC<NutritionalInfoProps> = ({
 }) => {
   return (
     <div className="bg-white rounded-lg shadow-lg p-6">
-      <h3 className="text-[#2A2A72] text-xl font-montserrat-bold text-center mb-6">
+      <h3 className="text-main text-xl font-montserrat-bold text-center mb-6">
         DECLARACIÓN NUTRIMENTAL POR 100 G
       </h3>
       <div className="space-y-2">
