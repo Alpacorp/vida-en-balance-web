@@ -8,7 +8,7 @@ export const slides: Slide[] = [
     ctaPrimary: {
       text: "Inscríbete aquí",
       url: "https://asdeporte.com/evento/carrera-san-rafael-balance--2026-qk6/datos-del-evento",
-      external: true,
+      isExternal: true,
     },
   },
   {
@@ -25,7 +25,7 @@ export const slides: Slide[] = [
     ctaPrimary: {
       text: "Descúbre el Balance",
       url: "https://www.youtube.com/@VidaEnBalanceMX",
-      external: true,
+      isExternal: true,
     },
   },
   {
@@ -34,7 +34,7 @@ export const slides: Slide[] = [
     ctaPrimary: {
       text: "Recetas",
       url: "https://www.instagram.com/sanrafaelbalance",
-      external: true
+      isExternal: true,
     },
   },
 ];
