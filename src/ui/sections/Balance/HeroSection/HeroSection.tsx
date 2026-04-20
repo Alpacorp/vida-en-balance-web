@@ -22,7 +22,7 @@ export const HeroSection: FC<HeroBalanceProps> = ({
         className="absolute w-full h-full object-cover"
         title={title}
       />
-      <div className="absolute inset-0 bg-linear-to-r from-tertiary to-secondary/60"></div>
+      <div className="absolute inset-0 bg-linear-to-t from-gray-900 via-gray-900/40" />
       <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-full flex items-center">
         <div className="max-w-2xl">
           <h1 className="text-4xl sm:text-5xl font-montserrat-bold mb-6">

@@ -33,7 +33,7 @@ export const Tabs = () => {
                 }`}
               >
                 <img
-                  src={tab.types[0].url}
+                  src={tab.tabIcon}
                   alt={tab.name}
                   className="w-6 h-8 object-contain"
                   width="24"
@@ -79,7 +79,7 @@ export const Tabs = () => {
             >
               <div className="flex items-center gap-3">
                 <img
-                  src={tab.types[0].url}
+                  src={tab.tabIcon}
                   alt={`Empaque de ${tab.name}`}
                   className="w-14 h-20 object-contain filter drop-shadow-md shrink-0"
                   height="80"
