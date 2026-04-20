@@ -2,6 +2,7 @@ export const tabsContent = [
   {
     id: 1,
     name: "Pechuga de Pavo Escalonada",
+    tabIcon: "/assets/" + "images/pechuga-pavo-escalonada-individual.webp",
     description:
       "Aquí encontrarás recetas para todos. Recetas pensadas con nuestros productos, en tus tiempos y sobre todo, con el mejor sabor, el de San Rafael Balance®",
     image: "/assets/" + "images/pechuga-pavo-escalonada-receta-v2.webp",
@@ -17,13 +18,13 @@ export const tabsContent = [
       {
         id: 2,
         url: "/assets/" + "images/pechuga-pavo-escalonada-familiar.webp",
-        name: "Familiar",
+        name: "Family size",
         description: ["350 gramos"],
       },
       {
         id: 3,
         url: "/assets/" + "images/pechuga-pavo-escalonada-individual.webp",
-        name: "Individual",
+        name: "",
         description: ["250 gramos"],
       },
     ],
@@ -31,6 +32,8 @@ export const tabsContent = [
   {
     id: 2,
     name: "Pechuga de Pavo Rebanadas Delgadas",
+    tabIcon:
+      "/assets/" + "images/pechuga-pavo-rebanadas-delgadas-familiar.webp",
     description:
       "Aquí encontrarás recetas para todos. Recetas pensadas con nuestros productos, en tus tiempos y sobre todo, con el mejor sabor, el de San Rafael Balance®",
     image: "/assets/" + "images/receta-pechuga-de-pavo-rebanadas-delgadas.webp",
@@ -47,7 +50,7 @@ export const tabsContent = [
         id: 2,
         url:
           "/assets/" + "images/pechuga-pavo-rebanadas-delgadas-familiar.webp",
-        name: "Familiar",
+        name: "Family size",
         description: ["200 gramos"],
       },
     ],
@@ -55,6 +58,7 @@ export const tabsContent = [
   {
     id: 3,
     name: "Salchicha de Pavo receta original",
+    tabIcon: "/assets/" + "images/salchicha-pavo-individual.webp",
     description:
       "Aquí encontrarás recetas para todos. Recetas pensadas con nuestros productos, en tus tiempos y sobre todo, con el mejor sabor, el de San Rafael Balance®",
     image: "/assets/" + "images/salchicha-pavo-receta.webp",
@@ -64,7 +68,7 @@ export const tabsContent = [
       {
         id: 1,
         url: "/assets/" + "images/salchicha-pavo-individual.webp",
-        name: "Individual",
+        name: "",
         description: ["500 gramos"],
       },
     ],
@@ -72,6 +76,8 @@ export const tabsContent = [
   {
     id: 4,
     name: "Pechuga de Pavo Rebanadas Sandwich",
+    tabIcon:
+      "/assets/" + "images/pechuga-pavo-rebanadas-sandwich-individual.webp",
     description:
       "Aquí encontrarás recetas para todos. Recetas pensadas con nuestros productos, en tus tiempos y sobre todo, con el mejor sabor, el de San Rafael Balance®",
     image: "/assets/" + "images/pechuga-pavo-rebanadas-sandwich-receta.webp",
@@ -81,14 +87,14 @@ export const tabsContent = [
       {
         id: 2,
         url: "/assets/" + "images/pechuga-pavo-family-size.webp",
-        name: "Familiar",
+        name: "Family size",
         description: ["350 gramos"],
       },
       {
         id: 3,
         url:
           "/assets/" + "images/pechuga-pavo-rebanadas-sandwich-individual.webp",
-        name: "Individual",
+        name: "",
         description: ["200 gramos"],
       },
     ],
@@ -96,6 +102,7 @@ export const tabsContent = [
   {
     id: 5,
     name: "Salchicha de Pechuga de Pavo",
+    tabIcon: "/assets/" + "images/salchicha-pechuga-pavo-individual.webp",
     description:
       "Aquí encontrarás recetas para todos. Recetas pensadas con nuestros productos, en tus tiempos y sobre todo, con el mejor sabor, el de San Rafael Balance®",
     image: "/assets/" + "images/salchicha-pechuga-pavo-receta-v2.webp",
@@ -105,7 +112,7 @@ export const tabsContent = [
       {
         id: 1,
         url: "/assets/" + "images/salchicha-pechuga-pavo-individual.webp",
-        name: "Individual",
+        name: "",
         description: ["500 gramos"],
       },
     ],
