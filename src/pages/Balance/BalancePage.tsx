@@ -27,7 +27,7 @@ const BalancePage: FC = () => {
   }, [balanceType]);
 
   if (!pageContent) {
-    return <NotFoundPage type="page" goBack={() => navigate(-1)} />;
+    return <NotFoundPage type="page" goBack={() => void navigate(-1)} />;
   }
 
   const seoData = {

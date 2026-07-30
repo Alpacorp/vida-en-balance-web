@@ -18,12 +18,13 @@ export const Hero: FC = () => {
   }, []);
 
   const handleTouchStart = (e: React.TouchEvent) => {
-    touchStartX.current = e.touches[0].clientX;
+    touchStartX.current = e.touches[0]?.clientX ?? null;
   };
 
   const handleTouchEnd = (e: React.TouchEvent) => {
-    if (touchStartX.current === null) return;
-    const diff = touchStartX.current - e.changedTouches[0].clientX;
+    const endX = e.changedTouches[0]?.clientX;
+    if (touchStartX.current === null || endX === undefined) return;
+    const diff = touchStartX.current - endX;
     if (Math.abs(diff) > 40) {
       setCurrentSlide((prev) =>
         diff > 0

@@ -17,7 +17,7 @@ const RecipeDetailPage: FC = () => {
   const recipe = recipesDetails[recipeId as keyof typeof recipesDetails];
 
   if (!recipe) {
-    return <NotFoundPage type="recipe" goBack={() => navigate(-1)} />;
+    return <NotFoundPage type="recipe" goBack={() => void navigate(-1)} />;
   }
 
   const seoData = {

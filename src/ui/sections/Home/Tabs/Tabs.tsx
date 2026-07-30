@@ -8,8 +8,11 @@ export const Tabs = () => {
   const [value, setValue] = useState(0);
   const [animationKey, setAnimationKey] = useState(0);
 
+  const activeTab = tabsContent[value];
+  if (!activeTab) return null;
+
   const { id, name, description, image, types, nutritional_link, recipes_link } =
-    tabsContent[value];
+    activeTab;
 
   const handleTabChange = (idx: number) => {
     setValue(idx);

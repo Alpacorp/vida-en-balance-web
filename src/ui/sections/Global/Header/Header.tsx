@@ -43,6 +43,7 @@ export const Header: FC = () => {
             to="/"
             className={`shrink-0 transition-all duration-300 ${isScrolled ? "mt-0" : "mt-6"}`}
             onMouseEnter={() => homePageLoader()}
+            onFocus={() => homePageLoader()}
           >
             <img
               src={headerLogo}
