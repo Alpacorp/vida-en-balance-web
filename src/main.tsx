@@ -16,11 +16,13 @@ createRoot(document.getElementById("root")!).render(
     <HelmetProvider>
       <BrowserRouter>
         <ScrollToTop />
-        <main className="grid min-h-dvh grid-rows-[auto,1fr,auto]">
+        <div className="grid min-h-dvh grid-rows-[auto_1fr_auto]">
           <Header />
-          <AppRoutes />
+          <main>
+            <AppRoutes />
+          </main>
           <Footer />
-        </main>
+        </div>
       </BrowserRouter>
     </HelmetProvider>
   </StrictMode>,

@@ -27,21 +27,14 @@ const HomePage: FC = () => {
   };
 
   return (
-    <main className="overflow-x-hidden">
+    <div className="overflow-x-hidden">
       <Seo {...seoData} />
       <Hero />
-      <Heading
-        tag="h1"
-        id="productos"
-        text="Productos San Rafael Balance®"
-      />
+      <Heading tag="h1" text="Productos San Rafael Balance®" />
       <Tabs />
-      <Heading
-        tag="h2"
-        text="Aprende a Cuidarte"
-      />
+      <Heading tag="h2" text="Aprende a Cuidarte" />
       <Health />
-    </main>
+    </div>
   );
 };
 

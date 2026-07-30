@@ -1,24 +1,28 @@
 import { defineConfig } from "vite";
-import react from '@vitejs/plugin-react';
+import react from "@vitejs/plugin-react";
 import viteCompression from "vite-plugin-compression";
 import { visualizer } from "rollup-plugin-visualizer";
 
-export default defineConfig({
+// El reporte del bundle es opcional: `npm run build:analyze`.
+// Se escribe fuera de dist/ para que nunca se publique junto al sitio.
+export default defineConfig(({ mode }) => ({
   plugins: [
     react(),
+    // Nginx sirve estos .gz directamente (gzip_static on en nginx.conf).
     viteCompression({
-      verbose: true,
+      verbose: false,
       disable: false,
       threshold: 10240,
       algorithm: "gzip",
       ext: ".gz",
     }),
-    visualizer({
-      filename: "./dist/report.html",
-      open: true,
-      gzipSize: true,
-      brotliSize: true,
-    }),
+    mode === "analyze" &&
+      visualizer({
+        filename: "./bundle-report.html",
+        open: true,
+        gzipSize: true,
+        brotliSize: true,
+      }),
   ],
   base: "/",
   resolve: {
@@ -41,12 +45,14 @@ export default defineConfig({
     cssCodeSplit: true,
     rollupOptions: {
       output: {
-        manualChunks: {
-          react: ["react", "react-dom"],
-          "react-router": ["react-router-dom"],
-          vendor: ["react-helmet-async"],
+        // Las dependencias cambian mucho menos que el contenido del sitio:
+        // aislarlas mantiene el chunk cacheado entre deploys. La versión
+        // anterior listaba "react-dom" (se importa "react-dom/client"), por lo
+        // que generaba un chunk vacío y React acababa en el bundle de entrada.
+        manualChunks(id) {
+          if (id.includes("node_modules")) return "vendor";
         },
       },
     },
   },
-});
+}));

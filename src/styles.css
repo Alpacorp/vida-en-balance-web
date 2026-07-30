@@ -1,6 +1,15 @@
 @import "tailwindcss";
 @config "../tailwind.config.js";
 
+/* Oculta la barra de scroll manteniendo el desplazamiento (carruseles
+   horizontales de presentaciones). La clase se usaba sin estar definida. */
+@utility scrollbar-hide {
+  scrollbar-width: none;
+  &::-webkit-scrollbar {
+    display: none;
+  }
+}
+
 @font-face {
   font-family: "Montserrat Black";
   font-style: normal;

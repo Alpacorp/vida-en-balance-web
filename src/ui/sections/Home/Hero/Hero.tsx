@@ -60,8 +60,11 @@ export const Hero: FC = () => {
               )}
               <img
                 src={slide.image}
-                alt={slide.title}
+                alt={slide.alt}
                 className={`h-full w-full object-cover ${slide.mobileImage ? "object-top sm:object-center" : "object-center"}`}
+                fetchPriority={index === 0 ? "high" : "low"}
+                loading={index === 0 ? "eager" : "lazy"}
+                decoding={index === 0 ? "sync" : "async"}
               />
             </picture>
             <div className="absolute inset-0 bg-linear-to-t from-black/30 to-transparent" />
@@ -70,12 +73,16 @@ export const Hero: FC = () => {
           {/* Content */}
           <div className="relative z-10 flex h-full items-center justify-center px-4">
             <div className="max-w-4xl text-center">
-              <h1 className="mb-4 text-4xl font-montserrat-bold text-white drop-shadow-[0_2px_8px_rgba(0,0,0,0.8)] sm:text-5xl md:text-6xl">
-                {slide.title}
-              </h1>
-              <p className="mb-8 text-lg text-white drop-shadow-[0_1px_6px_rgba(0,0,0,0.9)] sm:text-xl md:text-2xl">
-                {slide.subtitle}
-              </p>
+              {slide.title && (
+                <h2 className="mb-4 text-4xl font-montserrat-bold text-white drop-shadow-[0_2px_8px_rgba(0,0,0,0.8)] sm:text-5xl md:text-6xl">
+                  {slide.title}
+                </h2>
+              )}
+              {slide.subtitle && (
+                <p className="mb-8 text-lg text-white drop-shadow-[0_1px_6px_rgba(0,0,0,0.9)] sm:text-xl md:text-2xl">
+                  {slide.subtitle}
+                </p>
+              )}
               <div className="flex flex-wrap justify-center gap-4">
                 {slide.ctaPrimary.isExternal ? (
                   <a
@@ -129,7 +136,7 @@ export const Hero: FC = () => {
         className="absolute left-4 top-1/2 z-20 -translate-y-1/2 rounded-md bg-white/10 p-2 text-white transition-colors hover:bg-white/20"
         aria-label="Previous slide"
       >
-        <img src={ArrowLeftIcon} alt="left" className="h-6 w-6" />
+        <img src={ArrowLeftIcon} alt="" className="h-6 w-6" />
       </button>
       <button
         onClick={() =>
@@ -140,7 +147,7 @@ export const Hero: FC = () => {
         className="absolute right-4 top-1/2 z-20 -translate-y-1/2 rounded-md bg-white/10 p-2 text-white transition-colors hover:bg-white/20"
         aria-label="Next slide"
       >
-        <img src={ArrowRightIcon} alt="right" className="h-6 w-6" />
+        <img src={ArrowRightIcon} alt="" className="h-6 w-6" />
       </button>
 
       {/* Dots Navigation */}
