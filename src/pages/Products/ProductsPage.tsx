@@ -41,7 +41,7 @@ const ProductsPage: FC = () => {
             <h1 className="text-3xl md:text-4xl font-montserrat-bold mb-4">
               Nuestros Productos
             </h1>
-            <p className="text-xl font-montserrat-regular max-w-2xl">
+            <p className="text-xl font-montserrat-medium max-w-2xl">
               Toda nuestra línea de productos de pavo: nutritivos, bajos en
               grasa y sin conservadores artificiales.
             </p>

@@ -20,8 +20,6 @@ export default {
       fontFamily: {
         "montserrat-medium": ["Montserrat Medium", "sans-serif"],
         "montserrat-bold": ["Montserrat Bold", "sans-serif"],
-        "montserrat-regular": ["Montserrat Regular", "sans-serif"],
-        "montserrat-semiBold": ["Montserrat SemiBold", "sans-serif"],
       },
       keyframes: {
         "fade-in-right": {

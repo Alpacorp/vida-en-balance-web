@@ -100,7 +100,7 @@ export const ContentTab: FC<ContentProps> = ({
                       </h3>
                       {type.description.map((desc) => (
                         <p
-                          className="text-sm font-montserrat-regular text-gray-700"
+                          className="text-sm font-montserrat-medium text-gray-700"
                           key={desc}
                         >
                           {desc}

@@ -10,14 +10,15 @@
   }
 }
 
-/* Solo se declaran las familias que el proyecto usa de verdad. Había 17
-   declaradas y 13 no se aplicaban en ninguna parte.
+/* Todo el texto del sitio se resuelve con estos dos pesos. Regular y SemiBold
+   se retiraron: pesaban 477 KB entre los dos —venían de un subset distinto,
+   con el juego de caracteres completo— y solo cubrían cinco usos, que ahora
+   usan Medium y Bold.
 
    font-display: swap es obligatorio aquí: sin él el navegador oculta el texto
-   hasta que descarga la fuente (FOIT), y estos archivos pesan ~100 KB. Con
-   swap el texto se pinta de inmediato con la fuente de respaldo. Las dos
-   familias críticas van precargadas desde index.html para que el reemplazo
-   sea casi imperceptible. */
+   hasta que descarga la fuente (FOIT). Con swap el texto se pinta de inmediato
+   con la fuente de respaldo. Ambas van precargadas desde index.html para que
+   el reemplazo sea casi imperceptible. */
 
 @font-face {
   font-family: "Montserrat Medium";
@@ -35,18 +36,3 @@
   src: url("/assets/fonts/Montserrat-Bold.woff2") format("woff2");
 }
 
-@font-face {
-  font-family: "Montserrat Regular";
-  font-style: normal;
-  font-weight: 400;
-  font-display: swap;
-  src: url("/assets/fonts/Montserrat-Regular.woff2") format("woff2");
-}
-
-@font-face {
-  font-family: "Montserrat SemiBold";
-  font-style: normal;
-  font-weight: 600;
-  font-display: swap;
-  src: url("/assets/fonts/Montserrat-SemiBold.woff2") format("woff2");
-}

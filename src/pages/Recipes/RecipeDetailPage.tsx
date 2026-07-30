@@ -143,7 +143,7 @@ const RecipeDetailPage: FC = () => {
               {recipe.title}
             </h1>
             <div className="mb-8">
-              <h2 className="text-2xl font-montserrat-semiBold mb-4 text-secondary">
+              <h2 className="text-2xl font-montserrat-bold mb-4 text-secondary">
                 Ingredientes
               </h2>
               <ul className="space-y-2">
@@ -159,7 +159,7 @@ const RecipeDetailPage: FC = () => {
               </ul>
             </div>
             <div>
-              <h2 className="text-2xl font-montserrat-semiBold mb-4 text-secondary">
+              <h2 className="text-2xl font-montserrat-bold mb-4 text-secondary">
                 Preparación
               </h2>
               <ol className="space-y-4">
