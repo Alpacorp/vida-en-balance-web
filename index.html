@@ -6,11 +6,11 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
     <title>San Rafael Balance®</title>
 
-    <!-- Las dos familias que cubren casi todo el texto visible. Sin preload el
-         navegador no las descubre hasta haber descargado y aplicado el CSS,
-         lo que alarga el parpadeo a la fuente de respaldo.
-         crossorigin es obligatorio: las fuentes se piden siempre en modo CORS
-         y sin el atributo el preload se descartaría y se pediría dos veces. -->
+    <!-- The two families covering nearly all visible text. Without preload the
+         browser only discovers them after fetching and applying the CSS, which
+         lengthens the flash of fallback text.
+         crossorigin is required: fonts are always requested in CORS mode, and
+         without it the preload would be discarded and the file fetched twice. -->
     <link rel="preload" as="font" type="font/woff2"
           href="/assets/fonts/Montserrat-Medium.woff2" crossorigin/>
     <link rel="preload" as="font" type="font/woff2"

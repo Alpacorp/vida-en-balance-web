@@ -14,9 +14,9 @@ export default {
         quaternary: "#88C2C8",
         white: "#FFFFFF",
       },
-      // Solo las familias con @font-face declarado en styles.css. Exponer
-      // utilidades para fuentes que no se cargan produce texto en la fuente de
-      // respaldo sin ningún aviso.
+      // Only families with a @font-face declared in styles.css. Exposing
+      // utilities for fonts that are never loaded silently renders text in the
+      // fallback with no warning.
       fontFamily: {
         "montserrat-medium": ["Montserrat Medium", "sans-serif"],
         "montserrat-bold": ["Montserrat Bold", "sans-serif"],
