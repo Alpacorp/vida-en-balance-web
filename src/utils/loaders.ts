@@ -1,10 +1,10 @@
 /**
- * Precarga de chunks de ruta, disparada en hover/focus de los enlaces.
+ * Route chunk prefetching, triggered on link hover/focus.
  *
- * Los loaders devuelven `void`, no la promesa: se usan siempre como manejadores
- * de eventos y devolver una promesa ahí deja el rechazo sin capturar. Un fallo
- * de red al precargar es irrelevante —la navegación real volverá a pedir el
- * chunk—, así que se descarta en silencio.
+ * Loaders return `void` rather than the promise: they are always used as event
+ * handlers, and returning a promise there leaves the rejection uncaught. A
+ * network failure while prefetching is irrelevant — the real navigation will
+ * request the chunk again — so it is swallowed silently.
  */
 type RouteLoader = () => void;
 
@@ -12,7 +12,7 @@ const prefetch =
   (importer: () => Promise<unknown>): RouteLoader =>
   () => {
     void importer().catch(() => {
-      /* la precarga es best-effort: si falla, la navegación reintenta */
+      /* prefetching is best-effort: if it fails, navigation retries */
     });
   };
 

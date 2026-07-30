@@ -89,8 +89,8 @@ export const ArticleLayout: FC<ArticleLayoutProps> = ({
               <button
                 onClick={() => {
                   if (navigator.share) {
-                    // Cancelar la hoja de compartir rechaza la promesa; sin
-                    // catch queda como unhandled rejection en producción.
+                    // Dismissing the share sheet rejects the promise; without
+                    // a catch it becomes an unhandled rejection in production.
                     void navigator
                       .share({
                         title: title,
@@ -98,7 +98,7 @@ export const ArticleLayout: FC<ArticleLayoutProps> = ({
                         url: window.location.href,
                       })
                       .catch(() => {
-                        /* el usuario canceló el diálogo */
+                        /* the user dismissed the dialog */
                       });
                   }
                 }}

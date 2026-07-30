@@ -1,14 +1,16 @@
-import { defineConfig } from "vite";
+// defineConfig comes from vitest/config rather than vite so the `test` block is
+// typed. Vitest then reuses the `resolve` aliases instead of duplicating them.
+import { defineConfig } from "vitest/config";
 import react from "@vitejs/plugin-react";
 import viteCompression from "vite-plugin-compression";
 import { visualizer } from "rollup-plugin-visualizer";
 
-// El reporte del bundle es opcional: `npm run build:analyze`.
-// Se escribe fuera de dist/ para que nunca se publique junto al sitio.
+// The bundle report is opt-in: `npm run build:analyze`.
+// It is written outside dist/ so it never ships alongside the site.
 export default defineConfig(({ mode }) => ({
   plugins: [
     react(),
-    // Nginx sirve estos .gz directamente (gzip_static on en nginx.conf).
+    // Nginx serves these .gz files directly (gzip_static on in nginx.conf).
     viteCompression({
       verbose: false,
       disable: false,
@@ -34,6 +36,7 @@ export default defineConfig(({ mode }) => ({
       "@pages": "/src/pages",
       "@public": "/public",
       "@routes": "/src/routes",
+      "@test": "/src/test",
       "@ui": "/src/ui",
       "@utils": "/src/utils",
       "@interfaces": "/src/interfaces",
@@ -45,14 +48,31 @@ export default defineConfig(({ mode }) => ({
     cssCodeSplit: true,
     rollupOptions: {
       output: {
-        // Las dependencias cambian mucho menos que el contenido del sitio:
-        // aislarlas mantiene el chunk cacheado entre deploys. La versión
-        // anterior listaba "react-dom" (se importa "react-dom/client"), por lo
-        // que generaba un chunk vacío y React acababa en el bundle de entrada.
+        // Dependencies change far less often than the site content, so
+        // isolating them keeps the chunk cached across deploys. The previous
+        // version listed "react-dom" while the app imports "react-dom/client",
+        // producing an empty chunk and bundling React into the entry.
         manualChunks(id) {
           if (id.includes("node_modules")) return "vendor";
         },
       },
+    },
+  },
+  test: {
+    environment: "jsdom",
+    globals: false,
+    setupFiles: ["./src/test/setup.ts"],
+    include: ["src/**/*.test.{ts,tsx}"],
+    coverage: {
+      provider: "v8",
+      reporter: ["text", "html"],
+      // Content is flat data and .d.ts files have no runtime.
+      exclude: [
+        "src/content/**",
+        "src/test/**",
+        "src/**/*.d.ts",
+        "src/main.tsx",
+      ],
     },
   },
 }));

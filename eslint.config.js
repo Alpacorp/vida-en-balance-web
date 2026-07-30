@@ -23,7 +23,9 @@ export default tseslint.config(
     languageOptions: {
       globals: globals.browser,
       parserOptions: {
-        projectService: true,
+        // Both projects are listed explicitly: tsconfig.json excludes the test
+        // files, so projectService alone would fail to resolve them.
+        project: ["./tsconfig.json", "./tsconfig.test.json"],
         tsconfigRootDir: import.meta.dirname,
       },
     },
@@ -31,22 +33,22 @@ export default tseslint.config(
       react: { version: "detect" },
     },
     rules: {
-      // TypeScript ya resuelve los módulos y los alias @ui/@content/...;
-      // el resolver de eslint-plugin-import no los conoce y daría falsos
-      // positivos. Las reglas útiles del plugin sí se mantienen.
+      // TypeScript already resolves modules and the @ui/@content aliases; the
+      // eslint-plugin-import resolver does not know them and would report false
+      // positives. The plugin's useful rules are kept.
       "import/no-unresolved": "off",
       "import/named": "off",
       "import/no-duplicates": "error",
 
-      // El sitio es en español: los textos de accesibilidad deben serlo.
+      // The site is in Spanish, so accessibility text must be too.
       "jsx-a11y/lang": "error",
 
-      // TEMPORAL — degradado a aviso, no silenciado.
-      // Marca los 5 sitios donde se deriva estado de la URL con
-      // useState+useEffect (BalancePage, NutritionalPage, ArticlePage,
-      // Header, NutritionalHeader). Provoca un render intermedio que muestra
-      // el 404 antes de la página real. Se corrige en la fase de refactor de
-      // React; subir a "error" en cuanto no queden casos.
+      // TEMPORARY — downgraded to a warning, not turned off.
+      // Flags the 5 places that derive state from the URL with
+      // useState+useEffect (BalancePage, NutritionalPage, ArticlePage, Header,
+      // NutritionalHeader). They cause an intermediate render that shows the
+      // 404 page before the real one. Fixed in the React refactor phase; raise
+      // back to "error" once no cases remain.
       "react-hooks/set-state-in-effect": "warn",
 
       "@typescript-eslint/no-unused-vars": [
@@ -56,6 +58,6 @@ export default tseslint.config(
     },
   },
 
-  // Debe ir al final: desactiva las reglas que chocan con Prettier.
+  // Must come last: turns off the rules that conflict with Prettier.
   configPrettier,
 );

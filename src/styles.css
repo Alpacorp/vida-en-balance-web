@@ -1,8 +1,33 @@
 @import "tailwindcss";
 @config "../tailwind.config.js";
 
-/* Oculta la barra de scroll manteniendo el desplazamiento (carruseles
-   horizontales de presentaciones). La clase se usaba sin estar definida. */
+/* Two Tailwind v4 breaking changes this project never migrated. Both are
+   fixed globally rather than class by class, because every existing usage
+   relies on the v3 behaviour and new code would hit the same trap. */
+@layer base {
+  /* v4 changed the default border colour from gray-200 to currentColor, so
+     any `border` / `border-t` written without an explicit colour paints in
+     the inherited text colour — a hard black line. Shows up in the product
+     tab list on the home page and in the article layout dividers. */
+  *,
+  ::after,
+  ::before,
+  ::backdrop,
+  ::file-selector-button {
+    border-color: var(--color-gray-200, currentColor);
+  }
+
+  /* v4 also stopped forcing `cursor: pointer` on buttons, following the
+     browser default. Every button in the app was written expecting the old
+     behaviour, so none of them showed the click cursor. */
+  button:not(:disabled),
+  [role="button"]:not(:disabled) {
+    cursor: pointer;
+  }
+}
+
+/* Hides the scrollbar while keeping the element scrollable (horizontal
+   carousels of product presentations). The class was used but never defined. */
 @utility scrollbar-hide {
   scrollbar-width: none;
   &::-webkit-scrollbar {
@@ -10,15 +35,15 @@
   }
 }
 
-/* Todo el texto del sitio se resuelve con estos dos pesos. Regular y SemiBold
-   se retiraron: pesaban 477 KB entre los dos —venían de un subset distinto,
-   con el juego de caracteres completo— y solo cubrían cinco usos, que ahora
-   usan Medium y Bold.
+/* These two weights cover every piece of text on the site. Regular and
+   SemiBold were dropped: together they weighed 477 KB — they came from a
+   different subset carrying the full character set — and covered only five
+   usages, which now use Medium and Bold.
 
-   font-display: swap es obligatorio aquí: sin él el navegador oculta el texto
-   hasta que descarga la fuente (FOIT). Con swap el texto se pinta de inmediato
-   con la fuente de respaldo. Ambas van precargadas desde index.html para que
-   el reemplazo sea casi imperceptible. */
+   font-display: swap is mandatory here: without it the browser hides the text
+   until the font finishes downloading (FOIT). With swap the text paints
+   immediately in the fallback. Both are preloaded from index.html so the
+   replacement is barely noticeable. */
 
 @font-face {
   font-family: "Montserrat Medium";

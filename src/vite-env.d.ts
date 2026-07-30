@@ -1,7 +1,7 @@
 /// <reference types="vite/client" />
 
 interface ImportMetaEnv {
-  /** URL pública del sitio. La inyecta el pipeline como build-arg. */
+  /** Public site URL. Injected by the pipeline as a build arg. */
   readonly VITE_BASE_URL: string;
   readonly VITE_APP_MODE?: string;
 }

@@ -116,8 +116,8 @@ export interface Slide {
   subtitle?: string;
   image: string;
   /**
-   * Texto alternativo del banner. Obligatorio: estas imágenes llevan el texto
-   * de campaña incrustado, así que el alt debe reproducirlo (WCAG 1.1.1).
+   * Banner alternative text. Required: these images carry the campaign copy
+   * baked in, so the alt has to reproduce it (WCAG 1.1.1).
    */
   alt: string;
   mobileImage?: string;
