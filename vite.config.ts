@@ -43,7 +43,10 @@ export default defineConfig(({ mode }) => ({
     },
   },
   build: {
-    minify: "esbuild",
+    // Vite 8 bundles with Rolldown and minifies with Oxc. Asking for "esbuild"
+    // takes a deprecated path that now needs esbuild installed separately, so
+    // the default minifier is used instead.
+    minify: true,
     sourcemap: false,
     cssCodeSplit: true,
     rollupOptions: {
