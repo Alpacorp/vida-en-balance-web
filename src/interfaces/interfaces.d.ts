@@ -115,6 +115,11 @@ export interface Slide {
   title?: string;
   subtitle?: string;
   image: string;
+  /**
+   * Texto alternativo del banner. Obligatorio: estas imágenes llevan el texto
+   * de campaña incrustado, así que el alt debe reproducirlo (WCAG 1.1.1).
+   */
+  alt: string;
   mobileImage?: string;
   ctaPrimary: {
     text: string;
