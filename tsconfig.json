@@ -14,6 +14,11 @@
     "noEmit": true,
     "tsBuildInfoFile": "./node_modules/.tmp/tsconfig.tsbuildinfo",
     "jsx": "react-jsx",
+    // Without this, TypeScript auto-includes every @types package, so
+    // @types/node would leak process/fs into browser code. vite/client still
+    // applies through the /// reference in vite-env.d.ts, and @types/react
+    // through normal module resolution.
+    "types": [],
 
     /* Linting */
     "strict": true,
@@ -31,11 +36,13 @@
       "@pages/*": ["./src/pages/*"],
       "@public/*": ["./public/*"],
       "@routes/*": ["./src/routes/*"],
+      "@test/*": ["./src/test/*"],
       "@ui/*": ["./src/ui/*"],
       "@utils/*": ["./src/utils/*"],
       "@interfaces/*": ["./src/interfaces/*"],
     }
   },
   "include": ["src"],
+  "exclude": ["src/test", "src/**/*.test.ts", "src/**/*.test.tsx"],
   "references": [{ "path": "./tsconfig.node.json" }],
 }

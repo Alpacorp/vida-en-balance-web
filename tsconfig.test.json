@@ -1,0 +1,16 @@
+{
+  "extends": "./tsconfig.json",
+  "compilerOptions": {
+    "noEmit": true,
+    // Only this project gets the Node types: the tests read public/ from disk
+    // and listen for unhandled rejections. The app project (tsconfig.json)
+    // deliberately lacks them, so browser code using process or fs still
+    // fails there.
+    "types": ["node"]
+  },
+  // Overrides the parent exclude, which filters out the test files. App
+  // sources are included so imports resolve; they are also checked by the app
+  // project, which is the one that enforces the no-Node-API rule.
+  "exclude": [],
+  "include": ["src"]
+}
