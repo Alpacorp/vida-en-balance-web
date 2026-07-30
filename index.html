@@ -5,6 +5,16 @@
     <link rel="icon" type="image/svg+xml" href="/favicon.jpg"/>
     <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
     <title>San Rafael Balance®</title>
+
+    <!-- Las dos familias que cubren casi todo el texto visible. Sin preload el
+         navegador no las descubre hasta haber descargado y aplicado el CSS,
+         lo que alarga el parpadeo a la fuente de respaldo.
+         crossorigin es obligatorio: las fuentes se piden siempre en modo CORS
+         y sin el atributo el preload se descartaría y se pediría dos veces. -->
+    <link rel="preload" as="font" type="font/woff2"
+          href="/assets/fonts/Montserrat-Medium.woff2" crossorigin/>
+    <link rel="preload" as="font" type="font/woff2"
+          href="/assets/fonts/Montserrat-Bold.woff2" crossorigin/>
 </head>
 <body>
 <div id="root"></div>
