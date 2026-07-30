@@ -43,7 +43,7 @@ const RecipesHomePage: FC = () => {
             <h1 className="text-3xl md:text-4xl font-montserrat-bold mb-4">
               Recetas San Rafael Balance®
             </h1>
-            <p className="text-xl font-montserrat-regular">
+            <p className="text-xl font-montserrat-medium">
               Descubre deliciosas recetas con nuestros productos San Rafael Balance®
             </p>
           </div>
