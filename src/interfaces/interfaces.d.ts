@@ -82,8 +82,8 @@ export interface ContentProps {
   title?: string;
   description?: string;
   image?: string;
-  nutritional_link?: string | "";
-  recipes_link: string | "";
+  nutritional_link?: string;
+  recipes_link: string;
   types?: {
     id: number;
     url: string;

@@ -31,7 +31,7 @@ const NutritionalPage = () => {
   };
 
   if (!activeProduct) {
-    return <NotFoundPage type="page" goBack={() => navigate(-1)} />;
+    return <NotFoundPage type="page" goBack={() => void navigate(-1)} />;
   }
 
   const seoData = {
@@ -45,7 +45,7 @@ const NutritionalPage = () => {
       "@context": "https://schema.org",
       "@type": "Product",
       name: activeProduct.name,
-      image: activeProduct.presentations[0].image,
+      image: activeProduct.presentations[0]?.image ?? activeProduct.image,
       description: `Información nutricional de ${activeProduct.name}`,
       brand: {
         "@type": "Brand",

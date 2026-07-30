@@ -28,7 +28,7 @@ export const ArticleLayout: FC<ArticleLayoutProps> = ({
         <div className="absolute inset-x-0 bottom-0 p-8 text-white">
           <div className="mx-auto max-w-4xl">
             <button
-              onClick={() => navigate(-1)}
+              onClick={() => void navigate(-1)}
               className="mb-6 inline-flex items-center text-sm font-montserrat-medium text-white/80 hover:text-white"
             >
               <svg
@@ -89,11 +89,17 @@ export const ArticleLayout: FC<ArticleLayoutProps> = ({
               <button
                 onClick={() => {
                   if (navigator.share) {
-                    navigator.share({
-                      title: title,
-                      text: subtitle,
-                      url: window.location.href,
-                    });
+                    // Cancelar la hoja de compartir rechaza la promesa; sin
+                    // catch queda como unhandled rejection en producción.
+                    void navigator
+                      .share({
+                        title: title,
+                        text: subtitle,
+                        url: window.location.href,
+                      })
+                      .catch(() => {
+                        /* el usuario canceló el diálogo */
+                      });
                   }
                 }}
                 className="inline-flex items-center text-sm text-gray-600 hover:text-gray-900"

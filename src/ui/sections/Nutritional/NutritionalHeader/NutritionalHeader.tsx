@@ -24,7 +24,7 @@ export const NutritionalHeader: FC<NutritionalHeaderProps> = ({
     );
     setOtherProducts(remainingProducts.slice(0, 4));
     onProductChange(clickedProduct);
-    navigate(clickedProduct.url as string);
+    void navigate(clickedProduct.url);
   };
 
   const gradientStyle = {
