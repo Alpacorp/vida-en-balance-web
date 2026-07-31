@@ -1,7 +1,6 @@
 import { describe, it, expect } from "vitest";
 import { render, screen } from "@testing-library/react";
 import { MemoryRouter } from "react-router-dom";
-import { HelmetProvider } from "react-helmet-async";
 
 import AppRoutes from "./AppRoutes";
 import { balanceContent } from "@content/balance/balance";
@@ -26,11 +25,9 @@ import { recipesDetails } from "@content/recipes/recipesDetails";
 
 function renderAt(path: string) {
   return render(
-    <HelmetProvider>
-      <MemoryRouter initialEntries={[path]}>
-        <AppRoutes />
-      </MemoryRouter>
-    </HelmetProvider>,
+    <MemoryRouter initialEntries={[path]}>
+      <AppRoutes />
+    </MemoryRouter>,
   );
 }
 

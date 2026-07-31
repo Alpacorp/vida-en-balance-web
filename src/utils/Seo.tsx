@@ -1,5 +1,6 @@
 import { FC } from "react";
-import { Helmet, HelmetProvider } from "react-helmet-async";
+
+import { IS_INDEXABLE, toAbsoluteUrl } from "@config/config";
 
 interface SEOProps {
   title: string;
@@ -13,6 +14,16 @@ interface SEOProps {
   noFollow?: boolean;
 }
 
+/**
+ * React 19 hoists <title>, <meta> and <link> into <head> by itself, both in the
+ * browser and while prerendering, so no Helmet wrapper is needed. The previous
+ * version mounted a second <HelmetProvider> inside every page — a provider
+ * nested under the one in main.tsx — which is also what made the tree
+ * impossible to render on the server.
+ *
+ * The JSON-LD <script> is not a hoistable tag, so it stays where it renders.
+ * That is fine: Google reads structured data from the body as well as the head.
+ */
 export const Seo: FC<SEOProps> = ({
   title,
   description,
@@ -24,29 +35,38 @@ export const Seo: FC<SEOProps> = ({
   noIndex = false,
   noFollow = false,
 }) => {
-  const robotsContent = `${noIndex ? "noindex" : "index"}, ${noFollow ? "nofollow" : "follow"}`;
+  const indexRule = IS_INDEXABLE && !noIndex ? "index" : "noindex";
+  const followRule = noFollow ? "nofollow" : "follow";
+
+  // Social crawlers reject relative og:image values, and every content entry
+  // stores its image as a site-relative path.
+  const image = imageSeo ? toAbsoluteUrl(imageSeo) : undefined;
+  const canonical = toAbsoluteUrl(url);
 
   return (
-    <HelmetProvider>
-      <Helmet>
-        <title>{title}</title>
-        <meta name="description" content={description} />
-        <meta name="keywords" content={keywords} />
-        <meta name="robots" content={robotsContent} />
-        <meta property="og:title" content={title} />
-        <meta property="og:description" content={description} />
-        <meta property="og:type" content={type} />
-        <meta property="og:url" content={url} />
-        {imageSeo && <meta property="og:image" content={imageSeo} />}
-        <meta name="twitter:card" content="summary_large_image" />
-        <meta name="twitter:title" content={title} />
-        <meta name="twitter:description" content={description} />
-        {imageSeo && <meta name="twitter:image" content={imageSeo} />}
-        <link rel="canonical" href={url} />
-        {schema && (
-          <script type="application/ld+json">{JSON.stringify(schema)}</script>
-        )}
-      </Helmet>
-    </HelmetProvider>
+    <>
+      <title>{title}</title>
+      <meta name="description" content={description} />
+      <meta name="keywords" content={keywords} />
+      <meta name="robots" content={`${indexRule}, ${followRule}`} />
+      <link rel="canonical" href={canonical} />
+
+      <meta property="og:title" content={title} />
+      <meta property="og:description" content={description} />
+      <meta property="og:type" content={type} />
+      <meta property="og:url" content={canonical} />
+      <meta property="og:locale" content="es_CO" />
+      <meta property="og:site_name" content="San Rafael Balance®" />
+      {image && <meta property="og:image" content={image} />}
+
+      <meta name="twitter:card" content="summary_large_image" />
+      <meta name="twitter:title" content={title} />
+      <meta name="twitter:description" content={description} />
+      {image && <meta name="twitter:image" content={image} />}
+
+      {schema && (
+        <script type="application/ld+json">{JSON.stringify(schema)}</script>
+      )}
+    </>
   );
 };
