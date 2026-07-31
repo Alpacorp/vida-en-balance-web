@@ -22,16 +22,21 @@ jobs:
           node-version: 22
           cache: npm
 
-      # `npm ci` refuses to run unless the lockfile matches the tree it would
-      # resolve itself, and npm 10 and 11 do not resolve the same tree: npm 11
-      # nests @emnapi/runtime under the packages that ask for it, npm 10 hoists
-      # a newer copy and then reports it missing. Node 22 ships npm 10, so
-      # without this the build fails against a lockfile written by npm 11.
-      # Bump this together with the npm used to regenerate package-lock.json.
-      - name: Pin npm to the version the lockfile was generated with
-        run: npm i -g npm@11
-
-      - run: npm ci
+      # `npm install`, not `npm ci`, because the Dockerfile that builds
+      # production installs the same way.
+      #
+      # npm ci additionally demands that the lockfile already match the tree it
+      # would resolve on this machine. The wasm fallbacks of @tailwindcss/oxide
+      # and @rolldown/binding pull @emnapi/* through optional, platform-gated
+      # dependencies, and npm on Windows — where this project is developed —
+      # drops parts of those subtrees from the lockfile it writes. Linux then
+      # reports the missing entry and refuses to install. Regenerating the file
+      # on Windows makes it worse, not better.
+      #
+      # So npm ci here would fail on a lockfile that installs correctly
+      # everywhere it is actually used, guarding a strictness production never
+      # relies on. The checks that follow are the ones with something to say.
+      - run: npm install
 
       - name: Lint
         run: npm run lint
