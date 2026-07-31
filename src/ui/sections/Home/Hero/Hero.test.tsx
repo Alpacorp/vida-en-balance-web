@@ -1,6 +1,6 @@
 import { describe, it, expect, vi, beforeEach, afterEach } from "vitest";
 import { act } from "react";
-import { render, screen } from "@testing-library/react";
+import { render, screen, fireEvent } from "@testing-library/react";
 import userEvent from "@testing-library/user-event";
 import { MemoryRouter } from "react-router-dom";
 
@@ -24,19 +24,47 @@ function slideImages() {
 }
 
 /**
- * Index of the visible slide.
+ * Index of the slide being shown, read from the state the carousel exposes.
  *
- * This has to read a CSS class because the carousel exposes no accessible
- * state: the dots carry no aria-current and there is no live region, so
- * nothing tells assistive tech — or a test — which slide is showing. Replace
- * this helper with a role/state query once the accessibility pass lands.
+ * This used to have to read a CSS class, because which slide was showing lived
+ * nowhere else — assistive tech had no way to tell either. aria-current on the
+ * dots is now the source of truth, so the test asks the same question a screen
+ * reader would.
  */
-function visibleSlideIndex(container: HTMLElement) {
-  // Only the slide panels animate their opacity; the inner image wrapper and
-  // the gradient overlay share `absolute inset-0` and must not be matched.
-  const panels = [...container.querySelectorAll<HTMLElement>("div.transition-opacity")];
-  return panels.findIndex((p) => p.classList.contains("opacity-100"));
+function visibleSlideIndex() {
+  const dots = screen.getAllByRole("button", { name: /^Ir a la diapositiva/ });
+  return dots.findIndex((dot) => dot.getAttribute("aria-current") === "true");
 }
+
+/** The slide panels, in DOM order. */
+function slidePanels() {
+  return screen.getAllByRole("group", { hidden: true });
+}
+
+/**
+ * Forces the reduced-motion media query on or off.
+ *
+ * jsdom implements matchMedia but answers `false` to everything, so the
+ * reduced-motion path is unreachable without a stub.
+ */
+function stubReducedMotion(reduced: boolean) {
+  vi.stubGlobal(
+    "matchMedia",
+    (query: string): MediaQueryList =>
+      ({
+        matches: query.includes("prefers-reduced-motion") ? reduced : false,
+        media: query,
+        onchange: null,
+        addEventListener: () => undefined,
+        removeEventListener: () => undefined,
+        addListener: () => undefined,
+        removeListener: () => undefined,
+        dispatchEvent: () => false,
+      }) as unknown as MediaQueryList,
+  );
+}
+
+afterEach(() => vi.unstubAllGlobals());
 
 describe("Hero", () => {
   it("renders one image per slide, all with alternative text", () => {
@@ -57,7 +85,10 @@ describe("Hero", () => {
     // The three slides carry their copy inside the image. Rendering the
     // heading unconditionally produced three empty <h1> on the home page.
     for (const node of container.querySelectorAll("h1, h2, h3, p")) {
-      expect(node.textContent?.trim(), `empty <${node.tagName.toLowerCase()}>`).not.toBe("");
+      expect(
+        node.textContent?.trim(),
+        `empty <${node.tagName.toLowerCase()}>`,
+      ).not.toBe("");
     }
   });
 
@@ -90,35 +121,99 @@ describe("Hero", () => {
     await expectNoA11yViolations(container);
   });
 
+  describe("accessible structure", () => {
+    it("announces itself as a carousel of slides", () => {
+      renderHero();
+
+      const carousel = screen.getByRole("region", { name: "Destacados" });
+      expect(carousel).toHaveAttribute("aria-roledescription", "carrusel");
+
+      const panels = slidePanels();
+      expect(panels).toHaveLength(slides.length);
+      panels.forEach((panel, index) => {
+        expect(panel).toHaveAttribute("aria-roledescription", "diapositiva");
+        expect(panel).toHaveAccessibleName(`${index + 1} de ${slides.length}`);
+      });
+    });
+
+    it("labels its controls in Spanish", () => {
+      renderHero();
+
+      // These were shipped in English on a Spanish site, so a screen reader
+      // read them with the wrong pronunciation rules.
+      expect(
+        screen.getByRole("button", { name: "Diapositiva anterior" }),
+      ).toBeInTheDocument();
+      expect(
+        screen.getByRole("button", { name: "Diapositiva siguiente" }),
+      ).toBeInTheDocument();
+      expect(
+        screen.getByRole("button", { name: "Ir a la diapositiva 1" }),
+      ).toBeInTheDocument();
+    });
+
+    it("keeps every slide but the visible one out of reach", () => {
+      renderHero();
+
+      // opacity-0 hides a slide from sight only. Its links stayed in the tab
+      // order, so keyboard users landed on controls they could not see.
+      slidePanels().forEach((panel, index) => {
+        if (index === 0) expect(panel).not.toHaveAttribute("inert");
+        else expect(panel).toHaveAttribute("inert");
+      });
+    });
+
+    it("moves inert and aria-current together with the slide", async () => {
+      const user = userEvent.setup();
+      renderHero();
+
+      await user.click(
+        screen.getByRole("button", { name: "Diapositiva siguiente" }),
+      );
+
+      expect(visibleSlideIndex()).toBe(1);
+      expect(slidePanels()[1]).not.toHaveAttribute("inert");
+      expect(slidePanels()[0]).toHaveAttribute("inert");
+    });
+  });
+
   describe("navigation", () => {
     it("advances and goes back with the arrow buttons", async () => {
       const user = userEvent.setup();
-      const { container } = renderHero();
-      expect(visibleSlideIndex(container)).toBe(0);
+      renderHero();
+      expect(visibleSlideIndex()).toBe(0);
 
-      await user.click(screen.getByRole("button", { name: /next slide/i }));
-      expect(visibleSlideIndex(container)).toBe(1);
+      await user.click(
+        screen.getByRole("button", { name: "Diapositiva siguiente" }),
+      );
+      expect(visibleSlideIndex()).toBe(1);
 
-      await user.click(screen.getByRole("button", { name: /previous slide/i }));
-      expect(visibleSlideIndex(container)).toBe(0);
+      await user.click(
+        screen.getByRole("button", { name: "Diapositiva anterior" }),
+      );
+      expect(visibleSlideIndex()).toBe(0);
     });
 
     it("wraps around when going back from the first slide", async () => {
       const user = userEvent.setup();
-      const { container } = renderHero();
+      renderHero();
 
-      await user.click(screen.getByRole("button", { name: /previous slide/i }));
-      expect(visibleSlideIndex(container)).toBe(slides.length - 1);
+      await user.click(
+        screen.getByRole("button", { name: "Diapositiva anterior" }),
+      );
+      expect(visibleSlideIndex()).toBe(slides.length - 1);
     });
 
     it("jumps to a slide from its dot", async () => {
       const user = userEvent.setup();
-      const { container } = renderHero();
+      renderHero();
 
       await user.click(
-        screen.getByRole("button", { name: `Go to slide ${slides.length}` }),
+        screen.getByRole("button", {
+          name: `Ir a la diapositiva ${slides.length}`,
+        }),
       );
-      expect(visibleSlideIndex(container)).toBe(slides.length - 1);
+      expect(visibleSlideIndex()).toBe(slides.length - 1);
     });
   });
 
@@ -126,17 +221,68 @@ describe("Hero", () => {
     beforeEach(() => vi.useFakeTimers());
     afterEach(() => vi.useRealTimers());
 
+    /** Runs one autoplay interval. */
+    const tick = () => void act(() => vi.advanceTimersByTime(10_000));
+
     it("advances on its own and clears the timer on unmount", () => {
       const clear = vi.spyOn(globalThis, "clearInterval");
-      const { unmount, container } = renderHero();
+      const { unmount } = renderHero();
 
       // The interval updates state, so the tick has to run inside act() for
       // React to flush the re-render before we assert.
-      void act(() => vi.advanceTimersByTime(10_000));
-      expect(visibleSlideIndex(container)).toBe(1);
+      tick();
+      expect(visibleSlideIndex()).toBe(1);
 
       unmount();
       expect(clear).toHaveBeenCalled();
+    });
+
+    it("stops when the visitor presses pause, and resumes on play", () => {
+      renderHero();
+
+      // WCAG 2.2.2: content that moves for more than five seconds needs a way
+      // to stop it. Ten seconds of unstoppable rotation failed that outright.
+      fireEvent.click(
+        screen.getByRole("button", { name: "Pausar la rotación automática" }),
+      );
+
+      tick();
+      tick();
+      expect(visibleSlideIndex()).toBe(0);
+
+      fireEvent.click(
+        screen.getByRole("button", { name: "Reanudar la rotación automática" }),
+      );
+
+      tick();
+      expect(visibleSlideIndex()).toBe(1);
+    });
+
+    it("pauses while the pointer rests on a slide", () => {
+      renderHero();
+      const slideArea = slidePanels()[0]!.parentElement!;
+
+      fireEvent.mouseEnter(slideArea);
+      tick();
+      expect(visibleSlideIndex()).toBe(0);
+
+      fireEvent.mouseLeave(slideArea);
+      tick();
+      expect(visibleSlideIndex()).toBe(1);
+    });
+
+    it("does not rotate at all when the visitor asked for reduced motion", () => {
+      stubReducedMotion(true);
+      renderHero();
+
+      tick();
+      tick();
+      expect(visibleSlideIndex()).toBe(0);
+
+      // Offering to pause something that never moves is a dead control.
+      expect(
+        screen.queryByRole("button", { name: /rotación automática/ }),
+      ).not.toBeInTheDocument();
     });
   });
 });
