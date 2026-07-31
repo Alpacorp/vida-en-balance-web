@@ -98,9 +98,20 @@ export interface NotFoundProps {
 
 export interface RecipeDetail {
   id: string;
+  /**
+   * Canonical URL segment, derived from the title. Written out rather than
+   * computed so that rewording a title cannot silently change a live URL.
+   */
+  slug: string;
   description: string;
   title: string;
   image: string;
+  /**
+   * Landscape crop for social previews. `image` is portrait, and Facebook and
+   * WhatsApp only render the large preview for roughly landscape images.
+   * Optional: without one the page falls back to the site image.
+   */
+  ogImage?: string;
   ingredients: string[];
   preparation: string[];
   timePrep: string;
@@ -151,7 +162,7 @@ export interface ArticleLayoutProps {
 }
 
 export interface RecipeCardProps {
-  id: string;
+  slug: string;
   title: string;
   description: string;
   image: string;

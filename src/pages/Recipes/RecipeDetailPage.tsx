@@ -1,20 +1,29 @@
 import { FC } from "react";
-import { useParams, Link, useNavigate } from "react-router-dom";
+import { useParams, Link, useNavigate, Navigate } from "react-router-dom";
 
 import NotFoundPage from "@pages/NotFound/NotFoundPage";
 import { Seo } from "@utils/Seo.tsx";
 
-import { recipesDetails } from "@content/recipes/recipesDetails";
+import { recipesBySlug, recipesDetails } from "@content/recipes/recipesDetails";
 import { BASE_URL } from "@config/config";
 import { recipesProductPageLoader } from "@utils/loaders";
 
 const RecipeDetailPage: FC = () => {
   const navigate = useNavigate();
-  const { productSlug, recipeId } = useParams<{
+  const { productSlug, recipeSlug } = useParams<{
     productSlug: string;
-    recipeId: string;
+    recipeSlug: string;
   }>();
-  const recipe = recipesDetails[recipeId as keyof typeof recipesDetails];
+
+  const recipe = recipeSlug ? recipesBySlug[recipeSlug] : undefined;
+
+  // The site shipped with numeric URLs — /recetas/salchicha-de-pavo/9 — and
+  // those are out there in search results, shared links and bookmarks. Rather
+  // than 404 them, send them once to the slug that replaced them.
+  const legacy = !recipe && recipeSlug ? recipesDetails[recipeSlug] : undefined;
+  if (legacy) {
+    return <Navigate to={`/recetas/${productSlug}/${legacy.slug}`} replace />;
+  }
 
   if (!recipe) {
     return <NotFoundPage type="recipe" goBack={() => void navigate(-1)} />;
@@ -24,8 +33,12 @@ const RecipeDetailPage: FC = () => {
     title: `${recipe.title} - Recetas San Rafael Balance®`,
     description: recipe.description,
     keywords: `receta, ${recipe.title}, San Rafael Balance, saludable`,
-    url: `${BASE_URL}/recetas/${productSlug}/${recipeId}`,
-    imageSeo: recipe.image,
+    url: `${BASE_URL}/recetas/${productSlug}/${recipe.slug}`,
+    // recipe.image is the portrait photo the page itself shows. Facebook and
+    // WhatsApp only render the large preview for roughly landscape images, so
+    // sharing a recipe produced no image at all. ogImage lets a recipe supply
+    // a landscape crop; without one the site image is used.
+    imageSeo: recipe.ogImage ?? "/assets/images/desidete-receta.webp",
     type: "article" as const,
     schema: {
       "@context": "https://schema.org",

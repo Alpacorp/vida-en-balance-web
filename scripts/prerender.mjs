@@ -14,6 +14,7 @@
  * Runs after `vite build` (client) and `vite build --ssr` (server bundle);
  * see the "build" script in package.json.
  */
+import { existsSync } from "node:fs";
 import { mkdir, readFile, writeFile } from "node:fs/promises";
 import { dirname, join, resolve } from "node:path";
 import { fileURLToPath, pathToFileURL } from "node:url";
@@ -22,9 +23,13 @@ const ROOT = resolve(dirname(fileURLToPath(import.meta.url)), "..");
 const DIST = join(ROOT, "dist");
 const SERVER_ENTRY = join(ROOT, "dist-ssr", "entry-server.js");
 
-const { renderPage, listSiteRoutes, IS_INDEXABLE, SITE_URL } = await import(
-  pathToFileURL(SERVER_ENTRY).href
-);
+const {
+  renderPage,
+  listSiteRoutes,
+  listLegacyRecipeRedirects,
+  IS_INDEXABLE,
+  SITE_URL,
+} = await import(pathToFileURL(SERVER_ENTRY).href);
 
 const ROOT_PLACEHOLDER = '<div id="root"></div>';
 
@@ -87,7 +92,58 @@ for (const route of routes) {
     .replace("</head>", `${head}</head>`)
     .replace(ROOT_PLACEHOLDER, body);
 
+  // A shared link previews as a bare grey box when its og:image 404s, and
+  // nothing in a build or a click-through reveals that: the tag is present and
+  // well formed, the file behind it simply is not there. Two shipped that way
+  // — the home page pointed at a .png of a file saved as .webp, and the recipe
+  // index at an absolute URL on a domain the site does not serve.
+  const image = /property="og:image" content="([^"]+)"/.exec(head)?.[1];
+  if (!image) {
+    throw new Error(`${route} has no og:image.`);
+  }
+  const imagePath = image.replace(/^https?:\/\/[^/]+/, "");
+  if (!existsSync(join(DIST, imagePath))) {
+    throw new Error(`${route} points og:image at ${image}, which is not in the build.`);
+  }
+
   const file = fileFor(route);
+  await mkdir(dirname(file), { recursive: true });
+  await writeFile(file, html, "utf8");
+}
+
+/*
+  Redirect stubs for the recipe URLs that used to be numeric.
+
+  A static host cannot answer 301 without touching its own config, and this
+  project's nginx.conf is off limits, so each old URL gets a page whose only
+  job is to point at the new one: a canonical link so search engines move the
+  ranking across, and a meta refresh so a visitor who is not running our
+  JavaScript still lands on the recipe.
+
+  No robots noindex here, tempting as it is. Google warns against pairing it
+  with a canonical, because the noindex can carry over to the page the
+  canonical names — which would bury the recipe this is trying to protect.
+
+  These are not in the sitemap. They are redirects, not pages.
+*/
+const redirects = listLegacyRecipeRedirects();
+
+for (const { from, to } of redirects) {
+  const target = SITE_URL + to;
+  const html = `<!doctype html>
+<html lang="es">
+<head>
+<meta charset="UTF-8"/>
+<title>Esta receta se ha mudado</title>
+<link rel="canonical" href="${target}"/>
+<meta http-equiv="refresh" content="0; url=${to}"/>
+</head>
+<body>
+<p>Esta receta ahora está en <a href="${to}">${target}</a>.</p>
+</body>
+</html>
+`;
+  const file = fileFor(from);
   await mkdir(dirname(file), { recursive: true });
   await writeFile(file, html, "utf8");
 }
@@ -108,6 +164,7 @@ const robots = IS_INDEXABLE
 await writeFile(join(DIST, "robots.txt"), robots, "utf8");
 
 console.log(
-  `prerendered ${routes.length} routes · sitemap written · ` +
+  `prerendered ${routes.length} routes · ${redirects.length} legacy redirects · ` +
+    `sitemap written · ` +
     `robots: ${IS_INDEXABLE ? "indexable" : "noindex"} (${SITE_URL || "no VITE_BASE_URL"})`,
 );

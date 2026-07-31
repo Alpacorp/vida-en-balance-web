@@ -12,7 +12,9 @@ const HomePage: FC = () => {
       "Descubre nuestra gama de productos San Rafael Balance® para una vida más saludable y equilibrada.",
     keywords: "San Rafael Balance, balance, salud, bienestar, productos saludables",
     url: `${BASE_URL}/`,
-    imageSeo: `${BASE_URL}/assets/images/disfruta-cuidandote.png`,
+    // The file is .webp; the .png named here never existed, so sharing the
+    // home page — the most shared URL of the site — previewed with no image.
+    imageSeo: "/assets/images/disfruta-cuidandote.webp",
     schema: {
       "@context": "https://schema.org",
       "@type": "WebSite",

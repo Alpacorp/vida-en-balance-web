@@ -88,11 +88,20 @@ describe("AppRoutes", { timeout: 20_000 }, () => {
     expect(await heading(new RegExp(firstRecipeProduct.name, "i"))).toBeInTheDocument();
   });
 
-  it("renders a recipe at /recetas/:productSlug/:recipeId", async () => {
-    const expected = recipesDetails[firstRecipe.id]!.title;
+  it("renders a recipe at /recetas/:productSlug/:recipeSlug", async () => {
+    const detail = recipesDetails[firstRecipe.id]!;
 
+    renderAt(`/recetas/${firstRecipeSlug}/${detail.slug}`);
+    expect(await heading(detail.title)).toBeInTheDocument();
+  });
+
+  it("redirects the numeric URLs the site used to publish", async () => {
+    const detail = recipesDetails[firstRecipe.id]!;
+
+    // These are in search results and shared links; 404ing them would throw
+    // away every inbound link the recipes had.
     renderAt(`/recetas/${firstRecipeSlug}/${firstRecipe.id}`);
-    expect(await heading(expected)).toBeInTheDocument();
+    expect(await heading(detail.title)).toBeInTheDocument();
   });
 
   describe("precedence over the catch-all segments", () => {

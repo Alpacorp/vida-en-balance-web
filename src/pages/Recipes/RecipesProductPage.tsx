@@ -8,6 +8,7 @@ import NotFoundPage from "@pages/NotFound/NotFoundPage";
 import { Seo } from "@utils/Seo.tsx";
 
 import { productsData } from "@content/recipes/recipes";
+import { recipesDetails } from "@content/recipes/recipesDetails";
 import { productGradients } from "@content/nutritional/products";
 import { BASE_URL } from "@config/config";
 
@@ -38,7 +39,7 @@ const RecipesProductPage: FC = () => {
         "@type": "ListItem",
         position: index + 1,
         name: recipe.title,
-        url: `${BASE_URL}/recetas/${productSlug}/${recipe.id}`,
+        url: `${BASE_URL}/recetas/${productSlug}/${recipesDetails[recipe.id]?.slug ?? recipe.id}`,
       })),
     },
   };
@@ -64,7 +65,9 @@ const RecipesProductPage: FC = () => {
               }) => (
                 <RecipeCard
                   key={recipe.id}
-                  id={recipe.id}
+                  // The listing carries ids; the slug that addresses the recipe
+                  // lives with the recipe itself, so it is looked up here.
+                  slug={recipesDetails[recipe.id]?.slug ?? recipe.id}
                   title={recipe.title}
                   description={recipe.description}
                   image={recipe.image}

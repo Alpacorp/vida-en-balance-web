@@ -36,7 +36,7 @@ export default function AppRoutes() {
         <Route path="/recetas" element={<RecipesHomePage />} />
         <Route path="/recetas/:productSlug" element={<RecipesProductPage />} />
         <Route
-          path="/recetas/:productSlug/:recipeId"
+          path="/recetas/:productSlug/:recipeSlug"
           element={<RecipeDetailPage />}
         />
         <Route path="*" element={<NotFoundPage />} />

@@ -21,6 +21,16 @@ export const SITE_URL = (BASE_URL ?? "").replace(/\/+$/, "");
 
 export const IS_INDEXABLE = PRODUCTION_ORIGINS.includes(SITE_URL);
 
+/**
+ * Preview image for pages that have none of their own.
+ *
+ * It has to be landscape. Facebook and WhatsApp only render the large preview
+ * for images around 1.91:1 and fall back to a thumbnail — or to nothing — for
+ * portrait ones, which is why the recipe pages shared without an image even
+ * though their photo existed and was reachable.
+ */
+export const DEFAULT_SOCIAL_IMAGE = "/assets/images/disfruta-cuidandote.webp";
+
 /** Turns a site-relative asset path into the absolute URL crawlers require. */
 export const toAbsoluteUrl = (path: string): string =>
   /^https?:\/\//.test(path) ? path : `${SITE_URL}${path.startsWith("/") ? "" : "/"}${path}`;
