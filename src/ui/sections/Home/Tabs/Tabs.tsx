@@ -35,9 +35,14 @@ export const Tabs = () => {
                     : "bg-white text-gray-600 border border-gray-200 hover:bg-gray-50"
                 }`}
               >
+                {/*
+                  Decorative: the product name sits in the span right beside
+                  it, so describing the image repeats what the button already
+                  says and a screen reader announces the name twice.
+                */}
                 <img
                   src={tab.tabIcon}
-                  alt={tab.name}
+                  alt=""
                   className="w-6 h-8 object-contain"
                   width="24"
                   height="32"
@@ -62,14 +67,16 @@ export const Tabs = () => {
       <div className="hidden sm:flex mx-auto">
         {/* Vertical tabs navigation */}
         <nav
-          aria-label="Tabs"
+          aria-label="Productos"
           className="isolate flex flex-col min-w-62.5 divide-y divide-gray-200 rounded-lg shadow-sm border bg-white"
         >
           {tabsContent.map((tab, tabIdx) => (
             <button
               key={tab.id}
               onClick={() => handleTabChange(tabIdx)}
-              aria-current={tab.id === id ? "page" : undefined}
+              // "page" made a screen reader announce "current page" for a
+              // button that selects a product without navigating anywhere.
+              aria-current={tab.id === id ? "true" : undefined}
               className={`${
                 tab.id === id
                   ? "text-secondary bg-cyan-50 border-r-[5px] border-r-secondary"
@@ -81,9 +88,10 @@ export const Tabs = () => {
               } relative overflow-hidden px-4 py-4 text-sm font-montserrat-medium focus:z-10 transition-colors duration-200`}
             >
               <div className="flex items-center gap-3">
+                {/* Decorative here too: the name follows in the span. */}
                 <img
                   src={tab.tabIcon}
-                  alt={`Empaque de ${tab.name}`}
+                  alt=""
                   className="w-14 h-20 object-contain filter drop-shadow-md shrink-0"
                   height="80"
                   width="56"

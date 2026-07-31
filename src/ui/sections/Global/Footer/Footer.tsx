@@ -29,7 +29,7 @@ export const Footer: FC = () => {
       <div className="mx-auto max-w-7xl overflow-hidden px-6 py-10 lg:px-8">
         {/* Nav links */}
         <nav
-          aria-label="Footer"
+          aria-label="Pie de página"
           className="flex flex-wrap justify-center gap-x-8 gap-y-4 text-sm/6"
         >
           {footerMenu.map((item) => (
