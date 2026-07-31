@@ -2,9 +2,19 @@
 <html lang="es">
 <head>
     <meta charset="UTF-8"/>
-    <link rel="icon" type="image/svg+xml" href="/favicon.jpg"/>
+    <!-- The file is a JPEG. Declaring it as image/svg+xml made browsers that
+         trust the hint discard it and fall back to /favicon.ico, which the
+         site does not ship. -->
+    <link rel="icon" type="image/jpeg" href="/favicon.jpg"/>
     <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+
+    <!-- Placeholders for `npm run dev`, where nothing is prerendered. The build
+         strips both and injects the real per-page values instead: browsers and
+         crawlers keep the FIRST title and description they find, so leaving
+         these in place would override every page with the generic copy. -->
     <title>San Rafael Balance®</title>
+    <meta name="description"
+          content="Recetas, consejos de bienestar y productos San Rafael Balance® para disfrutar cuidándote."/>
 
     <!-- The two families covering nearly all visible text. Without preload the
          browser only discovers them after fetching and applying the CSS, which

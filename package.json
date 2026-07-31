@@ -5,7 +5,8 @@
   "type": "module",
   "scripts": {
     "dev": "vite",
-    "build": "tsc -b && vite build",
+    "build": "tsc -b && vite build && npm run build:server && node scripts/prerender.mjs",
+    "build:server": "vite build --ssr src/entry-server.tsx --outDir dist-ssr",
     "build:analyze": "tsc -b && vite build --mode analyze",
     "preview": "vite preview",
     "typecheck": "tsc -b && tsc -p tsconfig.test.json",
