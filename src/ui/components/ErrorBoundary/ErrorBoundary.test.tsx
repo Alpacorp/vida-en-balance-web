@@ -49,18 +49,21 @@ describe("ErrorBoundary", () => {
   });
 
   it("reports the error instead of swallowing it", () => {
+    const reported: unknown[] = [];
+    vi.stubGlobal("reportError", (error: unknown) => reported.push(error));
+
     render(
       <ErrorBoundary>
         <Boom />
       </ErrorBoundary>,
     );
 
-    // Nothing collects errors from production; a boundary that hides one is
-    // worse than the blank page it replaced.
-    const logged = consoleError.mock.calls
-      .map((args) => args.map(String).join(" "))
-      .some((message: string) => message.includes("chunk no disponible"));
-    expect(logged).toBe(true);
+    // A boundary that hides the error is worse than the blank page it
+    // replaced. reportError routes it to the global handler, so it shows up
+    // like an uncaught error and any tracking added later receives it.
+    expect(reported.map(String).join(" ")).toContain("chunk no disponible");
+
+    vi.unstubAllGlobals();
   });
 
   it("reloads the document rather than re-rendering", async () => {

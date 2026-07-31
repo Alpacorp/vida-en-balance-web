@@ -38,9 +38,21 @@ function renderAt(path: string) {
  * default 1s findBy timeout is not enough for the heavier pages once their
  * content module is pulled in.
  */
-async function heading(name: string | RegExp) {
+async function heading(
+  name: string | RegExp | ((accessibleName: string) => boolean),
+) {
   return screen.findByRole("heading", { level: 1, name }, { timeout: 10_000 });
 }
+
+/**
+ * Matches a heading that contains `text`, whatever its casing.
+ *
+ * A function rather than `new RegExp(text, "i")`: building a pattern out of a
+ * value is a habit worth not having, and static analysis flags it wherever it
+ * appears — the intent here is a plain substring comparison anyway.
+ */
+const containing = (text: string) => (accessibleName: string) =>
+  accessibleName.toLowerCase().includes(text.toLowerCase());
 
 const [firstArticle] = articles;
 const [firstProduct] = nutritionalProducts;
@@ -85,7 +97,9 @@ describe("AppRoutes", { timeout: 20_000 }, () => {
 
   it("renders the recipes of a product at /recetas/:productSlug", async () => {
     renderAt(`/recetas/${firstRecipeSlug}`);
-    expect(await heading(new RegExp(firstRecipeProduct.name, "i"))).toBeInTheDocument();
+    expect(
+      await heading(containing(firstRecipeProduct.name)),
+    ).toBeInTheDocument();
   });
 
   it("renders a recipe at /recetas/:productSlug/:recipeSlug", async () => {

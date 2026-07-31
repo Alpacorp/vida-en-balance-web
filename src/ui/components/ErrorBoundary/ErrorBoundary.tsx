@@ -7,7 +7,7 @@ interface ErrorBoundaryProps {
 }
 
 interface ErrorBoundaryState {
-  failed: boolean;
+  hasFailed: boolean;
 }
 
 /**
@@ -31,26 +31,28 @@ export class ErrorBoundary extends Component<
   ErrorBoundaryProps,
   ErrorBoundaryState
 > {
-  state: ErrorBoundaryState = { failed: false };
+  state: ErrorBoundaryState = { hasFailed: false };
 
   static getDerivedStateFromError(): ErrorBoundaryState {
-    return { failed: true };
+    return { hasFailed: true };
   }
 
   componentDidCatch(error: unknown) {
-    // Nothing collects errors from production, and a boundary that swallows
-    // one silently is worse than the blank page it replaced.
-    console.error("Fallo al renderizar la página:", error);
+    // A boundary that swallows the error is worse than the blank page it
+    // replaced. reportError hands it to the global error handler, so it
+    // surfaces in the console exactly like an uncaught one would and any error
+    // tracking added later picks it up without this component knowing.
+    if (typeof reportError === "function") reportError(error);
   }
 
   componentDidUpdate(previous: ErrorBoundaryProps) {
-    if (this.state.failed && previous.resetKey !== this.props.resetKey) {
-      this.setState({ failed: false });
+    if (this.state.hasFailed && previous.resetKey !== this.props.resetKey) {
+      this.setState({ hasFailed: false });
     }
   }
 
   render() {
-    if (!this.state.failed) return this.props.children;
+    if (!this.state.hasFailed) return this.props.children;
 
     return (
       <div className="mx-auto flex min-h-[50vh] max-w-2xl flex-col items-center justify-center px-6 text-center">
