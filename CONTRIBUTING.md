@@ -74,12 +74,17 @@ alive.
   directly.
 - `ui/layouts/` — arranges a whole page type, e.g. `ArticleLayout`.
 
-Shared types live in `src/interfaces/interfaces.d.ts`. Despite the extension it
-is a normal module — it has top-level exports, so every type is imported where
-it is used. It does hold two unrelated things at once: the shape of the content
-under `src/content/`, and the props of individual components. Prefer defining
-new props next to the component that uses them, and keep that file for types
-more than one place needs.
+Shared types live in `src/interfaces/`, split by what they describe:
+
+- `content.ts` — the shape of the data under `src/content/`.
+- `componentProps.ts` — props that were already shared when the two were pulled
+  apart.
+- `interfaces.ts` — re-exports both, so the existing `@interfaces/interfaces`
+  imports kept working. Importing from the specific module says more about what
+  a file depends on; prefer that in new code.
+
+Props belonging to one component are better declared next to it than added to
+`componentProps.ts`.
 
 ## Things that will bite you
 
