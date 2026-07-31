@@ -9,3 +9,6 @@ interface ImportMetaEnv {
 interface ImportMeta {
   readonly env: ImportMetaEnv;
 }
+
+/** Year the bundle was built. Replaced by Vite's `define`; see vite.config.ts. */
+declare const __BUILD_YEAR__: number;
