@@ -6,6 +6,10 @@ React 19 + TypeScript + Vite 8, styled with Tailwind CSS v4. The site is a
 client-side SPA that is **prerendered to static HTML at build time**, so every
 route ships as a real HTML file.
 
+If you are about to change something here, read
+[CONTRIBUTING.md](CONTRIBUTING.md) too: it covers the conventions and the
+handful of traps that are not visible from the code.
+
 ## Getting started
 
 ```bash
