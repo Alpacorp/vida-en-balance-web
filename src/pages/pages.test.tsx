@@ -2,7 +2,6 @@ import { describe, it, expect } from "vitest";
 import { render, screen } from "@testing-library/react";
 import { renderToString } from "react-dom/server";
 import { MemoryRouter, Route, Routes } from "react-router-dom";
-import { HelmetProvider } from "react-helmet-async";
 
 import BalancePage from "@pages/Balance/BalancePage";
 import ArticlePage from "@pages/Blogs/ArticlePage";
@@ -30,13 +29,11 @@ import { productsData } from "@content/nutritional/products";
 
 function tree(path: string, pattern: string, element: React.ReactElement) {
   return (
-    <HelmetProvider>
-      <MemoryRouter initialEntries={[path]}>
-        <Routes>
-          <Route path={pattern} element={element} />
-        </Routes>
-      </MemoryRouter>
-    </HelmetProvider>
+    <MemoryRouter initialEntries={[path]}>
+      <Routes>
+        <Route path={pattern} element={element} />
+      </Routes>
+    </MemoryRouter>
   );
 }
 
