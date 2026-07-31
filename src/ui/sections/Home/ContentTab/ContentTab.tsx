@@ -95,9 +95,17 @@ export const ContentTab: FC<ContentProps> = ({
                       />
                     </div>
                     <div className="text-center">
-                      <h3 className="text-sm font-montserrat-medium text-gray-900">
-                        {type.name}
-                      </h3>
+                      {/*
+                        Several presentations carry no name, and rendering the
+                        heading anyway put empty <h3> elements on the home page.
+                        A screen reader announces those as headings with nothing
+                        in them, and they show up in the document outline.
+                      */}
+                      {type.name && (
+                        <h3 className="text-sm font-montserrat-medium text-gray-900">
+                          {type.name}
+                        </h3>
+                      )}
                       {type.description.map((desc) => (
                         <p
                           className="text-sm font-montserrat-medium text-gray-700"

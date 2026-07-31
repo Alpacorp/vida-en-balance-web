@@ -27,6 +27,18 @@ export default defineConfig(({ mode }) => ({
       }),
   ],
   base: "/",
+  // The footer used to read the year from the visitor's clock. Every route is
+  // prerendered, so the HTML carries the year the build ran while the browser
+  // computed today's — identical all year, different on the first of January,
+  // and a hydration mismatch throws away the whole tree and re-renders it on
+  // the client for every visitor until the next deploy.
+  //
+  // Baking it here keeps both renders in agreement, and it is the more honest
+  // value anyway: a copyright year states when the work was last published,
+  // which is the day this built, not the day someone happens to read it.
+  define: {
+    __BUILD_YEAR__: JSON.stringify(new Date().getFullYear()),
+  },
   resolve: {
     alias: {
       "@assets": "/src/assets",

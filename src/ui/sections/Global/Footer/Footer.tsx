@@ -29,7 +29,7 @@ export const Footer: FC = () => {
       <div className="mx-auto max-w-7xl overflow-hidden px-6 py-10 lg:px-8">
         {/* Nav links */}
         <nav
-          aria-label="Footer"
+          aria-label="Pie de página"
           className="flex flex-wrap justify-center gap-x-8 gap-y-4 text-sm/6"
         >
           {footerMenu.map((item) => (
@@ -52,7 +52,8 @@ export const Footer: FC = () => {
         {/* Bottom row: copyright + social */}
         <div className="mt-6 flex flex-col sm:flex-row items-center justify-between gap-4">
           <p className="text-sm text-gray-300 text-center sm:text-left">
-            {new Date().getFullYear()} San Rafael Balance® | Vida en Balance Todos los derechos reservados.
+            {__BUILD_YEAR__} San Rafael Balance® | Vida en Balance Todos los
+            derechos reservados.
           </p>
           <div className="flex items-center gap-6">
             {socialMenuLinks.map((item) => {
