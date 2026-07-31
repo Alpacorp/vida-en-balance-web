@@ -90,6 +90,9 @@ export const Header: FC = () => {
             onClick={toggleMobileMenu}
             className="md:hidden inline-flex items-center justify-center p-2 rounded-md text-gray-700 hover:text-main hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-inset focus:ring-main"
             aria-expanded={isMobileMenuOpen}
+            // aria-expanded alone says something is open without saying what.
+            // aria-controls ties the button to the panel it toggles.
+            aria-controls="mobile-menu"
           >
             <span className="sr-only">
               {isMobileMenuOpen ? "Cerrar menú" : "Abrir menú"}
@@ -132,7 +135,16 @@ export const Header: FC = () => {
 
       {/* Mobile menu */}
       <div
-        className={`md:hidden transition-all duration-300 ease-in-out ${
+        id="mobile-menu"
+        /*
+          Closed, this panel is only clipped: max-height and opacity hide it
+          from sight while its links keep their place in the tab order, so on a
+          phone-sized viewport tabbing through the header walked into a menu
+          nobody could see. inert closes it for the keyboard and for assistive
+          tech the same way the styles close it visually.
+        */
+        inert={!isMobileMenuOpen}
+        className={`md:hidden transition-all duration-300 ease-in-out motion-reduce:transition-none ${
           isMobileMenuOpen
             ? "max-h-96 opacity-100"
             : "max-h-0 opacity-0 overflow-hidden"
