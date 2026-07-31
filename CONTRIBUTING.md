@@ -74,10 +74,12 @@ alive.
   directly.
 - `ui/layouts/` — arranges a whole page type, e.g. `ArticleLayout`.
 
-Props interfaces currently live in `src/interfaces/interfaces.d.ts`. Being an
-ambient declaration file, those types resolve without an `import`, which makes
-them hard to trace from a component. Prefer defining new props next to the
-component that uses them.
+Shared types live in `src/interfaces/interfaces.d.ts`. Despite the extension it
+is a normal module — it has top-level exports, so every type is imported where
+it is used. It does hold two unrelated things at once: the shape of the content
+under `src/content/`, and the props of individual components. Prefer defining
+new props next to the component that uses them, and keep that file for types
+more than one place needs.
 
 ## Things that will bite you
 
