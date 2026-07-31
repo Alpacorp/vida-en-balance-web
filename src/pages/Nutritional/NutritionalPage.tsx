@@ -1,4 +1,4 @@
-import { useState, useEffect } from "react";
+import { FC } from "react";
 import { useNavigate, useParams } from "react-router-dom";
 
 import {
@@ -14,21 +14,16 @@ import { BASE_URL } from "@config/config";
 
 import { Product } from "@interfaces/interfaces";
 
-const NutritionalPage = () => {
+const NutritionalPage: FC = () => {
   const navigate = useNavigate();
   const { productSlug } = useParams<{ productSlug: string }>();
-  const [activeProduct, setActiveProduct] = useState<Product | null>(null);
 
-  useEffect(() => {
-    const product = productsData.find((p) => p.slug === productSlug);
-    if (product) {
-      setActiveProduct(product);
-    }
-  }, [productSlug]);
-
-  const handleProductChange = (newActiveProduct: Product) => {
-    setActiveProduct(newActiveProduct);
-  };
+  // The URL is the single source of truth: switching product navigates, which
+  // re-derives this. Keeping a copy in state made the first render show the
+  // 404 page, and left two places that could disagree about the active product.
+  const activeProduct: Product | undefined = productsData.find(
+    (p) => p.slug === productSlug,
+  );
 
   if (!activeProduct) {
     return <NotFoundPage type="page" goBack={() => void navigate(-1)} />;
@@ -84,7 +79,6 @@ const NutritionalPage = () => {
       <div className="min-h-screen bg-white">
         <NutritionalHeader
           products={productsData}
-          onProductChange={handleProductChange}
           activeProduct={activeProduct}
         />
         <div className="max-w-7xl mx-auto px-4 py-12">

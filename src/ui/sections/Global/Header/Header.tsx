@@ -14,16 +14,28 @@ export const Header: FC = () => {
 
   useEffect(() => {
     const handleScroll = () => {
-      setIsScrolled(window.scrollY > 0);
+      // Only write when the boolean actually flips: setting it on every scroll
+      // event re-rendered the whole header continuously while scrolling.
+      setIsScrolled((wasScrolled) => {
+        const next = window.scrollY > 0;
+        return next === wasScrolled ? wasScrolled : next;
+      });
     };
 
-    window.addEventListener("scroll", handleScroll);
+    // Passive: this handler never calls preventDefault, and saying so lets the
+    // browser scroll without waiting on it.
+    window.addEventListener("scroll", handleScroll, { passive: true });
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
 
-  useEffect(() => {
+  // Closing the menu on navigation is a state reset, not derived state. Doing
+  // it during render — instead of in an effect — closes the menu in the same
+  // pass as the new route, with no intermediate frame showing it still open.
+  const [pathOnRender, setPathOnRender] = useState(location.pathname);
+  if (pathOnRender !== location.pathname) {
+    setPathOnRender(location.pathname);
     setIsMobileMenuOpen(false);
-  }, [location]);
+  }
 
   const isActive = (path: string) => location.pathname.startsWith(path);
 

@@ -16,7 +16,6 @@ export interface Product {
 
 export interface NutritionalHeaderProps {
   products: Product[];
-  onProductChange: (product: Product) => void;
   activeProduct: Product;
 }
 
