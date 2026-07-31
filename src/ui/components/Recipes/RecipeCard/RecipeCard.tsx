@@ -5,7 +5,7 @@ import { RecipeCardProps } from "@interfaces/interfaces";
 import { recipeDetailPageLoader } from "@utils/loaders";
 
 export const RecipeCard: FC<RecipeCardProps> = ({
-  id,
+  slug,
   title,
   description,
   image,
@@ -13,7 +13,7 @@ export const RecipeCard: FC<RecipeCardProps> = ({
 }) => {
   return (
     <Link
-      to={`/recetas/${productSlug}/${id}`}
+      to={`/recetas/${productSlug}/${slug}`}
       className="group"
       onMouseEnter={() => recipeDetailPageLoader()}
       onFocus={() => recipeDetailPageLoader()}

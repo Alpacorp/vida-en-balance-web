@@ -4,9 +4,9 @@ import { StaticRouter } from "react-router-dom";
 import App from "./App";
 
 import { IS_INDEXABLE, SITE_URL } from "@config/config";
-import { listSiteRoutes } from "@routes/siteRoutes";
+import { listSiteRoutes, listLegacyRecipeRedirects } from "@routes/siteRoutes";
 
-export { listSiteRoutes, IS_INDEXABLE, SITE_URL };
+export { listSiteRoutes, listLegacyRecipeRedirects, IS_INDEXABLE, SITE_URL };
 
 /**
  * Written by hand right here, so splitting the output on it is exact rather

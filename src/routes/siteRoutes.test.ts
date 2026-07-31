@@ -6,6 +6,7 @@ import { balanceContent } from "@content/balance/balance";
 import { articles } from "@content/blogs/articles";
 import { productsData as nutritionalProducts } from "@content/nutritional/products";
 import { productsData as recipeProducts } from "@content/recipes/recipes";
+import { recipesDetails } from "@content/recipes/recipesDetails";
 
 /**
  * This list drives two things at build time: which pages get prerendered into
@@ -24,7 +25,8 @@ describe("listSiteRoutes", () => {
 
   it("every entry is a root-relative path with no trailing slash", () => {
     const malformed = routes.filter(
-      (route) => !route.startsWith("/") || (route !== "/" && route.endsWith("/")),
+      (route) =>
+        !route.startsWith("/") || (route !== "/" && route.endsWith("/")),
     );
     expect(malformed).toEqual([]);
   });
@@ -57,7 +59,9 @@ describe("listSiteRoutes", () => {
     for (const [productSlug, product] of Object.entries(recipeProducts)) {
       expect(routes).toContain(`/recetas/${productSlug}`);
       for (const recipe of product.recipes) {
-        expect(routes).toContain(`/recetas/${productSlug}/${recipe.id}`);
+        expect(routes).toContain(
+          `/recetas/${productSlug}/${recipesDetails[recipe.id]!.slug}`,
+        );
       }
     }
   });

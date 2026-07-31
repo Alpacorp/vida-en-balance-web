@@ -4,6 +4,7 @@ export const recipesDetails: Record<string, RecipeDetail> = {
   "1": {
     id: "1",
     title: "Rollitos de pechuga de pavo rellenos de hummus",
+    slug: "rollitos-de-pechuga-de-pavo-rellenos-de-hummus",
     description:
       "Disfruta de unos deliciosos rollitos de pechuga de pavo rellenos de hummus, perfectos para un almuerzo saludable y rápido.",
     image: "/assets/" + "images/rollitos-pechuga-pavo.webp",
@@ -35,6 +36,7 @@ export const recipesDetails: Record<string, RecipeDetail> = {
   "2": {
     id: "2",
     title: "Sándwich abierto de pechuga de pavo con ensalada de col y pera",
+    slug: "sandwich-abierto-de-pechuga-de-pavo-con-ensalada-de-col-y-pera",
     description:
       "Delicioso sándwich abierto con pechuga de pavo, ensalada de col y pera, perfecto para una comida ligera y saludable.",
     image: "/assets/" + "images/sandwich-abierto-pechuga-pavo.webp",
@@ -68,6 +70,7 @@ export const recipesDetails: Record<string, RecipeDetail> = {
     id: "3",
     title:
       "Mitades de pan pita rellenas con pechuga de pavo, arúgula y salsa tzatziki",
+    slug: "mitades-de-pan-pita-rellenas-con-pechuga-de-pavo-arugula-y-salsa-tzatziki",
     description:
       "Disfruta de un platillo delicioso y saludable con estas mitades de pan pita rellenas de pechuga de pavo, arúgula y salsa tzatziki.",
     image: "/assets/" + "images/mitades-pan-pita-rellenas.webp",
@@ -94,6 +97,7 @@ export const recipesDetails: Record<string, RecipeDetail> = {
   "4": {
     id: "4",
     title: "Calabacitas rellenas de Pechuga de pavo y piña",
+    slug: "calabacitas-rellenas-de-pechuga-de-pavo-y-pina",
     description:
       "Disfruta de una comida ligera y deliciosa con estas calabacitas rellenas de Pechuga de pavo San Rafael Balance® y piña.",
     image: "/assets/" + "images/calabacitas.webp",
@@ -117,6 +121,7 @@ export const recipesDetails: Record<string, RecipeDetail> = {
   "5": {
     id: "5",
     title: "Molletes de camote y calabaza",
+    slug: "molletes-de-camote-y-calabaza",
     description:
       "Disfruta de la combinación perfecta de sabores con estos molletes de camote y calabaza.",
     image: "/assets/" + "images/molletes-camote.webp",
@@ -145,6 +150,7 @@ export const recipesDetails: Record<string, RecipeDetail> = {
   "6": {
     id: "6",
     title: "Rollitos Thai",
+    slug: "rollitos-thai",
     description:
       "Disfruta de un aperitivo ligero y delicioso con estos rollitos Thai.",
     image: "/assets/" + "images/rollitos-thai.webp",
@@ -171,6 +177,7 @@ export const recipesDetails: Record<string, RecipeDetail> = {
   "7": {
     id: "7",
     title: "Cocktail de Mango",
+    slug: "cocktail-de-mango",
     description:
       "Disfruta de un delicioso cóctel de mango, perfecto para acompañar tus reuniones.",
     image: "/assets/" + "images/cocktail-mango.webp",
@@ -197,6 +204,7 @@ export const recipesDetails: Record<string, RecipeDetail> = {
   "8": {
     id: "8",
     title: "Aguacate relleno de arroz integral y salchicha de pavo",
+    slug: "aguacate-relleno-de-arroz-integral-y-salchicha-de-pavo",
     description:
       "Disfruta de un aperitivo delicioso y saludable con este aguacate relleno de arroz integral y salchicha de pavo.",
     image: "/assets/" + "images/aguacate-relleno.webp",
@@ -229,6 +237,7 @@ export const recipesDetails: Record<string, RecipeDetail> = {
   "9": {
     id: "9",
     title: "Yakimeshi de Quinoa con Salchichas de Pavo",
+    slug: "yakimeshi-de-quinoa-con-salchichas-de-pavo",
     description:
       "Disfruta de un Yakimeshi saludable y lleno de sabor con esta receta de quinoa con salchichas de pavo San Rafael Balance®.",
     image: "/assets/" + "images/yakimeshi.webp",
@@ -260,6 +269,7 @@ export const recipesDetails: Record<string, RecipeDetail> = {
   "10": {
     id: "10",
     title: "Portobellos Rellenos de Salchicha",
+    slug: "portobellos-rellenos-de-salchicha",
     description:
       "Disfruta de una versión saludable del clásico con estos Portobellos rellenos de salchicha.",
     image: "/assets/" + "images/portobello.webp",
@@ -285,6 +295,7 @@ export const recipesDetails: Record<string, RecipeDetail> = {
   "11": {
     id: "11",
     title: "Sándwich tostado de pechuga de pavo con manzana",
+    slug: "sandwich-tostado-de-pechuga-de-pavo-con-manzana",
     description:
       "Disfruta de un delicioso sándwich con sabores frescos con este sándwich tostado de pechuga de pavo con manzana.",
     image: "/assets/" + "images/sandwich-tostado.webp",
@@ -311,6 +322,7 @@ export const recipesDetails: Record<string, RecipeDetail> = {
   "12": {
     id: "12",
     title: "Poke de quinoa con salchichas de pechuga de pavo",
+    slug: "poke-de-quinoa-con-salchichas-de-pechuga-de-pavo",
     description:
       "Disfruta de un delicioso poke con sabores frescos con este poke de quinoa con salchichas de pechuga de pavo.",
     image: "/assets/" + "images/poke-quinoa.webp",
@@ -344,3 +356,15 @@ export const recipesDetails: Record<string, RecipeDetail> = {
     datePublished: "2025-01-01",
   },
 };
+
+/**
+ * The same recipes, addressed by slug.
+ *
+ * The record above stays keyed by id because that is what the product listings
+ * reference, and because the numeric URLs the site shipped with have to keep
+ * resolving. The slug is the canonical address: "/recetas/salchicha-de-pavo/9"
+ * told a reader — and a search engine — nothing about the recipe behind it.
+ */
+export const recipesBySlug: Record<string, RecipeDetail> = Object.fromEntries(
+  Object.values(recipesDetails).map((recipe) => [recipe.slug, recipe]),
+);

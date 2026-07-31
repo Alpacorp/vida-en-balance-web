@@ -98,6 +98,11 @@ export interface NotFoundProps {
 
 export interface RecipeDetail {
   id: string;
+  /**
+   * Canonical URL segment, derived from the title. Written out rather than
+   * computed so that rewording a title cannot silently change a live URL.
+   */
+  slug: string;
   description: string;
   title: string;
   image: string;
@@ -157,7 +162,7 @@ export interface ArticleLayoutProps {
 }
 
 export interface RecipeCardProps {
-  id: string;
+  slug: string;
   title: string;
   description: string;
   image: string;

@@ -96,11 +96,31 @@ describe("recipes", () => {
   });
 
   it("ids are unique across every product", () => {
-    // RecipeDetailPage resolves by id and ignores productSlug, so two products
+    // RecipeDetailPage resolves without looking at productSlug, so two products
     // sharing a recipe id would render the same page for both.
     const ids = recipes.map((r) => r.id);
     const duplicates = ids.filter((id, i) => ids.indexOf(id) !== i);
     expect([...new Set(duplicates)]).toEqual([]);
+  });
+
+  it("every detail has a slug, and no two share one", () => {
+    // The slug is the URL. A missing one leaves a recipe unreachable; a
+    // repeated one silently hides whichever recipe loses the collision.
+    const details = Object.values(recipesDetails);
+
+    const missing = details.filter((r) => !r.slug?.trim()).map((r) => r.title);
+    expect(missing, `Recipes without a slug: ${missing.join(", ")}`).toEqual([]);
+
+    const slugs = details.map((r) => r.slug);
+    const duplicates = slugs.filter((s, i) => slugs.indexOf(s) !== i);
+    expect([...new Set(duplicates)]).toEqual([]);
+  });
+
+  it("slugs are URL-safe", () => {
+    const bad = Object.values(recipesDetails)
+      .map((r) => r.slug)
+      .filter((slug) => !/^[a-z0-9]+(?:-[a-z0-9]+)*$/.test(slug));
+    expect(bad, `Slugs needing escaping: ${bad.join(", ")}`).toEqual([]);
   });
 });
 

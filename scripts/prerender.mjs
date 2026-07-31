@@ -23,9 +23,13 @@ const ROOT = resolve(dirname(fileURLToPath(import.meta.url)), "..");
 const DIST = join(ROOT, "dist");
 const SERVER_ENTRY = join(ROOT, "dist-ssr", "entry-server.js");
 
-const { renderPage, listSiteRoutes, IS_INDEXABLE, SITE_URL } = await import(
-  pathToFileURL(SERVER_ENTRY).href
-);
+const {
+  renderPage,
+  listSiteRoutes,
+  listLegacyRecipeRedirects,
+  IS_INDEXABLE,
+  SITE_URL,
+} = await import(pathToFileURL(SERVER_ENTRY).href);
 
 const ROOT_PLACEHOLDER = '<div id="root"></div>';
 
@@ -107,6 +111,43 @@ for (const route of routes) {
   await writeFile(file, html, "utf8");
 }
 
+/*
+  Redirect stubs for the recipe URLs that used to be numeric.
+
+  A static host cannot answer 301 without touching its own config, and this
+  project's nginx.conf is off limits, so each old URL gets a page whose only
+  job is to point at the new one: a canonical link so search engines move the
+  ranking across, and a meta refresh so a visitor who is not running our
+  JavaScript still lands on the recipe.
+
+  No robots noindex here, tempting as it is. Google warns against pairing it
+  with a canonical, because the noindex can carry over to the page the
+  canonical names — which would bury the recipe this is trying to protect.
+
+  These are not in the sitemap. They are redirects, not pages.
+*/
+const redirects = listLegacyRecipeRedirects();
+
+for (const { from, to } of redirects) {
+  const target = SITE_URL + to;
+  const html = `<!doctype html>
+<html lang="es">
+<head>
+<meta charset="UTF-8"/>
+<title>Esta receta se ha mudado</title>
+<link rel="canonical" href="${target}"/>
+<meta http-equiv="refresh" content="0; url=${to}"/>
+</head>
+<body>
+<p>Esta receta ahora está en <a href="${to}">${target}</a>.</p>
+</body>
+</html>
+`;
+  const file = fileFor(from);
+  await mkdir(dirname(file), { recursive: true });
+  await writeFile(file, html, "utf8");
+}
+
 const sitemap = `<?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 ${routes.map((route) => `  <url><loc>${escapeXml(SITE_URL + route)}</loc></url>`).join("\n")}
@@ -123,6 +164,7 @@ const robots = IS_INDEXABLE
 await writeFile(join(DIST, "robots.txt"), robots, "utf8");
 
 console.log(
-  `prerendered ${routes.length} routes · sitemap written · ` +
+  `prerendered ${routes.length} routes · ${redirects.length} legacy redirects · ` +
+    `sitemap written · ` +
     `robots: ${IS_INDEXABLE ? "indexable" : "noindex"} (${SITE_URL || "no VITE_BASE_URL"})`,
 );
