@@ -1,4 +1,4 @@
-import { useState, useEffect, FC } from "react";
+import { FC } from "react";
 import { useNavigate, useParams } from "react-router-dom";
 
 import mainLogo from "@assets/images/san-rafael-balance-logo.webp";
@@ -14,20 +14,16 @@ import { Seo } from "@utils/Seo.tsx";
 
 const ArticlePage: FC = () => {
   const { category, slug } = useParams<{ category: string; slug: string }>();
-  const [article, setArticle] = useState<Article>();
   const navigate = useNavigate();
 
-  useEffect(() => {
-    if (category && slug) {
-      const foundArticle = getArticle(category, slug);
-      if (foundArticle) {
-        setArticle({
-          ...foundArticle,
-          relatedArticles: getRelatedArticles(category, slug),
-        });
-      }
-    }
-  }, [category, slug]);
+  // Derived from the URL instead of mirrored into state: the state version
+  // rendered the 404 page on the first pass, so a valid article flashed
+  // "not found" before the effect replaced it.
+  const found = category && slug ? getArticle(category, slug) : undefined;
+  const article: Article | undefined = found && {
+    ...found,
+    relatedArticles: getRelatedArticles(category!, slug!),
+  };
 
   if (!article) {
     return <NotFoundPage type="page" goBack={() => void navigate(-1)} />;

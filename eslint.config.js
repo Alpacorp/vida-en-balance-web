@@ -43,13 +43,9 @@ export default tseslint.config(
       // The site is in Spanish, so accessibility text must be too.
       "jsx-a11y/lang": "error",
 
-      // TEMPORARY — downgraded to a warning, not turned off.
-      // Flags the 5 places that derive state from the URL with
-      // useState+useEffect (BalancePage, NutritionalPage, ArticlePage, Header,
-      // NutritionalHeader). They cause an intermediate render that shows the
-      // 404 page before the real one. Fixed in the React refactor phase; raise
-      // back to "error" once no cases remain.
-      "react-hooks/set-state-in-effect": "warn",
+      // All five cases that derived state from the URL are gone, so this is
+      // back to an error and the pattern cannot return unnoticed.
+      "react-hooks/set-state-in-effect": "error",
 
       "@typescript-eslint/no-unused-vars": [
         "error",

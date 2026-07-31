@@ -1,4 +1,4 @@
-import { FC, useEffect, useState } from "react";
+import { FC } from "react";
 import { useNavigate, useParams } from "react-router-dom";
 
 import { CardSection, HeroSection } from "@ui/index";
@@ -14,17 +14,15 @@ import { BASE_URL } from "@config/config";
 const BalancePage: FC = () => {
   const navigate = useNavigate();
   const { balanceType } = useParams<{ balanceType: string }>();
-  const [pageContent, setPageContent] = useState<BalancePageContent | null>(
-    null,
-  );
 
-  useEffect(() => {
-    if (balanceType && balanceType in balanceContent) {
-      setPageContent(
-        balanceContent[balanceType as keyof typeof balanceContent],
-      );
-    }
-  }, [balanceType]);
+  // Derived straight from the URL rather than mirrored into state. Holding it
+  // in state meant the first render always saw null and returned the 404 page,
+  // so a valid URL flashed "not found" — and mounted its <Seo> — before the
+  // effect ran and swapped in the real content.
+  const pageContent: BalancePageContent | undefined =
+    balanceType && balanceType in balanceContent
+      ? balanceContent[balanceType as keyof typeof balanceContent]
+      : undefined;
 
   if (!pageContent) {
     return <NotFoundPage type="page" goBack={() => void navigate(-1)} />;

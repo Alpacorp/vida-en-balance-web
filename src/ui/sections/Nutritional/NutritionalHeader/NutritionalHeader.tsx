@@ -1,29 +1,24 @@
-import { FC, useState, useEffect } from "react";
+import { FC } from "react";
 import { useNavigate } from "react-router-dom";
 
 import { Product, NutritionalHeaderProps } from "@interfaces/interfaces";
 
 export const NutritionalHeader: FC<NutritionalHeaderProps> = ({
   products,
-  onProductChange,
   activeProduct,
 }) => {
   const navigate = useNavigate();
-  const [otherProducts, setOtherProducts] = useState<Product[]>([]);
 
-  useEffect(() => {
-    const remainingProducts = products.filter(
-      (product) => product.id !== activeProduct.id,
-    );
-    setOtherProducts(remainingProducts.slice(0, 4));
-  }, [activeProduct, products]);
+  // Plain derivation from props. It used to live in state kept in sync by an
+  // effect and updated again on click, so the same list was computed in two
+  // places and lagged one render behind the active product.
+  const otherProducts = products
+    .filter((product) => product.id !== activeProduct.id)
+    .slice(0, 4);
 
   const handleProductClick = (clickedProduct: Product) => {
-    const remainingProducts = products.filter(
-      (product) => product.id !== clickedProduct.id,
-    );
-    setOtherProducts(remainingProducts.slice(0, 4));
-    onProductChange(clickedProduct);
+    // Navigating is enough: the page re-derives the active product from the
+    // URL and this list follows.
     void navigate(clickedProduct.url);
   };
 
