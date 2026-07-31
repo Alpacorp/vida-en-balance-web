@@ -32,9 +32,10 @@ export const HeroSection: FC<HeroBalanceProps> = ({
             {description}
           </p>
           <div className="flex flex-wrap gap-4">
-            {buttonsHero.map((button: ButtonProps, index) => (
+            {buttonsHero.map((button: ButtonProps) => (
               <Link
-                key={index}
+                // The destination identifies the button; its position does not.
+                key={button.to}
                 to={button.to}
                 className={`px-6 py-3 font-montserrat-medium rounded-md transition duration-300 ease-in-out transform hover:-translate-y-1 ${
                   isActive(button.to)
