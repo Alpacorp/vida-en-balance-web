@@ -33,6 +33,11 @@ const {
 
 const ROOT_PLACEHOLDER = '<div id="root"></div>';
 
+// no-dd-sa:javascript-node-security/detect-non-literal-fs-filename
+// The rule guards server code against a path assembled from a request. This is
+// a build script: DIST is derived from this file's own location and it is
+// reading the output the build just produced. There is no request, no user and
+// no external input anywhere in this process.
 const template = await readFile(join(DIST, "index.html"), "utf8");
 
 if (!template.includes(ROOT_PLACEHOLDER)) {
