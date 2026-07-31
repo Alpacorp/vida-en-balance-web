@@ -28,6 +28,25 @@ describe("Footer", () => {
     ).toHaveAccessibleName("Pie de página");
   });
 
+  it("opens every external link with a safe rel", () => {
+    const { container } = renderFooter();
+
+    const newTab = [...container.querySelectorAll('a[target="_blank"]')];
+    // The social links and the privacy notice all leave the site.
+    expect(newTab.length).toBeGreaterThan(0);
+
+    for (const link of newTab) {
+      expect(link, link.getAttribute("href") ?? "").toHaveAttribute(
+        "rel",
+        expect.stringContaining("noopener"),
+      );
+      expect(link).toHaveAttribute(
+        "rel",
+        expect.stringContaining("noreferrer"),
+      );
+    }
+  });
+
   it("shows the year the bundle was built", () => {
     renderFooter();
     expect(

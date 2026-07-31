@@ -11,9 +11,10 @@ export const NutritionalInfo: FC<NutritionalInfoProps> = ({
         DECLARACIÓN NUTRIMENTAL POR 100 G
       </h3>
       <div className="space-y-2">
-        {nutritionalInfo.map((info, index) => (
+        {nutritionalInfo.map((info) => (
           <div
-            key={index}
+            // One row per nutrient, so the label is unique within the table.
+            key={info.label}
             className="flex justify-between py-2 border-b border-gray-200"
           >
             <span className="text-gray-700 font-montserrat-medium">

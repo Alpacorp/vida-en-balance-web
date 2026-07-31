@@ -162,6 +162,9 @@ const RecipeDetailPage: FC = () => {
               <ul className="space-y-2">
                 {recipe.ingredients.map((ingredient, index) => (
                   <li
+                    // Plain strings that could legitimately repeat, in a list
+                    // that never reorders and holds no state, so the position
+                    // is the only thing that identifies a row here.
                     key={index}
                     className="flex items-center font-montserrat-medium text-gray-700"
                   >
@@ -178,6 +181,7 @@ const RecipeDetailPage: FC = () => {
               <ol className="space-y-4">
                 {recipe.preparation.map((step, index) => (
                   <li
+                    // Same as the ingredients above: repeatable text, fixed order.
                     key={index}
                     className="flex font-montserrat-medium text-gray-700"
                   >

@@ -37,6 +37,9 @@ export const Footer: FC = () => {
               key={item.name}
               to={item.path}
               target={item.name === "Aviso de privacidad" ? "_blank" : "_self"}
+              // Browsers imply noopener for target=_blank these days, but not
+              // noreferrer, and older in-app webviews imply neither.
+              rel="noopener noreferrer"
               className="text-gray-300 hover:text-white hover:underline hover:underline-offset-4 transition-colors duration-150"
               onMouseEnter={() => routesLoaders[item.path]?.()}
               onFocus={() => routesLoaders[item.path]?.()}
@@ -64,6 +67,7 @@ export const Footer: FC = () => {
                   key={item.name}
                   to={item.path}
                   target="_blank"
+                  rel="noopener noreferrer"
                   className="text-gray-300 hover:text-white hover:scale-110 transition-transform duration-200"
                 >
                   <span className="sr-only">{item.name}</span>
