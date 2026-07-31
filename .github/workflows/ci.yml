@@ -22,6 +22,15 @@ jobs:
           node-version: 22
           cache: npm
 
+      # `npm ci` refuses to run unless the lockfile matches the tree it would
+      # resolve itself, and npm 10 and 11 do not resolve the same tree: npm 11
+      # nests @emnapi/runtime under the packages that ask for it, npm 10 hoists
+      # a newer copy and then reports it missing. Node 22 ships npm 10, so
+      # without this the build fails against a lockfile written by npm 11.
+      # Bump this together with the npm used to regenerate package-lock.json.
+      - name: Pin npm to the version the lockfile was generated with
+        run: npm i -g npm@11
+
       - run: npm ci
 
       - name: Lint
