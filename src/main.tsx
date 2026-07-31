@@ -16,9 +16,19 @@ createRoot(document.getElementById("root")!).render(
     <HelmetProvider>
       <BrowserRouter>
         <ScrollToTop />
-        <div className="grid min-h-dvh grid-rows-[auto_1fr_auto]">
+        {/*
+          Header is position:fixed, so it is out of flow and never occupies a
+          row or a flex slot. Only main and Footer are in flow. A three-row
+          grid template silently handed the flexible row to the Footer and left
+          a third row empty, stretching the Footer on short pages.
+
+          Flex column avoids the trap: main takes the free space regardless of
+          how many children are in flow. min-w-0 lets main shrink below its
+          content's intrinsic width instead of widening the page.
+        */}
+        <div className="flex min-h-dvh flex-col">
           <Header />
-          <main>
+          <main className="min-w-0 flex-1">
             <AppRoutes />
           </main>
           <Footer />
