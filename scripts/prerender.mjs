@@ -14,6 +14,7 @@
  * Runs after `vite build` (client) and `vite build --ssr` (server bundle);
  * see the "build" script in package.json.
  */
+import { existsSync } from "node:fs";
 import { mkdir, readFile, writeFile } from "node:fs/promises";
 import { dirname, join, resolve } from "node:path";
 import { fileURLToPath, pathToFileURL } from "node:url";
@@ -86,6 +87,20 @@ for (const route of routes) {
   const html = stripPlaceholderMeta(template)
     .replace("</head>", `${head}</head>`)
     .replace(ROOT_PLACEHOLDER, body);
+
+  // A shared link previews as a bare grey box when its og:image 404s, and
+  // nothing in a build or a click-through reveals that: the tag is present and
+  // well formed, the file behind it simply is not there. Two shipped that way
+  // — the home page pointed at a .png of a file saved as .webp, and the recipe
+  // index at an absolute URL on a domain the site does not serve.
+  const image = /property="og:image" content="([^"]+)"/.exec(head)?.[1];
+  if (!image) {
+    throw new Error(`${route} has no og:image.`);
+  }
+  const imagePath = image.replace(/^https?:\/\/[^/]+/, "");
+  if (!existsSync(join(DIST, imagePath))) {
+    throw new Error(`${route} points og:image at ${image}, which is not in the build.`);
+  }
 
   const file = fileFor(route);
   await mkdir(dirname(file), { recursive: true });

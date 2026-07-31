@@ -101,6 +101,12 @@ export interface RecipeDetail {
   description: string;
   title: string;
   image: string;
+  /**
+   * Landscape crop for social previews. `image` is portrait, and Facebook and
+   * WhatsApp only render the large preview for roughly landscape images.
+   * Optional: without one the page falls back to the site image.
+   */
+  ogImage?: string;
   ingredients: string[];
   preparation: string[];
   timePrep: string;

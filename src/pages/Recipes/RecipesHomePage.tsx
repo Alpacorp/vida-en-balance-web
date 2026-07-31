@@ -15,8 +15,9 @@ const RecipesHomePage: FC = () => {
     keywords:
       "recetas San Rafael Balance, comida saludable, recetas fáciles, productos San Rafael Balance",
     url: `${BASE_URL}/recetas`,
-    imageSeo:
-      "https://www.vidaenbalance.com/assets/images/recetas-balance-banner.jpg",
+    // Was an absolute URL to www.vidaenbalance.com — neither the production
+    // origin nor a file that exists — so this page previewed with no image.
+    imageSeo: "/assets/images/desidete-receta.webp",
     type: "website" as const,
     schema: {
       "@context": "https://schema.org",

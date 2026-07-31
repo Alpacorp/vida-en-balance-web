@@ -25,7 +25,11 @@ const RecipeDetailPage: FC = () => {
     description: recipe.description,
     keywords: `receta, ${recipe.title}, San Rafael Balance, saludable`,
     url: `${BASE_URL}/recetas/${productSlug}/${recipeId}`,
-    imageSeo: recipe.image,
+    // recipe.image is the portrait photo the page itself shows. Facebook and
+    // WhatsApp only render the large preview for roughly landscape images, so
+    // sharing a recipe produced no image at all. ogImage lets a recipe supply
+    // a landscape crop; without one the site image is used.
+    imageSeo: recipe.ogImage ?? "/assets/images/desidete-receta.webp",
     type: "article" as const,
     schema: {
       "@context": "https://schema.org",

@@ -1,6 +1,6 @@
 import { FC } from "react";
 
-import { IS_INDEXABLE, toAbsoluteUrl } from "@config/config";
+import { DEFAULT_SOCIAL_IMAGE, IS_INDEXABLE, toAbsoluteUrl } from "@config/config";
 
 interface SEOProps {
   title: string;
@@ -39,8 +39,10 @@ export const Seo: FC<SEOProps> = ({
   const followRule = noFollow ? "nofollow" : "follow";
 
   // Social crawlers reject relative og:image values, and every content entry
-  // stores its image as a site-relative path.
-  const image = imageSeo ? toAbsoluteUrl(imageSeo) : undefined;
+  // stores its image as a site-relative path. A page without one falls back to
+  // the site image rather than shipping no og:image at all, which is what makes
+  // a shared link preview as a bare grey box.
+  const image = toAbsoluteUrl(imageSeo ?? DEFAULT_SOCIAL_IMAGE);
   const canonical = toAbsoluteUrl(url);
 
   return (
@@ -57,12 +59,12 @@ export const Seo: FC<SEOProps> = ({
       <meta property="og:url" content={canonical} />
       <meta property="og:locale" content="es_CO" />
       <meta property="og:site_name" content="San Rafael Balance®" />
-      {image && <meta property="og:image" content={image} />}
+      <meta property="og:image" content={image} />
 
       <meta name="twitter:card" content="summary_large_image" />
       <meta name="twitter:title" content={title} />
       <meta name="twitter:description" content={description} />
-      {image && <meta name="twitter:image" content={image} />}
+      <meta name="twitter:image" content={image} />
 
       {schema && (
         <script type="application/ld+json">{JSON.stringify(schema)}</script>
