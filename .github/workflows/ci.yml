@@ -1,0 +1,42 @@
+name: CI
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+
+# A new push to the same branch makes the previous run pointless.
+concurrency:
+  group: ci-${{ github.ref }}
+  cancel-in-progress: true
+
+jobs:
+  verify:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-node@v4
+        with:
+          # Matches the node image the Dockerfile builds with.
+          node-version: 22
+          cache: npm
+
+      - run: npm ci
+
+      - name: Lint
+        run: npm run lint
+
+      - name: Typecheck
+        run: npm run typecheck
+
+      - name: Test
+        run: npm test
+
+      # Also covers the prerender step: it fails the build if a route renders
+      # with a Suspense boundary React had to defer, which would ship a page
+      # whose content only appears once JavaScript runs.
+      - name: Build
+        run: npm run build
+        env:
+          VITE_BASE_URL: https://webapp-vida-en-balance-prd.azurewebsites.net

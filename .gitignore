@@ -33,3 +33,6 @@ dist-ssr
 
 # Claude
 .claude
+
+# Bundle analysis output (npm run build:analyze)
+bundle-report.html
