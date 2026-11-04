@@ -82,7 +82,7 @@ describe("Hero", () => {
 
   it("never renders an empty heading or paragraph", () => {
     const { container } = renderHero();
-    // The three slides carry their copy inside the image. Rendering the
+    // The slides carry their copy inside the image. Rendering the
     // heading unconditionally produced three empty <h1> on the home page.
     for (const node of container.querySelectorAll("h1, h2, h3, p")) {
       expect(

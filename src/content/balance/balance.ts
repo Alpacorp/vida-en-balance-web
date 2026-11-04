@@ -5,8 +5,8 @@ export const balanceContent = {
         "Pensamos en rutinas que puedes hacer mientras estás en cualquier lugar y que te ayudarán a mantenerte en movimiento constante.",
       title: "Cuerpo en Balance",
       image: {
-        src: "/assets/" + "images/cuerpo-balance-banner.webp",
-        alt: "Persona ejercitándose",
+        src: "/assets/" + "images/importancia-proteinas.webp",
+        alt: "Torres de aguacate y pechuga de pavo sobre una bandeja",
       },
     },
     seo: {
@@ -20,8 +20,8 @@ export const balanceContent = {
         title: "Tu peso ideal",
         description:
           "Descubre cómo alcanzar y mantener tu peso ideal de manera saludable y sostenible.",
-        imageUrl: "/assets/" + "images/tu-peso-ideal-blog.webp",
-        imageAlt: "Báscula de peso",
+        imageUrl: "/assets/" + "images/calabacitas.webp",
+        imageAlt: "Calabacitas rellenas de pechuga de pavo",
         ctaText: "Calcular mi peso ideal",
         to: "/cuerpo-en-balance/tu-peso-ideal",
       },
@@ -50,8 +50,8 @@ export const balanceContent = {
         "Encuentra el equilibrio mental a través de prácticas de meditación, técnicas de relajación y hábitos saludables que promuevan tu bienestar emocional.",
       title: "Mente en Balance",
       image: {
-        src: "/assets/" + "images/mente-balance-banner.webp",
-        alt: "Persona meditando",
+        src: "/assets/" + "images/mente-balance-silueta-banner.webp",
+        alt: "Silueta de una persona meditando de espaldas",
       },
     },
     seo: {
@@ -65,8 +65,8 @@ export const balanceContent = {
         title: "¿Cómo afectan las emociones a mi salud?",
         description:
           "Descubre cómo las emociones influyen en tu bienestar físico y mental.",
-        imageUrl: "/assets/" + "images/emociones-salud-blog.webp",
-        imageAlt: "Persona demostrando emociones",
+        imageUrl: "/assets/" + "images/cocktail-mango.webp",
+        imageAlt: "Galletas con pechuga de pavo y mango",
         ctaText: "Aprender más",
         to: "/mente-en-balance/como-afectan-las-emociones-a-mi-salud",
       },

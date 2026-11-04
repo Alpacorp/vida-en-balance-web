@@ -12,16 +12,6 @@ export const slides: Slide[] = [
   },
   {
     id: 2,
-    image: "/assets/images/desidete-cuidados.webp",
-    alt: "Desídete y disfruta cuidándote. Una mujer sentada en una terraza rodeada de plantas disfruta un bocado de pechuga de pavo San Rafael Balance®.",
-    ctaPrimary: {
-      text: "Descúbre el Balance",
-      url: "https://www.youtube.com/@VidaEnBalanceMX",
-      isExternal: true,
-    },
-  },
-  {
-    id: 3,
     image: "/assets/images/desidete-receta.webp",
     alt: "Desídete y disfruta cuidándote. Botana de salchicha de pavo San Rafael Balance® con calabacita y aceitunas, acompañada de totopos y agua de limón.",
     ctaPrimary: {
