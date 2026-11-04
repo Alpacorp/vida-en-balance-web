@@ -60,7 +60,7 @@ function stubReducedMotion(reduced: boolean) {
         addListener: () => undefined,
         removeListener: () => undefined,
         dispatchEvent: () => false,
-      }) as unknown as MediaQueryList,
+      }),
   );
 }
 

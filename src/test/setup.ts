@@ -18,7 +18,7 @@ if (typeof window !== "undefined" && !window.matchMedia) {
       addListener: () => undefined,
       removeListener: () => undefined,
       dispatchEvent: () => false,
-    }) as unknown as MediaQueryList;
+    });
 }
 
 afterEach(() => {
