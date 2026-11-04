@@ -73,8 +73,8 @@ export const balanceContent = {
       {
         title: "Mindfullness en tu vida diaria",
         description: "Aprende a practicar la atención plena en tu día a día.",
-        imageUrl: "/assets/" + "images/mindfullness-blog.webp",
-        imageAlt: "Hombre meditando",
+        imageUrl: "/assets/" + "images/mente-mindfullness-silueta.webp",
+        imageAlt: "Silueta de una mano en postura de meditación",
         ctaText: "Conoce más",
         to: "/mente-en-balance/mindfullness-en-tu-vida-diaria",
       },
@@ -82,8 +82,8 @@ export const balanceContent = {
         title: "Paz interior, que nadie te la quite",
         description:
           "Encuentra la paz interior a través de la meditación y la relajación.",
-        imageUrl: "/assets/" + "images/paz-interior-blog.webp",
-        imageAlt: "Mujer meditando",
+        imageUrl: "/assets/" + "images/mente-paz-interior-silueta.webp",
+        imageAlt: "Silueta de una persona meditando de espaldas",
         ctaText: "Descubrir más",
         to: "/mente-en-balance/paz-interior-que-nadie-te-la-quite",
       },
@@ -135,8 +135,8 @@ export const balanceContent = {
       {
         title: "El mejor tratamiento para vivir en balance",
         description: "Acciones diarias que hacen la diferencia.",
-        imageUrl: "/assets/images/tratamiento-blog.webp",
-        imageAlt: "Pareja feliz hablando",
+        imageUrl: "/assets/images/tips-tratamiento-silueta.webp",
+        imageAlt: "Silueta de una mano en postura de meditación junto a un piso de madera",
         ctaText: "Conoce más",
         to: "/tips-balance/el-mejor-tratamiento-para-vivir-en-balance",
       },
