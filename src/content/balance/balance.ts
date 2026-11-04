@@ -5,8 +5,8 @@ export const balanceContent = {
         "Pensamos en rutinas que puedes hacer mientras estás en cualquier lugar y que te ayudarán a mantenerte en movimiento constante.",
       title: "Cuerpo en Balance",
       image: {
-        src: "/assets/" + "images/cuerpo-balance-banner.webp",
-        alt: "Persona ejercitándose",
+        src: "/assets/" + "images/importancia-proteinas.webp",
+        alt: "Torres de aguacate y pechuga de pavo sobre una bandeja",
       },
     },
     seo: {
@@ -20,8 +20,8 @@ export const balanceContent = {
         title: "Tu peso ideal",
         description:
           "Descubre cómo alcanzar y mantener tu peso ideal de manera saludable y sostenible.",
-        imageUrl: "/assets/" + "images/tu-peso-ideal-blog.webp",
-        imageAlt: "Báscula de peso",
+        imageUrl: "/assets/" + "images/calabacitas.webp",
+        imageAlt: "Calabacitas rellenas de pechuga de pavo",
         ctaText: "Calcular mi peso ideal",
         to: "/cuerpo-en-balance/tu-peso-ideal",
       },
@@ -50,8 +50,8 @@ export const balanceContent = {
         "Encuentra el equilibrio mental a través de prácticas de meditación, técnicas de relajación y hábitos saludables que promuevan tu bienestar emocional.",
       title: "Mente en Balance",
       image: {
-        src: "/assets/" + "images/mente-balance-banner.webp",
-        alt: "Persona meditando",
+        src: "/assets/" + "images/mente-balance-silueta-banner.webp",
+        alt: "Silueta de una persona meditando de espaldas",
       },
     },
     seo: {
@@ -65,16 +65,16 @@ export const balanceContent = {
         title: "¿Cómo afectan las emociones a mi salud?",
         description:
           "Descubre cómo las emociones influyen en tu bienestar físico y mental.",
-        imageUrl: "/assets/" + "images/emociones-salud-blog.webp",
-        imageAlt: "Persona demostrando emociones",
+        imageUrl: "/assets/" + "images/cocktail-mango.webp",
+        imageAlt: "Galletas con pechuga de pavo y mango",
         ctaText: "Aprender más",
         to: "/mente-en-balance/como-afectan-las-emociones-a-mi-salud",
       },
       {
-        title: "Mindfullness en tu vida diaria",
+        title: "Mindfulness en tu vida diaria",
         description: "Aprende a practicar la atención plena en tu día a día.",
-        imageUrl: "/assets/" + "images/mindfullness-blog.webp",
-        imageAlt: "Hombre meditando",
+        imageUrl: "/assets/" + "images/mente-mindfullness-silueta.webp",
+        imageAlt: "Silueta de una mano en postura de meditación",
         ctaText: "Conoce más",
         to: "/mente-en-balance/mindfullness-en-tu-vida-diaria",
       },
@@ -82,8 +82,8 @@ export const balanceContent = {
         title: "Paz interior, que nadie te la quite",
         description:
           "Encuentra la paz interior a través de la meditación y la relajación.",
-        imageUrl: "/assets/" + "images/paz-interior-blog.webp",
-        imageAlt: "Mujer meditando",
+        imageUrl: "/assets/" + "images/mente-paz-interior-silueta.webp",
+        imageAlt: "Silueta de una persona meditando de espaldas",
         ctaText: "Descubrir más",
         to: "/mente-en-balance/paz-interior-que-nadie-te-la-quite",
       },
@@ -105,7 +105,7 @@ export const balanceContent = {
       title: "Tips Balance",
       image: {
         src: "/assets/" + "images/tips-balance-banner.webp",
-        alt: "Persona meditando",
+        alt: "Sándwich de pechuga de pavo con fresas",
       },
     },
     seo: {
@@ -120,7 +120,7 @@ export const balanceContent = {
         description:
           "Descubre cómo prepararte para una carrera de 21 kilómetros.",
         imageUrl: "/assets/images/carrera-blog.webp",
-        imageAlt: "Pareja corriendo",
+        imageAlt: "Grupo de personas corriendo",
         ctaText: "Nada mejor que correr",
         to: "/tips-balance/21k-juntos",
       },
@@ -128,15 +128,15 @@ export const balanceContent = {
         title: "Evitando lesiones",
         description: "Conoce cómo prevenir lesiones al correr.",
         imageUrl: "/assets/images/lesiones-blog.webp",
-        imageAlt: "Una pareja haciendo ejercicio",
+        imageAlt: "Mujer corriendo junto al mar",
         ctaText: "Conoce más",
         to: "/tips-balance/evitando-lesiones",
       },
       {
         title: "El mejor tratamiento para vivir en balance",
         description: "Acciones diarias que hacen la diferencia.",
-        imageUrl: "/assets/images/tratamiento-blog.webp",
-        imageAlt: "Pareja feliz hablando",
+        imageUrl: "/assets/images/tips-tratamiento-silueta.webp",
+        imageAlt: "Silueta de una mano en postura de meditación junto a un piso de madera",
         ctaText: "Conoce más",
         to: "/tips-balance/el-mejor-tratamiento-para-vivir-en-balance",
       },

@@ -71,7 +71,7 @@ describe("ErrorBoundary", () => {
     vi.spyOn(window, "location", "get").mockReturnValue({
       ...window.location,
       reload,
-    } as unknown as Location);
+    });
 
     const user = userEvent.setup();
     render(

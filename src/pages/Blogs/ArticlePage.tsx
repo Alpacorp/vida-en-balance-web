@@ -1,14 +1,13 @@
 import { FC } from "react";
 import { useNavigate, useParams } from "react-router-dom";
 
-import mainLogo from "@assets/images/san-rafael-balance-logo.webp";
 import { ArticleLayout } from "@ui/layouts/ArticleLayout/ArticleLayout";
 import NotFoundPage from "@pages/NotFound/NotFoundPage";
 
 import { getArticle, getRelatedArticles } from "@utils/getArticleContent";
 
 import { Article } from "@interfaces/interfaces";
-import { BASE_URL } from "@config/config";
+import { BASE_URL, toAbsoluteUrl } from "@config/config";
 
 import { Seo } from "@utils/Seo.tsx";
 
@@ -41,7 +40,7 @@ const ArticlePage: FC = () => {
       "@type": "Article",
       headline: article.title,
       description: article.description,
-      image: article.coverImage,
+      image: toAbsoluteUrl(article.coverImage),
       author: {
         "@type": "Person",
         name: article.author,
@@ -52,7 +51,9 @@ const ArticlePage: FC = () => {
         name: "Balance",
         logo: {
           "@type": "ImageObject",
-          url: `${BASE_URL}/assets/images/${mainLogo}`,
+          // A file from public/, not an import: Vite inlines small imports as
+          // base64, which produced ".../assets/images/data:image/webp;base64,...".
+          url: toAbsoluteUrl("/assets/images/san-rafael-balance-logo.webp"),
         },
       },
       mainEntityOfPage: {

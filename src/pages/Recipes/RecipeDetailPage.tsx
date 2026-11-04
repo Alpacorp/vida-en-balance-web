@@ -5,7 +5,7 @@ import NotFoundPage from "@pages/NotFound/NotFoundPage";
 import { Seo } from "@utils/Seo.tsx";
 
 import { recipesBySlug, recipesDetails } from "@content/recipes/recipesDetails";
-import { BASE_URL } from "@config/config";
+import { BASE_URL, toAbsoluteUrl } from "@config/config";
 import { recipesProductPageLoader } from "@utils/loaders";
 
 const RecipeDetailPage: FC = () => {
@@ -44,7 +44,7 @@ const RecipeDetailPage: FC = () => {
       "@context": "https://schema.org",
       "@type": "Recipe",
       name: recipe.title,
-      image: recipe.image,
+      image: toAbsoluteUrl(recipe.image),
       description: recipe.description,
       keywords: `receta, ${recipe.title}, balance, saludable`,
       author: {

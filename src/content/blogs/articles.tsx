@@ -779,8 +779,8 @@ export const articles: Article[] = [
     relatedArticles: [
       {
         id: "9",
-        title: "Mindfullness en tu vida diaria",
-        excerpt: "Mindfullness: el arte de vivir en el presente.",
+        title: "Mindfulness en tu vida diaria",
+        excerpt: "Mindfulness: el arte de vivir en el presente.",
         image: "/assets/" + "images/mindfullness.webp",
         slug: "mindfullness-en-tu-vida-diaria",
         category: "mente-en-balance",
@@ -807,8 +807,8 @@ export const articles: Article[] = [
     id: "9",
     category: "mente-en-balance",
     slug: "mindfullness-en-tu-vida-diaria",
-    title: "Mindfullness en tu vida diaria",
-    subtitle: "Mindfullness: el arte de vivir en el presente",
+    title: "Mindfulness en tu vida diaria",
+    subtitle: "Mindfulness: el arte de vivir en el presente",
     description:
       "Descubre cómo practicar mindfulness para reducir el estrés, mejorar tu concentración y vivir plenamente en el aquí y el ahora. Solo necesitas 5 minutos al día para transformar tu calidad de vida.",
     coverImage: "/assets/" + "images/mindfullness.webp",
@@ -1061,8 +1061,8 @@ export const articles: Article[] = [
       },
       {
         id: "9",
-        title: "Mindfullness en tu vida diaria",
-        excerpt: "Mindfullness: el arte de vivir en el presente.",
+        title: "Mindfulness en tu vida diaria",
+        excerpt: "Mindfulness: el arte de vivir en el presente.",
         image: "/assets/" + "images/mindfullness.webp",
         slug: "mindfullness-en-tu-vida-diaria",
         category: "mente-en-balance",
@@ -1133,8 +1133,8 @@ export const articles: Article[] = [
       },
       {
         id: "9",
-        title: "Mindfullness en tu vida diaria",
-        excerpt: "Mindfullness: el arte de vivir en el presente.",
+        title: "Mindfulness en tu vida diaria",
+        excerpt: "Mindfulness: el arte de vivir en el presente.",
         image: "/assets/" + "images/mindfullness.webp",
         slug: "mindfullness-en-tu-vida-diaria",
         category: "mente-en-balance",

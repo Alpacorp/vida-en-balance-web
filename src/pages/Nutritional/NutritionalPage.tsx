@@ -10,7 +10,7 @@ import NotFoundPage from "@pages/NotFound/NotFoundPage";
 import { Seo } from "@utils/Seo.tsx";
 
 import { productsData } from "@content/nutritional/products";
-import { BASE_URL } from "@config/config";
+import { BASE_URL, DEFAULT_SOCIAL_IMAGE, toAbsoluteUrl } from "@config/config";
 
 import { Product } from "@interfaces/interfaces";
 
@@ -34,13 +34,16 @@ const NutritionalPage: FC = () => {
     description: `Descubre la información nutricional detallada de ${activeProduct.name} de San Rafael Balance®.`,
     keywords: `${activeProduct.name}, información nutricional, San Rafael Balance, salud`,
     url: `${BASE_URL}/productos/${productSlug}`,
-    imageSeo: activeProduct.image,
+    // Pack shots are portrait, which Facebook and WhatsApp will not preview.
+    imageSeo: DEFAULT_SOCIAL_IMAGE,
     type: "product" as const,
     schema: {
       "@context": "https://schema.org",
       "@type": "Product",
       name: activeProduct.name,
-      image: activeProduct.presentations[0]?.image ?? activeProduct.image,
+      image: toAbsoluteUrl(
+        activeProduct.presentations[0]?.image ?? activeProduct.image,
+      ),
       description: `Información nutricional de ${activeProduct.name}`,
       brand: {
         "@type": "Brand",

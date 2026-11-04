@@ -14,11 +14,11 @@ export const Health: FC = () => {
               className="w-full max-w-xs relative isolate flex flex-col justify-end overflow-hidden rounded-2xl bg-gray-900 px-8 pb-8 pt-80 sm:pt-48 lg:pt-80 hover:transform hover:scale-105 transition-transform duration-500 ease-in-out"
             >
               <img
-                alt={post.title}
+                // The card's link already reads the title; repeating it here
+                // made screen readers announce every card twice.
+                alt=""
                 src={post.imageUrl}
                 className="absolute inset-0 -z-10 size-full object-cover"
-                height="auto"
-                width="auto"
                 loading="lazy"
               />
               <div className="absolute inset-0 -z-10 bg-linear-to-t from-gray-900 via-gray-900/40" />
