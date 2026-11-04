@@ -1,3 +1,6 @@
+import { existsSync } from "node:fs";
+import { join } from "node:path";
+
 import { describe, it, expect } from "vitest";
 import { render, screen } from "@testing-library/react";
 import { renderToString } from "react-dom/server";
@@ -42,7 +45,11 @@ function renderAt(path: string, pattern: string, element: React.ReactElement) {
 }
 
 /** Markup of the very first render, before any effect has run. */
-function firstRender(path: string, pattern: string, element: React.ReactElement) {
+function firstRender(
+  path: string,
+  pattern: string,
+  element: React.ReactElement,
+) {
   return renderToString(tree(path, pattern, element));
 }
 
@@ -71,6 +78,23 @@ describe("pages render their content on the first pass", () => {
 
     expect(html).toContain(article!.title);
     expect(html).not.toMatch(NOT_FOUND);
+  });
+
+  it("ArticlePage declares a publisher logo that exists as a public file", () => {
+    const [article] = articles;
+
+    const html = firstRender(
+      `/${article!.category}/${article!.slug}`,
+      "/:category/:slug",
+      <ArticlePage />,
+    );
+    const url = /"logo":\{[^}]*"url":"([^"]+)"/.exec(html)?.[1];
+
+    // An imported image small enough for Vite to inline ended up here as
+    // ".../assets/images/data:image/webp;base64,...", invisible on the page.
+    expect(url).toBeDefined();
+    const { pathname } = new URL(url!, "https://example.com");
+    expect(existsSync(join(process.cwd(), "public", pathname))).toBe(true);
   });
 
   it("ArticlePage still resolves the related articles", () => {
@@ -125,16 +149,26 @@ describe("pages render their content on the first pass", () => {
 describe("pages still show the 404 for unknown URLs", () => {
   it("BalancePage on an unknown type", () => {
     renderAt("/no-existe", "/:balanceType", <BalancePage />);
-    expect(screen.getByRole("heading", { level: 1 })).toHaveTextContent(NOT_FOUND);
+    expect(screen.getByRole("heading", { level: 1 })).toHaveTextContent(
+      NOT_FOUND,
+    );
   });
 
   it("ArticlePage on an unknown slug", () => {
     renderAt("/a/b", "/:category/:slug", <ArticlePage />);
-    expect(screen.getByRole("heading", { level: 1 })).toHaveTextContent(NOT_FOUND);
+    expect(screen.getByRole("heading", { level: 1 })).toHaveTextContent(
+      NOT_FOUND,
+    );
   });
 
   it("NutritionalPage on an unknown product", () => {
-    renderAt("/productos/no-existe", "/productos/:productSlug", <NutritionalPage />);
-    expect(screen.getByRole("heading", { level: 1 })).toHaveTextContent(NOT_FOUND);
+    renderAt(
+      "/productos/no-existe",
+      "/productos/:productSlug",
+      <NutritionalPage />,
+    );
+    expect(screen.getByRole("heading", { level: 1 })).toHaveTextContent(
+      NOT_FOUND,
+    );
   });
 });

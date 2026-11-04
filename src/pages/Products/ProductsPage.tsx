@@ -3,18 +3,20 @@ import { Link } from "react-router-dom";
 
 import { Seo } from "@utils/Seo.tsx";
 import { productsData } from "@content/nutritional/products";
-import { BASE_URL } from "@config/config";
+import { BASE_URL, DEFAULT_SOCIAL_IMAGE, toAbsoluteUrl } from "@config/config";
 import { nutritionalPageLoader } from "@utils/loaders";
 
 const ProductsPage: FC = () => {
   const seoData = {
-    title: "Productos San Rafael Balance® - Línea completa de productos de pavo",
+    title:
+      "Productos San Rafael Balance® - Línea completa de productos de pavo",
     description:
       "Conoce toda la línea de productos San Rafael Balance®: pechugas de pavo y salchichas bajas en grasa, sin gluten, sin nitritos añadidos y 100% carne de pavo.",
     keywords:
       "productos San Rafael Balance, pechuga de pavo, salchicha de pavo, bajo en grasa, sin gluten, productos saludables",
     url: `${BASE_URL}/productos`,
-    imageSeo: productsData[0]?.image,
+    // Pack shots are portrait, which Facebook and WhatsApp will not preview.
+    imageSeo: DEFAULT_SOCIAL_IMAGE,
     type: "website" as const,
     schema: {
       "@context": "https://schema.org",
@@ -26,7 +28,7 @@ const ProductsPage: FC = () => {
         "@type": "Product",
         name: product.name,
         url: `${BASE_URL}${product.url}`,
-        image: product.image,
+        image: toAbsoluteUrl(product.image),
       })),
     },
   };

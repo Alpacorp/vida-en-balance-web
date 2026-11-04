@@ -71,7 +71,7 @@ export const balanceContent = {
         to: "/mente-en-balance/como-afectan-las-emociones-a-mi-salud",
       },
       {
-        title: "Mindfullness en tu vida diaria",
+        title: "Mindfulness en tu vida diaria",
         description: "Aprende a practicar la atención plena en tu día a día.",
         imageUrl: "/assets/" + "images/mente-mindfullness-silueta.webp",
         imageAlt: "Silueta de una mano en postura de meditación",
@@ -105,7 +105,7 @@ export const balanceContent = {
       title: "Tips Balance",
       image: {
         src: "/assets/" + "images/tips-balance-banner.webp",
-        alt: "Persona meditando",
+        alt: "Sándwich de pechuga de pavo con fresas",
       },
     },
     seo: {
@@ -120,7 +120,7 @@ export const balanceContent = {
         description:
           "Descubre cómo prepararte para una carrera de 21 kilómetros.",
         imageUrl: "/assets/images/carrera-blog.webp",
-        imageAlt: "Pareja corriendo",
+        imageAlt: "Grupo de personas corriendo",
         ctaText: "Nada mejor que correr",
         to: "/tips-balance/21k-juntos",
       },
@@ -128,7 +128,7 @@ export const balanceContent = {
         title: "Evitando lesiones",
         description: "Conoce cómo prevenir lesiones al correr.",
         imageUrl: "/assets/images/lesiones-blog.webp",
-        imageAlt: "Una pareja haciendo ejercicio",
+        imageAlt: "Mujer corriendo junto al mar",
         ctaText: "Conoce más",
         to: "/tips-balance/evitando-lesiones",
       },
